@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Zap, Target, Eye, CheckCircle } from "lucide-react";
+import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass } from "lucide-react";
 
 const Index = () => {
   const recodeSteps = [
@@ -40,23 +40,46 @@ const Index = () => {
   const approaches = [
     {
       title: "CBT Precision",
-      description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs"
+      description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
+      icon: Target
     },
     {
       title: "DBT Emotional Mastery", 
-      description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance"
+      description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
+      icon: Heart
     },
     {
       title: "Mindfulness Training",
-      description: "Train attention, reduce overthinking, and reconnect with the present moment"
+      description: "Train attention, reduce overthinking, and reconnect with the present moment",
+      icon: Compass
     },
     {
       title: "Neuroplasticity in Action",
-      description: "Rewire your brain with intentional mental habits, using repetition and structured practice"
+      description: "Rewire your brain with intentional mental habits, using repetition and structured practice",
+      icon: Brain
     },
     {
       title: "Performance Psychology",
-      description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting"
+      description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
+      icon: Lightbulb
+    }
+  ];
+
+  const conditions = [
+    {
+      title: "Anxiety & Panic",
+      description: "Decode the fear algorithms that trigger anxiety responses and build new neural pathways for calm confidence.",
+      image: "photo-1581090464777-f3220bbe1b8b"
+    },
+    {
+      title: "Depression & Low Mood",
+      description: "Rewrite negative thought loops and behavioral patterns that maintain depressive cycles.",
+      image: "photo-1470813740244-df37b8c1edcb"
+    },
+    {
+      title: "Procrastination & Avoidance",
+      description: "Debug the mental scripts that cause task avoidance and implement productivity algorithms.",
+      image: "photo-1498050108023-c5249f4df085"
     }
   ];
 
@@ -67,19 +90,28 @@ const Index = () => {
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
+                alt="RECODE Logo" 
+                className="h-32 w-auto animate-float"
+              />
+            </div>
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium">
-              <Code className="h-4 w-4" />
-              Mental Software Engineering
+              <Stethoscope className="h-4 w-4" />
+              Licensed Medical Doctor • Mental Software Engineering
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="text-primary">RECODE</span>
+              <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                RECODE
+              </span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
               Rewire Your Mind, Change Your Life
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Your brain is not broken. It's coded. RECODE helps you understand and rewrite 
-              the outdated scripts that cause anxiety, depression, and limiting behaviors.
+              Evidence-based therapy that treats anxiety, depression, and procrastination like outdated code. 
+              Delivered by a fully licensed medical doctor using proven CBT and DBT methodologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button size="lg" className="text-lg px-8 py-3">
@@ -89,6 +121,58 @@ const Index = () => {
                 Learn More
               </Button>
             </div>
+            
+            {/* Credentials Banner */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <GraduationCap className="h-4 w-4" />
+                Licensed Medical Doctor
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4" />
+                CBT & DBT Specialist
+              </div>
+              <div className="flex items-center gap-2">
+                <Stethoscope className="h-4 w-4" />
+                Remote Consultations Available
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mental Health Conditions Section */}
+      <section className="py-20 px-4 bg-secondary/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite 
+              the mental code behind common psychological challenges.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {conditions.map((condition, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`}
+                    alt={condition.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-white font-bold text-xl">{condition.title}</h3>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <CardDescription className="text-base">
+                    {condition.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -106,18 +190,26 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {approaches.map((approach, index) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">{approach.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {approach.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            {approaches.map((approach, index) => {
+              const Icon = approach.icon;
+              return (
+                <Card key={index} className="h-full hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg">{approach.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {approach.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -162,8 +254,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Philosophy Statement */}
+      {/* Doctor Credentials Section */}
       <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Professional Medical Care</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="p-6 text-center">
+                <GraduationCap className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Licensed Medical Doctor</h3>
+                <p className="text-muted-foreground">Fully qualified and registered medical practitioner</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="font-bold mb-2">CBT & DBT Specialist</h3>
+                <p className="text-muted-foreground">Expert training in evidence-based therapeutic modalities</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Secure & Confidential</h3>
+                <p className="text-muted-foreground">Professional standards and patient privacy guaranteed</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Statement */}
+      <section className="py-20 px-4 bg-secondary/5">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-8">The RECODE Philosophy</h2>
           <div className="space-y-6 text-lg text-muted-foreground">
@@ -199,6 +317,21 @@ const Index = () => {
           <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
             Book Your Session Today
           </Button>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="py-12 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center text-sm text-muted-foreground">
+            <p className="mb-2 font-medium">Important Disclaimer</p>
+            <p>
+              RECODE represents a new therapeutic approach that integrates elements of CBT and DBT methodologies 
+              within an innovative framework. While based on evidence-based practices, RECODE is not classical 
+              CBT or DBT therapy. All sessions are conducted by a licensed medical doctor. This service is not 
+              a substitute for emergency mental health care or crisis intervention.
+            </p>
+          </div>
         </div>
       </section>
     </div>
