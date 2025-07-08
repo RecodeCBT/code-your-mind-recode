@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass } from "lucide-react";
+import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
 
 const Index = () => {
   const recodeSteps = [
@@ -111,7 +110,7 @@ const Index = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Evidence-based therapy that treats anxiety, depression, and procrastination like outdated code. 
-              Delivered by a fully licensed medical doctor using proven CBT and DBT methodologies.
+              Delivered by Dr. Christopher Carson using proven CBT methodologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button size="lg" className="text-lg px-8 py-3">
@@ -130,7 +129,7 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4" />
-                CBT & DBT Specialist
+                CBT Specialist
               </div>
               <div className="flex items-center gap-2">
                 <Stethoscope className="h-4 w-4" />
@@ -267,7 +266,7 @@ const Index = () => {
               </Card>
               <Card className="p-6 text-center">
                 <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="font-bold mb-2">CBT & DBT Specialist</h3>
+                <h3 className="font-bold mb-2">CBT Specialist</h3>
                 <p className="text-muted-foreground">Expert training in evidence-based therapeutic modalities</p>
               </Card>
               <Card className="p-6 text-center">
@@ -280,8 +279,113 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Philosophy Statement */}
+      {/* Dr. Christopher Carson Credentials Section */}
       <section className="py-20 px-4 bg-secondary/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Meet Dr. Christopher Carson</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A practicing General Practitioner with extensive qualifications in medicine, 
+              mental health therapy, and performance coaching.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Photos Section */}
+            <div className="space-y-6">
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img 
+                  src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png"
+                  alt="Dr. Christopher Carson"
+                  className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img 
+                  src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png"
+                  alt="Dr. Christopher Carson"
+                  className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            </div>
+
+            {/* Credentials Section */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <GraduationCap className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">BSc - Biomedical Sciences</h3>
+                      <p className="text-muted-foreground">Comprehensive foundation in human biology, physiology, and medical science</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Stethoscope className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">MBBS in Medicine</h3>
+                      <p className="text-muted-foreground">Medical degree qualifying as a licensed doctor</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Shield className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">MRCGP</h3>
+                      <p className="text-muted-foreground">Specialist training in general practice and primary care</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Brain className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">Post Graduate Professional Diploma in CBT</h3>
+                      <p className="text-muted-foreground">Advanced qualification in Cognitive Behavioural Therapy</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Award className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-2">Level 3 Personal Training Qualification</h3>
+                      <p className="text-muted-foreground">Certified fitness and performance coaching expertise</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+
+              <div className="text-center pt-6">
+                <p className="text-lg text-muted-foreground italic">
+                  "Combining medical expertise with therapeutic innovation to help you unlock your potential."
+                </p>
+                <p className="font-semibold mt-2">- Dr. Christopher Carson</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Statement */}
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-8">The RECODE Philosophy</h2>
           <div className="space-y-6 text-lg text-muted-foreground">
