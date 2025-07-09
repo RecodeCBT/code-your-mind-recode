@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
@@ -176,10 +175,6 @@ const Index = () => {
                   style={{ filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.3))' }}
                 />
               </div>
-            </div>
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 border border-orange-500/20 px-4 py-2 rounded-full text-sm font-medium">
-              <Stethoscope className="h-4 w-4 text-orange-500" />
-              Mental Software Engineering
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
