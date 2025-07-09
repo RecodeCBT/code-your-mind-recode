@@ -1,123 +1,99 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
-
 const Index = () => {
-  const recodeSteps = [
-    {
-      step: "REVEAL",
-      description: "Notice the hidden patterns that control your reactions and self-image",
-      icon: Eye,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    },
-    {
-      step: "EVALUATE", 
-      description: "Use structured frameworks to explore whether these patterns are useful, kind, and evidence-based",
-      icon: Target,
-      color: "text-purple-600", 
-      bgColor: "bg-purple-600/10"
-    },
-    {
-      step: "CHALLENGE",
-      description: "Interrogate old beliefs and emotional habits through guided questioning", 
-      icon: Zap,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
-    },
-    {
-      step: "OBSERVE",
-      description: "Build awareness of emotional and sensory experience without reactivity",
-      icon: Brain,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    },
-    {
-      step: "DESIGN",
-      description: "Create new thoughts, habits and perspectives that serve your goals",
-      icon: Code,
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
-    },
-    {
-      step: "EMBED", 
-      description: "Strengthen these upgrades through daily practice and long-term reinforcement",
-      icon: CheckCircle,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
-    }
-  ];
-
-  const approaches = [
-    {
-      title: "CBT Precision",
-      description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
-      icon: Target,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    },
-    {
-      title: "DBT Emotional Mastery", 
-      description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
-      icon: Heart,
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
-    },
-    {
-      title: "Mindfulness Training",
-      description: "Train attention, reduce overthinking, and reconnect with the present moment",
-      icon: Compass,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
-    },
-    {
-      title: "Neuroplasticity in Action",
-      description: "Rewire your brain with intentional mental habits, using repetition and structured practice",
-      icon: Brain,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    },
-    {
-      title: "Performance Psychology",
-      description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
-      icon: Lightbulb,
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
-    },
-    {
-      title: "Visualisation Techniques",
-      description: "Harness the power of mental imagery to rehearse success and rewire limiting beliefs",
-      icon: Eye,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
-    }
-  ];
-
-  const conditions = [
-    {
-      title: "Anxiety & Panic",
-      description: "Decode the fear algorithms that trigger anxiety responses and build new neural pathways for calm confidence.",
-      image: "photo-1581090464777-f3220bbe1b8b"
-    },
-    {
-      title: "Depression & Low Mood",
-      description: "Rewrite negative thought loops and behavioral patterns that maintain depressive cycles.",
-      image: "photo-1470813740244-df37b8c1edcb"
-    },
-    {
-      title: "Procrastination & Avoidance",
-      description: "Debug the mental scripts that cause task avoidance and implement productivity algorithms.",
-      image: "photo-1498050108023-c5249f4df085"
-    },
-    {
-      title: "Anger & Emotional Dysregulation",
-      description: "Master emotional triggers and develop healthy response patterns for intense feelings.",
-      image: "photo-1526374965328-7f61d4dc18c5"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const recodeSteps = [{
+    step: "REVEAL",
+    description: "Notice the hidden patterns that control your reactions and self-image",
+    icon: Eye,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10"
+  }, {
+    step: "EVALUATE",
+    description: "Use structured frameworks to explore whether these patterns are useful, kind, and evidence-based",
+    icon: Target,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  }, {
+    step: "CHALLENGE",
+    description: "Interrogate old beliefs and emotional habits through guided questioning",
+    icon: Zap,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  }, {
+    step: "OBSERVE",
+    description: "Build awareness of emotional and sensory experience without reactivity",
+    icon: Brain,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10"
+  }, {
+    step: "DESIGN",
+    description: "Create new thoughts, habits and perspectives that serve your goals",
+    icon: Code,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  }, {
+    step: "EMBED",
+    description: "Strengthen these upgrades through daily practice and long-term reinforcement",
+    icon: CheckCircle,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  }];
+  const approaches = [{
+    title: "CBT Precision",
+    description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
+    icon: Target,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10"
+  }, {
+    title: "DBT Emotional Mastery",
+    description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
+    icon: Heart,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  }, {
+    title: "Mindfulness Training",
+    description: "Train attention, reduce overthinking, and reconnect with the present moment",
+    icon: Compass,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  }, {
+    title: "Neuroplasticity in Action",
+    description: "Rewire your brain with intentional mental habits, using repetition and structured practice",
+    icon: Brain,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10"
+  }, {
+    title: "Performance Psychology",
+    description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
+    icon: Lightbulb,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  }, {
+    title: "Visualisation Techniques",
+    description: "Harness the power of mental imagery to rehearse success and rewire limiting beliefs",
+    icon: Eye,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  }];
+  const conditions = [{
+    title: "Anxiety & Panic",
+    description: "Decode the fear algorithms that trigger anxiety responses and build new neural pathways for calm confidence.",
+    image: "photo-1581090464777-f3220bbe1b8b"
+  }, {
+    title: "Depression & Low Mood",
+    description: "Rewrite negative thought loops and behavioral patterns that maintain depressive cycles.",
+    image: "photo-1470813740244-df37b8c1edcb"
+  }, {
+    title: "Procrastination & Avoidance",
+    description: "Debug the mental scripts that cause task avoidance and implement productivity algorithms.",
+    image: "photo-1498050108023-c5249f4df085"
+  }, {
+    title: "Anger & Emotional Dysregulation",
+    description: "Master emotional triggers and develop healthy response patterns for intense feelings.",
+    image: "photo-1526374965328-7f61d4dc18c5"
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
         {/* Background patterns - moved further from text content */}
@@ -168,12 +144,9 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-purple-600/40 to-blue-600/40 rounded-full blur-3xl scale-200 animate-gradient"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-orange-500/30 to-purple-600/30 rounded-full blur-2xl scale-150 animate-pulse-slow"></div>
-                <img 
-                  src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
-                  alt="RECODE Logo" 
-                  className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl"
-                  style={{ filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.3))' }}
-                />
+                <img src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" alt="RECODE Logo" className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl" style={{
+                filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.3))'
+              }} />
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
@@ -231,14 +204,9 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {conditions.map((condition, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            {conditions.map((condition, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`}
-                    alt={condition.title}
-                    className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
-                  />
+                  <img src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`} alt={condition.title} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <h3 className="text-white font-bold text-xl">{condition.title}</h3>
@@ -249,8 +217,7 @@ const Index = () => {
                     {condition.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -272,9 +239,8 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {approaches.map((approach, index) => {
-              const Icon = approach.icon;
-              return (
-                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50">
+            const Icon = approach.icon;
+            return <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className={`p-2 ${approach.bgColor} rounded-lg`}>
@@ -288,9 +254,8 @@ const Index = () => {
                       {approach.description}
                     </CardDescription>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -310,9 +275,8 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recodeSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div key={index} className="relative">
+            const Icon = step.icon;
+            return <div key={index} className="relative">
                   <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-transparent hover:border-t-orange-500/50">
                     <CardHeader className="text-center">
                       <div className={`mx-auto mb-4 p-3 ${step.bgColor} rounded-full w-fit`}>
@@ -328,12 +292,9 @@ const Index = () => {
                       </CardDescription>
                     </CardContent>
                   </Card>
-                  {index < recodeSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 transform -translate-y-1/2"></div>
-                  )}
-                </div>
-              );
-            })}
+                  {index < recodeSteps.length - 1 && <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 transform -translate-y-1/2"></div>}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -382,18 +343,10 @@ const Index = () => {
             {/* Photos Section - Restored to original uncropped state */}
             <div className="space-y-6">
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img 
-                  src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png"
-                  alt="Dr. Christopher Carson"
-                  className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-                />
+                <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-scale-down" />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img 
-                  src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png"
-                  alt="Dr. Christopher Carson"
-                  className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-                />
+                <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="Dr. Christopher Carson" className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105" />
               </div>
             </div>
 
@@ -526,8 +479,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
