@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
@@ -83,6 +84,13 @@ const Index = () => {
       icon: Lightbulb,
       color: "text-purple-600",
       bgColor: "bg-purple-600/10"
+    },
+    {
+      title: "Visualisation Techniques",
+      description: "Harness the power of mental imagery to rehearse success and rewire limiting beliefs",
+      icon: Eye,
+      color: "text-blue-600",
+      bgColor: "bg-blue-600/10"
     }
   ];
 
@@ -113,46 +121,65 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        
-        {/* Enhanced decorative patterns around logo */}
-        <div className="absolute top-8 left-8 w-40 h-40 opacity-20">
+        {/* Background patterns - moved further from text content */}
+        <div className="absolute top-8 left-8 w-40 h-40 opacity-30">
           <div className="w-full h-full bg-gradient-to-br from-orange-500 via-purple-600 to-blue-600 rounded-full blur-3xl animate-pulse-slow"></div>
         </div>
-        <div className="absolute top-16 right-12 w-32 h-32 opacity-15">
+        <div className="absolute top-16 right-12 w-32 h-32 opacity-25">
           <div className="w-full h-full bg-gradient-to-br from-blue-500 via-purple-600 to-orange-500 rounded-lg rotate-45 blur-2xl animate-float"></div>
         </div>
-        <div className="absolute bottom-20 left-16 w-28 h-28 opacity-15">
+        <div className="absolute bottom-20 left-16 w-28 h-28 opacity-25">
           <div className="w-full h-full bg-gradient-to-br from-purple-500 via-orange-600 to-blue-600 rounded-full blur-2xl animate-gradient"></div>
         </div>
-        <div className="absolute bottom-32 right-8 w-36 h-36 opacity-20">
+        <div className="absolute bottom-32 right-8 w-36 h-36 opacity-30">
           <div className="w-full h-full bg-gradient-to-br from-blue-600 via-orange-500 to-purple-600 rounded-lg rotate-12 blur-3xl animate-pulse-slow"></div>
         </div>
         
-        {/* Additional pattern elements */}
-        <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-orange-500/20 rounded-full blur-sm animate-float"></div>
-        <div className="absolute top-1/2 right-1/3 w-4 h-4 bg-purple-600/25 rounded-full blur-sm animate-pulse-slow"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-8 h-8 bg-blue-600/20 rounded-full blur-sm animate-gradient"></div>
-        <div className="absolute top-2/3 right-1/4 w-5 h-5 bg-orange-500/25 rounded-full blur-sm animate-float"></div>
+        {/* Neural pathway animations leading to logo */}
+        <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2">
+          <div className="flex items-center space-x-2">
+            <div className="w-3 h-3 bg-orange-500/40 rounded-full animate-pulse-slow"></div>
+            <div className="w-8 h-0.5 bg-gradient-to-r from-orange-500/40 to-purple-600/40 animate-gradient"></div>
+            <div className="w-2 h-2 bg-purple-600/40 rounded-full animate-float"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600/40 to-blue-600/40 animate-gradient delay-300"></div>
+            <div className="w-2 h-2 bg-blue-600/40 rounded-full animate-pulse-slow delay-500"></div>
+          </div>
+        </div>
+        
+        <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2">
+          <div className="flex items-center space-x-2 flex-row-reverse">
+            <div className="w-3 h-3 bg-blue-600/40 rounded-full animate-pulse-slow"></div>
+            <div className="w-8 h-0.5 bg-gradient-to-l from-blue-600/40 to-orange-500/40 animate-gradient"></div>
+            <div className="w-2 h-2 bg-orange-500/40 rounded-full animate-float"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-l from-orange-500/40 to-purple-600/40 animate-gradient delay-300"></div>
+            <div className="w-2 h-2 bg-purple-600/40 rounded-full animate-pulse-slow delay-500"></div>
+          </div>
+        </div>
+        
+        {/* Additional scattered neural elements */}
+        <div className="absolute top-1/3 left-1/3 w-6 h-6 bg-orange-500/30 rounded-full blur-sm animate-float"></div>
+        <div className="absolute top-1/2 right-1/3 w-4 h-4 bg-purple-600/35 rounded-full blur-sm animate-pulse-slow"></div>
+        <div className="absolute bottom-1/3 left-1/2 w-8 h-8 bg-blue-600/30 rounded-full blur-sm animate-gradient"></div>
+        <div className="absolute top-2/3 right-1/4 w-5 h-5 bg-orange-500/35 rounded-full blur-sm animate-float"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
             <div className="flex justify-center mb-8 relative">
-              {/* Enhanced logo with better blending */}
+              {/* Enhanced logo with better blending and neural network effect */}
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/30 via-purple-600/30 to-blue-600/30 rounded-full blur-3xl scale-200 animate-gradient"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-orange-500/20 to-purple-600/20 rounded-full blur-2xl scale-150 animate-pulse-slow"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-purple-600/40 to-blue-600/40 rounded-full blur-3xl scale-200 animate-gradient"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-orange-500/30 to-purple-600/30 rounded-full blur-2xl scale-150 animate-pulse-slow"></div>
                 <img 
                   src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
                   alt="RECODE Logo" 
                   className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl"
-                  style={{ filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.3)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.2))' }}
+                  style={{ filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.3))' }}
                 />
               </div>
             </div>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 border border-orange-500/20 px-4 py-2 rounded-full text-sm font-medium">
               <Stethoscope className="h-4 w-4 text-orange-500" />
-              Licensed Medical Doctor • Mental Software Engineering
+              Mental Software Engineering
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -164,7 +191,7 @@ const Index = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Evidence-based therapy that treats anxiety, depression, and procrastination like outdated code. 
-              Using proven CBT methodologies.
+              Using a blend of techniques based on established CBT and DBT models.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button size="lg" className="text-lg px-8 py-3">
@@ -179,11 +206,11 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <GraduationCap className="h-4 w-4" />
-                Licensed Medical Doctor
+                Fully Qualified, Registered and Practicing General Practitioner
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4" />
-                Postgraduate Specialist Training in CBT Model
+                Accredited Diploma in CBT
               </div>
               <div className="flex items-center gap-2">
                 <Stethoscope className="h-4 w-4" />
@@ -196,8 +223,8 @@ const Index = () => {
 
       {/* Mental Health Conditions Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/10 to-purple-600/10 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/10 to-orange-500/10 rounded-lg rotate-45 blur-xl"></div>
+        <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
@@ -235,8 +262,8 @@ const Index = () => {
 
       {/* Philosophy Section */}
       <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute top-20 left-20 w-16 h-16 bg-gradient-to-br from-purple-600/15 to-blue-600/15 rounded-full blur-lg animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-lg rotate-12 blur-lg animate-pulse-slow"></div>
+        <div className="absolute top-20 left-20 w-16 h-16 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full blur-lg animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-20 h-20 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-lg rotate-12 blur-lg animate-pulse-slow"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
@@ -275,8 +302,8 @@ const Index = () => {
 
       {/* RECODE Method Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-blue-600/5 to-orange-500/5 relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-600/10 to-orange-500/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-28 h-28 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-lg rotate-45 blur-2xl"></div>
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-600/15 to-orange-500/15 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-28 h-28 bg-gradient-to-br from-blue-600/15 to-purple-600/15 rounded-lg rotate-45 blur-2xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
@@ -318,22 +345,22 @@ const Index = () => {
 
       {/* Doctor Credentials Section */}
       <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-24 h-24 bg-gradient-to-br from-orange-500/10 to-blue-600/10 rounded-full blur-xl animate-pulse-slow"></div>
-        <div className="absolute bottom-10 left-10 w-20 h-20 bg-gradient-to-br from-purple-600/10 to-orange-500/10 rounded-lg rotate-45 blur-xl animate-float"></div>
+        <div className="absolute top-10 right-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-blue-600/15 rounded-full blur-xl animate-pulse-slow"></div>
+        <div className="absolute bottom-10 left-10 w-20 h-20 bg-gradient-to-br from-purple-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl animate-float"></div>
         
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Professional Medical Care</h2>
+            <h2 className="text-4xl font-bold mb-6">Professional Care from a Practicing Physician</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-6 text-center border-t-4 border-t-orange-500/50">
                 <GraduationCap className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Licensed Medical Doctor</h3>
-                <p className="text-muted-foreground">Fully qualified and registered medical practitioner</p>
+                <h3 className="font-bold mb-2">Fully Qualified, Registered and Practicing General Practitioner</h3>
+                <p className="text-muted-foreground">Comprehensive medical training and ongoing clinical practice</p>
               </Card>
               <Card className="p-6 text-center border-t-4 border-t-purple-600/50">
                 <Brain className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Postgraduate Specialist Training</h3>
-                <p className="text-muted-foreground">Expert training in evidence-based therapeutic modalities</p>
+                <h3 className="font-bold mb-2">Accredited Diploma in CBT</h3>
+                <p className="text-muted-foreground">And therapy styles in the CBT model</p>
               </Card>
               <Card className="p-6 text-center border-t-4 border-t-blue-600/50">
                 <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -357,20 +384,20 @@ const Index = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photos Section */}
+            {/* Photos Section - Restored to original uncropped state */}
             <div className="space-y-6">
               <div className="relative overflow-hidden rounded-lg shadow-lg">
                 <img 
                   src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png"
                   alt="Dr. Christopher Carson"
-                  className="w-full h-auto max-h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
+                  className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
                 <img 
                   src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png"
                   alt="Dr. Christopher Carson"
-                  className="w-full h-auto max-h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
+                  className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </div>
@@ -441,7 +468,7 @@ const Index = () => {
 
               <div className="text-center pt-6">
                 <p className="text-lg text-muted-foreground italic">
-                  "Your mind is a biological computer that runs on automatic codes, these codes can be naive to the human brain or develop through our experiences, as they repeat the code strengthens, like learning an instrument. We can identify and re-write these codes using the same principles"
+                  "Your mind is a biological computer that runs on automatic codes, these codes can be pre-loaded in the human brain or develop through our experiences, as they repeat the code strengthens, like learning an instrument. We can identify and re-write these codes using the same principles"
                 </p>
                 <p className="font-semibold mt-2">- Dr. Christopher Carson</p>
               </div>
