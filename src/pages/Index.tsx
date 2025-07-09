@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
@@ -8,32 +7,44 @@ const Index = () => {
     {
       step: "REVEAL",
       description: "Notice the hidden patterns that control your reactions and self-image",
-      icon: Eye
+      icon: Eye,
+      color: "text-orange-500",
+      bgColor: "bg-orange-500/10"
     },
     {
       step: "EVALUATE", 
       description: "Use structured frameworks to explore whether these patterns are useful, kind, and evidence-based",
-      icon: Target
+      icon: Target,
+      color: "text-purple-600", 
+      bgColor: "bg-purple-600/10"
     },
     {
       step: "CHALLENGE",
       description: "Interrogate old beliefs and emotional habits through guided questioning", 
-      icon: Zap
+      icon: Zap,
+      color: "text-blue-600",
+      bgColor: "bg-blue-600/10"
     },
     {
       step: "OBSERVE",
       description: "Build awareness of emotional and sensory experience without reactivity",
-      icon: Brain
+      icon: Brain,
+      color: "text-orange-500",
+      bgColor: "bg-orange-500/10"
     },
     {
       step: "DESIGN",
       description: "Create new thoughts, habits and perspectives that serve your goals",
-      icon: Code
+      icon: Code,
+      color: "text-purple-600",
+      bgColor: "bg-purple-600/10"
     },
     {
       step: "EMBED", 
       description: "Strengthen these upgrades through daily practice and long-term reinforcement",
-      icon: CheckCircle
+      icon: CheckCircle,
+      color: "text-blue-600",
+      bgColor: "bg-blue-600/10"
     }
   ];
 
@@ -41,27 +52,37 @@ const Index = () => {
     {
       title: "CBT Precision",
       description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
-      icon: Target
+      icon: Target,
+      color: "text-orange-500",
+      bgColor: "bg-orange-500/10"
     },
     {
       title: "DBT Emotional Mastery", 
       description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
-      icon: Heart
+      icon: Heart,
+      color: "text-purple-600",
+      bgColor: "bg-purple-600/10"
     },
     {
       title: "Mindfulness Training",
       description: "Train attention, reduce overthinking, and reconnect with the present moment",
-      icon: Compass
+      icon: Compass,
+      color: "text-blue-600",
+      bgColor: "bg-blue-600/10"
     },
     {
       title: "Neuroplasticity in Action",
       description: "Rewire your brain with intentional mental habits, using repetition and structured practice",
-      icon: Brain
+      icon: Brain,
+      color: "text-orange-500",
+      bgColor: "bg-orange-500/10"
     },
     {
       title: "Performance Psychology",
       description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
-      icon: Lightbulb
+      icon: Lightbulb,
+      color: "text-purple-600",
+      bgColor: "bg-purple-600/10"
     }
   ];
 
@@ -91,38 +112,46 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/10 py-20 px-4">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
-        {/* Decorative patterns around logo */}
-        <div className="absolute top-10 left-10 w-32 h-32 opacity-10">
-          <div className="w-full h-full bg-gradient-to-br from-orange-500 to-purple-600 rounded-full blur-xl"></div>
+        {/* Enhanced decorative patterns around logo */}
+        <div className="absolute top-8 left-8 w-40 h-40 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-orange-500 via-purple-600 to-blue-600 rounded-full blur-3xl animate-pulse-slow"></div>
         </div>
-        <div className="absolute top-20 right-16 w-24 h-24 opacity-10">
-          <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg rotate-45 blur-lg"></div>
+        <div className="absolute top-16 right-12 w-32 h-32 opacity-15">
+          <div className="w-full h-full bg-gradient-to-br from-blue-500 via-purple-600 to-orange-500 rounded-lg rotate-45 blur-2xl animate-float"></div>
         </div>
-        <div className="absolute bottom-32 left-20 w-20 h-20 opacity-10">
-          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-orange-600 rounded-full blur-lg"></div>
+        <div className="absolute bottom-20 left-16 w-28 h-28 opacity-15">
+          <div className="w-full h-full bg-gradient-to-br from-purple-500 via-orange-600 to-blue-600 rounded-full blur-2xl animate-gradient"></div>
         </div>
-        <div className="absolute bottom-40 right-12 w-28 h-28 opacity-10">
-          <div className="w-full h-full bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg rotate-12 blur-xl"></div>
+        <div className="absolute bottom-32 right-8 w-36 h-36 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-blue-600 via-orange-500 to-purple-600 rounded-lg rotate-12 blur-3xl animate-pulse-slow"></div>
         </div>
+        
+        {/* Additional pattern elements */}
+        <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-orange-500/20 rounded-full blur-sm animate-float"></div>
+        <div className="absolute top-1/2 right-1/3 w-4 h-4 bg-purple-600/25 rounded-full blur-sm animate-pulse-slow"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-8 h-8 bg-blue-600/20 rounded-full blur-sm animate-gradient"></div>
+        <div className="absolute top-2/3 right-1/4 w-5 h-5 bg-orange-500/25 rounded-full blur-sm animate-float"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
             <div className="flex justify-center mb-8 relative">
-              {/* Logo with blend effect */}
+              {/* Enhanced logo with better blending */}
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-purple-600/20 to-blue-600/20 rounded-full blur-2xl scale-150"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/30 via-purple-600/30 to-blue-600/30 rounded-full blur-3xl scale-200 animate-gradient"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-orange-500/20 to-purple-600/20 rounded-full blur-2xl scale-150 animate-pulse-slow"></div>
                 <img 
                   src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
                   alt="RECODE Logo" 
-                  className="h-32 w-auto animate-float relative z-10 mix-blend-multiply"
+                  className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl"
+                  style={{ filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.3)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.2))' }}
                 />
               </div>
             </div>
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium">
-              <Stethoscope className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 border border-orange-500/20 px-4 py-2 rounded-full text-sm font-medium">
+              <Stethoscope className="h-4 w-4 text-orange-500" />
               Licensed Medical Doctor • Mental Software Engineering
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
@@ -166,8 +195,11 @@ const Index = () => {
       </section>
 
       {/* Mental Health Conditions Section */}
-      <section className="py-20 px-4 bg-secondary/5">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/10 to-purple-600/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/10 to-orange-500/10 rounded-lg rotate-45 blur-xl"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
@@ -202,8 +234,11 @@ const Index = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute top-20 left-20 w-16 h-16 bg-gradient-to-br from-purple-600/15 to-blue-600/15 rounded-full blur-lg animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-lg rotate-12 blur-lg animate-pulse-slow"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">What is RECODE?</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
@@ -217,11 +252,11 @@ const Index = () => {
             {approaches.map((approach, index) => {
               const Icon = approach.icon;
               return (
-                <Card key={index} className="h-full hover:shadow-lg transition-shadow">
+                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Icon className="h-5 w-5 text-primary" />
+                      <div className={`p-2 ${approach.bgColor} rounded-lg`}>
+                        <Icon className={`h-5 w-5 ${approach.color}`} />
                       </div>
                       <CardTitle className="text-lg">{approach.title}</CardTitle>
                     </div>
@@ -239,8 +274,11 @@ const Index = () => {
       </section>
 
       {/* RECODE Method Section */}
-      <section className="py-20 px-4 bg-secondary/5">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-blue-600/5 to-orange-500/5 relative overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-600/10 to-orange-500/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-28 h-28 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-lg rotate-45 blur-2xl"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">How Does RECODE Work?</h2>
             <p className="text-xl text-muted-foreground">
@@ -253,12 +291,12 @@ const Index = () => {
               const Icon = step.icon;
               return (
                 <div key={index} className="relative">
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-transparent hover:border-t-orange-500/50">
                     <CardHeader className="text-center">
-                      <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                        <Icon className="h-8 w-8 text-primary" />
+                      <div className={`mx-auto mb-4 p-3 ${step.bgColor} rounded-full w-fit`}>
+                        <Icon className={`h-8 w-8 ${step.color}`} />
                       </div>
-                      <CardTitle className="text-2xl font-bold text-primary">
+                      <CardTitle className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                         {index + 1}. {step.step}
                       </CardTitle>
                     </CardHeader>
@@ -269,7 +307,7 @@ const Index = () => {
                     </CardContent>
                   </Card>
                   {index < recodeSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-primary/30 transform -translate-y-1/2"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 transform -translate-y-1/2"></div>
                   )}
                 </div>
               );
@@ -279,23 +317,26 @@ const Index = () => {
       </section>
 
       {/* Doctor Credentials Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-24 h-24 bg-gradient-to-br from-orange-500/10 to-blue-600/10 rounded-full blur-xl animate-pulse-slow"></div>
+        <div className="absolute bottom-10 left-10 w-20 h-20 bg-gradient-to-br from-purple-600/10 to-orange-500/10 rounded-lg rotate-45 blur-xl animate-float"></div>
+        
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Professional Medical Care</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-6 text-center">
-                <GraduationCap className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Card className="p-6 text-center border-t-4 border-t-orange-500/50">
+                <GraduationCap className="h-12 w-12 text-orange-500 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Licensed Medical Doctor</h3>
                 <p className="text-muted-foreground">Fully qualified and registered medical practitioner</p>
               </Card>
-              <Card className="p-6 text-center">
-                <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Card className="p-6 text-center border-t-4 border-t-purple-600/50">
+                <Brain className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Postgraduate Specialist Training</h3>
                 <p className="text-muted-foreground">Expert training in evidence-based therapeutic modalities</p>
               </Card>
-              <Card className="p-6 text-center">
-                <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Card className="p-6 text-center border-t-4 border-t-blue-600/50">
+                <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Secure & Confidential</h3>
                 <p className="text-muted-foreground">Professional standards and patient privacy guaranteed</p>
               </Card>
