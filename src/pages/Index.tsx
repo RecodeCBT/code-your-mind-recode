@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
@@ -79,6 +80,11 @@ const Index = () => {
       title: "Procrastination & Avoidance",
       description: "Debug the mental scripts that cause task avoidance and implement productivity algorithms.",
       image: "photo-1498050108023-c5249f4df085"
+    },
+    {
+      title: "Anger & Emotional Dysregulation",
+      description: "Master emotional triggers and develop healthy response patterns for intense feelings.",
+      image: "photo-1526374965328-7f61d4dc18c5"
     }
   ];
 
@@ -87,14 +93,33 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/10 py-20 px-4">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        
+        {/* Decorative patterns around logo */}
+        <div className="absolute top-10 left-10 w-32 h-32 opacity-10">
+          <div className="w-full h-full bg-gradient-to-br from-orange-500 to-purple-600 rounded-full blur-xl"></div>
+        </div>
+        <div className="absolute top-20 right-16 w-24 h-24 opacity-10">
+          <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg rotate-45 blur-lg"></div>
+        </div>
+        <div className="absolute bottom-32 left-20 w-20 h-20 opacity-10">
+          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-orange-600 rounded-full blur-lg"></div>
+        </div>
+        <div className="absolute bottom-40 right-12 w-28 h-28 opacity-10">
+          <div className="w-full h-full bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg rotate-12 blur-xl"></div>
+        </div>
+        
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            <div className="flex justify-center mb-8">
-              <img 
-                src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
-                alt="RECODE Logo" 
-                className="h-32 w-auto animate-float"
-              />
+            <div className="flex justify-center mb-8 relative">
+              {/* Logo with blend effect */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-purple-600/20 to-blue-600/20 rounded-full blur-2xl scale-150"></div>
+                <img 
+                  src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
+                  alt="RECODE Logo" 
+                  className="h-32 w-auto animate-float relative z-10 mix-blend-multiply"
+                />
+              </div>
             </div>
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-sm font-medium">
               <Stethoscope className="h-4 w-4" />
@@ -129,11 +154,11 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4" />
-                CBT Specialist
+                Postgraduate Specialist Training in CBT Model
               </div>
               <div className="flex items-center gap-2">
                 <Stethoscope className="h-4 w-4" />
-                Remote Consultations Available
+                Flexible Remote Consultations
               </div>
             </div>
           </div>
@@ -151,14 +176,14 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {conditions.map((condition, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`}
                     alt={condition.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
@@ -266,7 +291,7 @@ const Index = () => {
               </Card>
               <Card className="p-6 text-center">
                 <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="font-bold mb-2">CBT Specialist</h3>
+                <h3 className="font-bold mb-2">Postgraduate Specialist Training</h3>
                 <p className="text-muted-foreground">Expert training in evidence-based therapeutic modalities</p>
               </Card>
               <Card className="p-6 text-center">
@@ -286,7 +311,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-4">Meet Dr. Christopher Carson</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A practicing General Practitioner with extensive qualifications in medicine, 
-              mental health therapy, and performance coaching.
+              mental health therapy, and a passion for using mindfulness meditation to reform emotional behaviour, the ethos of DBT.
             </p>
           </div>
 
@@ -297,14 +322,14 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png"
                   alt="Dr. Christopher Carson"
-                  className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-auto max-h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
                 <img 
                   src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png"
                   alt="Dr. Christopher Carson"
-                  className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-auto max-h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </div>
@@ -414,7 +439,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to RECODE Your Life?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to RECODE?</h2>
           <p className="text-xl mb-8 opacity-90">
             Start your journey with a personalized consultation and discover how mental software engineering can transform your reality.
           </p>
