@@ -135,7 +135,7 @@ const Index = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Evidence-based therapy that treats anxiety, depression, and procrastination like outdated code. 
-              Delivered by Dr. Christopher Carson using proven CBT methodologies.
+              Using proven CBT methodologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button size="lg" className="text-lg px-8 py-3">
@@ -308,10 +308,10 @@ const Index = () => {
       <section className="py-20 px-4 bg-secondary/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Meet Dr. Christopher Carson</h2>
+            <h2 className="text-4xl font-bold mb-4">Meet Dr. Christopher Carson BSc MBBS MRCGP ProfDipCBT</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A practicing General Practitioner with extensive qualifications in medicine, 
-              mental health therapy, and a passion for using mindfulness meditation to reform emotional behaviour, the ethos of DBT.
+              mental health therapy, and a passion for using mindfulness meditation to reform emotional behaviour, making use of methods in dialectical behavioural therapy.
             </p>
           </div>
 
@@ -400,7 +400,7 @@ const Index = () => {
 
               <div className="text-center pt-6">
                 <p className="text-lg text-muted-foreground italic">
-                  "Combining medical expertise with therapeutic innovation to help you unlock your potential."
+                  "Your mind is a biological computer that runs on automatic codes, these codes can be naive to the human brain or develop through our experiences, as they repeat the code strengthens, like learning an instrument. We can identify and re-write these codes using the same principles"
                 </p>
                 <p className="font-semibold mt-2">- Dr. Christopher Carson</p>
               </div>
