@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
+import VideoLogo from "@/components/VideoLogo";
 const Index = () => {
   const recodeSteps = [{
     step: "REVEAL",
@@ -144,7 +146,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-purple-600/40 to-blue-600/40 rounded-full blur-3xl scale-200 animate-gradient"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-orange-500/30 to-purple-600/30 rounded-full blur-2xl scale-150 animate-pulse-slow"></div>
-                <img src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" alt="RECODE Logo" className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl" style={{
+                <VideoLogo className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl" style={{
                 filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.3))'
               }} />
               </div>
@@ -162,12 +164,16 @@ const Index = () => {
               Using a blend of techniques based on established CBT and DBT models.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button size="lg" className="text-lg px-8 py-3">
-                Start Your Transformation
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                Learn More
-              </Button>
+              <Link to="/auth">
+                <Button size="lg" className="text-lg px-8 py-3">
+                  Start Your Transformation
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+                  Learn More
+                </Button>
+              </Link>
             </div>
             
             {/* Credentials Banner */}
@@ -459,9 +465,11 @@ const Index = () => {
           <p className="text-xl mb-8 opacity-90">
             Start your journey with a personalized consultation and discover how mental software engineering can transform your reality.
           </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-            Book Your Session Today
-          </Button>
+          <Link to="/auth">
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+              Book Your Session Today
+            </Button>
+          </Link>
         </div>
       </section>
 
