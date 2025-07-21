@@ -2,21 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  ArrowLeft, 
-  GraduationCap, 
-  Stethoscope, 
-  Shield, 
-  Brain, 
-  Award,
-  Users,
-  Calendar,
-  Heart
-} from "lucide-react";
-
+import { ArrowLeft, GraduationCap, Stethoscope, Shield, Brain, Award, Users, Calendar, Heart } from "lucide-react";
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <div className="container mx-auto px-4 py-8">
         <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-4 w-4" />
@@ -27,20 +15,14 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">About Dr. Christopher Carson</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Pioneering mental software engineering through evidence-based therapy and medical expertise
-            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Pioneering mental health re-programming through a new hybrid of therapy, modelled on evidence-based therapies, and years of medical practice in mental health.</p>
           </div>
 
           {/* Hero Image and Intro */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div className="space-y-6">
               <Card className="p-6">
-                <img 
-                  src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
-                  alt="Dr. Christopher Carson" 
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
+                <img src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" alt="Dr. Christopher Carson" className="w-full h-auto rounded-lg shadow-lg" />
               </Card>
             </div>
             
@@ -62,7 +44,7 @@ const About = () => {
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     <Badge variant="secondary">Medical Doctor</Badge>
-                    <Badge variant="secondary">CBT Specialist</Badge>
+                    <Badge variant="secondary">CBT Acreditation</Badge>
                     <Badge variant="secondary">General Practitioner</Badge>
                     <Badge variant="secondary">Mental Health Expert</Badge>
                   </div>
@@ -217,9 +199,7 @@ const About = () => {
                       "Mental health patterns are like code - these codes can be pre-loaded in the human brain. 
                       With the right approach, we can update and optimize them for better outcomes."
                     </blockquote>
-                    <cite className="block text-center mt-2 text-sm text-muted-foreground">
-                      - Dr. Christopher Carson
-                    </cite>
+                    <cite className="block text-center mt-2 text-sm text-muted-foreground">- Dr. Christopher Carson BSc MBBS MRCGP ProfDip</cite>
                   </div>
                 </div>
               </div>
@@ -247,8 +227,6 @@ const About = () => {
           </Card>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
