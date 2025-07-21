@@ -305,7 +305,7 @@ const Index = () => {
                 <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-scale-down" />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="Dr. Christopher Carson" className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105" />
+                
               </div>
             </div>
 
