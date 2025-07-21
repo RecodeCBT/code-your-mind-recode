@@ -98,58 +98,11 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
-        {/* Background patterns - moved further from text content */}
-        <div className="absolute top-8 left-8 w-40 h-40 opacity-30">
-          <div className="w-full h-full bg-gradient-to-br from-orange-500 via-purple-600 to-blue-600 rounded-full blur-3xl animate-pulse-slow"></div>
-        </div>
-        <div className="absolute top-16 right-12 w-32 h-32 opacity-25">
-          <div className="w-full h-full bg-gradient-to-br from-blue-500 via-purple-600 to-orange-500 rounded-lg rotate-45 blur-2xl animate-float"></div>
-        </div>
-        <div className="absolute bottom-20 left-16 w-28 h-28 opacity-25">
-          <div className="w-full h-full bg-gradient-to-br from-purple-500 via-orange-600 to-blue-600 rounded-full blur-2xl animate-gradient"></div>
-        </div>
-        <div className="absolute bottom-32 right-8 w-36 h-36 opacity-30">
-          <div className="w-full h-full bg-gradient-to-br from-blue-600 via-orange-500 to-purple-600 rounded-lg rotate-12 blur-3xl animate-pulse-slow"></div>
-        </div>
-        
-        {/* Neural pathway animations leading to logo */}
-        <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-orange-500/40 rounded-full animate-pulse-slow"></div>
-            <div className="w-8 h-0.5 bg-gradient-to-r from-orange-500/40 to-purple-600/40 animate-gradient"></div>
-            <div className="w-2 h-2 bg-purple-600/40 rounded-full animate-float"></div>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600/40 to-blue-600/40 animate-gradient delay-300"></div>
-            <div className="w-2 h-2 bg-blue-600/40 rounded-full animate-pulse-slow delay-500"></div>
-          </div>
-        </div>
-        
-        <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2">
-          <div className="flex items-center space-x-2 flex-row-reverse">
-            <div className="w-3 h-3 bg-blue-600/40 rounded-full animate-pulse-slow"></div>
-            <div className="w-8 h-0.5 bg-gradient-to-l from-blue-600/40 to-orange-500/40 animate-gradient"></div>
-            <div className="w-2 h-2 bg-orange-500/40 rounded-full animate-float"></div>
-            <div className="w-12 h-0.5 bg-gradient-to-l from-orange-500/40 to-purple-600/40 animate-gradient delay-300"></div>
-            <div className="w-2 h-2 bg-purple-600/40 rounded-full animate-pulse-slow delay-500"></div>
-          </div>
-        </div>
-        
-        {/* Additional scattered neural elements */}
-        <div className="absolute top-1/3 left-1/3 w-6 h-6 bg-orange-500/30 rounded-full blur-sm animate-float"></div>
-        <div className="absolute top-1/2 right-1/3 w-4 h-4 bg-purple-600/35 rounded-full blur-sm animate-pulse-slow"></div>
-        <div className="absolute bottom-1/3 left-1/2 w-8 h-8 bg-blue-600/30 rounded-full blur-sm animate-gradient"></div>
-        <div className="absolute top-2/3 right-1/4 w-5 h-5 bg-orange-500/35 rounded-full blur-sm animate-float"></div>
-        
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            <div className="flex justify-center mb-8 relative">
-              {/* Enhanced logo with better blending and neural network effect */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/40 via-purple-600/40 to-blue-600/40 rounded-full blur-3xl scale-200 animate-gradient"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-orange-500/30 to-purple-600/30 rounded-full blur-2xl scale-150 animate-pulse-slow"></div>
-                <VideoLogo className="h-32 w-auto animate-float relative z-10 drop-shadow-2xl" style={{
-                filter: 'drop-shadow(0 0 30px rgba(249, 115, 22, 0.4)) drop-shadow(0 0 60px rgba(147, 51, 234, 0.3))'
-              }} />
-              </div>
+            {/* Central Video Logo */}
+            <div className="flex justify-center mb-8">
+              <VideoLogo className="h-32 w-auto" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
