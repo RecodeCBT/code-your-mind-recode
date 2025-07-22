@@ -98,6 +98,8 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
+        <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
+        <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
             {/* Central Video Logo */}
@@ -292,94 +294,112 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Meet Dr. Christopher Carson BSc MBBS MRCGP ProfDipCBT</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A practicing General Practitioner with extensive qualifications in medicine, 
-              mental health therapy, and a passion for using mindfulness meditation to reform emotional behaviour, making use of methods in dialectical behavioural therapy.
-            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photos Section - Restored to original uncropped state */}
-            <div className="space-y-6">
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            {/* Photos Section - Small professional photos on left */}
+            <div className="space-y-4">
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-scale-down" />
+                <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-cover" />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                
+                <img src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" alt="Dr. Christopher Carson Professional" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-cover" />
               </div>
             </div>
 
-            {/* Credentials Section */}
-            <div className="space-y-8">
+            {/* Main Content Section */}
+            <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <GraduationCap className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">BSc - Biomedical Sciences</h3>
-                      <p className="text-muted-foreground">Comprehensive foundation in human biology, physiology, and medical science</p>
-                    </div>
-                  </div>
-                </Card>
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Dr. Christopher Carson developed RECODE in response to significant inefficiencies he observed in public mental health services during his work as a General Practitioner. Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress.
+                  </p>
+                  
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Drawing from his extensive medical training and specialized CBT qualifications, Dr. Carson created RECODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized.
+                  </p>
 
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Stethoscope className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">MBBS in Medicine</h3>
-                      <p className="text-muted-foreground">Medical degree qualifying as a licensed doctor</p>
-                    </div>
-                  </div>
-                </Card>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Through his dual expertise as both a practicing medical doctor and certified Level 3 Personal Trainer, Dr. Carson emphasizes the critical importance of "the basics" in holistic mental health. His experience has shown that anything affecting your energy levels directly impacts your psychological wellbeing, including exercise habits, sleep hygiene, nutritional choices, and hydration levels.
+                  </p>
 
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Shield className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">MRCGP</h3>
-                      <p className="text-muted-foreground">Specialist training in general practice and primary care</p>
-                    </div>
-                  </div>
-                </Card>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    This comprehensive understanding allows him to address mental health from both neurochemical and lifestyle perspectives, ensuring that therapy is supported by optimal physical foundations for lasting psychological change.
+                  </p>
+                </div>
 
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Brain className="h-6 w-6 text-primary" />
+                {/* Credentials Cards */}
+                <div className="grid md:grid-cols-2 gap-4 mt-8">
+                  <Card className="p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <GraduationCap className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base mb-1">BSc Biomedical Sciences</h3>
+                        <p className="text-sm text-muted-foreground">Foundation in human biology and medical science</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Post Graduate Professional Diploma in CBT</h3>
-                      <p className="text-muted-foreground">Advanced qualification in Cognitive Behavioural Therapy</p>
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
 
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Award className="h-6 w-6 text-primary" />
+                  <Card className="p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Stethoscope className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base mb-1">MBBS Medicine</h3>
+                        <p className="text-sm text-muted-foreground">Licensed medical doctor qualification</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Level 3 Personal Training Qualification</h3>
-                      <p className="text-muted-foreground">Certified fitness and performance coaching expertise</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+                  </Card>
 
-              <div className="text-center pt-6">
-                <p className="text-lg text-muted-foreground italic">
-                  "Your mind is a biological computer that runs on automatic codes, these codes can be pre-loaded in the human brain or develop through our experiences, as they repeat the code strengthens, like learning an instrument. We can identify and re-write these codes using the same principles"
-                </p>
-                <p className="font-semibold mt-2">- Dr. Christopher Carson</p>
+                  <Card className="p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Shield className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base mb-1">MRCGP</h3>
+                        <p className="text-sm text-muted-foreground">General practice specialist training</p>
+                      </div>
+                    </div>
+                  </Card>
+
+                  <Card className="p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Brain className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base mb-1">ProfDipCBT</h3>
+                        <p className="text-sm text-muted-foreground">Professional Diploma in CBT</p>
+                      </div>
+                    </div>
+                  </Card>
+
+                  <Card className="p-4 md:col-span-2">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Award className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base mb-1">Level 3 Personal Training</h3>
+                        <p className="text-sm text-muted-foreground">Certified fitness and holistic health expertise</p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Centered Quote */}
+          <div className="text-center pt-12 max-w-4xl mx-auto">
+            <p className="text-xl text-muted-foreground italic leading-relaxed">
+              "Your mind is a biological computer that runs on automatic codes, these codes can be pre-loaded in the human brain or develop through our experiences, as they repeat the code strengthens, like learning an instrument. We can identify and re-write these codes using the same principles"
+            </p>
+            <p className="font-semibold mt-4 text-lg">- Dr. Christopher Carson</p>
           </div>
         </div>
       </section>
