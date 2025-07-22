@@ -102,9 +102,9 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            {/* Central Video Logo */}
+            {/* Central Video Logo - 50% smaller */}
             <div className="flex justify-center mb-8">
-              <VideoLogo className="h-32 w-auto" />
+              <VideoLogo className="h-16 w-auto" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -119,12 +119,12 @@ const Index = () => {
               Using a blend of techniques based on established CBT and DBT models.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link to="/auth">
+              <Link to="/contact">
                 <Button size="lg" className="text-lg px-8 py-3">
                   Start Your Transformation
                 </Button>
               </Link>
-              <Link to="/about">
+              <Link to="/dr-carson">
                 <Button variant="outline" size="lg" className="text-lg px-8 py-3">
                   Learn More
                 </Button>
@@ -165,20 +165,32 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {conditions.map((condition, index) => <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="relative h-48 overflow-hidden">
-                  <img src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`} alt={condition.title} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <h3 className="text-white font-bold text-xl">{condition.title}</h3>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <CardDescription className="text-base">
-                    {condition.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>)}
+            {conditions.map((condition, index) => {
+              const conditionLinks = [
+                "/conditions/anxiety-panic",
+                "/conditions/depression-mood", 
+                "/conditions/procrastination",
+                "/conditions/anger-emotional"
+              ];
+              return (
+                <Link key={index} to={conditionLinks[index]}>
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div className="relative h-48 overflow-hidden">
+                      <img src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`} alt={condition.title} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4">
+                        <h3 className="text-white font-bold text-xl">{condition.title}</h3>
+                      </div>
+                    </div>
+                    <CardContent className="p-6">
+                      <CardDescription className="text-base">
+                        {condition.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

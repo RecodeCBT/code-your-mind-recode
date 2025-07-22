@@ -9,6 +9,12 @@ import Auth from "./pages/Auth";
 import Account from "./pages/Account";
 import Booking from "./pages/Booking";
 import About from "./pages/About";
+import DrCarsonBackground from "./pages/DrCarsonBackground";
+import Contact from "./pages/Contact";
+import AnxietyPanic from "./pages/conditions/AnxietyPanic";
+import DepressionMood from "./pages/conditions/DepressionMood";
+import ProcrastinationAvoidance from "./pages/conditions/ProcrastinationAvoidance";
+import AngerEmotional from "./pages/conditions/AngerEmotional";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +30,12 @@ const App = () => (
           <Route path="/account" element={<Account />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/about" element={<About />} />
+          <Route path="/dr-carson" element={<DrCarsonBackground />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/conditions/anxiety-panic" element={<AnxietyPanic />} />
+          <Route path="/conditions/depression-mood" element={<DepressionMood />} />
+          <Route path="/conditions/procrastination" element={<ProcrastinationAvoidance />} />
+          <Route path="/conditions/anger-emotional" element={<AngerEmotional />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
