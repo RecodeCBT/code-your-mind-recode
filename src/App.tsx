@@ -15,6 +15,7 @@ import AnxietyPanic from "./pages/conditions/AnxietyPanic";
 import DepressionMood from "./pages/conditions/DepressionMood";
 import ProcrastinationAvoidance from "./pages/conditions/ProcrastinationAvoidance";
 import AngerEmotional from "./pages/conditions/AngerEmotional";
+import WhatIsRecode from "./pages/WhatIsRecode";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/dr-carson" element={<DrCarsonBackground />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/what-is-recode" element={<WhatIsRecode />} />
           <Route path="/conditions/anxiety-panic" element={<AnxietyPanic />} />
           <Route path="/conditions/depression-mood" element={<DepressionMood />} />
           <Route path="/conditions/procrastination" element={<ProcrastinationAvoidance />} />
