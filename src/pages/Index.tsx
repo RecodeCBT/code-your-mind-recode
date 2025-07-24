@@ -104,9 +104,9 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            {/* Central Video Logo - 50% smaller */}
+            {/* Small RECODE Logo at top */}
             <div className="flex justify-center mb-8">
-              <VideoLogo className="h-16 w-auto" />
+              <VideoLogo className="h-8 w-auto" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -296,148 +296,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dr. Christopher Carson Credentials Section */}
-      <section className="py-20 px-4 bg-secondary/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Meet Dr. Christopher Carson BSc MBBS MRCGP ProfDipCBT</h2>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
-            {/* Photos Section - Small professional photos on left */}
-            <div className="space-y-4">
-              <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-cover" />
-              </div>
-              <div className="relative overflow-hidden rounded-lg shadow-lg">
-                
-              </div>
-            </div>
-
-            {/* Main Content Section */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="space-y-6">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Dr. Christopher Carson developed RECODE in response to significant inefficiencies he observed in public mental health services during his work as a General Practitioner. Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress.
-                  </p>
-                  
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Drawing from his extensive medical training and specialized CBT qualifications, Dr. Carson created RECODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized.
-                  </p>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Through his dual expertise as both a practicing medical doctor and certified Level 3 Personal Trainer, Dr. Carson emphasizes the critical importance of "the basics" in holistic mental health. His experience has shown that anything affecting your energy levels directly impacts your psychological wellbeing, including exercise habits, sleep hygiene, nutritional choices, and hydration levels.
-                  </p>
-
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    This comprehensive understanding allows him to address mental health from both neurochemical and lifestyle perspectives, ensuring that therapy is supported by optimal physical foundations for lasting psychological change.
-                  </p>
-                </div>
-
-                {/* Credentials Cards */}
-                <div className="grid md:grid-cols-2 gap-4 mt-8">
-                  <Card className="p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <GraduationCap className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-base mb-1">BSc Biomedical Sciences</h3>
-                        <p className="text-sm text-muted-foreground">Foundation in human biology and medical science</p>
-                      </div>
-                    </div>
-                  </Card>
-
-                  <Card className="p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Stethoscope className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-base mb-1">MBBS Medicine</h3>
-                        <p className="text-sm text-muted-foreground">Licensed medical doctor qualification</p>
-                      </div>
-                    </div>
-                  </Card>
-
-                  <Card className="p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Shield className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-base mb-1">MRCGP</h3>
-                        <p className="text-sm text-muted-foreground">General practice specialist training</p>
-                      </div>
-                    </div>
-                  </Card>
-
-                  <Card className="p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Brain className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-base mb-1">ProfDipCBT</h3>
-                        <p className="text-sm text-muted-foreground">Professional Diploma in CBT</p>
-                      </div>
-                    </div>
-                  </Card>
-
-                  <Card className="p-4 md:col-span-2">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Award className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-base mb-1">Level 3 Personal Training</h3>
-                        <p className="text-sm text-muted-foreground">Certified fitness and holistic health expertise</p>
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Centered Quote */}
-          <div className="text-center pt-12 max-w-4xl mx-auto">
-            <p className="text-xl text-muted-foreground italic leading-relaxed">
-              "Your mind is a biological computer that runs on automatic codes, these codes can be pre-loaded in the human brain or develop through our experiences, as they repeat the code strengthens, like learning an instrument. We can identify and re-write these codes using the same principles"
-            </p>
-            <p className="font-semibold mt-4 text-lg">- Dr. Christopher Carson</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy Statement */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-8">The RECODE Philosophy</h2>
-          <div className="space-y-6 text-lg text-muted-foreground">
-            <p>
-              We believe mental health tools should be <span className="font-semibold text-foreground">practical, intelligent, and accessible</span>. 
-              We don't pathologise—we empower. We don't mystify—we simplify.
-            </p>
-            <p>
-              And most importantly, we don't just help people "cope"—we help them 
-              <span className="font-semibold text-foreground"> reprogram the way they experience and respond to life</span>.
-            </p>
-            <p>
-              Whether you're battling burnout, perfectionism, emotional volatility or just want to 
-              optimise your mindset, RECODE gives you the skills and science to do it.
-            </p>
-          </div>
-          <div className="mt-12 p-8 bg-primary/5 rounded-lg border">
-            <h3 className="text-2xl font-bold mb-4">RECODE</h3>
-            <p className="text-xl font-medium">
-              It's not about fixing you. It's about upgrading you.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
@@ -445,7 +303,7 @@ const Index = () => {
           <p className="text-xl mb-8 opacity-90">
             Start your journey with a personalized consultation and discover how mental software engineering can transform your reality.
           </p>
-          <Link to="/auth">
+          <Link to="/contact">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
               Book Your Session Today
             </Button>

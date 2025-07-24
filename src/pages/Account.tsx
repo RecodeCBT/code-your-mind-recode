@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 
 const Account = () => {
+  const navigate = useNavigate();
+  
   // Mock user data - replace with real data from authentication
   const user = {
     name: "John Doe",
@@ -25,6 +27,16 @@ const Account = () => {
     nextSession: "Tomorrow at 2:00 PM"
   };
 
+  const handleLogout = () => {
+    // Add logout logic here (clear tokens, etc.)
+    navigate('/auth');
+  };
+
+  const handleSettings = () => {
+    // Navigate to settings or show settings modal
+    alert('Settings functionality coming soon!');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <div className="container mx-auto px-4 py-8">
@@ -32,11 +44,11 @@ const Account = () => {
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">My Account</h1>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" onClick={handleSettings}>
               <Settings className="h-4 w-4 mr-2" />
               Settings
             </Button>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" onClick={handleLogout}>
               <LogOut className="h-4 w-4 mr-2" />
               Logout
             </Button>
