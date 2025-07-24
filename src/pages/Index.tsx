@@ -168,14 +168,8 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {conditions.map((condition, index) => {
-              const conditionLinks = [
-                "/conditions/anxiety-panic",
-                "/conditions/depression-mood", 
-                "/conditions/procrastination",
-                "/conditions/anger-emotional"
-              ];
-              return (
-                <Link key={index} to={conditionLinks[index]}>
+            const conditionLinks = ["/conditions/anxiety-panic", "/conditions/depression-mood", "/conditions/procrastination", "/conditions/anger-emotional"];
+            return <Link key={index} to={conditionLinks[index]}>
                   <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                     <div className="relative h-48 overflow-hidden">
                       <img src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`} alt={condition.title} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
@@ -190,9 +184,8 @@ const Index = () => {
                       </CardDescription>
                     </CardContent>
                   </Card>
-                </Link>
-              );
-            })}
+                </Link>;
+          })}
           </div>
         </div>
       </section>
@@ -317,7 +310,7 @@ const Index = () => {
                 <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-cover" />
               </div>
               <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" alt="Dr. Christopher Carson Professional" className="w-full h-auto transition-transform duration-300 hover:scale-105 object-cover" />
+                
               </div>
             </div>
 
