@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Brain, Zap, Shield, AlertTriangle, CheckCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { ArrowLeft, Brain, Zap, Shield, AlertTriangle, CheckCircle, CreditCard, Flame } from "lucide-react";
+import angerVolcanoImage from "@/assets/anger-volcano.jpg";
 
 const AngerEmotional = () => {
   return (
@@ -21,13 +25,16 @@ const AngerEmotional = () => {
             </p>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image - Volcano Analogy */}
           <div className="mb-12">
             <img 
-              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&h=400" 
-              alt="Anger and Emotional Dysregulation" 
+              src={angerVolcanoImage} 
+              alt="Volcano transforming to calm water representing anger management" 
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
+            <p className="text-center text-sm text-muted-foreground mt-2 italic">
+              Anger is like a volcano - explosive emotions that can be channeled into calm, flowing responses
+            </p>
           </div>
 
           {/* Background Psychology */}
@@ -272,24 +279,102 @@ const AngerEmotional = () => {
             </CardContent>
           </Card>
 
-          {/* Call to Action */}
-          <Card className="p-8 text-center bg-primary text-primary-foreground">
-            <h2 className="text-2xl font-bold mb-4">Ready to Master Your Emotions?</h2>
-            <p className="text-lg mb-6 opacity-90">
-              Transform your relationship with anger and develop healthy emotional responses with RECODE
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                  Start Your Transformation
-                </Button>
-              </Link>
-              <Link to="/booking">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-3 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Book a Session
-                </Button>
-              </Link>
-            </div>
+          {/* Booking Form */}
+          <Card className="p-8 mb-8">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center mb-4">Book Your Anger Management Session</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Contact Form */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Session Information</h3>
+                  <form className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="firstName">First Name</Label>
+                        <Input id="firstName" placeholder="John" />
+                      </div>
+                      <div>
+                        <Label htmlFor="lastName">Last Name</Label>
+                        <Input id="lastName" placeholder="Doe" />
+                      </div>
+                    </div>
+                    <div>
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" type="email" placeholder="john@example.com" />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone">Phone Number</Label>
+                      <Input id="phone" type="tel" placeholder="+44 123 456 7890" />
+                    </div>
+                    <div>
+                      <Label htmlFor="angerLevel">How would you rate your anger intensity? (1-10)</Label>
+                      <Input id="angerLevel" type="number" min="1" max="10" placeholder="7" />
+                    </div>
+                    <div>
+                      <Label htmlFor="message">Tell us about your anger triggers and patterns</Label>
+                      <Textarea 
+                        id="message" 
+                        placeholder="Describe what typically triggers your anger, how you respond, and any relationship impacts..."
+                        rows={4}
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Replace this form with your FormSpree action URL when ready.
+                    </p>
+                  </form>
+                </div>
+
+                {/* Payment Section */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Session Details & Payment</h3>
+                  <div className="bg-muted/50 p-6 rounded-lg space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span>Anger Management Session</span>
+                      <span className="font-bold">£219</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm text-muted-foreground">
+                      <span>Duration</span>
+                      <span>90 minutes</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm text-muted-foreground">
+                      <span>Includes</span>
+                      <span>Emotion regulation toolkit</span>
+                    </div>
+                    <div className="border-t pt-4">
+                      <div className="flex justify-between items-center font-bold text-lg">
+                        <span>Total</span>
+                        <span>£219</span>
+                      </div>
+                    </div>
+                    
+                    <Button className="w-full" size="lg">
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Pay with Stripe
+                    </Button>
+                    
+                    <p className="text-xs text-muted-foreground text-center">
+                      Secure payment processing by Stripe. You'll be redirected to complete your booking.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Flame className="h-4 w-4 text-red-500" />
+                      What to Expect
+                    </h4>
+                    <ul className="text-sm space-y-1 text-muted-foreground">
+                      <li>• Comprehensive anger assessment</li>
+                      <li>• Personalized trigger management plan</li>
+                      <li>• Emotion regulation techniques</li>
+                      <li>• Communication and boundary skills</li>
+                      <li>• Stress management and prevention tools</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
           </Card>
         </div>
       </div>

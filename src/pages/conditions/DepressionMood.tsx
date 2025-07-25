@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Brain, Cloud, RefreshCw, AlertTriangle, CheckCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { ArrowLeft, Brain, Cloud, RefreshCw, AlertTriangle, CheckCircle, CreditCard, Sun } from "lucide-react";
+import depressionCloudImage from "@/assets/depression-cloud.jpg";
 
 const DepressionMood = () => {
   return (
@@ -21,13 +25,16 @@ const DepressionMood = () => {
             </p>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image - Storm to Sunshine Analogy */}
           <div className="mb-12">
             <img 
-              src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=1200&h=400" 
-              alt="Depression and Low Mood" 
+              src={depressionCloudImage} 
+              alt="Storm clouds clearing to reveal sunshine representing depression recovery" 
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
+            <p className="text-center text-sm text-muted-foreground mt-2 italic">
+              Depression is like storm clouds blocking the sun - RECODE helps clear the mental weather patterns
+            </p>
           </div>
 
           {/* Background Psychology */}
@@ -236,24 +243,102 @@ const DepressionMood = () => {
             </CardContent>
           </Card>
 
-          {/* Call to Action */}
-          <Card className="p-8 text-center bg-primary text-primary-foreground">
-            <h2 className="text-2xl font-bold mb-4">Ready to Break Free from Depression?</h2>
-            <p className="text-lg mb-6 opacity-90">
-              Start your journey towards renewed energy and purpose with RECODE
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                  Start Your Transformation
-                </Button>
-              </Link>
-              <Link to="/booking">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-3 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Book a Session
-                </Button>
-              </Link>
-            </div>
+          {/* Booking Form */}
+          <Card className="p-8 mb-8">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center mb-4">Book Your Depression & Mood Session</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Contact Form */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Session Information</h3>
+                  <form className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="firstName">First Name</Label>
+                        <Input id="firstName" placeholder="John" />
+                      </div>
+                      <div>
+                        <Label htmlFor="lastName">Last Name</Label>
+                        <Input id="lastName" placeholder="Doe" />
+                      </div>
+                    </div>
+                    <div>
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" type="email" placeholder="john@example.com" />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone">Phone Number</Label>
+                      <Input id="phone" type="tel" placeholder="+44 123 456 7890" />
+                    </div>
+                    <div>
+                      <Label htmlFor="duration">How long have you been experiencing low mood? (weeks/months)</Label>
+                      <Input id="duration" placeholder="6 months" />
+                    </div>
+                    <div>
+                      <Label htmlFor="message">Tell us about your current mood and energy levels</Label>
+                      <Textarea 
+                        id="message" 
+                        placeholder="Describe your daily mood patterns, energy levels, motivation challenges, etc."
+                        rows={4}
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Replace this form with your FormSpree action URL when ready.
+                    </p>
+                  </form>
+                </div>
+
+                {/* Payment Section */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Session Details & Payment</h3>
+                  <div className="bg-muted/50 p-6 rounded-lg space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span>Depression & Mood Session</span>
+                      <span className="font-bold">£249</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm text-muted-foreground">
+                      <span>Duration</span>
+                      <span>90 minutes</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm text-muted-foreground">
+                      <span>Includes</span>
+                      <span>Mood tracking tools</span>
+                    </div>
+                    <div className="border-t pt-4">
+                      <div className="flex justify-between items-center font-bold text-lg">
+                        <span>Total</span>
+                        <span>£249</span>
+                      </div>
+                    </div>
+                    
+                    <Button className="w-full" size="lg">
+                      <CreditCard className="h-4 w-4 mr-2" />
+                      Pay with Stripe
+                    </Button>
+                    
+                    <p className="text-xs text-muted-foreground text-center">
+                      Secure payment processing by Stripe. You'll be redirected to complete your booking.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Sun className="h-4 w-4 text-yellow-500" />
+                      What to Expect
+                    </h4>
+                    <ul className="text-sm space-y-1 text-muted-foreground">
+                      <li>• Comprehensive mood assessment</li>
+                      <li>• Personalized RECODE plan</li>
+                      <li>• Cognitive restructuring techniques</li>
+                      <li>• Behavioral activation strategies</li>
+                      <li>• Mood tracking and monitoring tools</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
           </Card>
         </div>
       </div>
