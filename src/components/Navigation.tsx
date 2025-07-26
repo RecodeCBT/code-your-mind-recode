@@ -9,6 +9,7 @@ const Navigation = () => {
     { label: "Home", path: "/" },
     { label: "What is RECODE?", path: "/what-is-recode" },
     { label: "Learn about Dr Carson", path: "/dr-carson" },
+    { label: "Testimonials", path: "/testimonials" },
     { label: "Book a session", path: "/booking" }
   ];
 

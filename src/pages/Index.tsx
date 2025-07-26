@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User } from "lucide-react";
+import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare } from "lucide-react";
 import VideoLogo from "@/components/VideoLogo";
 import Navigation from "@/components/Navigation";
 const Index = () => {
@@ -82,19 +82,19 @@ const Index = () => {
   const conditions = [{
     title: "Anxiety & Panic",
     description: "Decode the fear algorithms that trigger anxiety responses and build new neural pathways for calm confidence.",
-    image: "photo-1581090464777-f3220bbe1b8b"
+    image: "photo-1526374965328-7f61d4dc18c5"
   }, {
     title: "Depression & Low Mood",
     description: "Rewrite negative thought loops and behavioral patterns that maintain depressive cycles.",
-    image: "photo-1470813740244-df37b8c1edcb"
+    image: "photo-1472396961693-142e6e269027"
   }, {
     title: "Procrastination & Avoidance",
     description: "Debug the mental scripts that cause task avoidance and implement productivity algorithms.",
-    image: "photo-1498050108023-c5249f4df085"
+    image: "photo-1488590528505-98d2b5aba04b"
   }, {
     title: "Anger & Emotional Dysregulation",
     description: "Master emotional triggers and develop healthy response patterns for intense feelings.",
-    image: "photo-1526374965328-7f61d4dc18c5"
+    image: "photo-1500375592092-40eb2168fd21"
   }];
   return <div className="min-h-screen bg-background">
       <Navigation />
@@ -106,7 +106,11 @@ const Index = () => {
           <div className="text-center space-y-6">
             {/* Small RECODE Logo at top */}
             <div className="flex justify-center mb-8">
-              <VideoLogo className="h-8 w-auto" />
+              <img 
+                src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" 
+                alt="RECODE Logo" 
+                className="h-16 w-auto"
+              />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -190,79 +194,62 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute top-20 left-20 w-16 h-16 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full blur-lg animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-20 h-20 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-lg rotate-12 blur-lg animate-pulse-slow"></div>
+      {/* RECODE Chat CBT Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-500/15 to-purple-600/15 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-20 h-20 bg-gradient-to-br from-purple-600/15 to-blue-600/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What is RECODE?</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Introducing RECODE Chat CBT</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              RECODE is not just therapy. It's mental software engineering for real life. 
-              We don't believe in simply managing symptoms—we help you decode and redesign 
-              the core algorithms that drive your thoughts, feelings and behaviours.
+              Your personal AI therapist trained on evidence-based CBT and DBT models. 
+              Get instant psychological support and behavioral analysis 24/7.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {approaches.map((approach, index) => {
-            const Icon = approach.icon;
-            return <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className={`p-2 ${approach.bgColor} rounded-lg`}>
-                        <Icon className={`h-5 w-5 ${approach.color}`} />
-                      </div>
-                      <CardTitle className="text-lg">{approach.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">
-                      {approach.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>;
-          })}
-          </div>
-        </div>
-      </section>
-
-      {/* RECODE Method Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-blue-600/5 to-orange-500/5 relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-600/15 to-orange-500/15 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-28 h-28 bg-gradient-to-br from-blue-600/15 to-purple-600/15 rounded-lg rotate-45 blur-2xl"></div>
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">How Does RECODE Work?</h2>
-            <p className="text-xl text-muted-foreground">
-              RECODE simplifies complex psychological insights into teachable, doable steps
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recodeSteps.map((step, index) => {
-            const Icon = step.icon;
-            return <div key={index} className="relative">
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-transparent hover:border-t-orange-500/50">
-                    <CardHeader className="text-center">
-                      <div className={`mx-auto mb-4 p-3 ${step.bgColor} rounded-full w-fit`}>
-                        <Icon className={`h-8 w-8 ${step.color}`} />
-                      </div>
-                      <CardTitle className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                        {index + 1}. {step.step}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base text-center">
-                        {step.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                  {index < recodeSteps.length - 1 && <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 transform -translate-y-1/2"></div>}
-                </div>;
-          })}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400" 
+                alt="AI Circuit Board representing RECODE Chat CBT technology"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-blue-500/10 rounded-lg">
+                  <MessageSquare className="h-6 w-6 text-blue-500" />
+                </div>
+                <div>
+                  <h3 className="font-bold">24/7 AI Therapist</h3>
+                  <p className="text-muted-foreground">Instant access to CBT and DBT techniques</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-purple-500/10 rounded-lg">
+                  <Brain className="h-6 w-6 text-purple-500" />
+                </div>
+                <div>
+                  <h3 className="font-bold">Real-time Analysis</h3>
+                  <p className="text-muted-foreground">Get immediate insights into thought patterns</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-green-500/10 rounded-lg">
+                  <Zap className="h-6 w-6 text-green-500" />
+                </div>
+                <div>
+                  <h3 className="font-bold">Personalized Interventions</h3>
+                  <p className="text-muted-foreground">Tailored techniques for your specific needs</p>
+                </div>
+              </div>
+              <Link to="/recode-chat">
+                <Button size="lg" className="w-full mt-6">
+                  Explore RECODE Chat CBT
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -296,16 +283,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Fresha Booking Section */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to RECODE?</h2>
+          <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
           <p className="text-xl mb-8 opacity-90">
-            Start your journey with a personalized consultation and discover how mental software engineering can transform your reality.
+            Schedule your personalized RECODE consultation through our secure booking system
           </p>
-          <Link to="/contact">
+          
+          {/* Fresha Booking Embed Placeholder */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
+            <p className="text-lg mb-4">Fresha Booking System</p>
+            <p className="text-sm opacity-75 mb-4">
+              Secure online booking system will be embedded here
+            </p>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-              Book Your Session Today
+              Book Now via Fresha
+            </Button>
+            <p className="text-xs opacity-60 mt-2">
+              Integration with Fresha booking service coming soon
+            </p>
+          </div>
+          
+          <p className="text-sm opacity-75">
+            Or explore our conditions and pricing on the booking page
+          </p>
+          <Link to="/booking">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-3 mt-4 text-primary border-white hover:bg-white hover:text-primary">
+              View All Services
             </Button>
           </Link>
         </div>
@@ -316,12 +321,25 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center text-sm text-muted-foreground">
             <p className="mb-2 font-medium">Important Disclaimer</p>
-            <p>
+            <p className="mb-4">
               RECODE represents a new therapeutic approach that integrates elements of CBT and DBT methodologies 
               within an innovative framework. While based on evidence-based practices, RECODE is not classical 
               CBT or DBT therapy. All sessions are conducted by a licensed medical doctor. This service is not 
               a substitute for emergency mental health care or crisis intervention.
             </p>
+            <p className="mb-4">
+              If you are thinking about hurting yourself please click here:
+            </p>
+            <a 
+              href="https://www.samaritans.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button variant="destructive" size="sm">
+                Get Crisis Support - Samaritans
+              </Button>
+            </a>
           </div>
         </div>
       </section>
