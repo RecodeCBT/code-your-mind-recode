@@ -106,24 +106,16 @@ const Index = () => {
           <div className="text-center space-y-6">
             {/* Small RECODE Logo at top */}
             <div className="flex justify-center mb-8">
-              <img 
-                src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" 
-                alt="RECODE Logo" 
-                className="h-16 w-auto"
-              />
+              <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="h-16 w-auto" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 RECODE
               </span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
-              Rewire Your Mind, Change Your Life
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Evidence-based therapy that treats anxiety, depression, and procrastination like outdated code. 
-              Using a blend of techniques based on established CBT and DBT models.
-            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">Your coding, can change</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Evidence-based therapy that treats anxiety, depression, and procrastination like errors in Mindcode. 
+This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Link to="/contact">
                 <Button size="lg" className="text-lg px-8 py-3">
@@ -210,11 +202,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400" 
-                alt="AI Circuit Board representing RECODE Chat CBT technology"
-                className="w-full rounded-lg shadow-lg"
-              />
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400" alt="AI Circuit Board representing RECODE Chat CBT technology" className="w-full rounded-lg shadow-lg" />
             </div>
             <div className="space-y-6">
               <div className="flex items-center gap-3">
@@ -271,7 +259,7 @@ const Index = () => {
               <Card className="p-6 text-center border-t-4 border-t-purple-600/50">
                 <Brain className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Accredited Diploma in CBT</h3>
-                <p className="text-muted-foreground">And therapy styles in the CBT model</p>
+                <p className="text-muted-foreground">Therapy styled using the CBT model, taking advantage of the brains natural neuroplastic abilities </p>
               </Card>
               <Card className="p-6 text-center border-t-4 border-t-blue-600/50">
                 <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -293,10 +281,8 @@ const Index = () => {
           
           {/* Fresha Booking Embed Placeholder */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
-            <p className="text-lg mb-4">Fresha Booking System</p>
-            <p className="text-sm opacity-75 mb-4">
-              Secure online booking system will be embedded here
-            </p>
+            <p className="text-lg mb-4">Booking System</p>
+            <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
               Book Now via Fresha
             </Button>
@@ -327,15 +313,8 @@ const Index = () => {
               CBT or DBT therapy. All sessions are conducted by a licensed medical doctor. This service is not 
               a substitute for emergency mental health care or crisis intervention.
             </p>
-            <p className="mb-4">
-              If you are thinking about hurting yourself please click here:
-            </p>
-            <a 
-              href="https://www.samaritans.org" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
+            <p className="mb-4">If you are thinking about hurting yourself please click below:</p>
+            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-block">
               <Button variant="destructive" size="sm">
                 Get Crisis Support - Samaritans
               </Button>
