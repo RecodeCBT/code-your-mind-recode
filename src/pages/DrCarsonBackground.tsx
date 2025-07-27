@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, GraduationCap, Stethoscope, Brain, Award, Dumbbell, Heart, Activity } from "lucide-react";
 import Navigation from "@/components/Navigation";
-
 const DrCarsonBackground = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
       <div className="container mx-auto px-4 py-8">
         <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground">
@@ -29,18 +27,10 @@ const DrCarsonBackground = () => {
             <div className="grid lg:grid-cols-4 gap-8 items-center">
               <div className="lg:col-span-1 flex flex-col items-center space-y-4">
                 <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
-                  <img 
-                    src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" 
-                    alt="Dr. Christopher Carson" 
-                    className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" 
-                  />
+                  <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
                 <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
-                  <img 
-                    src="/lovable-uploads/28c2c6b5-4d5b-4410-975c-19cb580468dc.png" 
-                    alt="Dr. Christopher Carson Professional" 
-                    className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" 
-                  />
+                  
                 </div>
               </div>
               
@@ -82,11 +72,7 @@ const DrCarsonBackground = () => {
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
                   <div className="flex items-center gap-3">
-                    <img 
-                      src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" 
-                      alt="RECODE Logo" 
-                      className="w-8 h-8 object-contain" 
-                    />
+                    <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="RECODE Logo" className="w-8 h-8 object-contain" />
                     <span>The RECODE Approach</span>
                   </div>
                 </CardTitle>
@@ -177,7 +163,7 @@ const DrCarsonBackground = () => {
           <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20">
             <blockquote className="text-2xl italic mb-4">"Mental health patterns are like code - they can be pre-loaded in the human brain or they can develop. With the right approach, we can reveal this code, update and re-write them for better outcomes."</blockquote>
             <cite className="text-lg text-muted-foreground">
-              - Dr. Christopher Carson<br/>
+              - Dr. Christopher Carson<br />
               <span className="text-sm italic">BSc MBBS MRCGP ProfDipCBT</span>
             </cite>
           </Card>
@@ -192,8 +178,6 @@ const DrCarsonBackground = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default DrCarsonBackground;
