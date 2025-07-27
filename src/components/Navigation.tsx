@@ -17,16 +17,16 @@ const Navigation = () => {
 
   return (
     <nav className="w-full py-6 px-4 bg-background/95 backdrop-blur-sm border-b border-border/40">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex justify-center">
-          <div className="flex space-x-2 bg-secondary/10 rounded-full p-2 backdrop-blur-sm border border-border/20">
+      <div className="container mx-auto max-w-7xl">
+        <div className="flex justify-center overflow-x-auto">
+          <div className="flex space-x-1 sm:space-x-2 bg-secondary/10 rounded-full p-2 backdrop-blur-sm border border-border/20 min-w-max">
             {navItems.map((item) => (
               <Link key={item.path} to={item.path}>
                 <Button
                   variant={location.pathname === item.path ? "default" : "ghost"}
                   size="sm"
                   className={cn(
-                    "px-6 py-2 rounded-full transition-all duration-300 border border-transparent",
+                    "px-3 sm:px-6 py-2 rounded-full transition-all duration-300 border border-transparent text-xs sm:text-sm whitespace-nowrap",
                     location.pathname === item.path
                       ? "bg-primary text-primary-foreground shadow-md border-primary/20"
                       : "hover:bg-secondary/20 border-gradient-to-r from-orange-500/20 to-purple-600/20"

@@ -141,21 +141,6 @@ const Contact = () => {
               <Card className="p-6">
                 <CardHeader>
                   <CardTitle className="text-xl flex items-center gap-2">
-                    <Mail className="h-5 w-5 text-primary" />
-                    Email Address
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg font-semibold">info@recode-therapy.com</p>
-                  <p className="text-muted-foreground">
-                    We typically respond within 24 hours
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-6">
-                <CardHeader>
-                  <CardTitle className="text-xl flex items-center gap-2">
                     <Clock className="h-5 w-5 text-primary" />
                     Consultation Hours
                   </CardTitle>
@@ -163,16 +148,12 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span>Monday - Friday</span>
-                      <span>9:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday</span>
-                      <span>10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday</span>
+                      <span>Monday - Tuesday</span>
                       <span>Closed</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Wednesday - Sunday</span>
+                      <span>3:00 PM - 10:00 PM</span>
                     </div>
                   </div>
                 </CardContent>
@@ -215,10 +196,21 @@ const Contact = () => {
               <h3 className="text-lg font-semibold mb-2 text-orange-800 dark:text-orange-200">
                 Emergency Support
               </h3>
-              <p className="text-orange-700 dark:text-orange-300">
+              <p className="text-orange-700 dark:text-orange-300 mb-4">
                 If you're experiencing a mental health crisis, please contact your local emergency services 
                 or call the Samaritans on 116 123 (free from any phone).
               </p>
+              <p className="text-orange-700 dark:text-orange-300 mb-4">
+                If you are thinking about hurting yourself, please reach out for immediate support:
+              </p>
+              <a 
+                href="https://www.samaritans.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
+              >
+                Get Help Now - Samaritans
+              </a>
             </CardContent>
           </Card>
         </div>

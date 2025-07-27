@@ -108,40 +108,71 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            {/* Massive RECODE Logo with elaborate decorative waves */}
+            {/* Massive RECODE Logo with elaborate decorative code streams */}
             <div className="relative flex justify-center mb-16">
-              {/* Left side elaborate wave patterns */}
-              <div className="absolute left-[-200px] top-1/2 transform -translate-y-1/2 w-64 h-32">
-                <div className="absolute top-0 left-0 w-40 h-2 bg-gradient-to-r from-transparent via-orange-500/30 to-orange-500/50 rounded-full transform -rotate-12"></div>
-                <div className="absolute top-4 left-8 w-48 h-1 bg-gradient-to-r from-transparent via-purple-600/25 to-purple-600/40 rounded-full transform -rotate-6"></div>
-                <div className="absolute top-8 left-4 w-44 h-1.5 bg-gradient-to-r from-transparent via-blue-600/20 to-blue-600/35 rounded-full transform -rotate-3"></div>
-                <div className="absolute top-12 left-12 w-36 h-1 bg-gradient-to-r from-transparent via-orange-500/15 to-orange-500/25 rounded-full transform rotate-2"></div>
-                <div className="absolute top-16 left-6 w-42 h-1 bg-gradient-to-r from-transparent via-purple-600/10 to-purple-600/20 rounded-full transform rotate-6"></div>
-                <div className="absolute top-20 left-10 w-38 h-0.5 bg-gradient-to-r from-transparent via-blue-600/8 to-blue-600/15 rounded-full transform rotate-12"></div>
-                <div className="absolute top-24 left-2 w-32 h-0.5 bg-gradient-to-r from-transparent via-orange-500/5 to-orange-500/10 rounded-full transform rotate-18"></div>
+              {/* Elaborate Code Strings Flowing From Logo - Left Side */}
+              <div className="absolute left-[-300px] top-1/2 transform -translate-y-1/2 w-96 h-64 hidden lg:block">
+                {/* Main code streams */}
+                <div className="absolute top-0 left-0 w-56 h-3 bg-gradient-to-r from-transparent via-orange-500/40 to-orange-500/60 rounded-full transform -rotate-12 animate-pulse"></div>
+                <div className="absolute top-8 left-12 w-64 h-2 bg-gradient-to-r from-transparent via-purple-600/35 to-purple-600/50 rounded-full transform -rotate-6 animate-pulse delay-100"></div>
+                <div className="absolute top-16 left-6 w-52 h-2.5 bg-gradient-to-r from-transparent via-blue-600/30 to-blue-600/45 rounded-full transform -rotate-3 animate-pulse delay-200"></div>
+                <div className="absolute top-24 left-18 w-48 h-2 bg-gradient-to-r from-transparent via-orange-500/25 to-orange-500/40 rounded-full transform rotate-2 animate-pulse delay-300"></div>
+                <div className="absolute top-32 left-8 w-58 h-1.5 bg-gradient-to-r from-transparent via-purple-600/20 to-purple-600/35 rounded-full transform rotate-6 animate-pulse delay-150"></div>
+                <div className="absolute top-40 left-16 w-44 h-1 bg-gradient-to-r from-transparent via-blue-600/15 to-blue-600/25 rounded-full transform rotate-12 animate-pulse delay-250"></div>
+                <div className="absolute top-48 left-4 w-40 h-1 bg-gradient-to-r from-transparent via-orange-500/10 to-orange-500/20 rounded-full transform rotate-18 animate-pulse delay-350"></div>
+                
+                {/* Binary dots and particles */}
+                <div className="absolute top-12 left-24 w-2 h-2 bg-primary rounded-full animate-ping"></div>
+                <div className="absolute top-28 left-36 w-1.5 h-1.5 bg-secondary rounded-full animate-ping delay-100"></div>
+                <div className="absolute top-36 left-14 w-2 h-2 bg-primary/70 rounded-full animate-ping delay-200"></div>
+                <div className="absolute top-44 left-28 w-1 h-1 bg-secondary/70 rounded-full animate-ping delay-300"></div>
+                
+                {/* Code brackets and symbols */}
+                <div className="absolute top-6 left-32 text-2xl text-orange-500/30 font-mono animate-pulse">{'{'}</div>
+                <div className="absolute top-20 left-40 text-xl text-purple-600/30 font-mono animate-pulse delay-100">{'<'}</div>
+                <div className="absolute top-34 left-22 text-lg text-blue-600/30 font-mono animate-pulse delay-200">{'>'}</div>
+                <div className="absolute top-42 left-34 text-2xl text-orange-500/30 font-mono animate-pulse delay-300">{'}'}</div>
               </div>
               
-              {/* Right side elaborate wave patterns */}
-              <div className="absolute right-[-200px] top-1/2 transform -translate-y-1/2 w-64 h-32">
-                <div className="absolute top-0 right-0 w-40 h-2 bg-gradient-to-l from-transparent via-orange-500/30 to-orange-500/50 rounded-full transform rotate-12"></div>
-                <div className="absolute top-4 right-8 w-48 h-1 bg-gradient-to-l from-transparent via-purple-600/25 to-purple-600/40 rounded-full transform rotate-6"></div>
-                <div className="absolute top-8 right-4 w-44 h-1.5 bg-gradient-to-l from-transparent via-blue-600/20 to-blue-600/35 rounded-full transform rotate-3"></div>
-                <div className="absolute top-12 right-12 w-36 h-1 bg-gradient-to-l from-transparent via-orange-500/15 to-orange-500/25 rounded-full transform -rotate-2"></div>
-                <div className="absolute top-16 right-6 w-42 h-1 bg-gradient-to-l from-transparent via-purple-600/10 to-purple-600/20 rounded-full transform -rotate-6"></div>
-                <div className="absolute top-20 right-10 w-38 h-0.5 bg-gradient-to-l from-transparent via-blue-600/8 to-blue-600/15 rounded-full transform -rotate-12"></div>
-                <div className="absolute top-24 right-2 w-32 h-0.5 bg-gradient-to-l from-transparent via-orange-500/5 to-orange-500/10 rounded-full transform -rotate-18"></div>
+              {/* Elaborate Code Strings Flowing From Logo - Right Side */}
+              <div className="absolute right-[-300px] top-1/2 transform -translate-y-1/2 w-96 h-64 hidden lg:block">
+                {/* Main code streams */}
+                <div className="absolute top-0 right-0 w-56 h-3 bg-gradient-to-l from-transparent via-orange-500/40 to-orange-500/60 rounded-full transform rotate-12 animate-pulse"></div>
+                <div className="absolute top-8 right-12 w-64 h-2 bg-gradient-to-l from-transparent via-purple-600/35 to-purple-600/50 rounded-full transform rotate-6 animate-pulse delay-100"></div>
+                <div className="absolute top-16 right-6 w-52 h-2.5 bg-gradient-to-l from-transparent via-blue-600/30 to-blue-600/45 rounded-full transform rotate-3 animate-pulse delay-200"></div>
+                <div className="absolute top-24 right-18 w-48 h-2 bg-gradient-to-l from-transparent via-orange-500/25 to-orange-500/40 rounded-full transform -rotate-2 animate-pulse delay-300"></div>
+                <div className="absolute top-32 right-8 w-58 h-1.5 bg-gradient-to-l from-transparent via-purple-600/20 to-purple-600/35 rounded-full transform -rotate-6 animate-pulse delay-150"></div>
+                <div className="absolute top-40 right-16 w-44 h-1 bg-gradient-to-l from-transparent via-blue-600/15 to-blue-600/25 rounded-full transform -rotate-12 animate-pulse delay-250"></div>
+                <div className="absolute top-48 right-4 w-40 h-1 bg-gradient-to-l from-transparent via-orange-500/10 to-orange-500/20 rounded-full transform -rotate-18 animate-pulse delay-350"></div>
+                
+                {/* Binary dots and particles */}
+                <div className="absolute top-12 right-24 w-2 h-2 bg-primary rounded-full animate-ping"></div>
+                <div className="absolute top-28 right-36 w-1.5 h-1.5 bg-secondary rounded-full animate-ping delay-100"></div>
+                <div className="absolute top-36 right-14 w-2 h-2 bg-primary/70 rounded-full animate-ping delay-200"></div>
+                <div className="absolute top-44 right-28 w-1 h-1 bg-secondary/70 rounded-full animate-ping delay-300"></div>
+                
+                {/* Code brackets and symbols */}
+                <div className="absolute top-6 right-32 text-2xl text-orange-500/30 font-mono animate-pulse">{'}'}</div>
+                <div className="absolute top-20 right-40 text-xl text-purple-600/30 font-mono animate-pulse delay-100">{'>'}</div>
+                <div className="absolute top-34 right-22 text-lg text-blue-600/30 font-mono animate-pulse delay-200">{'<'}</div>
+                <div className="absolute top-42 right-34 text-2xl text-orange-500/30 font-mono animate-pulse delay-300">{'{'}</div>
               </div>
 
-              {/* Central logo with enhanced styling */}
-              <div className="relative bg-gradient-to-br from-orange-50/70 to-purple-50/70 dark:from-orange-950/30 dark:to-purple-950/30 rounded-[2rem] p-16 backdrop-blur-md border border-orange-200/30 dark:border-orange-700/30 shadow-2xl">
+              {/* Central logo with enhanced styling and 300% bigger size */}
+              <div className="relative bg-gradient-to-br from-orange-50/70 to-purple-50/70 dark:from-orange-950/30 dark:to-purple-950/30 rounded-[2rem] p-20 backdrop-blur-md border border-orange-200/30 dark:border-orange-700/30 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-purple-600/5 to-blue-600/5 rounded-[2rem]"></div>
-                <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="h-72 w-auto relative z-10" />
+                <img 
+                  src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" 
+                  alt="RECODE Logo" 
+                  className="h-96 w-auto relative z-10 object-contain max-w-none sm:h-72 md:h-80 lg:h-96" 
+                  style={{ backgroundColor: '#F5F5DC' }}
+                />
                 
                 {/* Additional decorative elements around logo */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-sm"></div>
-                <div className="absolute -top-2 -right-6 w-6 h-6 bg-gradient-to-br from-blue-600/20 to-orange-500/20 rounded-full blur-sm"></div>
-                <div className="absolute -bottom-3 -left-5 w-7 h-7 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full blur-sm"></div>
-                <div className="absolute -bottom-4 -right-3 w-5 h-5 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-sm"></div>
+                <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-sm animate-pulse"></div>
+                <div className="absolute -top-4 -right-8 w-8 h-8 bg-gradient-to-br from-blue-600/20 to-orange-500/20 rounded-full blur-sm animate-pulse delay-100"></div>
+                <div className="absolute -bottom-5 -left-7 w-10 h-10 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full blur-sm animate-pulse delay-200"></div>
+                <div className="absolute -bottom-6 -right-5 w-7 h-7 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-sm animate-pulse delay-300"></div>
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">Your coding, can change</h2>
