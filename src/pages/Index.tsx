@@ -104,9 +104,13 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            {/* Small RECODE Logo at top */}
-            <div className="flex justify-center mb-8">
-              <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="h-16 w-auto" />
+            {/* Large RECODE Logo at top with decorative elements */}
+            <div className="relative flex justify-center mb-12">
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-32 h-1 bg-gradient-to-r from-orange-500/20 via-purple-600/20 to-transparent rounded-full"></div>
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-32 h-1 bg-gradient-to-l from-orange-500/20 via-purple-600/20 to-transparent rounded-full"></div>
+              <div className="relative bg-gradient-to-br from-orange-50/50 to-purple-50/50 dark:from-orange-950/20 dark:to-purple-950/20 rounded-3xl p-8 backdrop-blur-sm">
+                <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="h-40 w-auto" />
+              </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -186,61 +190,6 @@ This code can be revealed and re-written using a combination of techniques based
         </div>
       </section>
 
-      {/* RECODE Chat CBT Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 relative overflow-hidden">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-500/15 to-purple-600/15 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-20 h-20 bg-gradient-to-br from-purple-600/15 to-blue-600/15 rounded-lg rotate-45 blur-xl"></div>
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Introducing RECODE Chat CBT</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Your personal AI therapist trained on evidence-based CBT and DBT models. 
-              Get instant psychological support and behavioral analysis 24/7.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400" alt="AI Circuit Board representing RECODE Chat CBT technology" className="w-full rounded-lg shadow-lg" />
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-500/10 rounded-lg">
-                  <MessageSquare className="h-6 w-6 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="font-bold">24/7 AI Therapist</h3>
-                  <p className="text-muted-foreground">Instant access to CBT and DBT techniques</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-purple-500/10 rounded-lg">
-                  <Brain className="h-6 w-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="font-bold">Real-time Analysis</h3>
-                  <p className="text-muted-foreground">Get immediate insights into thought patterns</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-500/10 rounded-lg">
-                  <Zap className="h-6 w-6 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="font-bold">Personalized Interventions</h3>
-                  <p className="text-muted-foreground">Tailored techniques for your specific needs</p>
-                </div>
-              </div>
-              <Link to="/recode-chat">
-                <Button size="lg" className="w-full mt-6">
-                  Explore RECODE Chat CBT
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Doctor Credentials Section */}
       <section className="py-20 px-4 relative overflow-hidden">
@@ -281,14 +230,13 @@ This code can be revealed and re-written using a combination of techniques based
           
           {/* Fresha Booking Embed Placeholder */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
-            <p className="text-lg mb-4">Booking System</p>
+            <p className="text-lg mb-4">Professional RECODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-              Book Now via Fresha
-            </Button>
-            <p className="text-xs opacity-60 mt-2">
-              Integration with Fresha booking service coming soon
-            </p>
+            <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
+                Book Your Session Now
+              </Button>
+            </a>
           </div>
           
           <p className="text-sm opacity-75">

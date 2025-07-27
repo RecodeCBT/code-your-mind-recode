@@ -15,8 +15,8 @@ const DrCarsonBackground = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="mb-4 text-2xl font-thin">Dr. Christopher Carson 
- BSc MBBS MRCGP ProfDipCBT</h1>
+            <h1 className="mb-2 text-4xl font-bold">Dr. Christopher Carson</h1>
+            <p className="text-sm italic text-muted-foreground mb-4">BSc MBBS MRCGP ProfDipCBT</p>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The journey from medical practice to creating RECODE - A revolutionary approach to mental health treatment
             </p>
@@ -127,8 +127,10 @@ Through structure and repetition the brain can re-write your codes, much like le
           {/* Quote Section */}
           <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10">
             <blockquote className="text-2xl italic mb-4">"Mental health patterns are like code - they can be pre-loaded in the human brain or they can develop. With the right approach, we can reveal this code, update and re-write them for better outcomes."</blockquote>
-            <cite className="text-lg text-muted-foreground">- Dr. Christopher Carson   
-BSc MBBS MRCGP ProfDipCBT</cite>
+            <cite className="text-lg text-muted-foreground">
+              - Dr. Christopher Carson<br/>
+              <span className="text-sm italic">BSc MBBS MRCGP ProfDipCBT</span>
+            </cite>
           </Card>
 
           {/* Call to Action */}
