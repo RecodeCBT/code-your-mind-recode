@@ -244,7 +244,15 @@ const DepressionMood = () => {
           </Card>
 
           {/* Booking Form */}
-          <Card className="p-8 mb-8">
+          <Card className="p-8 mb-8 relative">
+            <div className="absolute top-4 right-4">
+              <div className="bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-1">
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                10%+ OFF Applied
+              </div>
+            </div>
             <CardHeader>
               <CardTitle className="text-2xl text-center mb-4">Book Your Depression & Mood Session</CardTitle>
             </CardHeader>
