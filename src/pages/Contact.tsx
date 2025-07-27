@@ -2,38 +2,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch('https://formspree.io/f/manbqker', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-        form.reset();
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const [searchParams] = useSearchParams();
+  const submitted = searchParams.get('submitted') === 'true';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
@@ -62,25 +35,26 @@ const Contact = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                {isSubmitted ? (
+                {submitted ? (
                   <div className="text-center py-8">
                     <div className="mb-4 text-green-600 text-2xl">✓</div>
                     <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
                     <p className="text-muted-foreground">
                       Your enquiry has been sent. We'll reply within 1 working day.
                     </p>
-                    <Button 
-                      onClick={() => setIsSubmitted(false)}
-                      variant="outline" 
-                      className="mt-4"
-                    >
-                      Send Another Message
-                    </Button>
+                    <Link to="/contact">
+                      <Button variant="outline" className="mt-4">
+                        Send Another Message
+                      </Button>
+                    </Link>
                   </div>
                 ) : (
-                  <form method="POST" action="https://formspree.io/f/manbqker" onSubmit={handleSubmit} className="space-y-4">
+                  <form method="POST" action="https://formspree.io/f/manbqker" className="space-y-4">
                     {/* Anti-spam honeypot field */}
                     <input type="text" name="_gotcha" style={{ display: 'none' }} aria-hidden="true" />
+                    
+                    {/* Redirect after successful submission */}
+                    <input type="hidden" name="_next" value={`${window.location.origin}/contact?submitted=true`} />
                     
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -126,10 +100,9 @@ const Contact = () => {
                     
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-pink-600 text-white rounded py-2 px-4 hover:opacity-90 disabled:opacity-50 transition-opacity font-medium"
+                      className="w-full bg-pink-600 text-white rounded py-2 px-4 hover:opacity-90 transition-opacity font-medium"
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      Send Message
                     </button>
                   </form>
                 )}
