@@ -50,101 +50,19 @@ const Testimonials = () => {
           Back to Home
         </Link>
 
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Client Testimonials</h1>
-            <p className="text-xl text-muted-foreground">
-              Real experiences from clients who have transformed their lives with RECODE
-            </p>
-          </div>
-
-          {/* Top Testimonials */}
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <User className="h-8 w-8 text-primary" />
-                    <div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                      <CardDescription>{testimonial.condition}</CardDescription>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    {renderStars(testimonial.rating)}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <p className="text-sm text-muted-foreground">{testimonial.date}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Add Your Testimonial Section */}
-          <Card className="p-8">
-            <CardHeader>
-              <CardTitle className="text-2xl mb-4 text-center">Share Your Experience</CardTitle>
-              <CardDescription className="text-center text-lg">
-                Help others by sharing your RECODE journey
-              </CardDescription>
-            </CardHeader>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold mb-4">Testimonials</h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            This section is currently being updated
+          </p>
+          
+          <Card className="p-12">
             <CardContent>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input 
-                      id="name" 
-                      placeholder="Enter your name (or initials)"
-                      disabled
-                      className="bg-muted/50"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="condition">Condition Treated</Label>
-                    <Input 
-                      id="condition" 
-                      placeholder="e.g., Anxiety, Depression, Procrastination"
-                      disabled
-                      className="bg-muted/50"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="rating">Rating</Label>
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }, (_, i) => (
-                      <Star
-                        key={i}
-                        className="h-6 w-6 text-gray-300 cursor-not-allowed"
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="testimonial">Your Testimonial</Label>
-                  <Textarea 
-                    id="testimonial"
-                    placeholder="Share your experience with RECODE..."
-                    rows={6}
-                    disabled
-                    className="bg-muted/50"
-                  />
-                </div>
-                <div className="text-center">
-                  <Button disabled className="w-full md:w-auto">
-                    Submit Testimonial (Coming Soon)
-                  </Button>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Testimonial submission will be available soon via secure form
-                  </p>
-                </div>
-              </form>
+              <h2 className="text-2xl font-semibold mb-4">Coming Soon</h2>
+              <p className="text-muted-foreground text-lg">
+                We're working on bringing you authentic client testimonials and experiences. 
+                Please check back soon for updates.
+              </p>
             </CardContent>
           </Card>
         </div>
