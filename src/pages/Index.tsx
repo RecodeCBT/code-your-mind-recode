@@ -299,9 +299,8 @@ This code can be revealed and re-written using a combination of techniques based
             <p className="text-lg mb-4">Professional RECODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none shadow-2xl hover:shadow-3xl ring-4 ring-yellow-400/50 hover:ring-yellow-400/80 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-black font-bold relative overflow-hidden group">
-                <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
-                <span className="relative z-10">🚀 Book Your Session Now</span>
+              <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
+                Book Your Session Now
               </Button>
             </a>
           </div>
