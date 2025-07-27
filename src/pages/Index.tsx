@@ -4,6 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare } from "lucide-react";
 import VideoLogo from "@/components/VideoLogo";
 import Navigation from "@/components/Navigation";
+import anxietyImage from "@/assets/anxiety-brain.jpg";
+import depressionImage from "@/assets/depression-cloud.jpg";
+import procrastinationImage from "@/assets/procrastination-clock.jpg";
+import angerImage from "@/assets/anger-volcano.jpg";
 const Index = () => {
   const recodeSteps = [{
     step: "REVEAL",
@@ -82,19 +86,19 @@ const Index = () => {
   const conditions = [{
     title: "Anxiety & Panic",
     description: "Decode the fear algorithms that trigger anxiety responses and build new neural pathways for calm confidence.",
-    image: "photo-1526374965328-7f61d4dc18c5"
+    image: anxietyImage
   }, {
     title: "Depression & Low Mood",
     description: "Rewrite negative thought loops and behavioral patterns that maintain depressive cycles.",
-    image: "photo-1472396961693-142e6e269027"
+    image: depressionImage
   }, {
     title: "Procrastination & Avoidance",
     description: "Debug the mental scripts that cause task avoidance and implement productivity algorithms.",
-    image: "photo-1488590528505-98d2b5aba04b"
+    image: procrastinationImage
   }, {
     title: "Anger & Emotional Dysregulation",
     description: "Master emotional triggers and develop healthy response patterns for intense feelings.",
-    image: "photo-1500375592092-40eb2168fd21"
+    image: angerImage
   }];
   return <div className="min-h-screen bg-background">
       <Navigation />
@@ -104,19 +108,42 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            {/* Large RECODE Logo at top with decorative elements */}
-            <div className="relative flex justify-center mb-12">
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-32 h-1 bg-gradient-to-r from-orange-500/20 via-purple-600/20 to-transparent rounded-full"></div>
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-32 h-1 bg-gradient-to-l from-orange-500/20 via-purple-600/20 to-transparent rounded-full"></div>
-              <div className="relative bg-gradient-to-br from-orange-50/50 to-purple-50/50 dark:from-orange-950/20 dark:to-purple-950/20 rounded-3xl p-8 backdrop-blur-sm">
-                <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="h-40 w-auto" />
+            {/* Massive RECODE Logo with elaborate decorative waves */}
+            <div className="relative flex justify-center mb-16">
+              {/* Left side elaborate wave patterns */}
+              <div className="absolute left-[-200px] top-1/2 transform -translate-y-1/2 w-64 h-32">
+                <div className="absolute top-0 left-0 w-40 h-2 bg-gradient-to-r from-transparent via-orange-500/30 to-orange-500/50 rounded-full transform -rotate-12"></div>
+                <div className="absolute top-4 left-8 w-48 h-1 bg-gradient-to-r from-transparent via-purple-600/25 to-purple-600/40 rounded-full transform -rotate-6"></div>
+                <div className="absolute top-8 left-4 w-44 h-1.5 bg-gradient-to-r from-transparent via-blue-600/20 to-blue-600/35 rounded-full transform -rotate-3"></div>
+                <div className="absolute top-12 left-12 w-36 h-1 bg-gradient-to-r from-transparent via-orange-500/15 to-orange-500/25 rounded-full transform rotate-2"></div>
+                <div className="absolute top-16 left-6 w-42 h-1 bg-gradient-to-r from-transparent via-purple-600/10 to-purple-600/20 rounded-full transform rotate-6"></div>
+                <div className="absolute top-20 left-10 w-38 h-0.5 bg-gradient-to-r from-transparent via-blue-600/8 to-blue-600/15 rounded-full transform rotate-12"></div>
+                <div className="absolute top-24 left-2 w-32 h-0.5 bg-gradient-to-r from-transparent via-orange-500/5 to-orange-500/10 rounded-full transform rotate-18"></div>
+              </div>
+              
+              {/* Right side elaborate wave patterns */}
+              <div className="absolute right-[-200px] top-1/2 transform -translate-y-1/2 w-64 h-32">
+                <div className="absolute top-0 right-0 w-40 h-2 bg-gradient-to-l from-transparent via-orange-500/30 to-orange-500/50 rounded-full transform rotate-12"></div>
+                <div className="absolute top-4 right-8 w-48 h-1 bg-gradient-to-l from-transparent via-purple-600/25 to-purple-600/40 rounded-full transform rotate-6"></div>
+                <div className="absolute top-8 right-4 w-44 h-1.5 bg-gradient-to-l from-transparent via-blue-600/20 to-blue-600/35 rounded-full transform rotate-3"></div>
+                <div className="absolute top-12 right-12 w-36 h-1 bg-gradient-to-l from-transparent via-orange-500/15 to-orange-500/25 rounded-full transform -rotate-2"></div>
+                <div className="absolute top-16 right-6 w-42 h-1 bg-gradient-to-l from-transparent via-purple-600/10 to-purple-600/20 rounded-full transform -rotate-6"></div>
+                <div className="absolute top-20 right-10 w-38 h-0.5 bg-gradient-to-l from-transparent via-blue-600/8 to-blue-600/15 rounded-full transform -rotate-12"></div>
+                <div className="absolute top-24 right-2 w-32 h-0.5 bg-gradient-to-l from-transparent via-orange-500/5 to-orange-500/10 rounded-full transform -rotate-18"></div>
+              </div>
+
+              {/* Central logo with enhanced styling */}
+              <div className="relative bg-gradient-to-br from-orange-50/70 to-purple-50/70 dark:from-orange-950/30 dark:to-purple-950/30 rounded-[2rem] p-16 backdrop-blur-md border border-orange-200/30 dark:border-orange-700/30 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-purple-600/5 to-blue-600/5 rounded-[2rem]"></div>
+                <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="h-72 w-auto relative z-10" />
+                
+                {/* Additional decorative elements around logo */}
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-sm"></div>
+                <div className="absolute -top-2 -right-6 w-6 h-6 bg-gradient-to-br from-blue-600/20 to-orange-500/20 rounded-full blur-sm"></div>
+                <div className="absolute -bottom-3 -left-5 w-7 h-7 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-full blur-sm"></div>
+                <div className="absolute -bottom-4 -right-3 w-5 h-5 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-sm"></div>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                RECODE
-              </span>
-            </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">Your coding, can change</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Evidence-based therapy that treats anxiety, depression, and procrastination like errors in Mindcode. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
@@ -172,7 +199,7 @@ This code can be revealed and re-written using a combination of techniques based
             return <Link key={index} to={conditionLinks[index]}>
                   <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                     <div className="relative h-48 overflow-hidden">
-                      <img src={`https://images.unsplash.com/${condition.image}?auto=format&fit=crop&w=600&h=300`} alt={condition.title} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
+                      <img src={condition.image} alt={condition.title} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4">
                         <h3 className="text-white font-bold text-xl">{condition.title}</h3>

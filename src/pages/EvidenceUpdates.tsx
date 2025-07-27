@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import { useEffect } from "react";
 
 const EvidenceUpdates = () => {
+  useEffect(() => {
+    // Load RSS widget script
+    const script = document.createElement('script');
+    script.src = 'https://widget.rss.app/v1/wall.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
@@ -41,9 +56,6 @@ const EvidenceUpdates = () => {
           </div>
         </div>
       </div>
-      
-      {/* RSS Widget Script */}
-      <script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
     </div>
   );
 };
