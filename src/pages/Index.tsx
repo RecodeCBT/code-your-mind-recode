@@ -333,6 +333,11 @@ This code can be revealed and re-written using a combination of techniques based
                 Get Crisis Support - Samaritans
               </Button>
             </a>
+            <div className="mt-6 pt-4 border-t border-muted-foreground/20">
+              <Link to="/policies" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
+                Privacy Policy & Terms
+              </Link>
+            </div>
           </div>
         </div>
       </section>

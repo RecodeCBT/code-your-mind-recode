@@ -22,6 +22,7 @@ import Mindfulness from "./pages/philosophy/Mindfulness";
 import Neuroplasticity from "./pages/philosophy/Neuroplasticity";
 import PerformancePsychology from "./pages/philosophy/PerformancePsychology";
 import Visualization from "./pages/philosophy/Visualization";
+import Policies from "./pages/Policies";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/philosophy/neuroplasticity" element={<Neuroplasticity />} />
           <Route path="/philosophy/performance-psychology" element={<PerformancePsychology />} />
           <Route path="/philosophy/visualization" element={<Visualization />} />
+          <Route path="/policies" element={<Policies />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
