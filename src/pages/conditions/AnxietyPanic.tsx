@@ -191,116 +191,11 @@ const AnxietyPanic = () => {
               <p className="text-lg leading-relaxed">
                 Through this systematic approach, we help you build new neural pathways for calm confidence, 
                 teach you practical coping strategies, and gradually expose you to feared situations in a 
-                controlled, supportive environment.
+                controlled, supportive environment. ...read more
               </p>
             </CardContent>
           </Card>
 
-          {/* Booking Form */}
-          <Card className="p-8 mb-8 relative">
-            <div className="absolute top-4 right-4">
-              <div className="bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-1">
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                10%+ OFF Applied
-              </div>
-            </div>
-            <CardHeader>
-              <CardTitle className="text-2xl text-center mb-4">Book Your Anxiety & Panic Session</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Contact Form */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-4">Session Information</h3>
-                  <form className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input id="firstName" placeholder="John" />
-                      </div>
-                      <div>
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input id="lastName" placeholder="Doe" />
-                      </div>
-                    </div>
-                    <div>
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="john@example.com" />
-                    </div>
-                    <div>
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" type="tel" placeholder="+44 123 456 7890" />
-                    </div>
-                    <div>
-                      <Label htmlFor="severity">How would you rate your anxiety level? (1-10)</Label>
-                      <Input id="severity" type="number" min="1" max="10" placeholder="7" />
-                    </div>
-                    <div>
-                      <Label htmlFor="message">Tell us about your specific anxiety triggers</Label>
-                      <Textarea 
-                        id="message" 
-                        placeholder="Describe situations that trigger your anxiety, frequency of panic attacks, etc."
-                        rows={4}
-                      />
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Replace this form with your FormSpree action URL when ready.
-                    </p>
-                  </form>
-                </div>
-
-                {/* Payment Section */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-4">Session Details & Payment</h3>
-                  <div className="bg-muted/50 p-6 rounded-lg space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span>Anxiety & Panic Session</span>
-                      <span className="font-bold">£199</span>
-                    </div>
-                    <div className="flex justify-between items-center text-sm text-muted-foreground">
-                      <span>Duration</span>
-                      <span>90 minutes</span>
-                    </div>
-                    <div className="flex justify-between items-center text-sm text-muted-foreground">
-                      <span>Includes</span>
-                      <span>Follow-up materials</span>
-                    </div>
-                    <div className="border-t pt-4">
-                      <div className="flex justify-between items-center font-bold text-lg">
-                        <span>Total</span>
-                        <span>£199</span>
-                      </div>
-                    </div>
-                    
-                    <Button className="w-full" size="lg">
-                      <CreditCard className="h-4 w-4 mr-2" />
-                      Pay with Stripe
-                    </Button>
-                    
-                    <p className="text-xs text-muted-foreground text-center">
-                      Secure payment processing by Stripe. You'll be redirected to complete your booking.
-                    </p>
-                  </div>
-                  
-                  <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <Brain className="h-4 w-4 text-blue-500" />
-                      What to Expect
-                    </h4>
-                    <ul className="text-sm space-y-1 text-muted-foreground">
-                      <li>• Comprehensive anxiety assessment</li>
-                      <li>• Personalized RECODE strategy</li>
-                      <li>• Immediate coping techniques</li>
-                      <li>• Follow-up worksheet and exercises</li>
-                      <li>• Secure video call session</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>
