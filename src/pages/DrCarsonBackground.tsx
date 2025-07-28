@@ -18,7 +18,7 @@ const DrCarsonBackground = () => {
             <h1 className="mb-2 text-4xl font-bold">Dr. Christopher Carson</h1>
             <p className="text-sm italic text-muted-foreground mb-4">BSc MBBS MRCGP ProfDipCBT</p>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The journey from medical practice to creating RECODE - A revolutionary approach to mental health treatment
+              The journey from medical practice to creating ReCODE - A new approach to mental health treatment
             </p>
           </div>
 
@@ -26,9 +26,21 @@ const DrCarsonBackground = () => {
           <Card className="p-8 mb-12 border-2 border-primary/20 bg-gradient-to-r from-background via-muted/10 to-primary/5">
             <div className="grid lg:grid-cols-4 gap-8 items-center">
               <div className="lg:col-span-1 flex flex-col items-center space-y-4">
-                <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
-                  <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" />
-                </div>
+                  <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
+                    <div className="absolute inset-0 border-4 border-transparent bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 rounded-lg z-10 pointer-events-none">
+                      <div className="absolute inset-2 bg-background rounded"></div>
+                      <div className="absolute top-2 left-2 w-3 h-3 bg-orange-500/60 rounded-full animate-pulse"></div>
+                      <div className="absolute top-4 right-3 w-2 h-2 bg-purple-600/60 rounded-full animate-pulse delay-100"></div>
+                      <div className="absolute bottom-3 left-3 w-2 h-2 bg-blue-600/60 rounded-full animate-pulse delay-200"></div>
+                      <div className="absolute bottom-2 right-2 w-3 h-3 bg-orange-500/60 rounded-full animate-pulse delay-300"></div>
+                      {/* Neural circuit lines */}
+                      <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
+                      <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
+                      <div className="absolute left-1/4 top-0 h-full w-px bg-gradient-to-b from-transparent via-blue-600/30 to-transparent"></div>
+                      <div className="absolute right-1/4 top-0 h-full w-px bg-gradient-to-b from-transparent via-orange-500/30 to-transparent"></div>
+                    </div>
+                    <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105 relative z-0" />
+                  </div>
                 <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
                   
                 </div>
@@ -56,7 +68,7 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapeutic techniques. This advanced training enhanced his ability to develop innovative approaches to mental health treatment, ultimately leading to the creation of his revolutionary <strong>RECODE</strong> methodology.
+                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapeutic techniques. This advanced training enhanced his ability to develop innovative approaches to mental health treatment, ultimately leading to the creation of his new <strong>ReCODE</strong> methodology.
                   </p>
                 </CardContent>
               </div>
@@ -70,21 +82,21 @@ const DrCarsonBackground = () => {
                 <CardTitle className="text-2xl flex items-center gap-2">
                   <div className="flex items-center gap-3">
                     <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="RECODE Logo" className="w-8 h-8 object-contain" />
-                    <span>The RECODE Approach</span>
+                    <span>The ReCODE Approach</span>
                   </div>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Dr. Carson developed RECODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized, drawing from his comprehensive medical training and specialized CBT qualifications.
+                  Dr. Carson developed ReCODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized, drawing from his comprehensive medical training and specialized CBT qualifications.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. RECODE represents a paradigm shift towards understanding and restructuring these fundamental patterns.
+                  Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. ReCODE represents a paradigm shift towards understanding and restructuring these fundamental patterns.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The RECODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Through repetition, new coding develops much like how all skills develop through neuroplasticity. Structure and repetition force the brain to change into new automatic reactions.
+                  The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Through repetition, new coding develops much like how all skills develop through neuroplasticity. This systematic approach creates lasting change by leveraging the brain's natural ability to form new neural pathways through structured practice and repetition.
                 </p>
               </CardContent>
             </Card>
@@ -99,10 +111,6 @@ const DrCarsonBackground = () => {
               <CardContent className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Throughout his tenure in general practice, Dr. Carson consistently achieved remarkable success rates in treating mental health conditions. His evidence-based approach, combining traditional medical knowledge with innovative therapeutic techniques, helped hundreds of patients overcome anxiety, depression, and various psychological challenges.
-                </p>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  His unique methodology demonstrated that mental health conditions could be treated more effectively when approached with systematic understanding of thought patterns - much like debugging and optimizing computer code. Through structure and repetition, the brain can rewrite these patterns, similar to learning an instrument or language.
                 </p>
               </CardContent>
             </Card>
@@ -173,7 +181,7 @@ const DrCarsonBackground = () => {
           <div className="text-center mt-12">
             <Link to="/contact">
               <Button size="lg" className="text-lg px-8 py-3">
-                Get Started with RECODE
+                Get Started with ReCODE
               </Button>
             </Link>
           </div>

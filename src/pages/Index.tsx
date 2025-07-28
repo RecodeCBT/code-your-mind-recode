@@ -123,7 +123,7 @@ const Index = () => {
                 <div className="w-80 h-80 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-8 backdrop-blur-md shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-full"></div>
                   <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center">
-                    <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="RECODE Logo" className="w-full h-full object-contain" />
+                    <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="ReCODE Logo" className="w-full h-full object-contain" />
                   </div>
                 </div>
                 
@@ -143,7 +143,7 @@ const Index = () => {
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">Your coding | Can change</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Evidence-based therapy that treats anxiety, depression, and procrastination like errors in Mindcode. 
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Evidence-based therapy that treats anxiety, depression, and procrastination like errors in Mindcode. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Link to="/contact">
@@ -184,6 +184,13 @@ This code can be revealed and re-written using a combination of techniques based
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
+            <div className="mb-8">
+              <Link to="/contact">
+                <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                  Contact Us Today
+                </Button>
+              </Link>
+            </div>
             <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite 
@@ -258,12 +265,12 @@ This code can be revealed and re-written using a combination of techniques based
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
           <p className="text-xl mb-8 opacity-90">
-            Schedule your personalized RECODE consultation through our secure booking system
+            Schedule your personalized ReCODE consultation through our secure booking system
           </p>
           
           {/* Fresha Booking Embed Placeholder */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
-            <p className="text-lg mb-4">Professional RECODE Sessions</p>
+            <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
@@ -272,14 +279,13 @@ This code can be revealed and re-written using a combination of techniques based
             </a>
           </div>
           
-          <p className="text-sm opacity-75">
-            Or explore our conditions and pricing on the booking page
-          </p>
-          <Link to="/booking">
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3 mt-4 text-primary border-white hover:bg-white hover:text-primary">
-              View All Services
-            </Button>
-          </Link>
+          <div className="mt-6">
+            <Link to="/contact">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                Contact Us Today
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -289,8 +295,8 @@ This code can be revealed and re-written using a combination of techniques based
           <div className="text-center text-sm text-muted-foreground">
             <p className="mb-2 font-medium">Important Disclaimer</p>
             <p className="mb-4">
-              RECODE represents a new therapeutic approach that integrates elements of CBT and DBT methodologies 
-              within an innovative framework. While based on evidence-based practices, RECODE is not classical 
+              ReCODE represents a new therapeutic approach that integrates elements of CBT and DBT methodologies 
+              within an innovative framework. While based on evidence-based practices, ReCODE is not classical 
               CBT or DBT therapy. All sessions are conducted by a licensed medical doctor. This service is not 
               a substitute for emergency mental health care or crisis intervention.
             </p>
