@@ -16,6 +16,12 @@ import AngerEmotional from "./pages/conditions/AngerEmotional";
 import WhatIsRecode from "./pages/WhatIsRecode";
 import Testimonials from "./pages/Testimonials";
 import EvidenceUpdates from "./pages/EvidenceUpdates";
+import CBT from "./pages/philosophy/CBT";
+import DBT from "./pages/philosophy/DBT";
+import Mindfulness from "./pages/philosophy/Mindfulness";
+import Neuroplasticity from "./pages/philosophy/Neuroplasticity";
+import PerformancePsychology from "./pages/philosophy/PerformancePsychology";
+import Visualization from "./pages/philosophy/Visualization";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +44,12 @@ const App = () => (
           <Route path="/conditions/depression-mood" element={<DepressionMood />} />
           <Route path="/conditions/procrastination" element={<ProcrastinationAvoidance />} />
           <Route path="/conditions/anger-emotional" element={<AngerEmotional />} />
+          <Route path="/philosophy/cbt" element={<CBT />} />
+          <Route path="/philosophy/dbt" element={<DBT />} />
+          <Route path="/philosophy/mindfulness" element={<Mindfulness />} />
+          <Route path="/philosophy/neuroplasticity" element={<Neuroplasticity />} />
+          <Route path="/philosophy/performance-psychology" element={<PerformancePsychology />} />
+          <Route path="/philosophy/visualization" element={<Visualization />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

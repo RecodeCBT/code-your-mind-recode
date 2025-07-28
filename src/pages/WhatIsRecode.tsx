@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -54,42 +55,48 @@ const WhatIsRecode = () => {
       description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
       icon: Target,
       color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
+      bgColor: "bg-orange-500/10",
+      link: "/philosophy/cbt"
     },
     {
       title: "DBT Emotional Mastery", 
       description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
       icon: Heart,
       color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
+      bgColor: "bg-purple-600/10",
+      link: "/philosophy/dbt"
     },
     {
       title: "Mindfulness Training",
       description: "Train attention, reduce overthinking, and reconnect with the present moment",
       icon: Compass,
       color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
+      bgColor: "bg-blue-600/10",
+      link: "/philosophy/mindfulness"
     },
     {
       title: "Neuroplasticity in Action",
       description: "Rewire your brain with intentional mental habits, using repetition and structured practice", 
       icon: Brain,
       color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
+      bgColor: "bg-orange-500/10",
+      link: "/philosophy/neuroplasticity"
     },
     {
       title: "Performance Psychology",
       description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
       icon: Lightbulb,
       color: "text-purple-600", 
-      bgColor: "bg-purple-600/10"
+      bgColor: "bg-purple-600/10",
+      link: "/philosophy/performance-psychology"
     },
     {
       title: "Visualisation Techniques",
       description: "Harness the power of mental imagery to rehearse success and rewire limiting beliefs",
       icon: Eye,
       color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
+      bgColor: "bg-blue-600/10",
+      link: "/philosophy/visualization"
     }
   ];
 
@@ -134,21 +141,23 @@ const WhatIsRecode = () => {
             {approaches.map((approach, index) => {
               const Icon = approach.icon;
               return (
-                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className={`p-2 ${approach.bgColor} rounded-lg`}>
-                        <Icon className={`h-5 w-5 ${approach.color}`} />
+                <Link key={index} to={approach.link}>
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50 cursor-pointer">
+                    <CardHeader>
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className={`p-2 ${approach.bgColor} rounded-lg`}>
+                          <Icon className={`h-5 w-5 ${approach.color}`} />
+                        </div>
+                        <CardTitle className="text-lg">{approach.title}</CardTitle>
                       </div>
-                      <CardTitle className="text-lg">{approach.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">
-                      {approach.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base">
+                        {approach.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
               );
             })}
           </div>
