@@ -184,13 +184,6 @@ This code can be revealed and re-written using a combination of techniques based
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <div className="mb-8">
-              <Link to="/contact">
-                <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
-                  Contact Us Today
-                </Button>
-              </Link>
-            </div>
             <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite 
@@ -222,6 +215,57 @@ This code can be revealed and re-written using a combination of techniques based
         </div>
       </section>
 
+      {/* Contact Us Button - Midpoint */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <Link to="/contact">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                Contact Us Today
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Seminars Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-muted/10 via-orange-500/5 to-purple-600/10 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-purple-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
+        
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Corporate Training & Staff Wellness</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              Transform your workplace culture with ReCODE methodology. We offer specialized corporate seminars 
+              and staff wellness sessions designed to enhance mental resilience, reduce workplace stress, and 
+              improve team performance through evidence-based psychological training.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card className="p-6 text-center">
+                <Brain className="h-12 w-12 text-orange-500 mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Stress Management Workshops</h3>
+                <p className="text-muted-foreground text-sm">Team sessions focused on practical stress reduction techniques</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <Target className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Performance Psychology</h3>
+                <p className="text-muted-foreground text-sm">Enhance focus, productivity and goal achievement strategies</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <Heart className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Emotional Resilience Training</h3>
+                <p className="text-muted-foreground text-sm">Build team emotional intelligence and workplace wellbeing</p>
+              </Card>
+            </div>
+            <Link to="/corporate-contact">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
+                Enquire About Corporate Training
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Doctor Credentials Section */}
       <section className="py-20 px-4 relative overflow-hidden">

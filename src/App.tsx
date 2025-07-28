@@ -9,6 +9,7 @@ import Booking from "./pages/Booking";
 import About from "./pages/About";
 import DrCarsonBackground from "./pages/DrCarsonBackground";
 import Contact from "./pages/Contact";
+import CorporateContact from "./pages/CorporateContact";
 import AnxietyPanic from "./pages/conditions/AnxietyPanic";
 import DepressionMood from "./pages/conditions/DepressionMood";
 import ProcrastinationAvoidance from "./pages/conditions/ProcrastinationAvoidance";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/dr-carson" element={<DrCarsonBackground />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/corporate-contact" element={<CorporateContact />} />
           <Route path="/what-is-recode" element={<WhatIsRecode />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/evidence-updates" element={<EvidenceUpdates />} />
