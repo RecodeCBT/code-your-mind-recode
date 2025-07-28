@@ -48,7 +48,7 @@ const EvidenceUpdates = () => {
           {/* Second RSS Feed */}
           <div className="mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
-              <h2 className="text-2xl font-bold mb-6 text-center">Therapy & Treatment Updates</h2>
+              <h2 className="text-2xl font-bold mb-6 text-center">Neuroscience</h2>
               <div className="w-full">
                 <div dangerouslySetInnerHTML={{ __html: '<rssapp-wall id="8XOhfo0oupRzAlAJ"></rssapp-wall>' }} />
               </div>
