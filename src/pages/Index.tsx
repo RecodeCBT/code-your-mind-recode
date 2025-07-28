@@ -278,7 +278,7 @@ This code can be revealed and re-written using a combination of techniques based
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-6 text-center border-t-4 border-t-orange-500/50">
                 <GraduationCap className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Fully Qualified, Registered and Practicing General Practitioner</h3>
+                <h3 className="font-bold mb-2">Fully Qualified, GMC Registered and Practicing General Practitioner</h3>
                 <p className="text-muted-foreground">Comprehensive medical training and ongoing clinical practice</p>
               </Card>
               <Card className="p-6 text-center border-t-4 border-t-purple-600/50">
