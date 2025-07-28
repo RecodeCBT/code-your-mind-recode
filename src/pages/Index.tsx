@@ -8,10 +8,7 @@ import anxietyImage from "@/assets/anxiety-brain.jpg";
 import depressionImage from "@/assets/depression-cloud.jpg";
 import procrastinationImage from "@/assets/procrastination-clock.jpg";
 import angerImage from "@/assets/anger-volcano.jpg";
-import circuitBoardImage from "@/assets/circuit-board.jpg";
-import javaCodeImage from "@/assets/java-code.jpg";
-import colorfulCodeImage from "@/assets/colorful-code.jpg";
-import macbookCodeImage from "@/assets/macbook-code.jpg";
+import brainCodeBackground from "@/assets/brain-code-background.jpg";
 const Index = () => {
   const recodeSteps = [{
     step: "REVEAL",
@@ -112,31 +109,21 @@ const Index = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6">
-            {/* Code-themed hero with circular logo */}
-            <div className="relative flex items-center justify-center mb-16 gap-8">
+            {/* Neural code-themed hero with circular logo */}
+            <div className="relative flex items-center justify-center mb-16">
               
-              {/* Left Side Code Images */}
-              <div className="hidden lg:flex flex-col gap-4">
-                <div className="relative group">
-                  <img 
-                    src={circuitBoardImage} 
-                    alt="Circuit Board" 
-                    className="w-32 h-32 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-lg"></div>
-                </div>
-                <div className="relative group">
-                  <img 
-                    src={javaCodeImage} 
-                    alt="Java Code" 
-                    className="w-32 h-32 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-orange-500/20 rounded-lg"></div>
-                </div>
+              {/* Background Brain-Code Pattern */}
+              <div className="absolute inset-0 w-full h-96 overflow-hidden rounded-2xl">
+                <img 
+                  src={brainCodeBackground} 
+                  alt="Neural Code Background" 
+                  className="w-full h-full object-cover opacity-20 scale-110 animate-pulse"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/10 to-blue-600/10"></div>
               </div>
 
               {/* Central Circular Logo */}
-              <div className="relative">
+              <div className="relative z-10">
                 <div className="w-80 h-80 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-8 backdrop-blur-md shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-full"></div>
                   <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center">
@@ -148,30 +135,18 @@ const Index = () => {
                   </div>
                 </div>
                 
-                {/* Floating particles around logo */}
-                <div className="absolute -top-4 -left-4 w-6 h-6 bg-gradient-to-br from-orange-500/30 to-purple-600/30 rounded-full blur-sm animate-pulse"></div>
-                <div className="absolute -top-2 -right-6 w-4 h-4 bg-gradient-to-br from-blue-600/30 to-orange-500/30 rounded-full blur-sm animate-pulse delay-100"></div>
-                <div className="absolute -bottom-3 -left-5 w-5 h-5 bg-gradient-to-br from-purple-600/30 to-blue-600/30 rounded-full blur-sm animate-pulse delay-200"></div>
-                <div className="absolute -bottom-4 -right-4 w-3 h-3 bg-gradient-to-br from-orange-500/30 to-purple-600/30 rounded-full blur-sm animate-pulse delay-300"></div>
-              </div>
-
-              {/* Right Side Code Images */}
-              <div className="hidden lg:flex flex-col gap-4">
-                <div className="relative group">
-                  <img 
-                    src={colorfulCodeImage} 
-                    alt="Colorful Code" 
-                    className="w-32 h-32 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-lg"></div>
-                </div>
-                <div className="relative group">
-                  <img 
-                    src={macbookCodeImage} 
-                    alt="MacBook Code" 
-                    className="w-32 h-32 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-lg"></div>
+                {/* Enhanced floating particles around logo */}
+                <div className="absolute -top-4 -left-4 w-6 h-6 bg-gradient-to-br from-orange-500/40 to-purple-600/40 rounded-full blur-sm animate-pulse"></div>
+                <div className="absolute -top-2 -right-6 w-4 h-4 bg-gradient-to-br from-blue-600/40 to-orange-500/40 rounded-full blur-sm animate-pulse delay-100"></div>
+                <div className="absolute -bottom-3 -left-5 w-5 h-5 bg-gradient-to-br from-purple-600/40 to-blue-600/40 rounded-full blur-sm animate-pulse delay-200"></div>
+                <div className="absolute -bottom-4 -right-4 w-3 h-3 bg-gradient-to-br from-orange-500/40 to-purple-600/40 rounded-full blur-sm animate-pulse delay-300"></div>
+                
+                {/* Neural connection lines */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 pointer-events-none">
+                  <div className="absolute top-0 left-1/2 w-px h-20 bg-gradient-to-b from-orange-500/30 to-transparent animate-pulse delay-500"></div>
+                  <div className="absolute bottom-0 left-1/2 w-px h-20 bg-gradient-to-t from-purple-600/30 to-transparent animate-pulse delay-700"></div>
+                  <div className="absolute left-0 top-1/2 h-px w-20 bg-gradient-to-r from-blue-600/30 to-transparent animate-pulse delay-600"></div>
+                  <div className="absolute right-0 top-1/2 h-px w-20 bg-gradient-to-l from-orange-500/30 to-transparent animate-pulse delay-800"></div>
                 </div>
               </div>
             </div>
