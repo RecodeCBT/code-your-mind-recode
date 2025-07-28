@@ -166,28 +166,70 @@ const CBT = () => {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h5 className="font-semibold mb-2">All-or-Nothing Thinking</h5>
                     <p className="text-sm text-muted-foreground">
-                      Seeing things in black and white terms without recognizing middle ground
+                      Sometimes called "black and white thinking" - seeing things in extremes without recognizing middle ground. "If I'm not perfect, I have failed."
                     </p>
                   </div>
                   
                   <div className="p-4 bg-muted/50 rounded-lg">
-                    <h5 className="font-semibold mb-2">Catastrophizing</h5>
+                    <h5 className="font-semibold mb-2">Over-generalising</h5>
                     <p className="text-sm text-muted-foreground">
-                      Imagining the worst possible outcome in any situation
+                      Seeing a pattern based upon a single event, or being overly broad in the conclusions we draw. "Everything is always going wrong."
                     </p>
                   </div>
                   
                   <div className="p-4 bg-muted/50 rounded-lg">
-                    <h5 className="font-semibold mb-2">Mind Reading</h5>
+                    <h5 className="font-semibold mb-2">Mental Filter</h5>
                     <p className="text-sm text-muted-foreground">
-                      Assuming you know what others are thinking without evidence
+                      Only paying attention to certain types of evidence, noticing our failures but not seeing our successes.
                     </p>
                   </div>
                   
                   <div className="p-4 bg-muted/50 rounded-lg">
-                    <h5 className="font-semibold mb-2">Personalization</h5>
+                    <h5 className="font-semibold mb-2">Disqualifying the Positive</h5>
                     <p className="text-sm text-muted-foreground">
-                      Taking responsibility for events outside your control
+                      Discounting the good things that have happened or that you have done for some reason or another. "That doesn't count."
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h5 className="font-semibold mb-2">Jumping to Conclusions</h5>
+                    <p className="text-sm text-muted-foreground">
+                      Two key types: Mind reading (imagining we know what others are thinking) and Fortune telling (predicting the future).
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h5 className="font-semibold mb-2">Magnification & Minimisation</h5>
+                    <p className="text-sm text-muted-foreground">
+                      Blowing things out of proportion (catastrophising), or inappropriately shrinking something to make it seem less important.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h5 className="font-semibold mb-2">Emotional Reasoning</h5>
+                    <p className="text-sm text-muted-foreground">
+                      Assuming that because we feel a certain way that what we think must be true. "I feel embarrassed so I must be an idiot."
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h5 className="font-semibold mb-2">Should Statements</h5>
+                    <p className="text-sm text-muted-foreground">
+                      Using critical words like 'should,' 'must,' or 'ought' can make us feel guilty, or like we have already failed. This often leads to frustration.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h5 className="font-semibold mb-2">Labelling</h5>
+                    <p className="text-sm text-muted-foreground">
+                      Assigning labels to ourselves or other people. "I'm a loser," "I'm completely useless," "They're such an idiot."
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h5 className="font-semibold mb-2">Personalisation</h5>
+                    <p className="text-sm text-muted-foreground">
+                      Blaming yourself or taking responsibility for something that wasn't completely your fault. Conversely, blaming other people for something that was your fault.
                     </p>
                   </div>
                 </div>
