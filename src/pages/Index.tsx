@@ -85,7 +85,7 @@ const Index = () => {
     bgColor: "bg-blue-600/10"
   }];
   const conditions = [{
-    title: "Anxiety & Panic",
+    title: "Anxiety & Stress",
     description: "Decode the fear algorithms that trigger anxiety responses and build new neural pathways for calm confidence.",
     image: anxietyImage
   }, {
