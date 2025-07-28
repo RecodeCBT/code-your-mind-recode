@@ -177,6 +177,19 @@ This code can be revealed and re-written using a combination of techniques based
         </div>
       </section>
 
+      {/* Contact Us Button - Between Hero and Conditions */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <Link to="/contact">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                Contact Us Today
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Mental Health Conditions Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
         <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
@@ -211,19 +224,6 @@ This code can be revealed and re-written using a combination of techniques based
                   </Card>
                 </Link>;
           })}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Us Button - Midpoint */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center">
-            <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
-                Contact Us Today
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
