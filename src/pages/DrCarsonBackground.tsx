@@ -40,7 +40,7 @@ const DrCarsonBackground = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed">
                   <p>
-                    Dr. Christopher Carson's journey in healthcare began with his <strong>BSc (Hons) in Biomedical Sciences</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
+                    Dr. Christopher Carson's journey in healthcare began with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
                   </p>
                   
                   <p>
@@ -56,7 +56,7 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, solidifying his interest and providing him with the final piece needed to consolidate his learning and form a revolutionary new approach to managing mental health through <strong>RECODE</strong>.
+                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapeutic techniques. This advanced training enhanced his ability to develop innovative approaches to mental health treatment, ultimately leading to the creation of his revolutionary <strong>RECODE</strong> methodology.
                   </p>
                 </CardContent>
               </div>
@@ -81,6 +81,10 @@ const DrCarsonBackground = () => {
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. RECODE represents a paradigm shift towards understanding and restructuring these fundamental patterns.
+                </p>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  The RECODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Through repetition, new coding develops much like how all skills develop through neuroplasticity. Structure and repetition force the brain to change into new automatic reactions.
                 </p>
               </CardContent>
             </Card>
