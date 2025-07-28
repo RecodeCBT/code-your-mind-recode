@@ -26,21 +26,9 @@ const DrCarsonBackground = () => {
           <Card className="p-8 mb-12 border-2 border-primary/20 bg-gradient-to-r from-background via-muted/10 to-primary/5">
             <div className="grid lg:grid-cols-4 gap-8 items-center">
               <div className="lg:col-span-1 flex flex-col items-center space-y-4">
-                  <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
-                    <div className="absolute inset-0 border-4 border-transparent bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 rounded-lg z-10 pointer-events-none">
-                      <div className="absolute inset-2 bg-background rounded"></div>
-                      <div className="absolute top-2 left-2 w-3 h-3 bg-orange-500/60 rounded-full animate-pulse"></div>
-                      <div className="absolute top-4 right-3 w-2 h-2 bg-purple-600/60 rounded-full animate-pulse delay-100"></div>
-                      <div className="absolute bottom-3 left-3 w-2 h-2 bg-blue-600/60 rounded-full animate-pulse delay-200"></div>
-                      <div className="absolute bottom-2 right-2 w-3 h-3 bg-orange-500/60 rounded-full animate-pulse delay-300"></div>
-                      {/* Neural circuit lines */}
-                      <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
-                      <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
-                      <div className="absolute left-1/4 top-0 h-full w-px bg-gradient-to-b from-transparent via-blue-600/30 to-transparent"></div>
-                      <div className="absolute right-1/4 top-0 h-full w-px bg-gradient-to-b from-transparent via-orange-500/30 to-transparent"></div>
-                    </div>
-                    <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105 relative z-0" />
-                  </div>
+                <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
+                  <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" />
+                </div>
                 <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
                   
                 </div>
