@@ -35,7 +35,7 @@ const CorporateContact = () => {
             <Card className="p-6 text-center border-2 border-purple-600/20 bg-gradient-to-b from-purple-50/50 to-white dark:from-purple-950/20 dark:to-background">
               <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="font-bold mb-2">Team Wellness Programs</h3>
-              <p className="text-muted-foreground text-sm">Customized group sessions focusing on stress management and emotional resilience</p>
+              <p className="text-muted-foreground text-sm">Customised group sessions focusing on stress management and emotional resilience</p>
             </Card>
             <Card className="p-6 text-center border-2 border-orange-500/20 bg-gradient-to-b from-orange-50/50 to-white dark:from-orange-950/20 dark:to-background">
               <TrendingUp className="h-12 w-12 text-orange-500 mx-auto mb-4" />
@@ -53,7 +53,7 @@ const CorporateContact = () => {
                   Corporate Enquiry Form
                 </CardTitle>
                 <p className="text-muted-foreground">
-                  Complete the form below and we'll get back to you within 24 hours with a customized proposal
+                  Complete the form below and we'll get back to you within 24 hours with a customised proposal
                 </p>
               </CardHeader>
               <CardContent>
@@ -253,10 +253,6 @@ const CorporateContact = () => {
                     <div className="flex items-center gap-2">
                       <Award className="h-4 w-4 text-purple-600" />
                       <span>Accredited Diploma in CBT</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-purple-600" />
-                      <span>Specialized in Corporate Wellness Training</span>
                     </div>
                   </div>
                 </CardContent>
