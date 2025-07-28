@@ -187,8 +187,14 @@ const WhatIsRecode = () => {
                       <div className={`mx-auto mb-4 p-3 ${step.bgColor} rounded-full w-fit`}>
                         <Icon className={`h-8 w-8 ${step.color}`} />
                       </div>
-                      <CardTitle className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                        {index + 1}. {step.step}
+                      <CardTitle className="text-2xl font-bold">
+                        <span className="text-muted-foreground">{index + 1}. </span>
+                        <span className="text-3xl font-extrabold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                          {step.step[0]}
+                        </span>
+                        <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                          {step.step.slice(1)}
+                        </span>
                       </CardTitle>
                     </CardHeader>
                     <CardContent>

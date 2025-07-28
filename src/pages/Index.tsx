@@ -285,7 +285,7 @@ This code can be revealed and re-written using a combination of techniques based
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
             </svg>
-            10%+ OFF Applied
+            Limited time offer £20 off at checkout
           </div>
         </div>
         <div className="container mx-auto max-w-4xl text-center">
