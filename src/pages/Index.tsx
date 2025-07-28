@@ -205,7 +205,7 @@ This code can be revealed and re-written using a combination of techniques based
                     </div>
                     <CardContent className="p-6">
                       <CardDescription className="text-base">
-                        {condition.description}
+                        {condition.description} <span className="text-primary font-medium">...read more</span>
                       </CardDescription>
                     </CardContent>
                   </Card>
