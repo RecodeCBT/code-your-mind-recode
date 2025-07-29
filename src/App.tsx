@@ -1,3 +1,4 @@
+import ChatCBT from "./pages/ChatCBT";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/corporate-contact" element={<CorporateContact />} />
           <Route path="/what-is-recode" element={<WhatIsRecode />} />
+          <Route path="/chatcbt" element={<ChatCBT />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/evidence-updates" element={<EvidenceUpdates />} />
           <Route path="/conditions/anxiety-panic" element={<AnxietyPanic />} />
