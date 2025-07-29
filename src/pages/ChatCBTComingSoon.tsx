@@ -3,33 +3,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Brain, MessageSquare, Clock, Check, Users, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
-
 const ChatCBTComingSoon = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "Real-time Assessment",
-      description: "AI quickly identifies cognitive distortions and mind-code errors as they occur"
-    },
-    {
-      icon: MessageSquare,
-      title: "Interactive Learning", 
-      description: "Engage with AI-powered conversations that educate and reinforce CBT principles"
-    },
-    {
-      icon: Lightbulb,
-      title: "Instant Guidance",
-      description: "Get immediate, evidence-based methods to address distortions without delay"
-    },
-    {
-      icon: Users,
-      title: "Consolidate Learning",
-      description: "Strengthen and reinforce therapeutic insights through guided practice"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const features = [{
+    icon: Brain,
+    title: "Real-time Assessment",
+    description: "AI quickly identifies cognitive distortions and mind-code errors as they occur"
+  }, {
+    icon: MessageSquare,
+    title: "Interactive Learning",
+    description: "Engage with AI-powered conversations that educate and reinforce CBT principles"
+  }, {
+    icon: Lightbulb,
+    title: "Instant Guidance",
+    description: "Get immediate, evidence-based methods to address distortions without delay"
+  }, {
+    icon: Users,
+    title: "Consolidate Learning",
+    description: "Strengthen and reinforce therapeutic insights through guided practice"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Back Navigation */}
@@ -50,11 +42,7 @@ const ChatCBTComingSoon = () => {
             {/* Round ChatCBT Logo */}
             <div className="w-48 h-48 mx-auto mb-8 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-4 backdrop-blur-md shadow-2xl">
               <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-4 flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" 
-                  alt="ReCODE: ChatCBT Logo" 
-                  className="w-full h-full object-contain"
-                />
+                <img src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" alt="ReCODE: ChatCBT Logo" className="w-full h-full object-contain" />
               </div>
             </div>
 
@@ -69,10 +57,7 @@ const ChatCBTComingSoon = () => {
             <h2 className="text-2xl text-muted-foreground mb-8">Interactive AI for Cognitive Behavioral Therapy</h2>
             
             <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted-foreground">
-              <p>
-                An revolutionary AI companion designed and highly trained to quickly assess for signs of 
-                cognitive distortions and other mind-code errors, offering evidence-based methods to address them in real-time.
-              </p>
+              <p>An AI companion designed and highly trained to quickly assess for signs of cognitive distortions and other mind-code errors, offering evidence-based methods to address them in real-time.</p>
               <p>
                 This interactive tool helps educate clients on addressing cognitive distortions without delay, 
                 consolidating therapeutic learning through immediate, personalized feedback and guidance.
@@ -96,9 +81,8 @@ const ChatCBTComingSoon = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            const Icon = feature.icon;
+            return <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <CardHeader>
                     <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-orange-500/10 to-purple-600/10 rounded-full w-fit">
                       <Icon className="h-8 w-8 text-orange-500" />
@@ -110,16 +94,15 @@ const ChatCBTComingSoon = () => {
                       {feature.description}
                     </CardDescription>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
 
           {/* Subscription Model */}
           <div className="text-center">
             <Card className="max-w-2xl mx-auto p-8 border-2 border-orange-500/20">
               <CardHeader>
-                <CardTitle className="text-2xl mb-4">Flexible Subscription Model</CardTitle>
+                <CardTitle className="text-2xl mb-4">Flexible Subscription Model - £8 per month</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-center gap-3 text-lg">
@@ -157,8 +140,6 @@ const ChatCBTComingSoon = () => {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default ChatCBTComingSoon;
