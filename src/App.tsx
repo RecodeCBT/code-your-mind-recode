@@ -19,6 +19,7 @@ import AngerEmotional from "./pages/conditions/AngerEmotional";
 import WhatIsRecode from "./pages/WhatIsRecode";
 import Testimonials from "./pages/Testimonials";
 import EvidenceUpdates from "./pages/EvidenceUpdates";
+import ChatCBTComingSoon from "./pages/ChatCBTComingSoon";
 import CBT from "./pages/philosophy/CBT";
 import DBT from "./pages/philosophy/DBT";
 import Mindfulness from "./pages/philosophy/Mindfulness";
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/philosophy/performance-psychology" element={<PerformancePsychology />} />
           <Route path="/philosophy/visualization" element={<Visualization />} />
           <Route path="/policies" element={<Policies />} />
+          <Route path="/chatcbt-coming-soon" element={<ChatCBTComingSoon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

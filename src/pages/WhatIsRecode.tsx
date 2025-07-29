@@ -180,19 +180,37 @@ const WhatIsRecode = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recodeSteps.map((step, index) => {
               const Icon = step.icon;
+              // Define unique colors for each step while keeping first letter colors
+              const stepColors = [
+                "bg-orange-500/10", // REVEAL - orange
+                "bg-green-500/10",  // EVALUATE - green  
+                "bg-red-500/10",    // CHALLENGE - red
+                "bg-blue-500/10",   // OBSERVE - blue
+                "bg-purple-500/10", // DESIGN - purple
+                "bg-teal-500/10"    // EMBED - teal
+              ];
+              const iconColors = [
+                "text-orange-500", // REVEAL
+                "text-green-500",  // EVALUATE
+                "text-red-500",    // CHALLENGE
+                "text-blue-500",   // OBSERVE
+                "text-purple-500", // DESIGN
+                "text-teal-500"    // EMBED
+              ];
+              
               return (
                 <div key={index} className="relative">
                   <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-transparent hover:border-t-orange-500/50">
                     <CardHeader className="text-center">
-                      <div className={`mx-auto mb-4 p-3 ${step.bgColor} rounded-full w-fit`}>
-                        <Icon className={`h-8 w-8 ${step.color}`} />
+                      <div className={`mx-auto mb-4 p-3 ${stepColors[index]} rounded-full w-fit`}>
+                        <Icon className={`h-8 w-8 ${iconColors[index]}`} />
                       </div>
                       <CardTitle className="text-2xl font-bold">
                         <span className="text-muted-foreground">{index + 1}. </span>
-                        <span className="text-3xl font-extrabold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        <span className={`text-3xl font-extrabold ${step.color}`}>
                           {step.step[0]}
                         </span>
-                        <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        <span className={`${iconColors[index]}`}>
                           {step.step.slice(1)}
                         </span>
                       </CardTitle>
@@ -235,6 +253,15 @@ const WhatIsRecode = () => {
                     RECODE applies CBT principles systematically, helping you identify and challenge the thought patterns 
                     that create emotional distress and behavioral problems.
                   </p>
+                  <div className="mt-6">
+                    <h4 className="font-semibold mb-3 text-foreground">Core CBT Principles:</h4>
+                    <ul className="space-y-2 text-sm">
+                      <li>• <strong>Cognitive Triangle:</strong> Understanding the connection between thoughts, feelings, and behaviors</li>
+                      <li>• <strong>Present-Focused:</strong> Addressing current problems and developing practical solutions</li>
+                      <li>• <strong>Collaborative:</strong> Working together to identify and change unhelpful patterns</li>
+                      <li>• <strong>Evidence-Based:</strong> Using proven techniques like thought records and behavioral experiments</li>
+                    </ul>
+                  </div>
                 </CardDescription>
               </CardContent>
             </Card>
@@ -253,6 +280,15 @@ const WhatIsRecode = () => {
                     Through RECODE, you'll learn mindfulness, distress tolerance, and interpersonal effectiveness 
                     skills that create lasting change in how you respond to life's challenges.
                   </p>
+                  <div className="mt-6">
+                    <h4 className="font-semibold mb-3 text-foreground">Core DBT Skills:</h4>
+                    <ul className="space-y-2 text-sm">
+                      <li>• <strong>Mindfulness:</strong> Present-moment awareness without judgment</li>
+                      <li>• <strong>Distress Tolerance:</strong> Managing crisis situations without making them worse</li>
+                      <li>• <strong>Emotion Regulation:</strong> Understanding and managing intense emotions effectively</li>
+                      <li>• <strong>Interpersonal Effectiveness:</strong> Maintaining relationships while meeting your needs</li>
+                    </ul>
+                  </div>
                 </CardDescription>
               </CardContent>
             </Card>

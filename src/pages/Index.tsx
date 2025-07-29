@@ -267,6 +267,51 @@ This code can be revealed and re-written using a combination of techniques based
         </div>
       </section>
 
+      {/* ChatCBT Coming Soon Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-purple-600/5 to-blue-600/5 relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
+        
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <MessageSquare className="h-6 w-6 text-orange-500" />
+              <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent font-semibold text-lg">
+                COMING SOON
+              </span>
+            </div>
+            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions 
+              and other mind-code errors, offering methods to address them in real-time. Help educate yourself 
+              on addressing cognitive distortions without delay and consolidate your learning.
+            </p>
+            
+            <div className="bg-white/10 dark:bg-gray-900/20 backdrop-blur-sm rounded-lg p-8 mb-8">
+              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-3 backdrop-blur-md shadow-lg">
+                <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-3 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" 
+                    alt="ReCODE: ChatCBT Logo" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Subscription-Based, Month-by-Month</h3>
+              <p className="text-muted-foreground mb-6">
+                Flexible, affordable access to AI-powered CBT support that complements your therapeutic journey
+              </p>
+            </div>
+            
+            <Link to="/chatcbt-coming-soon">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                Learn More
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Doctor Credentials Section */}
       <section className="py-20 px-4 relative overflow-hidden">
         <div className="absolute top-10 right-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-blue-600/15 rounded-full blur-xl animate-pulse-slow"></div>
