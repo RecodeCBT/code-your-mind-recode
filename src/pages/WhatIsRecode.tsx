@@ -207,7 +207,7 @@ const WhatIsRecode = () => {
                       </div>
                       <CardTitle className="text-2xl font-bold">
                         <span className="text-muted-foreground">{index + 1}. </span>
-                        <span className={`text-3xl font-extrabold ${step.color}`}>
+                        <span className="text-4xl font-extrabold text-orange-500">
                           {step.step[0]}
                         </span>
                         <span className={`${iconColors[index]}`}>
