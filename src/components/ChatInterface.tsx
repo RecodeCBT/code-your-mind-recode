@@ -4,6 +4,8 @@ export default function ChatInterface() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
+  const [password, setPassword] = useState('');
   const chatContainerRef = useRef(null);
 
   const sendMessage = async () => {
@@ -30,6 +32,36 @@ export default function ChatInterface() {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
   }, [messages, loading]);
+
+  const handleUnlock = () => {
+    if (password === 'recode2025') {
+      setUnlocked(true);
+    } else {
+      alert('Incorrect password.');
+    }
+  };
+
+  if (!unlocked) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+        <h2 className="text-2xl font-bold mb-4 text-center">🔒 RECODE ChatCBT Access</h2>
+        <p className="mb-2 text-sm text-gray-600">Please enter your access password to begin.</p>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter password"
+          className="mb-3 p-2 border border-gray-300 rounded w-64 text-center"
+        />
+        <button
+          onClick={handleUnlock}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Unlock Chat
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-screen bg-gray-50">
