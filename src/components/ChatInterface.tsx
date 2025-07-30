@@ -10,25 +10,8 @@ export default function ChatInterface() {
   const [loading, setLoading] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
-  const [captchaVerified, setCaptchaVerified] = useState(false);
   const chatContainerRef = useRef(null);
 
-  useEffect(() => {
-    // Load reCAPTCHA script
-    const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector('script[src*="recaptcha"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
 
   const starterOptions = [
     "I would like explore my Mind-Code",
@@ -69,10 +52,6 @@ export default function ChatInterface() {
   }, [messages, loading]);
 
   const handleUnlock = () => {
-    if (!captchaVerified) {
-      alert("Please verify you're human.");
-      return;
-    }
     if (password === 'recode2025') {
       setUnlocked(true);
     } else {
@@ -142,11 +121,6 @@ export default function ChatInterface() {
             placeholder="Enter password"
             className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
           />
-          <div
-            className="g-recaptcha mb-4"
-            data-sitekey="6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB"
-            data-callback="setCaptchaVerified"
-          ></div>
 
           <button
             onClick={handleUnlock}
