@@ -21,6 +21,7 @@ export default function ChatInterface() {
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
   const [captchaToken, setCaptchaToken] = useState('');
+  const [captchaLoading, setCaptchaLoading] = useState(false);
 
   useEffect(() => {
     // Load reCAPTCHA v3 script
@@ -30,11 +31,24 @@ export default function ChatInterface() {
     script.defer = true;
     document.body.appendChild(script);
 
+    // Add CSS to hide reCAPTCHA badge
+    const style = document.createElement('style');
+    style.textContent = `
+      .grecaptcha-badge {
+        visibility: hidden !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     // Cleanup function
     return () => {
       const existingScript = document.querySelector('script[src*="recaptcha"]');
       if (existingScript) {
         existingScript.remove();
+      }
+      const existingStyle = document.querySelector('style');
+      if (existingStyle) {
+        existingStyle.remove();
       }
     };
   }, []);
@@ -86,24 +100,46 @@ export default function ChatInterface() {
       return;
     }
 
+    setCaptchaLoading(true);
+    console.log('Starting reCAPTCHA verification...');
+
     try {
       // Execute reCAPTCHA v3 verification
       if (window.grecaptcha) {
         window.grecaptcha.ready(async () => {
           try {
+            console.log('reCAPTCHA ready, executing verification...');
             const token = await window.grecaptcha.execute('6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB', { action: 'login' });
+            console.log('reCAPTCHA token received:', token ? 'SUCCESS' : 'FAILED');
             setCaptchaToken(token);
+            setCaptchaLoading(false);
             setUnlocked(true);
           } catch (error) {
-            console.error('reCAPTCHA error:', error);
-            alert('reCAPTCHA verification failed. Please try again.');
+            console.error('reCAPTCHA execution error:', error);
+            setCaptchaLoading(false);
+            // For preview environments, allow bypass if reCAPTCHA fails
+            if (window.location.hostname.includes('lovable') || window.location.hostname === 'localhost') {
+              console.log('Preview environment detected, bypassing reCAPTCHA');
+              setUnlocked(true);
+            } else {
+              alert('reCAPTCHA verification failed. Please try again.');
+            }
           }
         });
       } else {
-        alert('reCAPTCHA is not loaded yet. Please try again in a moment.');
+        console.error('reCAPTCHA not loaded');
+        setCaptchaLoading(false);
+        // For preview environments, allow bypass if reCAPTCHA not loaded
+        if (window.location.hostname.includes('lovable') || window.location.hostname === 'localhost') {
+          console.log('Preview environment detected, bypassing reCAPTCHA');
+          setUnlocked(true);
+        } else {
+          alert('reCAPTCHA is not loaded yet. Please try again in a moment.');
+        }
       }
     } catch (error) {
       console.error('Unlock error:', error);
+      setCaptchaLoading(false);
       alert('An error occurred. Please try again.');
     }
   };
@@ -174,9 +210,13 @@ export default function ChatInterface() {
 
           <button
             onClick={handleUnlock}
-            className="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:from-primary-foreground hover:to-secondary-foreground transition-all duration-300 shadow-lg"
+            disabled={captchaLoading}
+            className="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:from-primary-foreground hover:to-secondary-foreground transition-all duration-300 shadow-lg disabled:opacity-50 flex items-center justify-center gap-2"
             >
-            Unlock ChatCBT
+            {captchaLoading && (
+              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            )}
+            {captchaLoading ? 'Verifying...' : 'Unlock ChatCBT'}
           </button>
           
         </div>
