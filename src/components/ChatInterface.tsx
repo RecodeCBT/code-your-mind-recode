@@ -3,6 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
 
+// Extend window interface for reCAPTCHA
+declare global {
+  interface Window {
+    onRecaptchaVerify: () => void;
+  }
+}
+
 
 export default function ChatInterface() {
   const [messages, setMessages] = useState([]);
@@ -10,6 +17,30 @@ export default function ChatInterface() {
   const [loading, setLoading] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  useEffect(() => {
+    // Create global callback function for reCAPTCHA
+    window.onRecaptchaVerify = () => {
+      setCaptchaVerified(true);
+    };
+
+    // Load reCAPTCHA script
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    // Cleanup function
+    return () => {
+      const existingScript = document.querySelector('script[src*="recaptcha"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      delete window.onRecaptchaVerify;
+    };
+  }, []);
+
   const chatContainerRef = useRef(null);
 
 
@@ -52,6 +83,10 @@ export default function ChatInterface() {
   }, [messages, loading]);
 
   const handleUnlock = () => {
+    if (!captchaVerified) {
+      alert("Please complete the reCAPTCHA verification.");
+      return;
+    }
     if (password === 'recode2025') {
       setUnlocked(true);
     } else {
@@ -121,6 +156,12 @@ export default function ChatInterface() {
             placeholder="Enter password"
             className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
           />
+          
+          <div
+            className="g-recaptcha mb-4"
+            data-sitekey="6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB"
+            data-callback="onRecaptchaVerify"
+          ></div>
 
           <button
             onClick={handleUnlock}
