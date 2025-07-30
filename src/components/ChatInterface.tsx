@@ -3,6 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
 
+// Extend window interface for reCAPTCHA callback
+declare global {
+  interface Window {
+    onRecaptchaVerify: () => void;
+  }
+}
+
 export default function ChatInterface() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
@@ -13,12 +20,31 @@ export default function ChatInterface() {
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
-  const script = document.createElement("script");
-  script.src = "https://www.google.com/recaptcha/api.js";
-  script.async = true;
-  script.defer = true;
-  document.body.appendChild(script);
-}, []);
+    // Create global callback function for reCAPTCHA
+    window.onRecaptchaVerify = () => {
+      setCaptchaVerified(true);
+    };
+
+    // Load reCAPTCHA script
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    script.defer = true;
+    script.onerror = () => {
+      console.error('Failed to load reCAPTCHA script');
+    };
+    document.body.appendChild(script);
+
+    // Cleanup function
+    return () => {
+      // Remove script and global callback
+      const existingScript = document.querySelector('script[src*="recaptcha"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      delete window.onRecaptchaVerify;
+    };
+  }, []);
 
   const starterOptions = [
     "I would like explore my Mind-Code",
@@ -135,7 +161,7 @@ export default function ChatInterface() {
           <div
             className="g-recaptcha mb-4"
             data-sitekey="6Lci9pQrAAAAAAJvQI3OBCdMhze9B4TMmRnLoCE5"
-            data-callback={() => setCaptchaVerified(true)}
+            data-callback="onRecaptchaVerify"
           ></div>
 
           <button
@@ -144,7 +170,7 @@ export default function ChatInterface() {
             >
             Unlock ChatCBT
           </button>
-          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+          
         </div>
       </div>
     );
