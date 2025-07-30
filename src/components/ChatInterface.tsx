@@ -226,28 +226,40 @@ export default function ChatInterface() {
 
   return (
     <div className="flex flex-col h-screen w-full bg-gradient-to-br from-background via-muted/5 to-accent/5">
-      {/* Compact Header */}
-      <header className="bg-white/90 backdrop-blur-sm shadow-sm border-b border-border/20 p-3 flex items-center justify-between flex-shrink-0">
+      {/* Redesigned Header with explanation and larger logo */}
+      <header className="bg-white/90 backdrop-blur-sm shadow-sm border-b border-border/20 p-4 flex items-center justify-between flex-shrink-0">
         <Button
           variant="ghost"
           size="sm"
           onClick={() => window.location.href = '/'}
-          className="flex items-center gap-2 hover:bg-primary/5"
+          className="flex items-center gap-2 hover:bg-primary/5 flex-shrink-0"
         >
           <ArrowLeft className="h-4 w-4" />
           <span className="hidden sm:inline">Main Site</span>
         </Button>
         
-        <div className="flex items-center gap-3">
-          <img 
-            src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
-            alt="RECODE ChatCBT" 
-            className="h-10 w-auto"
-          />
-          <h1 className="text-lg font-semibold text-foreground hidden sm:block">ChatCBT</h1>
+        <div className="flex items-center gap-6 flex-1">
+          {/* Explanation text */}
+          <div className="flex-1 max-w-md">
+            <h1 className="text-xl font-bold text-foreground mb-1">ReCODE ChatCBT</h1>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              A highly trained AI assistant specializing in cognitive behavioral therapy. 
+              Designed to help you explore your thoughts, emotions, and behavioral patterns 
+              through evidence-based therapeutic techniques.
+            </p>
+          </div>
+          
+          {/* Larger logo positioned to the right */}
+          <div className="flex-shrink-0">
+            <img 
+              src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
+              alt="RECODE ChatCBT" 
+              className="h-24 w-auto shadow-lg rounded-lg"
+            />
+          </div>
         </div>
         
-        <div className="w-16"></div>
+        <div className="w-20 flex-shrink-0"></div>
       </header>
 
       {/* Starter buttons - only show when no messages */}
@@ -290,7 +302,7 @@ export default function ChatInterface() {
                     <img
                       src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
                       alt="ChatCBT Assistant"
-                      className="w-10 h-10 rounded-full border-2 border-primary/20 shadow-md bg-white p-0.5"
+                      className="w-16 h-16 rounded-full border-3 border-primary/20 shadow-lg bg-white p-1"
                     />
                   </div>
                 )}
@@ -312,7 +324,7 @@ export default function ChatInterface() {
                   <img 
                     src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
                     alt="Loading..." 
-                    className="w-10 h-10 rounded-full border-2 border-primary/20 shadow-md bg-white p-0.5 animate-pulse" 
+                    className="w-16 h-16 rounded-full border-3 border-primary/20 shadow-lg bg-white p-1 animate-pulse" 
                   />
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm border border-border/20 px-4 py-3 rounded-2xl rounded-bl-sm shadow-sm">
