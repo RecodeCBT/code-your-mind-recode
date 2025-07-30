@@ -12,6 +12,14 @@ export default function ChatInterface() {
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const chatContainerRef = useRef(null);
 
+  useEffect(() => {
+  const script = document.createElement("script");
+  script.src = "https://www.google.com/recaptcha/api.js";
+  script.async = true;
+  script.defer = true;
+  document.body.appendChild(script);
+}, []);
+
   const starterOptions = [
     "I would like explore my Mind-Code",
     "Talk about depression", 
