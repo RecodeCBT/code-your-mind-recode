@@ -7,14 +7,13 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "ChatCBT", path: "/chatcbt" },
-    { label: "Services", path: "/services" },
     { label: "What is RECODE?", path: "/what-is-recode" },
+    { label: "ChatCBT", path: "/chatcbt" },
+    { label: "Book a Session", path: "/services", isHighlighted: true },
     { label: "Learn about Dr Carson", path: "/dr-carson" },
     { label: "Testimonials", path: "/testimonials" },
     { label: "Evidence Updates", path: "/evidence-updates" },
-    { label: "Contact Us", path: "/contact" },
-    { label: "Book a session", path: "/booking" }
+    { label: "Contact Us", path: "/contact" }
   ];
 
   return (
@@ -26,12 +25,15 @@ const Navigation = () => {
               <Link key={item.path} to={item.path}>
                 <Button
                   variant={location.pathname === item.path ? "default" : "ghost"}
-                  size="sm"
+                  size={item.isHighlighted ? "default" : "sm"}
                   className={cn(
-                    "px-2 sm:px-3 md:px-4 py-2 rounded-full transition-all duration-300 border border-transparent text-xs sm:text-sm whitespace-nowrap",
-                    location.pathname === item.path
+                    "rounded-full transition-all duration-300 border border-transparent whitespace-nowrap",
+                    item.isHighlighted 
+                      ? "px-4 sm:px-6 md:px-8 py-3 text-sm sm:text-base bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 font-semibold"
+                      : "px-2 sm:px-3 md:px-4 py-2 text-xs sm:text-sm",
+                    location.pathname === item.path && !item.isHighlighted
                       ? "bg-primary text-primary-foreground shadow-md border-primary/20"
-                      : "hover:bg-secondary/20 border-gradient-to-r from-orange-500/20 to-purple-600/20"
+                      : !item.isHighlighted && "hover:bg-secondary/20 border-gradient-to-r from-orange-500/20 to-purple-600/20"
                   )}
                 >
                   {item.label}
