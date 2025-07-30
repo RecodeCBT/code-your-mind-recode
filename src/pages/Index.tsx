@@ -206,7 +206,7 @@ This code can be revealed and re-written using a combination of techniques based
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {conditions.map((condition, index) => {
-            const conditionLinks = ["/conditions/anxiety-panic", "/conditions/depression-mood", "/conditions/procrastination", "/conditions/anger-emotional"];
+            const conditionLinks = ["/conditions/anxiety-panic#top", "/conditions/depression-mood#top", "/conditions/procrastination#top", "/conditions/anger-emotional#top"];
             return <Link key={index} to={conditionLinks[index]}>
                   <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                     <div className="relative h-48 overflow-hidden">
@@ -258,7 +258,7 @@ This code can be revealed and re-written using a combination of techniques based
                 <p className="text-muted-foreground text-sm">Build team emotional intelligence and workplace wellbeing</p>
               </Card>
             </div>
-            <Link to="/corporate-contact">
+            <Link to="/corporate-contact#top">
               <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
                 Enquire About Corporate Training
               </Button>
@@ -268,15 +268,15 @@ This code can be revealed and re-written using a combination of techniques based
       </section>
 
       {/* ChatCBT Coming Soon Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-secondary/5 via-purple-600/5 to-blue-600/5 relative overflow-hidden">
+      <section className="py-8 px-4 bg-gradient-to-r from-secondary/5 via-purple-600/5 to-blue-600/5 relative overflow-hidden">
         <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-8">
             {/* Move icon above title and make it bigger */}
-            <div className="w-40 h-40 mx-auto mb-6 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-4 backdrop-blur-md shadow-lg">
-              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-4 flex items-center justify-center">
+            <div className="w-56 h-56 mx-auto mb-6 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-6 backdrop-blur-md shadow-lg">
+              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" 
                   alt="ReCODE: ChatCBT Logo" 
@@ -347,14 +347,6 @@ This code can be revealed and re-written using a combination of techniques based
 
       {/* Fresha Booking Section */}
       <section className="py-20 px-4 bg-primary text-primary-foreground relative">
-        <div className="absolute top-4 right-4">
-          <div className="bg-green-500 text-white text-sm px-4 py-2 rounded-full font-semibold flex items-center gap-2">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-            </svg>
-            Limited time offer £20 off at checkout
-          </div>
-        </div>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -365,11 +357,26 @@ This code can be revealed and re-written using a combination of techniques based
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
             <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
-            <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
-                Book Your Session Now
-              </Button>
-            </a>
+            <div className="flex items-center justify-center gap-6">
+              <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
+                  Book Your Session Now
+                </Button>
+              </a>
+              
+              {/* £20 off price tag */}
+              <div className="relative">
+                <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-r-full rounded-l-sm shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 border-l-4 border-l-green-600">
+                  <div className="flex items-center gap-2 font-bold text-sm">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    £20 OFF
+                  </div>
+                  <div className="text-xs opacity-90 text-center">Limited Time</div>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="mt-6">
