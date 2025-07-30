@@ -357,23 +357,20 @@ This code can be revealed and re-written using a combination of techniques based
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
             <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
-            <div className="flex items-center justify-center gap-6">
-              <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
-                  Book Your Session Now
-                </Button>
-              </a>
-              
-              {/* £20 off price tag */}
+            <div className="flex flex-col items-center justify-center gap-4">
               <div className="relative">
-                <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-r-full rounded-l-sm shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 border-l-4 border-l-green-600">
-                  <div className="flex items-center gap-2 font-bold text-sm">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                    £20 OFF
+                <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
+                    Book Your Session Now
+                  </Button>
+                </a>
+                
+                {/* £20 off circular sticker */}
+                <div className="absolute -top-3 -right-3">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-full shadow-lg transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-4 border-white">
+                    <div className="font-bold text-xs leading-none">£20</div>
+                    <div className="font-bold text-xs leading-none">OFF</div>
                   </div>
-                  <div className="text-xs opacity-90 text-center">Limited Time</div>
                 </div>
               </div>
             </div>

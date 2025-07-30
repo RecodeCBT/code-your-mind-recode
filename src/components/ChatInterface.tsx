@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
 
 export default function ChatInterface() {
@@ -58,22 +59,24 @@ export default function ChatInterface() {
 
   if (!unlocked) {
     return (
-      <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 overflow-hidden">
-        {/* Animated Circuit Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 animate-pulse"></div>
-          <div className="circuit-pattern absolute inset-0">
-            {/* Circuit lines and nodes */}
+      <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
+        {/* Neural Network Background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>
+          <div className="neural-network absolute inset-0">
+            {/* Neural network pattern */}
             <svg className="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                  <circle cx="10" cy="10" r="2" fill="currentColor" className="text-primary animate-pulse" />
-                  <circle cx="90" cy="90" r="2" fill="currentColor" className="text-secondary animate-pulse" />
-                  <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" strokeWidth="1" className="text-accent/50" />
-                  <line x1="10" y1="10" x2="10" y2="90" stroke="currentColor" strokeWidth="1" className="text-primary/50" />
+                <pattern id="neural" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse">
+                  <circle cx="25" cy="25" r="3" fill="currentColor" className="text-blue-400 animate-pulse" />
+                  <circle cx="75" cy="75" r="3" fill="currentColor" className="text-purple-400 animate-pulse" />
+                  <circle cx="125" cy="125" r="3" fill="currentColor" className="text-indigo-400 animate-pulse" />
+                  <line x1="25" y1="25" x2="75" y2="75" stroke="currentColor" strokeWidth="1" className="text-blue-300/40" />
+                  <line x1="75" y1="75" x2="125" y2="125" stroke="currentColor" strokeWidth="1" className="text-purple-300/40" />
+                  <line x1="25" y1="125" x2="75" y2="75" stroke="currentColor" strokeWidth="1" className="text-indigo-300/40" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#circuit)" />
+              <rect width="100%" height="100%" fill="url(#neural)" />
             </svg>
           </div>
         </div>
@@ -104,7 +107,7 @@ export default function ChatInterface() {
           <h2 className="text-2xl font-bold mb-4 text-center text-white">🔒 Access Required</h2>
           <p className="mb-6 text-sm text-white/80 text-center">Please enter your access password to begin your CBT session.</p>
           
-          <input
+          <Input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
