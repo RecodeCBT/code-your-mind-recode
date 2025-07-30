@@ -3,10 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
 
-// Extend window interface for reCAPTCHA
+// Extend window interface for reCAPTCHA v3
 declare global {
   interface Window {
-    onRecaptchaVerify: () => void;
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
   }
 }
 
@@ -17,16 +20,12 @@ export default function ChatInterface() {
   const [loading, setLoading] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
-  const [captchaVerified, setCaptchaVerified] = useState(false);
-  useEffect(() => {
-    // Create global callback function for reCAPTCHA
-    window.onRecaptchaVerify = () => {
-      setCaptchaVerified(true);
-    };
+  const [captchaToken, setCaptchaToken] = useState('');
 
-    // Load reCAPTCHA script
+  useEffect(() => {
+    // Load reCAPTCHA v3 script
     const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js";
+    script.src = "https://www.google.com/recaptcha/api.js?render=6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB";
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
@@ -37,7 +36,6 @@ export default function ChatInterface() {
       if (existingScript) {
         existingScript.remove();
       }
-      delete window.onRecaptchaVerify;
     };
   }, []);
 
@@ -82,15 +80,31 @@ export default function ChatInterface() {
     }
   }, [messages, loading]);
 
-  const handleUnlock = () => {
-    if (!captchaVerified) {
-      alert("Please complete the reCAPTCHA verification.");
+  const handleUnlock = async () => {
+    if (password !== 'recode2025') {
+      alert('Incorrect password.');
       return;
     }
-    if (password === 'recode2025') {
-      setUnlocked(true);
-    } else {
-      alert('Incorrect password.');
+
+    try {
+      // Execute reCAPTCHA v3 verification
+      if (window.grecaptcha) {
+        window.grecaptcha.ready(async () => {
+          try {
+            const token = await window.grecaptcha.execute('6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB', { action: 'login' });
+            setCaptchaToken(token);
+            setUnlocked(true);
+          } catch (error) {
+            console.error('reCAPTCHA error:', error);
+            alert('reCAPTCHA verification failed. Please try again.');
+          }
+        });
+      } else {
+        alert('reCAPTCHA is not loaded yet. Please try again in a moment.');
+      }
+    } catch (error) {
+      console.error('Unlock error:', error);
+      alert('An error occurred. Please try again.');
     }
   };
 
@@ -157,11 +171,6 @@ export default function ChatInterface() {
             className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
           />
           
-          <div
-            className="g-recaptcha mb-4"
-            data-sitekey="6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB"
-            data-callback="onRecaptchaVerify"
-          ></div>
 
           <button
             onClick={handleUnlock}
