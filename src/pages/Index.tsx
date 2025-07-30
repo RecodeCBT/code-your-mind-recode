@@ -138,7 +138,6 @@ const Index = () => {
                   <div className="absolute top-0 left-1/2 w-px h-20 bg-gradient-to-b from-orange-500/30 to-transparent animate-pulse delay-500"></div>
                   <div className="absolute bottom-0 left-1/2 w-px h-20 bg-gradient-to-t from-purple-600/30 to-transparent animate-pulse delay-700"></div>
                   <div className="absolute left-0 top-1/2 h-px w-20 bg-gradient-to-r from-blue-600/30 to-transparent animate-pulse delay-600"></div>
-                  <div className="absolute right-0 top-1/2 h-px w-20 bg-gradient-to-l from-orange-500/30 to-transparent animate-pulse delay-800"></div>
                 </div>
               </div>
             </div>
