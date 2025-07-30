@@ -9,6 +9,7 @@ export default function ChatInterface() {
   const [loading, setLoading] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const chatContainerRef = useRef(null);
 
   const starterOptions = [
@@ -50,12 +51,16 @@ export default function ChatInterface() {
   }, [messages, loading]);
 
   const handleUnlock = () => {
-    if (password === 'recode2025') {
-      setUnlocked(true);
-    } else {
-      alert('Incorrect password.');
-    }
-  };
+  if (!captchaVerified) {
+    alert("Please verify you're human.");
+    return;
+  }
+  if (password === 'recode2025') {
+    setUnlocked(true);
+  } else {
+    alert('Incorrect password.');
+  }
+};
 
   if (!unlocked) {
     return (
@@ -119,13 +124,19 @@ export default function ChatInterface() {
             placeholder="Enter password"
             className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
           />
-          
+          <div
+            className="g-recaptcha mb-4"
+            data-sitekey="6Lci9pQrAAAAAAJvQI3OBCdMhze9B4TMmRnLoCE5"
+            data-callback={() => setCaptchaVerified(true)}
+          ></div>
+
           <button
             onClick={handleUnlock}
             className="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:from-primary-foreground hover:to-secondary-foreground transition-all duration-300 shadow-lg"
-          >
+            >
             Unlock ChatCBT
           </button>
+          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </div>
       </div>
     );
