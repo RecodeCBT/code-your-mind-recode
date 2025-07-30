@@ -10,7 +10,7 @@ const Services = () => {
     {
       title: "Initial Assessment & Therapy",
       duration: "65 min",
-      price: "£169",
+      price: "£149",
       introPrice: "Intro £149",
       bullets: [
         "Doctor-delivered CBT",
@@ -25,7 +25,7 @@ const Services = () => {
     {
       title: "Follow-up Session",
       duration: "45 min",
-      price: "£119–£129",
+      price: "£119",
       bullets: [
         "Progress reviews",
         "Skills consolidation", 
@@ -38,7 +38,7 @@ const Services = () => {
     {
       title: "6-Session Package",
       duration: "6 × 65 min",
-      price: "£949–£969",
+      price: "£949",
       savings: "save 5–7%",
       bullets: [
         "Structured plan",
@@ -52,7 +52,7 @@ const Services = () => {
     {
       title: "Guided CBT Programme",
       duration: "Monthly + 20-min check-in",
-      price: "£49–£69/month",
+      price: "£49/month",
       bullets: [
         "Weekly email lessons",
         "Worksheets included",
@@ -63,9 +63,9 @@ const Services = () => {
       isSubscription: true
     },
     {
-      title: "Anxiety Reset Group",
-      duration: "4 × 60-min sessions",
-      price: "£25–£40 per person/week",
+      title: "Reset Group",
+      duration: "4 × 60-min sessions", 
+      price: "£30 per person/week",
       bullets: [
         "Skills + practice",
         "Community support",
@@ -78,7 +78,7 @@ const Services = () => {
     {
       title: "Assessment + Written Plan",
       duration: "90 min",
-      price: "£249–£295",
+      price: "£249",
       bullets: [
         "Structured intake",
         "PHQ-9/GAD-7 assessment",
@@ -91,7 +91,7 @@ const Services = () => {
     {
       title: "Self-Help Packs",
       duration: "PDF toolkits",
-      price: "£9–£29",
+      price: "£9",
       bullets: [
         "Thought diaries",
         "Behavioural activation planners",
