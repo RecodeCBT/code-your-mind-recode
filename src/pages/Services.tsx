@@ -10,7 +10,7 @@ const Services = () => {
     {
       title: "Initial Assessment & Therapy",
       duration: "65 min",
-      price: "£149",
+      price: "£169",
       introPrice: "Intro £149",
       bullets: [
         "Doctor-delivered CBT",
