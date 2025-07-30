@@ -132,7 +132,7 @@ export default function ChatInterface() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-br from-background via-muted/10 to-accent/5">
+    <div className="flex flex-col h-screen w-full bg-gradient-to-br from-background via-muted/10 to-accent/5">
       {/* Header with larger ChatCBT logo and return button */}
       <header className="bg-white/80 backdrop-blur-sm shadow-lg border-b border-border/20 p-6 flex items-center justify-between">
         <Button
@@ -158,9 +158,9 @@ export default function ChatInterface() {
 
       {/* Starter buttons section */}
       {messages.length === 0 && (
-        <div className="bg-white/50 backdrop-blur-sm border-b border-border/10 p-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Get started with a topic that interests you:</h3>
+        <div className="bg-white/50 backdrop-blur-sm border-b border-border/10 p-4 lg:p-6">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <h3 className="text-lg lg:text-xl font-semibold text-foreground mb-4 text-center">Get started with a topic that interests you:</h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {starterOptions.map((option, idx) => (
                 <Button
@@ -168,7 +168,7 @@ export default function ChatInterface() {
                   variant="outline"
                   size="sm"
                   onClick={() => handleStarterClick(option)}
-                  className="bg-white/70 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 hover:scale-105"
+                  className="bg-white/70 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 hover:scale-105 text-xs sm:text-sm"
                   disabled={loading}
                 >
                   {option}
@@ -179,33 +179,35 @@ export default function ChatInterface() {
         </div>
       )}
 
-      {/* Chat area with larger avatar */}
-      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-6 space-y-8 max-w-4xl mx-auto w-full">
-        {messages.map((msg, idx) => (
-          <div
-            key={idx}
-            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-4`}
-          >
-            {msg.role === 'bot' && (
-              <div className="flex-shrink-0">
-                <img
-                  src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
-                  alt="ChatCBT Assistant"
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1"
-                />
-              </div>
-            )}
+      {/* Chat area with full width and responsive design */}
+      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6 lg:space-y-8 w-full">
+        <div className="max-w-none lg:max-w-6xl xl:max-w-7xl mx-auto">
+          {messages.map((msg, idx) => (
             <div
-              className={`px-6 py-4 rounded-2xl text-base max-w-[75%] whitespace-pre-wrap shadow-lg ${
-                msg.role === 'user'
-                  ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto'
-                  : 'bg-white/90 backdrop-blur-sm border border-border/20 text-foreground'
-              }`}
+              key={idx}
+              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-4 mb-6 lg:mb-8`}
             >
-              {msg.content}
+              {msg.role === 'bot' && (
+                <div className="flex-shrink-0">
+                  <img
+                    src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
+                    alt="ChatCBT Assistant"
+                    className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1"
+                  />
+                </div>
+              )}
+              <div
+                className={`px-4 sm:px-6 py-3 sm:py-4 rounded-2xl text-sm sm:text-base lg:text-lg max-w-[85%] sm:max-w-[80%] lg:max-w-[75%] whitespace-pre-wrap shadow-lg leading-relaxed ${
+                  msg.role === 'user'
+                    ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto'
+                    : 'bg-white/90 backdrop-blur-sm border border-border/20 text-foreground'
+                }`}
+              >
+                {msg.content}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         {loading && (
           <div className="flex items-center gap-4">
@@ -231,23 +233,25 @@ export default function ChatInterface() {
       </main>
 
       {/* Input area */}
-      <footer className="p-6 bg-white/80 backdrop-blur-sm border-t border-border/20 max-w-4xl mx-auto w-full">
-        <div className="flex gap-3 mb-4">
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-            className="flex-grow p-4 border border-border/30 rounded-xl text-base outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm"
-            placeholder="Share what's on your mind..."
-            disabled={loading}
-          />
-          <button
-            onClick={() => sendMessage()}
-            disabled={loading}
-            className="px-6 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-xl text-base font-semibold hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg disabled:opacity-50"
-          >
-            Send
-          </button>
+      <footer className="p-4 sm:p-6 bg-white/80 backdrop-blur-sm border-t border-border/20 w-full">
+        <div className="max-w-none lg:max-w-6xl xl:max-w-7xl mx-auto">
+          <div className="flex gap-3 mb-4">
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+              className="flex-grow p-3 sm:p-4 border border-border/30 rounded-xl text-sm sm:text-base lg:text-lg outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm"
+              placeholder="Share what's on your mind..."
+              disabled={loading}
+            />
+            <button
+              onClick={() => sendMessage()}
+              disabled={loading}
+              className="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-xl text-sm sm:text-base lg:text-lg font-semibold hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg disabled:opacity-50"
+            >
+              Send
+            </button>
+          </div>
         </div>
 
         {/* Privacy disclaimer */}
