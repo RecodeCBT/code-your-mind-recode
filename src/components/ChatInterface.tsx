@@ -160,7 +160,7 @@ export default function ChatInterface() {
           />
           <div
             className="g-recaptcha mb-4"
-            data-sitekey="6Lci9pQrAAAAAAJvQI3OBCdMhze9B4TMmRnLoCE5"
+            data-sitekey="6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB"
             data-callback="onRecaptchaVerify"
           ></div>
 
