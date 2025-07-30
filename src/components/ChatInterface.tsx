@@ -224,8 +224,8 @@ export default function ChatInterface() {
         </div>
       )}
 
-      {/* Chat area with much larger height and full screen utilization */}
-      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6 lg:space-y-8 w-full min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh]">
+      {/* Chat area with optimized height */}
+      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-4 lg:space-y-6 w-full max-h-[50vh] sm:max-h-[55vh] lg:max-h-[60vh]">
         <div className="max-w-full px-2 sm:px-4 lg:px-8">
           {messages.map((msg, idx) => (
             <div
