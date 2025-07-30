@@ -95,10 +95,14 @@ export default function ChatInterface() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl max-w-md w-full mx-4">
+          {/* Title and Subtitle */}
+          <h1 className="text-3xl font-bold text-white mb-2 text-center">ReCODE ChatCBT</h1>
+          <p className="text-white/80 text-center mb-6 text-sm leading-relaxed">A highly trained AI that can help you analyse your issues and autocode in real time.</p>
+          
           {/* ChatCBT Logo - Made circular */}
           <div className="w-80 h-80 rounded-full overflow-hidden mb-6 border-4 border-white/30 shadow-2xl">
             <img 
-              src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
+              src="/lovable-uploads/00be3df8-615b-4d76-b3a9-28b01e9651d0.png" 
               alt="RECODE ChatCBT" 
               className="w-full h-full object-cover"
             />
