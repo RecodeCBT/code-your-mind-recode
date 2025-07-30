@@ -29,6 +29,8 @@ import Neuroplasticity from "./pages/philosophy/Neuroplasticity";
 import PerformancePsychology from "./pages/philosophy/PerformancePsychology";
 import Visualization from "./pages/philosophy/Visualization";
 import Policies from "./pages/Policies";
+import Services from "./pages/Services";
+import LeadMagnet from "./pages/LeadMagnet";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/corporate-contact" element={<CorporateContact />} />
           <Route path="/what-is-recode" element={<WhatIsRecode />} />
           <Route path="/chatcbt" element={<ChatCBT />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/lead-magnet" element={<LeadMagnet />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/evidence-updates" element={<EvidenceUpdates />} />
           <Route path="/conditions/anxiety-panic" element={<AnxietyPanic />} />

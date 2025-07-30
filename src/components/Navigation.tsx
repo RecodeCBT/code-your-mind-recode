@@ -8,6 +8,7 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "ChatCBT", path: "/chatcbt" },
+    { label: "Services", path: "/services" },
     { label: "What is RECODE?", path: "/what-is-recode" },
     { label: "Learn about Dr Carson", path: "/dr-carson" },
     { label: "Testimonials", path: "/testimonials" },
