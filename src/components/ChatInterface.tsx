@@ -225,35 +225,36 @@ export default function ChatInterface() {
   }
 
   return (
-    <div className="flex flex-col h-screen w-full bg-gradient-to-br from-background via-muted/10 to-accent/5">
-      {/* Header with larger ChatCBT logo and return button */}
-      <header className="bg-white/80 backdrop-blur-sm shadow-lg border-b border-border/20 p-6 flex items-center justify-between">
+    <div className="flex flex-col h-screen w-full bg-gradient-to-br from-background via-muted/5 to-accent/5">
+      {/* Compact Header */}
+      <header className="bg-white/90 backdrop-blur-sm shadow-sm border-b border-border/20 p-3 flex items-center justify-between flex-shrink-0">
         <Button
-          variant="outline"
+          variant="ghost"
           size="sm"
           onClick={() => window.location.href = '/'}
-          className="flex items-center gap-2 border-primary/20 hover:bg-primary/5"
+          className="flex items-center gap-2 hover:bg-primary/5"
         >
           <ArrowLeft className="h-4 w-4" />
-          Main Site
+          <span className="hidden sm:inline">Main Site</span>
         </Button>
         
-        <div className="flex-1 flex justify-center">
+        <div className="flex items-center gap-3">
           <img 
             src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
             alt="RECODE ChatCBT" 
-            className="h-20 w-auto shadow-lg rounded-lg"
+            className="h-10 w-auto"
           />
+          <h1 className="text-lg font-semibold text-foreground hidden sm:block">ChatCBT</h1>
         </div>
         
-        <div className="w-20"></div> {/* Spacer for center alignment */}
+        <div className="w-16"></div>
       </header>
 
-      {/* Starter buttons section */}
+      {/* Starter buttons - only show when no messages */}
       {messages.length === 0 && (
-        <div className="bg-white/50 backdrop-blur-sm border-b border-border/10 p-4 lg:p-6">
-          <div className="w-full px-4 sm:px-6 lg:px-8">
-            <h3 className="text-lg lg:text-xl font-semibold text-foreground mb-4 text-center">Get started with a topic that interests you:</h3>
+        <div className="bg-white/70 backdrop-blur-sm border-b border-border/10 p-3 flex-shrink-0">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-sm font-medium text-foreground mb-3 text-center">Choose a topic to get started:</h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {starterOptions.map((option, idx) => (
                 <Button
@@ -261,7 +262,7 @@ export default function ChatInterface() {
                   variant="outline"
                   size="sm"
                   onClick={() => handleStarterClick(option)}
-                  className="bg-white/70 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 hover:scale-105 text-xs sm:text-sm"
+                  className="bg-white/80 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 text-xs"
                   disabled={loading}
                 >
                   {option}
@@ -272,117 +273,98 @@ export default function ChatInterface() {
         </div>
       )}
 
-      {/* Chat area with optimized height */}
-      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-4 lg:space-y-6 w-full max-h-[50vh] sm:max-h-[55vh] lg:max-h-[60vh]">
-        <div className="max-w-full px-2 sm:px-4 lg:px-8">
-          {messages.map((msg, idx) => (
-            <div
-              key={idx}
-              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-4 mb-6 lg:mb-8`}
-            >
-              {msg.role === 'bot' && (
+      {/* Main Chat Area - takes up remaining space */}
+      <div className="flex-1 flex flex-col min-h-0">
+        <main 
+          ref={chatContainerRef} 
+          className="flex-1 overflow-y-auto p-4 space-y-4"
+        >
+          <div className="max-w-4xl mx-auto">
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-3 mb-4`}
+              >
+                {msg.role === 'bot' && (
+                  <div className="flex-shrink-0">
+                    <img
+                      src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
+                      alt="ChatCBT Assistant"
+                      className="w-10 h-10 rounded-full border-2 border-primary/20 shadow-md bg-white p-0.5"
+                    />
+                  </div>
+                )}
+                <div
+                  className={`px-4 py-3 rounded-2xl text-sm max-w-[85%] whitespace-pre-wrap shadow-sm leading-relaxed ${
+                    msg.role === 'user'
+                      ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto rounded-br-sm'
+                      : 'bg-white/95 backdrop-blur-sm border border-border/20 text-foreground rounded-bl-sm'
+                  }`}
+                >
+                  {msg.content}
+                </div>
+              </div>
+            ))}
+
+            {loading && (
+              <div className="flex items-start gap-3 mb-4">
                 <div className="flex-shrink-0">
-                  <img
-                    src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
-                    alt="ChatCBT Assistant"
-                    className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1"
+                  <img 
+                    src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
+                    alt="Loading..." 
+                    className="w-10 h-10 rounded-full border-2 border-primary/20 shadow-md bg-white p-0.5 animate-pulse" 
                   />
                 </div>
-              )}
-              <div
-                className={`px-4 sm:px-6 py-3 sm:py-4 rounded-2xl text-sm sm:text-base lg:text-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] whitespace-pre-wrap shadow-lg leading-relaxed ${
-                  msg.role === 'user'
-                    ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto'
-                    : 'bg-white/90 backdrop-blur-sm border border-border/20 text-foreground'
-                }`}
-              >
-                {msg.content}
+                <div className="bg-white/95 backdrop-blur-sm border border-border/20 px-4 py-3 rounded-2xl rounded-bl-sm shadow-sm">
+                  <span className="text-muted-foreground flex items-center gap-2 text-sm">
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    </div>
+                    Thinking...
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
-
-          {loading && (
-            <div className="flex items-center gap-4 mb-6 lg:mb-8">
-              <div className="flex-shrink-0">
-                <img 
-                  src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
-                  alt="Loading..." 
-                  className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1 animate-pulse" 
-                />
-              </div>
-              <div className="bg-white/90 backdrop-blur-sm border border-border/20 px-4 sm:px-6 py-3 sm:py-4 rounded-2xl shadow-lg">
-                <span className="text-muted-foreground flex items-center gap-2 text-sm sm:text-base">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                  </div>
-                  Thinking...
-                </span>
-              </div>
-            </div>
-          )}
-        </div>
-      </main>
-
-      {/* Input area - fixed at bottom */}
-      <div className="p-4 sm:p-6 bg-white/80 backdrop-blur-sm border-t border-border/20 w-full">
-        <div className="max-w-full px-2 sm:px-4 lg:px-8">
-          <div className="flex gap-3 mb-4">
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-              className="flex-grow p-3 sm:p-4 border border-border/30 rounded-xl text-sm sm:text-base lg:text-lg outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm"
-              placeholder="Share what's on your mind..."
-              disabled={loading}
-            />
-            <button
-              onClick={() => sendMessage()}
-              disabled={loading}
-              className="px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-xl text-sm sm:text-base lg:text-lg font-semibold hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg disabled:opacity-50"
-            >
-              Send
-            </button>
+            )}
           </div>
+        </main>
 
-          {/* Mobile app install prompt */}
-          <div className="block sm:hidden mb-4 p-3 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-xl">
-            <p className="text-sm text-foreground mb-2 font-medium">💡 Add ChatCBT to your home screen for easy access!</p>
-            <p className="text-xs text-muted-foreground">Tap your browser menu and select "Add to Home Screen" or "Install App"</p>
+        {/* Fixed Input Area */}
+        <div className="bg-white/95 backdrop-blur-sm border-t border-border/20 p-4 flex-shrink-0">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex gap-3">
+              <input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && sendMessage()}
+                className="flex-grow p-3 border border-border/30 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm placeholder:text-muted-foreground"
+                placeholder="Share what's on your mind..."
+                disabled={loading}
+              />
+              <button
+                onClick={() => sendMessage()}
+                disabled={loading || !input.trim()}
+                className="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-2xl text-sm font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
+              >
+                Send
+              </button>
+            </div>
+            
+            {/* Compact disclaimers */}
+            <div className="mt-3 text-xs text-muted-foreground text-center space-y-1">
+              <p>
+                🔒 <strong>Privacy:</strong> Chats are not stored and are wiped when you exit. 
+                <span className="mx-2">•</span>
+                🚨 <strong>Emergency:</strong> Not for crisis intervention - contact <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Samaritans</a> if needed.
+              </p>
+              <div className="block sm:hidden mt-2 p-2 bg-primary/5 border border-primary/20 rounded-lg">
+                <p className="text-xs font-medium">💡 Add to home screen for easy access!</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Privacy and Emergency disclaimers moved to bottom */}
-      <footer className="p-4 sm:p-6 bg-white/90 backdrop-blur-sm border-t-2 border-border/30 w-full mt-auto">
-        <div className="max-w-full px-2 sm:px-4 lg:px-8">
-          {/* Privacy disclaimer */}
-          <div className="mb-4 p-4 bg-blue-50/80 backdrop-blur-sm border border-blue-200/50 rounded-xl">
-            <p className="text-sm text-blue-800 mb-2">
-              <strong>Privacy & Data:</strong> Your chat details are never stored and are completely wiped when you exit this session.
-            </p>
-            <p className="text-sm text-blue-700">
-              This service is powered by highly specialized pre-trained OpenAI software designed for cognitive behavioral therapy support.
-            </p>
-          </div>
-
-          {/* Emergency disclaimer */}
-          <div className="p-4 bg-orange-50/80 backdrop-blur-sm border border-orange-200/50 rounded-xl">
-            <p className="text-sm text-orange-800 mb-2">
-              <strong>Important:</strong> This ChatCBT service is not a substitute for emergency mental health care or crisis intervention.
-            </p>
-            <p className="text-sm text-orange-700 mb-3">
-              If you are thinking about hurting yourself, please get immediate help:
-            </p>
-            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer">
-              <Button variant="destructive" size="sm" className="w-full sm:w-auto">
-                Get Crisis Support - Samaritans
-              </Button>
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
