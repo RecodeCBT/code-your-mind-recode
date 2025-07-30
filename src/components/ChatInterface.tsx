@@ -179,9 +179,9 @@ export default function ChatInterface() {
         </div>
       )}
 
-      {/* Chat area with full width and responsive design */}
-      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6 lg:space-y-8 w-full">
-        <div className="max-w-none lg:max-w-6xl xl:max-w-7xl mx-auto">
+      {/* Chat area with much larger height and full screen utilization */}
+      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6 lg:space-y-8 w-full min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh]">
+        <div className="max-w-full px-2 sm:px-4 lg:px-8">
           {messages.map((msg, idx) => (
             <div
               key={idx}
@@ -197,7 +197,7 @@ export default function ChatInterface() {
                 </div>
               )}
               <div
-                className={`px-4 sm:px-6 py-3 sm:py-4 rounded-2xl text-sm sm:text-base lg:text-lg max-w-[85%] sm:max-w-[80%] lg:max-w-[75%] whitespace-pre-wrap shadow-lg leading-relaxed ${
+                className={`px-4 sm:px-6 py-3 sm:py-4 rounded-2xl text-sm sm:text-base lg:text-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] whitespace-pre-wrap shadow-lg leading-relaxed ${
                   msg.role === 'user'
                     ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto'
                     : 'bg-white/90 backdrop-blur-sm border border-border/20 text-foreground'
@@ -207,34 +207,34 @@ export default function ChatInterface() {
               </div>
             </div>
           ))}
-        </div>
 
-        {loading && (
-          <div className="flex items-center gap-4">
-            <div className="flex-shrink-0">
-              <img 
-                src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
-                alt="Loading..." 
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1 animate-pulse" 
-              />
+          {loading && (
+            <div className="flex items-center gap-4 mb-6 lg:mb-8">
+              <div className="flex-shrink-0">
+                <img 
+                  src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
+                  alt="Loading..." 
+                  className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1 animate-pulse" 
+                />
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm border border-border/20 px-4 sm:px-6 py-3 sm:py-4 rounded-2xl shadow-lg">
+                <span className="text-muted-foreground flex items-center gap-2 text-sm sm:text-base">
+                  <div className="flex gap-1">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  </div>
+                  Thinking...
+                </span>
+              </div>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm border border-border/20 px-6 py-4 rounded-2xl shadow-lg">
-              <span className="text-muted-foreground flex items-center gap-2">
-                <div className="flex gap-1">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                </div>
-                Thinking...
-              </span>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </main>
 
-      {/* Input area */}
-      <footer className="p-4 sm:p-6 bg-white/80 backdrop-blur-sm border-t border-border/20 w-full">
-        <div className="max-w-none lg:max-w-6xl xl:max-w-7xl mx-auto">
+      {/* Input area - fixed at bottom */}
+      <div className="p-4 sm:p-6 bg-white/80 backdrop-blur-sm border-t border-border/20 w-full">
+        <div className="max-w-full px-2 sm:px-4 lg:px-8">
           <div className="flex gap-3 mb-4">
             <input
               value={input}
@@ -252,31 +252,42 @@ export default function ChatInterface() {
               Send
             </button>
           </div>
-        </div>
 
-        {/* Privacy disclaimer */}
-        <div className="mb-4 p-4 bg-blue-50/80 backdrop-blur-sm border border-blue-200/50 rounded-xl">
-          <p className="text-sm text-blue-800 mb-2">
-            <strong>Privacy & Data:</strong> Your chat details are never stored and are completely wiped when you exit this session.
-          </p>
-          <p className="text-sm text-blue-700">
-            This service is powered by highly specialized pre-trained OpenAI software designed for cognitive behavioral therapy support.
-          </p>
+          {/* Mobile app install prompt */}
+          <div className="block sm:hidden mb-4 p-3 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-xl">
+            <p className="text-sm text-foreground mb-2 font-medium">💡 Add ChatCBT to your home screen for easy access!</p>
+            <p className="text-xs text-muted-foreground">Tap your browser menu and select "Add to Home Screen" or "Install App"</p>
+          </div>
         </div>
+      </div>
 
-        {/* Emergency disclaimer */}
-        <div className="p-4 bg-orange-50/80 backdrop-blur-sm border border-orange-200/50 rounded-xl">
-          <p className="text-sm text-orange-800 mb-2">
-            <strong>Important:</strong> This ChatCBT service is not a substitute for emergency mental health care or crisis intervention.
-          </p>
-          <p className="text-sm text-orange-700 mb-3">
-            If you are thinking about hurting yourself, please get immediate help:
-          </p>
-          <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer">
-            <Button variant="destructive" size="sm" className="w-full sm:w-auto">
-              Get Crisis Support - Samaritans
-            </Button>
-          </a>
+      {/* Privacy and Emergency disclaimers moved to bottom */}
+      <footer className="p-4 sm:p-6 bg-white/90 backdrop-blur-sm border-t-2 border-border/30 w-full mt-auto">
+        <div className="max-w-full px-2 sm:px-4 lg:px-8">
+          {/* Privacy disclaimer */}
+          <div className="mb-4 p-4 bg-blue-50/80 backdrop-blur-sm border border-blue-200/50 rounded-xl">
+            <p className="text-sm text-blue-800 mb-2">
+              <strong>Privacy & Data:</strong> Your chat details are never stored and are completely wiped when you exit this session.
+            </p>
+            <p className="text-sm text-blue-700">
+              This service is powered by highly specialized pre-trained OpenAI software designed for cognitive behavioral therapy support.
+            </p>
+          </div>
+
+          {/* Emergency disclaimer */}
+          <div className="p-4 bg-orange-50/80 backdrop-blur-sm border border-orange-200/50 rounded-xl">
+            <p className="text-sm text-orange-800 mb-2">
+              <strong>Important:</strong> This ChatCBT service is not a substitute for emergency mental health care or crisis intervention.
+            </p>
+            <p className="text-sm text-orange-700 mb-3">
+              If you are thinking about hurting yourself, please get immediate help:
+            </p>
+            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer">
+              <Button variant="destructive" size="sm" className="w-full sm:w-auto">
+                Get Crisis Support - Samaritans
+              </Button>
+            </a>
+          </div>
         </div>
       </footer>
     </div>
