@@ -3,12 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
 
-// Extend window interface for reCAPTCHA callback
-declare global {
-  interface Window {
-    onRecaptchaVerify: () => void;
-  }
-}
 
 export default function ChatInterface() {
   const [messages, setMessages] = useState([]);
@@ -20,29 +14,19 @@ export default function ChatInterface() {
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
-    // Create global callback function for reCAPTCHA
-    window.onRecaptchaVerify = () => {
-      setCaptchaVerified(true);
-    };
-
     // Load reCAPTCHA script
     const script = document.createElement("script");
     script.src = "https://www.google.com/recaptcha/api.js";
     script.async = true;
     script.defer = true;
-    script.onerror = () => {
-      console.error('Failed to load reCAPTCHA script');
-    };
     document.body.appendChild(script);
 
-    // Cleanup function
     return () => {
-      // Remove script and global callback
+      // Cleanup
       const existingScript = document.querySelector('script[src*="recaptcha"]');
       if (existingScript) {
         existingScript.remove();
       }
-      delete window.onRecaptchaVerify;
     };
   }, []);
 
@@ -85,16 +69,16 @@ export default function ChatInterface() {
   }, [messages, loading]);
 
   const handleUnlock = () => {
-  if (!captchaVerified) {
-    alert("Please verify you're human.");
-    return;
-  }
-  if (password === 'recode2025') {
-    setUnlocked(true);
-  } else {
-    alert('Incorrect password.');
-  }
-};
+    if (!captchaVerified) {
+      alert("Please verify you're human.");
+      return;
+    }
+    if (password === 'recode2025') {
+      setUnlocked(true);
+    } else {
+      alert('Incorrect password.');
+    }
+  };
 
   if (!unlocked) {
     return (
@@ -161,7 +145,7 @@ export default function ChatInterface() {
           <div
             className="g-recaptcha mb-4"
             data-sitekey="6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB"
-            data-callback="onRecaptchaVerify"
+            data-callback="setCaptchaVerified"
           ></div>
 
           <button
