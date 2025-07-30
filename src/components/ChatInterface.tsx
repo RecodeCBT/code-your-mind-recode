@@ -10,9 +10,18 @@ export default function ChatInterface() {
   const [password, setPassword] = useState('');
   const chatContainerRef = useRef(null);
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
-    const userMessage = { role: 'user', content: input };
+  const starterOptions = [
+    "I would like explore my Mind-Code",
+    "Talk about depression", 
+    "Talk about anxiety",
+    "Talk about anger",
+    "Talk about motivation"
+  ];
+
+  const sendMessage = async (messageText?: string) => {
+    const textToSend = messageText || input;
+    if (!textToSend.trim()) return;
+    const userMessage = { role: 'user', content: textToSend };
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
     setLoading(true);
@@ -20,13 +29,17 @@ export default function ChatInterface() {
     const response = await fetch('/api/recode-chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: input }),
+      body: JSON.stringify({ message: textToSend }),
     });
 
     const data = await response.json();
     const botMessage = { role: 'bot', content: data.reply };
     setMessages((prev) => [...prev, botMessage]);
     setLoading(false);
+  };
+
+  const handleStarterClick = (starterText: string) => {
+    sendMessage(starterText);
   };
 
   useEffect(() => {
@@ -45,19 +58,19 @@ export default function ChatInterface() {
 
   if (!unlocked) {
     return (
-      <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 overflow-hidden">
         {/* Animated Circuit Background */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-pink-500/20 via-purple-500/20 to-blue-500/20 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 animate-pulse"></div>
           <div className="circuit-pattern absolute inset-0">
             {/* Circuit lines and nodes */}
             <svg className="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                  <circle cx="10" cy="10" r="2" fill="currentColor" className="text-orange-400 animate-pulse" />
-                  <circle cx="90" cy="90" r="2" fill="currentColor" className="text-purple-400 animate-pulse" />
-                  <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" strokeWidth="1" className="text-pink-400/50" />
-                  <line x1="10" y1="10" x2="10" y2="90" stroke="currentColor" strokeWidth="1" className="text-blue-400/50" />
+                  <circle cx="10" cy="10" r="2" fill="currentColor" className="text-primary animate-pulse" />
+                  <circle cx="90" cy="90" r="2" fill="currentColor" className="text-secondary animate-pulse" />
+                  <line x1="10" y1="10" x2="90" y2="10" stroke="currentColor" strokeWidth="1" className="text-accent/50" />
+                  <line x1="10" y1="10" x2="10" y2="90" stroke="currentColor" strokeWidth="1" className="text-primary/50" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#circuit)" />
@@ -79,12 +92,14 @@ export default function ChatInterface() {
         </div>
 
         <div className="relative z-10 flex flex-col items-center p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl max-w-md w-full mx-4">
-          {/* ChatCBT Logo */}
-          <img 
-            src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
-            alt="RECODE ChatCBT" 
-            className="w-64 h-auto mb-6"
-          />
+          {/* ChatCBT Logo - Made circular */}
+          <div className="w-80 h-80 rounded-full overflow-hidden mb-6 border-4 border-white/30 shadow-2xl">
+            <img 
+              src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
+              alt="RECODE ChatCBT" 
+              className="w-full h-full object-cover"
+            />
+          </div>
           
           <h2 className="text-2xl font-bold mb-4 text-center text-white">🔒 Access Required</h2>
           <p className="mb-6 text-sm text-white/80 text-center">Please enter your access password to begin your CBT session.</p>
@@ -93,13 +108,14 @@ export default function ChatInterface() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleUnlock()}
             placeholder="Enter password"
-            className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
           />
           
           <button
             onClick={handleUnlock}
-            className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
+            className="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:from-primary-foreground hover:to-secondary-foreground transition-all duration-300 shadow-lg"
           >
             Unlock ChatCBT
           </button>
@@ -109,14 +125,14 @@ export default function ChatInterface() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
-      {/* Header with ChatCBT logo and return button */}
-      <header className="bg-white shadow p-4 flex items-center justify-between">
+    <div className="flex flex-col h-screen bg-gradient-to-br from-background via-muted/10 to-accent/5">
+      {/* Header with larger ChatCBT logo and return button */}
+      <header className="bg-white/80 backdrop-blur-sm shadow-lg border-b border-border/20 p-6 flex items-center justify-between">
         <Button
           variant="outline"
           size="sm"
           onClick={() => window.location.href = '/'}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 border-primary/20 hover:bg-primary/5"
         >
           <ArrowLeft className="h-4 w-4" />
           Main Site
@@ -126,34 +142,57 @@ export default function ChatInterface() {
           <img 
             src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
             alt="RECODE ChatCBT" 
-            className="h-12 w-auto"
+            className="h-20 w-auto shadow-lg rounded-lg"
           />
         </div>
         
         <div className="w-20"></div> {/* Spacer for center alignment */}
       </header>
 
+      {/* Starter buttons section */}
+      {messages.length === 0 && (
+        <div className="bg-white/50 backdrop-blur-sm border-b border-border/10 p-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Get started with a topic that interests you:</h3>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {starterOptions.map((option, idx) => (
+                <Button
+                  key={idx}
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleStarterClick(option)}
+                  className="bg-white/70 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 hover:scale-105"
+                  disabled={loading}
+                >
+                  {option}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Chat area with larger avatar */}
-      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 space-y-6 max-w-4xl mx-auto w-full">
+      <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-6 space-y-8 max-w-4xl mx-auto w-full">
         {messages.map((msg, idx) => (
           <div
             key={idx}
-            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-3`}
+            className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-4`}
           >
             {msg.role === 'bot' && (
               <div className="flex-shrink-0">
                 <img
-                  src="/recode-avatar.png"
-                  alt="RECODE Avatar"
-                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-purple-200 shadow-lg"
+                  src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
+                  alt="ChatCBT Assistant"
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1"
                 />
               </div>
             )}
             <div
-              className={`px-6 py-4 rounded-2xl text-base max-w-[70%] whitespace-pre-wrap shadow-sm ${
+              className={`px-6 py-4 rounded-2xl text-base max-w-[75%] whitespace-pre-wrap shadow-lg ${
                 msg.role === 'user'
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white ml-auto'
-                  : 'bg-white border border-gray-200 text-gray-800'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto'
+                  : 'bg-white/90 backdrop-blur-sm border border-border/20 text-foreground'
               }`}
             >
               {msg.content}
@@ -162,20 +201,20 @@ export default function ChatInterface() {
         ))}
 
         {loading && (
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <div className="flex-shrink-0">
               <img 
-                src="/recode-avatar.png" 
+                src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
                 alt="Loading..." 
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-purple-200 shadow-lg animate-pulse" 
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-primary/20 shadow-xl bg-white p-1 animate-pulse" 
               />
             </div>
-            <div className="bg-white border border-gray-200 px-6 py-4 rounded-2xl shadow-sm">
-              <span className="text-gray-500 flex items-center gap-2">
+            <div className="bg-white/90 backdrop-blur-sm border border-border/20 px-6 py-4 rounded-2xl shadow-lg">
+              <span className="text-muted-foreground flex items-center gap-2">
                 <div className="flex gap-1">
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                 </div>
                 Thinking...
               </span>
@@ -185,25 +224,37 @@ export default function ChatInterface() {
       </main>
 
       {/* Input area */}
-      <footer className="p-4 bg-white border-t max-w-4xl mx-auto w-full">
-        <div className="flex gap-2">
+      <footer className="p-6 bg-white/80 backdrop-blur-sm border-t border-border/20 max-w-4xl mx-auto w-full">
+        <div className="flex gap-3 mb-4">
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-            className="flex-grow p-4 border border-gray-300 rounded-xl text-base outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+            className="flex-grow p-4 border border-border/30 rounded-xl text-base outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm"
             placeholder="Share what's on your mind..."
+            disabled={loading}
           />
           <button
-            onClick={sendMessage}
-            className="px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl text-base font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
+            onClick={() => sendMessage()}
+            disabled={loading}
+            className="px-6 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-xl text-base font-semibold hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg disabled:opacity-50"
           >
             Send
           </button>
         </div>
 
+        {/* Privacy disclaimer */}
+        <div className="mb-4 p-4 bg-blue-50/80 backdrop-blur-sm border border-blue-200/50 rounded-xl">
+          <p className="text-sm text-blue-800 mb-2">
+            <strong>Privacy & Data:</strong> Your chat details are never stored and are completely wiped when you exit this session.
+          </p>
+          <p className="text-sm text-blue-700">
+            This service is powered by highly specialized pre-trained OpenAI software designed for cognitive behavioral therapy support.
+          </p>
+        </div>
+
         {/* Emergency disclaimer */}
-        <div className="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-xl">
+        <div className="p-4 bg-orange-50/80 backdrop-blur-sm border border-orange-200/50 rounded-xl">
           <p className="text-sm text-orange-800 mb-2">
             <strong>Important:</strong> This ChatCBT service is not a substitute for emergency mental health care or crisis intervention.
           </p>
