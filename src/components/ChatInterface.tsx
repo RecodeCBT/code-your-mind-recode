@@ -1,14 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-export default function ChatInterface() {
+function ChatInterfaceContent() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
   const chatContainerRef = useRef(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -35,12 +37,33 @@ export default function ChatInterface() {
     }
   }, [messages, loading]);
 
-  const handleUnlock = () => {
-    if (password === 'recode2025') {
-      setUnlocked(true);
-    } else {
-      alert('Incorrect password.');
+  const handleUnlock = async () => {
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
     }
+
+    setLoading(true);
+    try {
+      const token = await executeRecaptcha('login');
+      
+      const response = await fetch('/api/verify-captcha', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password, token })
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setUnlocked(true);
+      } else {
+        alert(data.error || 'Verification failed');
+      }
+    } catch (error) {
+      alert('Network error. Please try again.');
+    }
+    setLoading(false);
   };
 
   if (!unlocked) {
@@ -99,9 +122,10 @@ export default function ChatInterface() {
           
           <button
             onClick={handleUnlock}
-            className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
+            disabled={loading}
+            className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg disabled:opacity-50"
           >
-            Unlock ChatCBT
+            {loading ? 'Verifying...' : 'Unlock ChatCBT'}
           </button>
         </div>
       </div>
@@ -218,5 +242,13 @@ export default function ChatInterface() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function ChatInterface() {
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}>
+      <ChatInterfaceContent />
+    </GoogleReCaptchaProvider>
   );
 }
