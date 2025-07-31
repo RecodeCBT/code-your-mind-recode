@@ -4,18 +4,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap } from "lucide-react";
+import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight } from "lucide-react";
+
+// Import service images
+import serviceLightbulb from "@/assets/service-lightbulb.jpg";
+import serviceGuidance from "@/assets/service-guidance.jpg";
+import serviceLaptop from "@/assets/service-laptop.jpg";
+import serviceCode from "@/assets/service-code.jpg";
+import serviceProgress from "@/assets/service-progress.jpg";
+import serviceTeam from "@/assets/service-team.jpg";
+import serviceToolkit from "@/assets/service-toolkit.jpg";
+import serviceDocumentation from "@/assets/service-documentation.jpg";
 
 const Services = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [showAllServices, setShowAllServices] = useState<boolean>(false);
 
   const services = [
     // Just Starting Out
     {
       title: "Initial Assessment & Therapy",
       duration: "65 min",
-      price: "£169",
-      introPrice: "Intro £149",
+      price: "£149",
+      originalPrice: "£169",
+      discountTag: "£20 discount introductory offer",
       bullets: [
         "Doctor-delivered CBT",
         "Personalised formulation", 
@@ -25,7 +37,9 @@ const Services = () => {
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_initial65",
       featured: true,
-      category: "just-starting"
+      category: "just-starting",
+      image: serviceLightbulb,
+      colorTheme: "from-blue-400 to-blue-600"
     },
     {
       title: "Guided CBT Programme",
@@ -39,7 +53,9 @@ const Services = () => {
       ],
       stripeUrl: "https://buy.stripe.com/REPLACE_guided",
       isSubscription: true,
-      category: "just-starting"
+      category: "just-starting",
+      image: serviceGuidance,
+      colorTheme: "from-blue-400 to-blue-600"
     },
     {
       title: "Self-Help Packs",
@@ -53,7 +69,9 @@ const Services = () => {
       ],
       stripeUrl: "https://buy.stripe.com/REPLACE_pack",
       isDigital: true,
-      category: "just-starting"
+      category: "just-starting",
+      image: serviceLaptop,
+      colorTheme: "from-blue-400 to-blue-600"
     },
     {
       title: "ChatCBT",
@@ -63,12 +81,13 @@ const Services = () => {
       bullets: [
         "AI-powered CBT conversations",
         "Available 24/7",
-        "Personalized guidance",
-        "Progress tracking"
+        "Personalized guidance"
       ],
       stripeUrl: "#",
       isSubscription: true,
-      category: "just-starting"
+      category: "just-starting",
+      image: serviceCode,
+      colorTheme: "from-blue-400 to-blue-600"
     },
     // Ready to Commit
     {
@@ -83,7 +102,9 @@ const Services = () => {
       ],
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
-      category: "ready-to-commit"
+      category: "ready-to-commit",
+      image: serviceProgress,
+      colorTheme: "from-green-400 to-green-600"
     },
     {
       title: "Reset Group",
@@ -97,7 +118,9 @@ const Services = () => {
       ],
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_group",
-      category: "ready-to-commit"
+      category: "ready-to-commit",
+      image: serviceTeam,
+      colorTheme: "from-green-400 to-green-600"
     },
     // Intensive Support
     {
@@ -115,7 +138,9 @@ const Services = () => {
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
       hasDiscount: true,
-      category: "intensive-support"
+      category: "intensive-support",
+      image: serviceToolkit,
+      colorTheme: "from-purple-400 to-purple-600"
     },
     {
       title: "Assessment + Written Plan",
@@ -129,37 +154,81 @@ const Services = () => {
       ],
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_assess",
-      category: "intensive-support"
+      category: "intensive-support",
+      image: serviceDocumentation,
+      colorTheme: "from-purple-400 to-purple-600"
+    },
+    // Corporate & Group Solutions
+    {
+      title: "Corporate Training",
+      duration: "Half/Full day workshops",
+      price: "From £2,500",
+      bullets: [
+        "Team mental health training",
+        "Workplace resilience building",
+        "Manager support skills",
+        "Custom programme design"
+      ],
+      category: "corporate-group",
+      image: serviceTeam,
+      colorTheme: "from-orange-400 to-orange-600",
+      isCorporate: true
+    },
+    {
+      title: "Group Therapy",
+      duration: "8-week programmes",
+      price: "£40 per person/week",
+      bullets: [
+        "Structured CBT curriculum",
+        "Peer support environment",
+        "Professional facilitation",
+        "Flexible scheduling"
+      ],
+      category: "corporate-group",
+      image: serviceTeam,
+      colorTheme: "from-orange-400 to-orange-600",
+      isCorporate: true
     }
   ];
 
   const categories = [
     {
       id: "just-starting",
+      number: "1",
       title: "Just Starting Out",
       description: "Explore tools and build foundations",
       icon: MessageCircle,
-      color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
+      color: "from-blue-400 to-blue-600"
     },
     {
       id: "ready-to-commit",
+      number: "2",
       title: "Ready to Commit",
       description: "Begin structured therapy and skill-building",
       icon: UserCheck,
-      color: "bg-green-50 border-green-200 hover:bg-green-100"
+      color: "from-green-400 to-green-600"
     },
     {
       id: "intensive-support",
+      number: "3",
       title: "Intensive Support",
       description: "Comprehensive assessment and treatment packages",
       icon: Zap,
-      color: "bg-purple-50 border-purple-200 hover:bg-purple-100"
+      color: "from-purple-400 to-purple-600"
+    },
+    {
+      id: "corporate-group",
+      number: "4",
+      title: "Group & Corporate Solutions",
+      description: "Team training and group therapy options",
+      icon: Building2,
+      color: "from-orange-400 to-orange-600"
     }
   ];
 
-  const filteredServices = selectedCategory === "all" 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+  const filteredServices = selectedCategory 
+    ? services.filter(service => service.category === selectedCategory)
+    : [];
 
   const steps = [
     {
@@ -212,104 +281,159 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-secondary/30 to-primary/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
 
       <Navigation />
         
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 text-center bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
-          <div className="container mx-auto max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Recode Your Mind Code™ with Doctor-Delivered CBT
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
-              Doctor-delivered CBT with clear goals and measurable outcomes. 65-minute sessions. Introductory offer available.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
-              >
-                Book Your First Session
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={() => window.location.href = '/lead-magnet'}
-              >
-                Download the 14-Day Mind Code™ Reset
-              </Button>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 text-center">
+        <div className="container mx-auto max-w-4xl relative z-10">
+          {/* Brain Logo */}
+          <div className="relative inline-block mb-8">
+            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary via-accent to-secondary p-1 animate-pulse">
+              <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/fe81a945-6632-4272-8a5e-b2608fc7fbb2.png" 
+                  alt="RecodeCBT Brain Logo" 
+                  className="w-20 h-20 object-contain"
+                />
+              </div>
             </div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-20 blur-md animate-pulse"></div>
           </div>
-        </section>
 
-        {/* Service Categories */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-7xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Choose Your Journey</h2>
-            <p className="text-xl text-center text-muted-foreground mb-12">
-              Select the path that best matches where you are in your mental health journey
-            </p>
-            
-            {/* Category Selection */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {categories.map((category) => (
-                <Card 
-                  key={category.id}
-                  className={`cursor-pointer transition-all duration-200 ${
-                    selectedCategory === category.id 
-                      ? 'ring-2 ring-primary bg-primary/5' 
-                      : 'hover:shadow-lg'
-                  } ${category.color}`}
-                  onClick={() => setSelectedCategory(category.id)}
-                >
-                  <CardContent className="p-6 text-center">
-                    <category.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                    <h3 className="text-xl font-bold mb-2">{category.title}</h3>
-                    <p className="text-muted-foreground">{category.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            Recode Your Mind Code™ with Doctor-Delivered CBT
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
+            Doctor-delivered CBT with clear goals and measurable outcomes. 65-minute sessions. Introductory offer available.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-all duration-300"
+              onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
+            >
+              Book Your First Session
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-6 border-2 hover:bg-primary/5"
+              onClick={() => window.location.href = '/lead-magnet'}
+            >
+              Download the 14-Day Mind Code™ Reset
+            </Button>
+          </div>
+        </div>
+      </section>
 
-            {/* Show All Button */}
+      {/* Service Categories */}
+      <section className="py-20 px-4 relative z-10">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Choose Your Journey</h2>
+          <p className="text-xl text-center text-muted-foreground mb-12">
+            Select the path that best matches where you are in your mental health journey
+          </p>
+          
+          {/* Category Selection */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {categories.map((category) => (
+              <Card 
+                key={category.id}
+                className={`cursor-pointer transition-all duration-500 relative overflow-hidden group ${
+                  selectedCategory === category.id 
+                    ? 'ring-4 ring-primary/50 bg-primary/10 scale-105 shadow-2xl' 
+                    : selectedCategory && selectedCategory !== category.id
+                    ? 'opacity-30 scale-95'
+                    : 'hover:shadow-xl hover:scale-105'
+                }`}
+                onClick={() => setSelectedCategory(selectedCategory === category.id ? "" : category.id)}
+              >
+                {/* Number Badge */}
+                <div className={`absolute top-4 right-4 w-8 h-8 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center text-white font-bold text-sm z-10`}>
+                  {category.number}
+                </div>
+                
+                {/* Gradient Background */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <CardContent className="p-6 text-center relative z-10">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                  <p className="text-muted-foreground text-sm">{category.description}</p>
+                  {selectedCategory === category.id && (
+                    <div className="mt-4 flex items-center justify-center text-primary">
+                      <ArrowRight className="w-4 h-4 animate-pulse" />
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Show All Button */}
+          {!selectedCategory && (
             <div className="text-center mb-12">
               <Button 
-                variant={selectedCategory === "all" ? "default" : "outline"}
-                onClick={() => setSelectedCategory("all")}
+                variant={showAllServices ? "default" : "outline"}
+                size="lg"
+                onClick={() => setShowAllServices(!showAllServices)}
+                className="text-lg px-8 py-3"
               >
-                Show All Services
+                {showAllServices ? "Hide Services" : "Show All Services"}
               </Button>
             </div>
+          )}
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service, index) => (
-                <Card key={index} className={`relative ${service.featured ? 'ring-2 ring-primary' : ''}`}>
-                  {service.featured && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                        Flagship Service
-                      </span>
-                    </div>
-                  )}
-                  {service.hasDiscount && (
-                    <div className="absolute -top-4 -right-4">
-                      <Badge className="bg-red-500 text-white px-3 py-1 text-xs font-bold transform rotate-12">
-                        25% OFF
-                      </Badge>
-                    </div>
-                  )}
-                  {service.comingSoon && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                        Coming Soon
-                      </span>
-                    </div>
-                  )}
-                  <CardHeader>
+          {/* Services Grid */}
+          {(selectedCategory || showAllServices) && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+              {(selectedCategory ? filteredServices : services).map((service, index) => (
+                <Card key={index} className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-300 ${service.featured ? 'ring-2 ring-primary' : ''}`}>
+                  {/* Service Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <div className={`absolute inset-0 bg-gradient-to-r ${service.colorTheme} opacity-80`}></div>
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    
+                    {/* Badges */}
+                    {service.featured && (
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                          Flagship Service
+                        </span>
+                      </div>
+                    )}
+                    {service.hasDiscount && (
+                      <div className="absolute top-4 right-4">
+                        <Badge className="bg-red-500 text-white px-3 py-1 text-xs font-bold shadow-lg">
+                          25% OFF
+                        </Badge>
+                      </div>
+                    )}
+                    {service.comingSoon && (
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                          Coming Soon
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  <CardHeader className="pb-4">
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription className="text-lg font-semibold">
                       {service.duration}
@@ -321,8 +445,10 @@ const Services = () => {
                         </span>
                       )}
                       {service.price}
-                      {service.introPrice && (
-                        <span className="block text-sm text-green-600">{service.introPrice}</span>
+                      {service.discountTag && (
+                        <div className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full inline-block mt-1">
+                          {service.discountTag}
+                        </div>
                       )}
                       {service.savings && (
                         <span className="block text-sm text-green-600">({service.savings})</span>
@@ -339,187 +465,134 @@ const Services = () => {
                       ))}
                     </ul>
                     <div className="space-y-2">
-                      {service.bookingUrl && !service.comingSoon && (
+                      {service.isCorporate ? (
                         <Button 
                           className="w-full" 
-                          onClick={() => window.open(service.bookingUrl, '_blank')}
+                          onClick={() => window.location.href = '/corporate-contact'}
                         >
-                          {service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
+                          Request Corporate Quote
                         </Button>
+                      ) : (
+                        <>
+                          {service.bookingUrl && !service.comingSoon && (
+                            <Button 
+                              className="w-full" 
+                              onClick={() => window.open(service.bookingUrl, '_blank')}
+                            >
+                              {service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
+                            </Button>
+                          )}
+                          <Button 
+                            variant="outline" 
+                            className="w-full"
+                            onClick={() => service.comingSoon ? null : window.open(service.stripeUrl, '_blank')}
+                            disabled={service.comingSoon}
+                          >
+                            {service.comingSoon ? 'Coming Soon' : service.isSubscription ? 'Join' : 'Buy Now'}
+                          </Button>
+                        </>
                       )}
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        onClick={() => service.comingSoon ? null : window.open(service.stripeUrl, '_blank')}
-                        disabled={service.comingSoon}
-                      >
-                        {service.comingSoon ? 'Coming Soon' : service.isSubscription ? 'Join' : 'Buy Now'}
-                      </Button>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+          )}
+        </div>
+      </section>
 
-        {/* How it Works */}
-        <section className="py-20 px-4 bg-secondary/10">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How it Works</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {steps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <step.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+      {/* How it Works */}
+      <section className="py-20 px-4 relative z-10">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How it Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-gradient-to-r from-primary to-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <step.icon className="w-8 h-8 text-white" />
                 </div>
-              ))}
+                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes & Trust */}
+      <section className="py-20 px-4 relative z-10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Outcomes & Trust</h2>
+          <p className="text-xl mb-12 text-muted-foreground">
+            We measure progress session-by-session (e.g., PHQ-9/GAD-7) and adjust the plan together.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center group">
+              <div className="bg-gradient-to-r from-primary to-accent rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold mb-2">GP-Led Practice</h3>
+              <p className="text-sm text-muted-foreground">Doctor-delivered therapy with medical oversight</p>
+            </div>
+            <div className="flex flex-col items-center group">
+              <div className="bg-gradient-to-r from-primary to-accent rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <FileText className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold mb-2">Data Privacy</h3>
+              <p className="text-sm text-muted-foreground">Secure, confidential sessions with GDPR compliance</p>
+            </div>
+            <div className="flex flex-col items-center group">
+              <div className="bg-gradient-to-r from-primary to-accent rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold mb-2">Measured Progress</h3>
+              <p className="text-sm text-muted-foreground">Validated tools track your improvement</p>
             </div>
           </div>
-        </section>
+          <p className="text-sm text-muted-foreground mt-8 italic">
+            CBT outcomes vary; we review progress together and adjust the plan.
+          </p>
+        </div>
+      </section>
 
-        {/* Outcomes & Trust */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Outcomes & Trust</h2>
-            <p className="text-xl mb-12 text-muted-foreground">
-              We measure progress session-by-session (e.g., PHQ-9/GAD-7) and adjust the plan together.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <Shield className="w-12 h-12 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">GP-Led Practice</h3>
-                <p className="text-sm text-muted-foreground">Doctor-delivered therapy with medical oversight</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <FileText className="w-12 h-12 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Data Privacy</h3>
-                <p className="text-sm text-muted-foreground">Secure, confidential sessions with GDPR compliance</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Target className="w-12 h-12 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Measured Progress</h3>
-                <p className="text-sm text-muted-foreground">Validated tools track your improvement</p>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground mt-8 italic">
-              CBT outcomes vary; we review progress together and adjust the plan.
-            </p>
-          </div>
-        </section>
+      {/* FAQs */}
+      <section className="py-20 px-4 relative z-10">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border border-border/50 rounded-lg mb-4 px-6">
+                <AccordionTrigger className="text-left hover:no-underline">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
-        {/* FAQs */}
-        <section className="py-20 px-4 bg-secondary/10">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+      {/* Final CTA */}
+      <section className="py-20 px-4 relative z-10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Start Your Journey?</h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-all duration-300"
+              onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
+            >
+              Book Your First Session
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-6 border-2 hover:bg-primary/5"
+              onClick={() => window.location.href = '/lead-magnet'}
+            >
+              Download the 14-Day Mind Code™ Reset
+            </Button>
           </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-20 px-4 bg-gradient-to-r from-primary/10 to-accent/10">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Start Your Journey?</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
-              >
-                Book Your First Session
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={() => window.location.href = '/lead-magnet'}
-              >
-                Download the 14-Day Mind Code™ Reset
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Form Sidebar - Right Rail */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <div className="lg:col-span-2">
-                <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
-                <p className="text-muted-foreground">
-                  Our services are designed to provide effective, evidence-based CBT with clear outcomes. 
-                  Each session is structured to help you understand and change the patterns that maintain your difficulties.
-                </p>
-              </div>
-              <div className="lg:col-span-1">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Get in Touch</CardTitle>
-                    <CardDescription>Send us a message and we'll get back to you</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form action="https://formspree.io/f/manbqker" method="POST" className="space-y-4">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
-                        <input 
-                          type="text" 
-                          id="name" 
-                          name="name" 
-                          required 
-                          className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
-                        <input 
-                          type="email" 
-                          id="email" 
-                          name="email" 
-                          required 
-                          className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
-                        <textarea 
-                          id="message" 
-                          name="message" 
-                          rows={4} 
-                          required 
-                          className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                        ></textarea>
-                      </div>
-                      <div className="flex items-start space-x-2">
-                        <input 
-                          type="checkbox" 
-                          id="consent" 
-                          name="consent" 
-                          required 
-                          className="mt-1"
-                        />
-                        <label htmlFor="consent" className="text-xs text-muted-foreground">
-                          I consent to my data being processed in accordance with the{" "}
-                          <a href="/policies" className="underline">Privacy Policy</a>
-                        </label>
-                      </div>
-                      <Button type="submit" className="w-full">Send Message</Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
     </div>
   );
 };
