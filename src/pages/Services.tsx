@@ -1,12 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { CheckCircle, Users, FileText, Brain, Target, Shield } from "lucide-react";
+import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap } from "lucide-react";
 
 const Services = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
   const services = [
+    // Just Starting Out
     {
       title: "Initial Assessment & Therapy",
       duration: "65 min",
@@ -20,34 +24,8 @@ const Services = () => {
       ],
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_initial65",
-      featured: true
-    },
-    {
-      title: "Follow-up Session",
-      duration: "45 min",
-      price: "£119",
-      bullets: [
-        "Progress reviews",
-        "Skills consolidation", 
-        "Outcome tracking",
-        "Continuity of care"
-      ],
-      bookingUrl: "https://recodecbt.setmore.com",
-      stripeUrl: "https://buy.stripe.com/REPLACE_follow45"
-    },
-    {
-      title: "6-Session Package",
-      duration: "6 × 65 min",
-      price: "£949",
-      savings: "save 5–7%",
-      bullets: [
-        "Structured plan",
-        "Continuity",
-        "Priority scheduling",
-        "Pre-paid convenience"
-      ],
-      bookingUrl: "https://recodecbt.setmore.com",
-      stripeUrl: "https://buy.stripe.com/REPLACE_pkg6"
+      featured: true,
+      category: "just-starting"
     },
     {
       title: "Guided CBT Programme",
@@ -60,33 +38,8 @@ const Services = () => {
         "20-min monthly check-in"
       ],
       stripeUrl: "https://buy.stripe.com/REPLACE_guided",
-      isSubscription: true
-    },
-    {
-      title: "Reset Group",
-      duration: "4 × 60-min sessions", 
-      price: "£30 per person/week",
-      bullets: [
-        "Skills + practice",
-        "Community support",
-        "Workbook included",
-        "8 seats, Zoom format"
-      ],
-      bookingUrl: "https://recodecbt.setmore.com",
-      stripeUrl: "https://buy.stripe.com/REPLACE_group"
-    },
-    {
-      title: "Assessment + Written Plan",
-      duration: "90 min",
-      price: "£249",
-      bullets: [
-        "Structured intake",
-        "PHQ-9/GAD-7 assessment",
-        "Personalised plan",
-        "Share with GP/HR"
-      ],
-      bookingUrl: "https://recodecbt.setmore.com",
-      stripeUrl: "https://buy.stripe.com/REPLACE_assess"
+      isSubscription: true,
+      category: "just-starting"
     },
     {
       title: "Self-Help Packs",
@@ -99,9 +52,114 @@ const Services = () => {
         "Instant download"
       ],
       stripeUrl: "https://buy.stripe.com/REPLACE_pack",
-      isDigital: true
+      isDigital: true,
+      category: "just-starting"
+    },
+    {
+      title: "ChatCBT",
+      duration: "24/7 AI Support",
+      price: "£8/month",
+      comingSoon: true,
+      bullets: [
+        "AI-powered CBT conversations",
+        "Available 24/7",
+        "Personalized guidance",
+        "Progress tracking"
+      ],
+      stripeUrl: "#",
+      isSubscription: true,
+      category: "just-starting"
+    },
+    // Ready to Commit
+    {
+      title: "Follow-up Session",
+      duration: "45 min",
+      price: "£119",
+      bullets: [
+        "Progress reviews",
+        "Skills consolidation", 
+        "Outcome tracking",
+        "Continuity of care"
+      ],
+      bookingUrl: "https://recodecbt.setmore.com",
+      stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
+      category: "ready-to-commit"
+    },
+    {
+      title: "Reset Group",
+      duration: "4 × 60-min sessions", 
+      price: "£30 per person/week",
+      bullets: [
+        "Skills + practice",
+        "Community support",
+        "Workbook included",
+        "8 seats, Zoom format"
+      ],
+      bookingUrl: "https://recodecbt.setmore.com",
+      stripeUrl: "https://buy.stripe.com/REPLACE_group",
+      category: "ready-to-commit"
+    },
+    // Intensive Support
+    {
+      title: "6-Session Package",
+      duration: "6 × 65 min",
+      price: "£780",
+      originalPrice: "£1,014",
+      savings: "25% discount with this option",
+      bullets: [
+        "Structured plan",
+        "Continuity",
+        "Priority scheduling",
+        "Pre-paid convenience"
+      ],
+      bookingUrl: "https://recodecbt.setmore.com",
+      stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
+      hasDiscount: true,
+      category: "intensive-support"
+    },
+    {
+      title: "Assessment + Written Plan",
+      duration: "90 min",
+      price: "£249",
+      bullets: [
+        "Structured intake",
+        "PHQ-9/GAD-7 assessment",
+        "Personalised plan",
+        "Share with GP/HR"
+      ],
+      bookingUrl: "https://recodecbt.setmore.com",
+      stripeUrl: "https://buy.stripe.com/REPLACE_assess",
+      category: "intensive-support"
     }
   ];
+
+  const categories = [
+    {
+      id: "just-starting",
+      title: "Just Starting Out",
+      description: "Explore tools and build foundations",
+      icon: MessageCircle,
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
+    },
+    {
+      id: "ready-to-commit",
+      title: "Ready to Commit",
+      description: "Begin structured therapy and skill-building",
+      icon: UserCheck,
+      color: "bg-green-50 border-green-200 hover:bg-green-100"
+    },
+    {
+      id: "intensive-support",
+      title: "Intensive Support",
+      description: "Comprehensive assessment and treatment packages",
+      icon: Zap,
+      color: "bg-purple-50 border-purple-200 hover:bg-purple-100"
+    }
+  ];
+
+  const filteredServices = selectedCategory === "all" 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
 
   const steps = [
     {
@@ -187,17 +245,67 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Services at a Glance */}
+        {/* Service Categories */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Services at a Glance</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Choose Your Journey</h2>
+            <p className="text-xl text-center text-muted-foreground mb-12">
+              Select the path that best matches where you are in your mental health journey
+            </p>
+            
+            {/* Category Selection */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {categories.map((category) => (
+                <Card 
+                  key={category.id}
+                  className={`cursor-pointer transition-all duration-200 ${
+                    selectedCategory === category.id 
+                      ? 'ring-2 ring-primary bg-primary/5' 
+                      : 'hover:shadow-lg'
+                  } ${category.color}`}
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  <CardContent className="p-6 text-center">
+                    <category.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
+                    <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                    <p className="text-muted-foreground">{category.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Show All Button */}
+            <div className="text-center mb-12">
+              <Button 
+                variant={selectedCategory === "all" ? "default" : "outline"}
+                onClick={() => setSelectedCategory("all")}
+              >
+                Show All Services
+              </Button>
+            </div>
+
+            {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => (
+              {filteredServices.map((service, index) => (
                 <Card key={index} className={`relative ${service.featured ? 'ring-2 ring-primary' : ''}`}>
                   {service.featured && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
                         Flagship Service
+                      </span>
+                    </div>
+                  )}
+                  {service.hasDiscount && (
+                    <div className="absolute -top-4 -right-4">
+                      <Badge className="bg-red-500 text-white px-3 py-1 text-xs font-bold transform rotate-12">
+                        25% OFF
+                      </Badge>
+                    </div>
+                  )}
+                  {service.comingSoon && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Coming Soon
                       </span>
                     </div>
                   )}
@@ -207,6 +315,11 @@ const Services = () => {
                       {service.duration}
                     </CardDescription>
                     <div className="text-2xl font-bold text-primary">
+                      {service.originalPrice && (
+                        <span className="line-through text-muted-foreground text-lg mr-2">
+                          {service.originalPrice}
+                        </span>
+                      )}
                       {service.price}
                       {service.introPrice && (
                         <span className="block text-sm text-green-600">{service.introPrice}</span>
@@ -226,7 +339,7 @@ const Services = () => {
                       ))}
                     </ul>
                     <div className="space-y-2">
-                      {service.bookingUrl && (
+                      {service.bookingUrl && !service.comingSoon && (
                         <Button 
                           className="w-full" 
                           onClick={() => window.open(service.bookingUrl, '_blank')}
@@ -237,9 +350,10 @@ const Services = () => {
                       <Button 
                         variant="outline" 
                         className="w-full"
-                        onClick={() => window.open(service.stripeUrl, '_blank')}
+                        onClick={() => service.comingSoon ? null : window.open(service.stripeUrl, '_blank')}
+                        disabled={service.comingSoon}
                       >
-                        {service.isSubscription ? 'Join' : 'Buy Now'}
+                        {service.comingSoon ? 'Coming Soon' : service.isSubscription ? 'Join' : 'Buy Now'}
                       </Button>
                     </div>
                   </CardContent>
