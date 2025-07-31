@@ -122,8 +122,8 @@ const Index = () => {
               <div className="relative z-10">
                 <div className="w-80 h-80 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-8 backdrop-blur-md shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-full"></div>
-                  <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center">
-                    <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="ReCODE Logo" className="w-full h-full object-contain" />
+                  <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center overflow-hidden">
+                    <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="ReCODE Logo" className="w-full h-full object-contain rounded-full" />
                   </div>
                 </div>
                 

@@ -4,17 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight } from "lucide-react";
-
-// Import service images
-import serviceLightbulb from "@/assets/service-lightbulb.jpg";
-import serviceGuidance from "@/assets/service-guidance.jpg";
-import serviceLaptop from "@/assets/service-laptop.jpg";
-import serviceCode from "@/assets/service-code.jpg";
-import serviceProgress from "@/assets/service-progress.jpg";
-import serviceTeam from "@/assets/service-team.jpg";
-import serviceToolkit from "@/assets/service-toolkit.jpg";
-import serviceDocumentation from "@/assets/service-documentation.jpg";
+import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight, Lightbulb, Compass, Laptop, Code, BarChart3, Search, Wrench, Link } from "lucide-react";
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -38,7 +28,7 @@ const Services = () => {
       stripeUrl: "https://buy.stripe.com/REPLACE_initial65",
       featured: true,
       category: "just-starting",
-      image: serviceLightbulb,
+      icon: Lightbulb,
       colorTheme: "from-blue-400 to-blue-600"
     },
     {
@@ -54,7 +44,7 @@ const Services = () => {
       stripeUrl: "https://buy.stripe.com/REPLACE_guided",
       isSubscription: true,
       category: "just-starting",
-      image: serviceGuidance,
+      icon: Compass,
       colorTheme: "from-blue-400 to-blue-600"
     },
     {
@@ -70,7 +60,7 @@ const Services = () => {
       stripeUrl: "https://buy.stripe.com/REPLACE_pack",
       isDigital: true,
       category: "just-starting",
-      image: serviceLaptop,
+      icon: Laptop,
       colorTheme: "from-blue-400 to-blue-600"
     },
     {
@@ -86,7 +76,7 @@ const Services = () => {
       stripeUrl: "#",
       isSubscription: true,
       category: "just-starting",
-      image: serviceCode,
+      icon: Code,
       colorTheme: "from-blue-400 to-blue-600"
     },
     // Ready to Commit
@@ -103,7 +93,7 @@ const Services = () => {
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
       category: "ready-to-commit",
-      image: serviceProgress,
+      icon: BarChart3,
       colorTheme: "from-green-400 to-green-600"
     },
     {
@@ -114,12 +104,12 @@ const Services = () => {
         "Skills + practice",
         "Community support",
         "Workbook included",
-        "8 seats, Zoom format"
+        "Minimum 8 people per session required"
       ],
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_group",
       category: "ready-to-commit",
-      image: serviceTeam,
+      icon: Users,
       colorTheme: "from-green-400 to-green-600"
     },
     // Intensive Support
@@ -139,7 +129,7 @@ const Services = () => {
       stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
       hasDiscount: true,
       category: "intensive-support",
-      image: serviceToolkit,
+      icon: Wrench,
       colorTheme: "from-purple-400 to-purple-600"
     },
     {
@@ -155,14 +145,14 @@ const Services = () => {
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_assess",
       category: "intensive-support",
-      image: serviceDocumentation,
+      icon: Search,
       colorTheme: "from-purple-400 to-purple-600"
     },
     // Corporate & Group Solutions
     {
       title: "Corporate Training",
       duration: "Half/Full day workshops",
-      price: "From £2,500",
+      price: "Quote on request",
       bullets: [
         "Team mental health training",
         "Workplace resilience building",
@@ -170,7 +160,7 @@ const Services = () => {
         "Custom programme design"
       ],
       category: "corporate-group",
-      image: serviceTeam,
+      icon: Building2,
       colorTheme: "from-orange-400 to-orange-600",
       isCorporate: true
     },
@@ -182,10 +172,10 @@ const Services = () => {
         "Structured CBT curriculum",
         "Peer support environment",
         "Professional facilitation",
-        "Flexible scheduling"
+        "Minimum 8 people per session required"
       ],
       category: "corporate-group",
-      image: serviceTeam,
+      icon: MessageCircle,
       colorTheme: "from-orange-400 to-orange-600",
       isCorporate: true
     }
@@ -357,7 +347,7 @@ const Services = () => {
                 onClick={() => setSelectedCategory(selectedCategory === category.id ? "" : category.id)}
               >
                 {/* Number Badge */}
-                <div className={`absolute top-4 right-4 w-8 h-8 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center text-white font-bold text-sm z-10`}>
+                <div className={`absolute top-4 left-4 w-8 h-8 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center text-white font-bold text-sm z-10`}>
                   {category.number}
                 </div>
                 
@@ -399,60 +389,59 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
               {(selectedCategory ? filteredServices : services).map((service, index) => (
                 <Card key={index} className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-300 ${service.featured ? 'ring-2 ring-primary' : ''}`}>
-                  {/* Service Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-r ${service.colorTheme} opacity-80`}></div>
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    
-                    {/* Badges */}
-                    {service.featured && (
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                          Flagship Service
-                        </span>
-                      </div>
-                    )}
-                    {service.hasDiscount && (
-                      <div className="absolute top-4 right-4">
-                        <Badge className="bg-red-500 text-white px-3 py-1 text-xs font-bold shadow-lg">
-                          25% OFF
-                        </Badge>
-                      </div>
-                    )}
-                    {service.comingSoon && (
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                          Coming Soon
-                        </span>
-                      </div>
-                    )}
-                  </div>
-
                   <CardHeader className="pb-4">
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <CardDescription className="text-lg font-semibold">
-                      {service.duration}
-                    </CardDescription>
-                    <div className="text-2xl font-bold text-primary">
-                      {service.originalPrice && (
-                        <span className="line-through text-muted-foreground text-lg mr-2">
-                          {service.originalPrice}
-                        </span>
-                      )}
-                      {service.price}
-                      {service.discountTag && (
-                        <div className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full inline-block mt-1">
-                          {service.discountTag}
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <CardTitle className="text-xl">{service.title}</CardTitle>
+                        <CardDescription className="text-lg font-semibold">
+                          {service.duration}
+                        </CardDescription>
+                        
+                        {/* Badges */}
+                        {service.featured && (
+                          <div className="mt-2">
+                            <span className="bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                              Flagship Service
+                            </span>
+                          </div>
+                        )}
+                        {service.hasDiscount && (
+                          <div className="mt-2">
+                            <Badge className="bg-red-500 text-white px-3 py-1 text-xs font-bold shadow-lg">
+                              25% OFF
+                            </Badge>
+                          </div>
+                        )}
+                        {service.comingSoon && (
+                          <div className="mt-2">
+                            <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                              Coming Soon
+                            </span>
+                          </div>
+                        )}
+                        
+                        <div className="text-2xl font-bold text-primary mt-3">
+                          {service.originalPrice && (
+                            <span className="line-through text-muted-foreground text-lg mr-2">
+                              {service.originalPrice}
+                            </span>
+                          )}
+                          {service.price}
+                          {service.discountTag && (
+                            <div className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full inline-block mt-1">
+                              {service.discountTag}
+                            </div>
+                          )}
+                          {service.savings && (
+                            <span className="block text-sm text-green-600">({service.savings})</span>
+                          )}
                         </div>
-                      )}
-                      {service.savings && (
-                        <span className="block text-sm text-green-600">({service.savings})</span>
-                      )}
+                      </div>
+                      
+                      {/* Service Icon */}
+                      <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${service.colorTheme} flex items-center justify-center flex-shrink-0`}>
+                        <service.icon className="w-8 h-8 text-white" />
+                      </div>
                     </div>
                   </CardHeader>
                   <CardContent>
