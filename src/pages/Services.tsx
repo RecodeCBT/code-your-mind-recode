@@ -386,7 +386,7 @@ const Services = () => {
 
           {/* Services Grid */}
           {(selectedCategory || showAllServices) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {(selectedCategory ? filteredServices : services).map((service, index) => (
                 <Card key={index} className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-300 ${service.featured ? 'ring-2 ring-primary' : ''}`}>
                   <CardHeader className="pb-4">
