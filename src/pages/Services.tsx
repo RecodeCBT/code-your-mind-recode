@@ -307,7 +307,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-all duration-300"
+              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-transform duration-300"
               onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
             >
               Book Your First Session
@@ -337,7 +337,7 @@ const Services = () => {
             {categories.map((category) => (
               <Card 
                 key={category.id}
-                className={`cursor-pointer transition-all duration-500 relative overflow-hidden group ${
+                className={`cursor-pointer transition-transform duration-300 relative overflow-hidden group ${
                   selectedCategory === category.id 
                     ? 'ring-4 ring-primary/50 bg-primary/10 scale-105 shadow-2xl' 
                     : selectedCategory && selectedCategory !== category.id
@@ -388,7 +388,7 @@ const Services = () => {
           {(selectedCategory || showAllServices) && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {(selectedCategory ? filteredServices : services).map((service, index) => (
-                <Card key={index} className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-300 ${service.featured ? 'ring-2 ring-primary' : ''}`}>
+                <Card key={index} className={`relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300 ${service.featured ? 'ring-2 ring-primary' : ''}`}>
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
@@ -566,7 +566,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-all duration-300"
+              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-transform duration-300"
               onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
             >
               Book Your First Session
