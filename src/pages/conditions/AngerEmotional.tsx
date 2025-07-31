@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,10 @@ import { ArrowLeft, Brain, Zap, Shield, AlertTriangle, CheckCircle, CreditCard, 
 import angerVolcanoImage from "@/assets/anger-volcano.jpg";
 
 const AngerEmotional = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <div className="container mx-auto px-4 py-8">
@@ -277,9 +282,6 @@ const AngerEmotional = () => {
                 </ul>
               </div>
               
-              <p className="text-lg leading-relaxed">
-                ...read more
-              </p>
             </CardContent>
           </Card>
         </div>

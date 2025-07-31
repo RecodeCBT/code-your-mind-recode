@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,10 @@ import { ArrowLeft, Brain, Heart, Zap, AlertTriangle, CheckCircle, CreditCard, M
 import anxietyBrainImage from "@/assets/anxiety-brain.jpg";
 
 const AnxietyPanic = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <div className="container mx-auto px-4 py-8">
@@ -191,7 +196,7 @@ const AnxietyPanic = () => {
               <p className="text-lg leading-relaxed">
                 Through this systematic approach, we help you build new neural pathways for calm confidence, 
                 teach you practical coping strategies, and gradually expose you to feared situations in a 
-                controlled, supportive environment. ...read more
+                controlled, supportive environment.
               </p>
             </CardContent>
           </Card>
