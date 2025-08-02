@@ -19,9 +19,10 @@ const Services = () => {
       originalPrice: "£169",
       discountTag: "£20 discount introductory offer",
       bullets: [
-        "Doctor-delivered CBT",
-        "Personalised formulation", 
-        "Measurable outcomes",
+        "Doctor-delivered ReCODE CBT",
+        "Personalised ReCODE formulation", 
+        "Psychoanalysis of AutoCode, and Measurable outcomes",
+        "Reports and home content issued with each session"
         "Secure online booking"
       ],
       bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=60fdb16d-7ddb-4847-8b65-9b9db898381b&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
@@ -34,12 +35,15 @@ const Services = () => {
     {
       title: "Guided CBT Programme",
       duration: "Monthly + 20-min check-in",
-      price: "£49/month",
+      price: "£19/month",
       bullets: [
-        "Weekly email lessons",
+        "20-min monthly check-in with a Doctor"
+        "Access to ChatCBT 24/7"
+        "Weekly email lessons & exercises",
         "Worksheets included",
-        "Mood tracking tools",
-        "20-min monthly check-in"
+        "Coaching and practice re-enforcement"
+        
+        
       ],
       stripeUrl: "https://buy.stripe.com/REPLACE_guided",
       isSubscription: true,
@@ -139,7 +143,7 @@ const Services = () => {
       originalPrice: "£676",
       savings: "SAVE £76",
       bullets: [
-        "Intermediate course approach, ReCODE psychoanalysis and applied CBT theory, and DBT styled exercises",
+        "Intermediate course, ReCODE psychoanalysis and applied CBT theory, and DBT styled exercises",
         "Reports and home content issued with each session",
         "Free 15 minute drop in session included",
         "SAVE £76 on 4 session course compared to single sessions"
@@ -218,7 +222,7 @@ const Services = () => {
       color: "from-green-400 to-green-600"
     },
     {
-      id: "intensive-support",
+      id: "Intensive-support",
       number: "3",
       title: "Intensive Support",
       description: "Comprehensive assessment and treatment packages",
@@ -247,7 +251,7 @@ const Services = () => {
     },
     {
       icon: Brain,
-      title: "Formulate your Mind Code™",
+      title: "Formulate your Auto-Code™",
       description: "Identify patterns maintaining the problem"
     },
     {
@@ -265,7 +269,7 @@ const Services = () => {
   const faqs = [
     {
       question: "How many sessions will I need?",
-      answer: "Many benefit from 6–12 sessions; we review regularly and adjust the plan based on your progress and goals."
+      answer: "Many benefit from 4-6 sessions; we review regularly and adjust the plan based on your progress and goals."
     },
     {
       question: "Do you prescribe medication?",
