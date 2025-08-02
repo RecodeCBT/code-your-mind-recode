@@ -474,10 +474,10 @@ const Services = () => {
                           <Button 
                             variant="outline" 
                             className="w-full"
-                            onClick={() => service.comingSoon ? null : window.open(service.stripeUrl, '_blank')}
+                            onClick={() => service.comingSoon ? null : window.open('https://recodecbt.setmore.com', '_blank')}
                             disabled={service.comingSoon}
                           >
-                            {service.comingSoon ? 'Coming Soon' : service.isSubscription ? 'Join' : 'Buy Now'}
+                            {service.comingSoon ? 'Coming Soon' : 'Book'}
                           </Button>
                         </>
                       )}

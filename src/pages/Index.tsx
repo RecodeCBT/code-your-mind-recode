@@ -357,18 +357,21 @@ This code can be revealed and re-written using a combination of techniques based
             <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <div className="flex flex-col items-center justify-center gap-4">
-              <div className="relative">
-                <a href="https://recodecbt.setmore.com" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="secondary" className="text-lg px-12 py-4 hover:scale-105 transition-transform">
-                    Book Your Session Now
-                  </Button>
-                </a>
+              <div className="relative group">
+                <Button 
+                  size="lg" 
+                  className="text-xl px-16 py-6 bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-white shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 font-bold"
+                  onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
+                >
+                  Book Your Session Today
+                </Button>
                 
-                {/* £20 off circular sticker */}
-                <div className="absolute -top-3 -right-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-full shadow-lg transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-4 border-white">
-                    <div className="font-bold text-xs leading-none">£20</div>
+                {/* Enhanced £20 off sticker */}
+                <div className="absolute -top-4 -right-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white rounded-full shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-4 border-white">
+                    <div className="font-bold text-sm leading-none">£20</div>
                     <div className="font-bold text-xs leading-none">OFF</div>
+                    <div className="font-bold text-xs leading-none opacity-90">INTRO</div>
                   </div>
                 </div>
               </div>
