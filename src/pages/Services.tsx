@@ -34,12 +34,13 @@ const Services = () => {
     {
       title: "Guided CBT Programme",
       duration: "Monthly + 20-min check-in",
-      price: "£49/month",
+      price: "£19/month",
       bullets: [
-        "Weekly email lessons",
-        "Worksheets included",
-        "Mood tracking tools",
-        "20-min monthly check-in"
+        "20-min monthly check-in with a Doctor"
+        "Weekly email ReCODE CBT lessons",
+        "Worksheets and exercises included",
+        "Free access to ChatCBT 24/7",
+        
       ],
       stripeUrl: "https://buy.stripe.com/REPLACE_guided",
       isSubscription: true,
