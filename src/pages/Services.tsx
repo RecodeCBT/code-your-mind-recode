@@ -36,7 +36,7 @@ const Services = () => {
       duration: "Monthly + 20-min check-in",
       price: "£19/month",
       bullets: [
-        "20-min monthly check-in with a Doctor"
+        "20-min monthly check-in with a Doctor" ,
         "Weekly email ReCODE CBT lessons",
         "Worksheets and exercises included",
         "Free access to ChatCBT 24/7",
