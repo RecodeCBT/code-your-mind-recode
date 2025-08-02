@@ -97,9 +97,9 @@ const Services = () => {
       colorTheme: "from-green-400 to-green-600"
     },
     {
-      title: "Ready to commit or continue",
-      duration: "Drop in session", 
-      price: "£15",
+      title: "Drop in session",
+      duration: "15 mins", 
+      price: "£29",
       bullets: [
         "15 minute check-in or emergency session",
         "Discuss new events and help break them down for analysis",
@@ -139,7 +139,7 @@ const Services = () => {
       originalPrice: "£676",
       savings: "SAVE £76",
       bullets: [
-        "Intermediate course approach, structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises",
+        "Intermediate course approach, ReCODE psychoanalysis and applied CBT theory, and DBT styled exercises",
         "Reports and home content issued with each session",
         "Free 15 minute drop in session included",
         "SAVE £76 on 4 session course compared to single sessions"
@@ -159,7 +159,7 @@ const Services = () => {
         "Structured intake",
         "PHQ-9/GAD-7 assessment",
         "Personalised plan",
-        "Share with GP/HR"
+        "Share with GP to GP/HR letter"
       ],
       bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_assess",
@@ -212,7 +212,7 @@ const Services = () => {
     {
       id: "ready-to-commit",
       number: "2",
-      title: "Ready to Commit",
+      title: "Ready to Commit or Continue",
       description: "Begin structured therapy and skill-building",
       icon: UserCheck,
       color: "from-green-400 to-green-600"
