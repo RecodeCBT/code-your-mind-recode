@@ -24,6 +24,7 @@ const Services = () => {
         "Psychoanalysis of AutoCode, and Measurable outcomes",
         "Reports and home content issued with each session"
         "Secure online booking"
+        
       ],
       bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=60fdb16d-7ddb-4847-8b65-9b9db898381b&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
       stripeUrl: "https://buy.stripe.com/REPLACE_initial65",
