@@ -6,24 +6,54 @@ export default function ChatInterface() {
   const [loading, setLoading] = useState(false);
   const chatContainerRef = useRef(null);
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
-    const userMessage = { role: 'user', content: input };
-    setMessages((prev) => [...prev, userMessage]);
-    setInput('');
-    setLoading(true);
+ const sendMessage = async () => {
+  // Prevent sending if empty or already loading
+  if (!input.trim() || loading) return;
 
+  // Append user message
+  const userMessage = { role: 'user', content: input };
+  setMessages(prev => [...prev, userMessage]);
+
+  // Clear input & show spinner
+  setInput('');
+  setLoading(true);
+
+  try {
+    // API call
     const response = await fetch('/api/recode-chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: input }),
     });
 
+    // Throw if non-200
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    // Parse JSON
     const data = await response.json();
-    const botMessage = { role: 'bot', content: data.reply };
-    setMessages((prev) => [...prev, botMessage]);
+
+    // Append bot reply
+    const botMessage = {
+      role: 'bot',
+      content: data.reply ?? '❌ No reply received.',
+    };
+    setMessages(prev => [...prev, botMessage]);
+
+  } catch (err: any) {
+    // On error, show message
+    const errorMessage = {
+      role: 'bot',
+      content: `Sorry, something went wrong: ${err.message}`,
+    };
+    setMessages(prev => [...prev, errorMessage]);
+
+  } finally {
+    // Always hide spinner
     setLoading(false);
-  };
+  }
+};
 
   useEffect(() => {
     if (chatContainerRef.current) {
