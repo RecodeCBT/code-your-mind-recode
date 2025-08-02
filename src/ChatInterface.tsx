@@ -20,7 +20,7 @@ export default function ChatInterface() {
 
   try {
     // API call
-    const response = await fetch('/api/recode-chat', {
+    const response = await fetch('/api/recode-chats', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: input }),
