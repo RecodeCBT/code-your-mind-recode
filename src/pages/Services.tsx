@@ -24,7 +24,7 @@ const Services = () => {
         "Measurable outcomes",
         "Secure online booking"
       ],
-      bookingUrl: "https://recodecbt.setmore.com",
+      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=60fdb16d-7ddb-4847-8b65-9b9db898381b&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
       stripeUrl: "https://buy.stripe.com/REPLACE_initial65",
       featured: true,
       category: "just-starting",
@@ -90,26 +90,42 @@ const Services = () => {
         "Outcome tracking",
         "Continuity of care"
       ],
-      bookingUrl: "https://recodecbt.setmore.com",
+      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=0a8ad2bd-fbfd-4ad7-b998-77a02cc30537&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
       stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
       category: "ready-to-commit",
       icon: BarChart3,
       colorTheme: "from-green-400 to-green-600"
     },
     {
-      title: "Reset Group",
-      duration: "4 × 60-min sessions", 
-      price: "£30 per person/week",
+      title: "Ready to Commit or Continue",
+      duration: "15-min drop-in session",
+      price: "Quick consultation",
       bullets: [
-        "Skills + practice",
-        "Community support",
-        "Workbook included",
-        "Minimum 8 people per session required"
+        "Drop-in session",
+        "Quick guidance",
+        "Progress check",
+        "Next steps planning"
       ],
-      bookingUrl: "https://recodecbt.setmore.com",
+      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=5c7a5dce-69ca-428f-8921-b13cab696cc6&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
       stripeUrl: "https://buy.stripe.com/REPLACE_group",
       category: "ready-to-commit",
       icon: Users,
+      colorTheme: "from-green-400 to-green-600"
+    },
+    {
+      title: "4-Session Package",
+      duration: "4 × 65 min",
+      price: "£476",
+      bullets: [
+        "Structured therapy",
+        "Skills building",
+        "Progress tracking",
+        "Pre-paid convenience"
+      ],
+      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=049a7c0d-e671-4731-99e1-922f8ce7b8ce&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
+      stripeUrl: "https://buy.stripe.com/REPLACE_group",
+      category: "ready-to-commit",
+      icon: Target,
       colorTheme: "from-green-400 to-green-600"
     },
     // Intensive Support
@@ -125,7 +141,7 @@ const Services = () => {
         "Priority scheduling",
         "Pre-paid convenience"
       ],
-      bookingUrl: "https://recodecbt.setmore.com",
+      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=67aeddf9-e76a-43f8-8809-eac3bcc4c266&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
       stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
       hasDiscount: true,
       category: "intensive-support",
@@ -464,7 +480,7 @@ const Services = () => {
                       ) : (
                         <Button 
                           className="w-full bg-slate-800 hover:bg-slate-700 text-white" 
-                          onClick={() => service.comingSoon ? null : window.open('https://recodecbt.setmore.com', '_blank')}
+                          onClick={() => service.comingSoon ? null : window.open(service.bookingUrl, '_blank')}
                           disabled={service.comingSoon}
                         >
                           {service.comingSoon ? 'Coming Soon' : service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
