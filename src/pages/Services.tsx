@@ -462,24 +462,13 @@ const Services = () => {
                           Request Corporate Quote
                         </Button>
                       ) : (
-                        <>
-                          {service.bookingUrl && !service.comingSoon && (
-                            <Button 
-                              className="w-full" 
-                              onClick={() => window.open(service.bookingUrl, '_blank')}
-                            >
-                              {service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
-                            </Button>
-                          )}
-                          <Button 
-                            variant="outline" 
-                            className="w-full"
-                            onClick={() => service.comingSoon ? null : window.open('https://recodecbt.setmore.com', '_blank')}
-                            disabled={service.comingSoon}
-                          >
-                            {service.comingSoon ? 'Coming Soon' : 'Book'}
-                          </Button>
-                        </>
+                        <Button 
+                          className="w-full bg-slate-800 hover:bg-slate-700 text-white" 
+                          onClick={() => service.comingSoon ? null : window.open('https://recodecbt.setmore.com', '_blank')}
+                          disabled={service.comingSoon}
+                        >
+                          {service.comingSoon ? 'Coming Soon' : service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
+                        </Button>
                       )}
                     </div>
                   </CardContent>
