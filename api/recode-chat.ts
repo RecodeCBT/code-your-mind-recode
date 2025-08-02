@@ -1,59 +1,48 @@
-// api/recode-chat.ts
-
-// ❶ Tell Vercel to use Node.js (so process.env.OPENAI_API_KEY works)
-export const config = {
-  runtime: 'nodejs',
-};
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const ipRequestLog = new Map<string, { count: number; lastRequest: number }>();
 
-export default async function handler(req: Request) {
-  const ip = req.headers.get("x-forwarded-for") || "unknown";
-  const now = Date.now();
-  const windowMs = 60 * 1000; // 1 minute
-  const limit = 7; // max 7 requests per minute per IP
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  try {
+    const ip = (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || 'unknown';
+    const now = Date.now();
+    const windowMs = 60 * 1000; // 1 minute
+    const limit = 7; // max 7 requests per minute per IP
 
-  const record = ipRequestLog.get(ip) || { count: 0, lastRequest: now };
+    const record = ipRequestLog.get(ip) || { count: 0, lastRequest: now };
 
-  if (now - record.lastRequest < windowMs) {
-    if (record.count >= limit) {
-      return new Response(
-        JSON.stringify({ error: "Rate limit exceeded. Please wait before trying again." }),
-        { status: 429, headers: { "Content-Type": "application/json" } }
-      );
+    if (now - record.lastRequest < windowMs) {
+      if (record.count >= limit) {
+        return res.status(429).json({ error: 'Rate limit exceeded. Please wait before trying again.' });
+      }
+      record.count++;
+    } else {
+      record.count = 1;
+      record.lastRequest = now;
     }
-    record.count++;
-  } else {
-    record.count = 1;
-    record.lastRequest = now;
-  }
-  ipRequestLog.set(ip, record);
+    ipRequestLog.set(ip, record);
 
-  const { message } = await req.json();
+    const { message } = req.body;
 
-  console.log(
-    "[RECODE LOG]",
-    JSON.stringify({
+    console.log('[RECODE LOG]', JSON.stringify({
       timestamp: new Date().toISOString(),
       ip,
-      userAgent: req.headers.get("user-agent"),
+      userAgent: req.headers['user-agent'],
       message,
-    })
-  );
+    }));
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      // ← now this WILL pick up your key from Vercel env
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      messages: [
-        {
-          role: "system",
-          content: `you are to function as a highly deep thinking, rational professional therapist with extensive knowledge in cognitive behavioural therapy theory, dialectical behavioural theory, mindfulness meditation, and motivational speech. You will answer questions in a professional format geared towards exploring distortions in thinking and guiding the individual easily, and through metaphor or analogy, often citing brief reference to the underlying neuropsychological physiology or neuroscience, into explanations and exploration of methods of thought and behaviour interrogation and reconditioning to emotional reactions through repeated practice of simplified mindfulness techniques. Thoughts are the language of the brain, and feelings are the language of the body.
+    const apiRes = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o',
+        messages: [
+          {
+            role: 'system',
+            content: `you are to function as a highly deep thinking, rational professional therapist with extensive knowledge in cognitive behavioural therapy theory, dialectical behavioural theory, mindfulness meditation, and motivational speech. You will answer questions in a professional format geared towards exploring distortions in thinking and guiding the individual easily, and through metaphor or analogy, often citing brief reference to the underlying neuropsychological physiology or neuroscience, into explanations and exploration of methods of thought and behaviour interrogation and reconditioning to emotional reactions through repeated practice of simplified mindfulness techniques. Thoughts are the language of the brain, and feelings are the language of the body.
 
 You should be warm,, but not overly supportive to the point of cheesy motivation. Speak naturally but professionally, mostly succinctly but detailed when its required, with easy to understand language and use intermittent simplistic analogy (eg relating to how other skills are learnt).
 
@@ -122,9 +111,20 @@ Rules:
     }),
   });
 
-  const data = await response.json();
-  return new Response(
-    JSON.stringify({ reply: data.choices[0].message.content }),
-    { headers: { "Content-Type": "application/json" } }
-  );
+
+    if (!apiRes.ok) {
+      const err = await apiRes.text();
+      console.error('OpenAI API Error:', err);
+      return res.status(500).json({ error: 'OpenAI API error occurred.' });
+    }
+
+    const data = await apiRes.json();
+    const reply = data.choices?.[0]?.message?.content || 'Sorry, no response.';
+
+    return res.status(200).json({ reply });
+
+  } catch (error) {
+    console.error('Unexpected Error:', error);
+    return res.status(500).json({ error: 'Internal server error.' });
+  }
 }
