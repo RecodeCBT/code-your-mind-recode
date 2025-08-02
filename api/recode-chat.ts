@@ -1,3 +1,7 @@
+export const config = {
+  runtime: 'nodejs',
+};
+
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const ipRequestLog = new Map<string, { count: number; lastRequest: number }>();
