@@ -1,4 +1,5 @@
-import ChatInterface from "@/components/ChatInterface"; // adjust path if needed
+// src/pages/ChatCBT.tsx
+import ChatInterface from "@/components/ChatInterface"; // make sure this path matches exactly
 
 export default function ChatCBT() {
   return (
