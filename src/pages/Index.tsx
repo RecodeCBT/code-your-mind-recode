@@ -141,7 +141,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">Your coding | Can change</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Evidence-based therapy that treats anxiety, depression, and procrastination like errors in Mindcode. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
