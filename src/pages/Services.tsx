@@ -337,8 +337,8 @@ const Services = () => {
               className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words"
               onClick={() => window.location.href = '/lead-magnet'}
             >
-              <span className="block sm:inline">Download the 14-Day</span>
-              <span className="block sm:inline sm:ml-1">Mind Code™ Reset</span>
+              <span className="block sm:inline">Download AutoCode™</span>
+              <span className="block sm:inline sm:ml-1">the 14-Day Reset</span>
             </Button>
           </div>
         </div>
