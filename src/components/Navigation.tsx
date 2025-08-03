@@ -29,7 +29,7 @@ const Navigation = () => {
                   className={cn(
                     "rounded-full transition-all duration-300 border border-transparent whitespace-nowrap",
                     item.isHighlighted 
-                      ? "px-4 sm:px-6 md:px-8 py-3 text-sm sm:text-base bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 font-semibold"
+                      ? "px-4 sm:px-6 md:px-8 py-3 text-sm sm:text-base bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl hover:scale-105 font-semibold"
                       : "px-2 sm:px-3 md:px-4 py-2 text-xs sm:text-sm",
                     location.pathname === item.path && !item.isHighlighted
                       ? "bg-primary text-primary-foreground shadow-md border-primary/20"

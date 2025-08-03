@@ -305,20 +305,19 @@ const Services = () => {
       <section className="relative py-20 px-4 text-center">
         <div className="container mx-auto max-w-4xl relative z-10">
           {/* Brain Logo */}
-          <div className="relative inline-block mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary via-accent to-secondary p-1 animate-pulse">
-              <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
+          <div className="relative inline-block mb-2">
+            <div className="w-64 h-64 mx-auto rounded-full bg-orange-500 p-2">
+              <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/fe81a945-6632-4272-8a5e-b2608fc7fbb2.png" 
                   alt="RecodeCBT Brain Logo" 
-                  className="w-20 h-20 object-contain"
+                  className="w-full h-full object-contain rounded-full"
                 />
               </div>
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-5 blur-md animate-pulse"></div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
             Rewrite Your AutoCode™ with Doctor-Delivered therapy based on CBT and DBT
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
@@ -327,7 +326,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-transform duration-300"
+              className="text-lg px-8 py-6 bg-orange-500 hover:bg-orange-600 text-white shadow-lg transition-transform duration-300"
               onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
             >
               Book Your First Session
