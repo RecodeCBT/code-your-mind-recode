@@ -334,11 +334,10 @@ const Services = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words"
+              className="text-lg px-8 py-6 border-2 hover:bg-primary/5"
               onClick={() => window.location.href = '/lead-magnet'}
             >
-              <span className="block sm:inline">Download the 14-Day</span>
-              <span className="block sm:inline sm:ml-1">Mind Code™ Reset</span>
+              Download the 14-Day AutoCode™ Reset
             </Button>
           </div>
         </div>
@@ -575,7 +574,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-orange-500 hover:bg-orange-600 text-white shadow-lg transition-transform duration-300"
+              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-2xl hover:shadow-primary/25 transition-transform duration-300"
               onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
             >
               Book Your First Session
@@ -583,11 +582,10 @@ const Services = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words"
+              className="text-lg px-8 py-6 border-2 hover:bg-primary/5"
               onClick={() => window.location.href = '/lead-magnet'}
             >
-              <span className="block sm:inline">Download the 14-Day</span>
-              <span className="block sm:inline sm:ml-1">Mind Code™ Reset</span>
+              Download the 14-Day AutoCode™ Reset
             </Button>
           </div>
         </div>
