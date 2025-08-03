@@ -162,7 +162,7 @@ const Services = () => {
         "Personalised plan",
         "Share with GP to GP/HR letter"
       ],
-      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=6b03a4dc-d6a9-49b1-b8f0-b28a7af58ebb&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
+      bookingUrl: "https://recodecbt.setmore.com",
       stripeUrl: "https://buy.stripe.com/REPLACE_assess",
       category: "intensive-support",
       icon: Search,
@@ -318,7 +318,7 @@ const Services = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-            Rewrite Your AutoCode™ with Doctor-Delivered therapy based on CBT and DBT
+            Rewrite Your AutoCode™ with therapy based on CBT & DBT
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Doctor-delivered CBT with clear goals and measurable outcomes. 65-minute sessions. Introductory offer available.
@@ -338,7 +338,7 @@ const Services = () => {
               onClick={() => window.location.href = '/lead-magnet'}
             >
               <span className="block sm:inline">Download the 14-Day</span>
-              <span className="block sm:inline sm:ml-1">AutoCode™ Reset</span>
+              <span className="block sm:inline sm:ml-1">Mind Code™ Reset</span>
             </Button>
           </div>
         </div>
