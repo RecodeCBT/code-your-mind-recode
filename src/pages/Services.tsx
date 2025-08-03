@@ -248,7 +248,7 @@ const Services = () => {
     },
     {
       icon: Brain,
-      title: "Formulate your Mind Code™",
+      title: "Formulate your Auto-Code™",
       description: "Identify patterns maintaining the problem"
     },
     {
@@ -266,11 +266,11 @@ const Services = () => {
   const faqs = [
     {
       question: "How many sessions will I need?",
-      answer: "Many benefit from 6–12 sessions; we review regularly and adjust the plan based on your progress and goals."
+      answer: "Many benefit from 4–6 sessions; we review regularly and adjust the plan based on your progress and goals."
     },
     {
       question: "Do you prescribe medication?",
-      answer: "This service focuses on CBT. Medication questions can be discussed and coordinated with your GP as needed."
+      answer: "This service focuses on methods based on CBT and DBT. Medication questions can be discussed and coordinated with your GP as needed."
     },
     {
       question: "Do you see clients outside the UK?",
@@ -283,7 +283,7 @@ const Services = () => {
   ];
 
   useEffect(() => {
-    document.title = "Services | RecodeCBT – Doctor-Delivered CBT (Online)";
+    document.title = "Services | ReCode CBT – Doctor-Delivered CBT (Online)";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'GP-led CBT with 65-minute sessions, measurable outcomes, and clear pricing. Book online or join a guided CBT programme or group cohort.');
@@ -315,11 +315,11 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-20 blur-md animate-pulse"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-5 blur-md animate-pulse"></div>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            Recode Your Mind Code™ with Doctor-Delivered CBT
+            Rewrite Your AutoCode™ with Doctor-Delivered therapy based on CBT and DBT
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
             Doctor-delivered CBT with clear goals and measurable outcomes. 65-minute sessions. Introductory offer available.
