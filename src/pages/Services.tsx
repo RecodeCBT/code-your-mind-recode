@@ -162,7 +162,7 @@ const Services = () => {
         "Personalised plan",
         "Share with GP to GP/HR letter"
       ],
-      bookingUrl: "https://recodecbt.setmore.com",
+      bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=6b03a4dc-d6a9-49b1-b8f0-b28a7af58ebb&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
       stripeUrl: "https://buy.stripe.com/REPLACE_assess",
       category: "intensive-support",
       icon: Search,
@@ -337,8 +337,8 @@ const Services = () => {
               className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words"
               onClick={() => window.location.href = '/lead-magnet'}
             >
-              <span className="block sm:inline">Download AutoCode™</span>
-              <span className="block sm:inline sm:ml-1">the 14-Day Reset</span>
+              <span className="block sm:inline">Download the 14-Day</span>
+              <span className="block sm:inline sm:ml-1">AutoCode™ Reset</span>
             </Button>
           </div>
         </div>
@@ -587,7 +587,7 @@ const Services = () => {
               onClick={() => window.location.href = '/lead-magnet'}
             >
               <span className="block sm:inline">Download the 14-Day</span>
-              <span className="block sm:inline sm:ml-1">Mind Code™ Reset</span>
+              <span className="block sm:inline sm:ml-1">AutoCode™ Reset</span>
             </Button>
           </div>
         </div>
