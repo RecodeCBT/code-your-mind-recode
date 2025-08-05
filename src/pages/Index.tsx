@@ -142,7 +142,7 @@ const Index = () => {
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Evidence-based therapy that treats anxiety, depression, and procrastination like errors in Mindcode. 
+          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Link to="/services">
@@ -234,7 +234,7 @@ This code can be revealed and re-written using a combination of techniques based
         
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Corporate Training & Staff Wellness</h2>
+            <h2 className="text-4xl font-bold mb-6">New: Corporate Training & Staff Wellness</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Transform your workplace culture with ReCODE methodology. We offer specialized corporate seminars 
               and staff wellness sessions designed to enhance mental resilience, reduce workplace stress, and 
@@ -276,20 +276,13 @@ This code can be revealed and re-written using a combination of techniques based
             {/* Move icon above title and make it bigger */}
             <div className="w-56 h-56 mx-auto mb-6 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-6 backdrop-blur-md shadow-lg">
               <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" 
-                  alt="ReCODE: ChatCBT Logo" 
-                  className="w-full h-full object-contain"
-                />
+                <img src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" alt="ReCODE: ChatCBT Logo" className="w-full h-full object-contain" />
               </div>
             </div>
             
-            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-              An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions 
-              and other mind-code errors, offering methods to address them in real-time. Help educate yourself 
-              on addressing cognitive distortions without delay and consolidate your learning.
-            </p>
+            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT
+(Commuing</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions and other AutoCode errors, offering methods to address them in real-time. Help educate yourself on addressing cognitive distortions without delay and consolidate your learning.</p>
             
             {/* Move coming soon text below paragraph */}
             <div className="flex items-center justify-center gap-3 mb-8">
@@ -332,7 +325,7 @@ This code can be revealed and re-written using a combination of techniques based
               <Card className="p-6 text-center border-t-4 border-t-purple-600/50">
                 <Brain className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Accredited Diploma in CBT</h3>
-                <p className="text-muted-foreground">Therapy styled using the CBT model, taking advantage of the brains natural neuroplastic abilities </p>
+                <p className="text-muted-foreground">Therapy styled using the CBT model, using neuroscience and taking advantage of the brains natural neuroplastic abilities </p>
               </Card>
               <Card className="p-6 text-center border-t-4 border-t-blue-600/50">
                 <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -358,11 +351,7 @@ This code can be revealed and re-written using a combination of techniques based
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <div className="flex flex-col items-center justify-center gap-4">
               <div className="relative group">
-                <Button 
-                  size="lg" 
-                  className="text-xl px-16 py-6 bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-white shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 font-bold"
-                  onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}
-                >
+                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-xl px-16 py-6 bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-white shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 font-bold bg-orange-500 hover:bg-orange-400">
                   Book Your Session Today
                 </Button>
                 
