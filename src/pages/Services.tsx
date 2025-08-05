@@ -224,19 +224,16 @@ const Services = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-            Rewrite Your AutoCode™ with Doctor-Delivered therapy based on CBT and DBT
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
-            Doctor-delivered CBT with clear goals and measurable outcomes. 65-minute sessions. Introductory offer available.
-          </p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
+          <p className="text-xl md:text-2xl mb-8 text-muted-foreground">Doctor-delivered CBT with clear goals and measurable outcomes. 
+65-minute sessions. Introductory offer available.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6 bg-orange-500 hover:bg-orange-600 text-white shadow-lg transition-transform duration-300" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}>
               Book Your First Session
             </Button>
             <Button variant="outline" size="lg" className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words" onClick={() => window.location.href = '/lead-magnet'}>
               <span className="block sm:inline">Download the 14-Day</span>
-              <span className="block sm:inline sm:ml-1">Mind Code™ Reset</span>
+              <span className="block sm:inline sm:ml-1">AutoCode™ Reset</span>
             </Button>
           </div>
         </div>
