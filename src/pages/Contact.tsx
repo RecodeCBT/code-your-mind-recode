@@ -153,7 +153,7 @@ const Contact = () => {
 
               {/* Quick Action Buttons */}
               <div className="space-y-4">
-                <Link to="/booking" className="block">
+                <Link to="/services" className="block">
                   <Button className="w-full" size="lg">
                     Book a Session
                   </Button>
