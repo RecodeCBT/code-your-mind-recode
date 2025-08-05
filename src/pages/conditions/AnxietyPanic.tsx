@@ -22,6 +22,20 @@ const AnxietyPanic = () => {
         </Link>
 
         <div className="max-w-4xl mx-auto">
+          {/* Top Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link to="/services">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                Start Your Journey
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+                Contact Us
+              </Button>
+            </Link>
+          </div>
+
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Anxiety & Panic Disorders</h1>
@@ -196,10 +210,24 @@ const AnxietyPanic = () => {
               <p className="text-lg leading-relaxed">
                 Through this systematic approach, we help you build new neural pathways for calm confidence, 
                 teach you practical coping strategies, and gradually expose you to feared situations in a 
-                controlled, supportive environment.
-              </p>
+              controlled, supportive environment.
+            </p>
             </CardContent>
           </Card>
+
+          {/* Bottom Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+            <Link to="/services">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                Start Your Journey
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+                Contact Us
+              </Button>
+            </Link>
+          </div>
 
         </div>
       </div>
