@@ -351,7 +351,7 @@ This code can be revealed and re-written using a combination of techniques based
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <div className="flex flex-col items-center justify-center gap-4">
               <div className="relative group">
-                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-xl px-16 py-6 bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-white shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 font-bold bg-orange-500 hover:bg-orange-400">
+                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                   Book Your Session Today
                 </Button>
                 
