@@ -40,15 +40,15 @@ const DrCarsonBackground = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed">
                   <p>
-                    Dr. Christopher Carson's journey in healthcare began with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong> in 2008, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
+                    Dr. Christopher Carson's journey in healthcare began with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
                   </p>
                   
                   <p>
-                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing. This expertise allows him to address mental health from both neurochemical and lifestyle perspectives, understanding how exercise, nutrition, and physical health directly impact psychological resilience.
+                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing. After a long career in the university and senior level teams, he represented Ireland in American Football with the international Irish Wolfhounds team in 2018 and 2019. This insight allows him to address mental health from both neurochemical and lifestyle perspectives, understanding how exercise, nutrition, and physical health directly impact psychological states.
                   </p>
                   
                   <p>
-                    Dr. Carson then pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> in 2015 qualifying as a doctor. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner.
+                    Dr. Carson then pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> and qualified as a doctor. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner.
                   </p>
                   
                   <p>
