@@ -44,7 +44,7 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing. After a long career in the university and senior level teams, he <strong>represented Ireland in American Football<strong> with the international Irish Wolfhounds team in 2018 and 2019. This expertise allows him to address mental health from both neurochemical and lifestyle perspectives, understanding how exercise, nutrition, and physical health directly impact psychological resilience.
+                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing. After a long career in the university and senior level teams, <strong>he represented Ireland in American Football</strong> with the international Irish Wolfhounds team in 2018 and 2019. This expertise allows him to address mental health from both neurochemical and lifestyle perspectives, understanding how exercise, nutrition, and physical health directly impact psychological resilience.
                   </p>
                   
                   <p>
