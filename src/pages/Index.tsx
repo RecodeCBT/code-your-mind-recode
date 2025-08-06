@@ -159,7 +159,7 @@ const Index = () => {
             {/* Credentials Banner */}
             <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <GraduationCap className="h-4 w-4" />
+                <GraduationCap className="h-4 w-4 flex-shrink-0" />
                 Fully Qualified, Registered and Practicing General Practitioner
               </div>
               <div className="flex items-center gap-2">
