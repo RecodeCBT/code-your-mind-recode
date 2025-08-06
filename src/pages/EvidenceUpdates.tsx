@@ -11,6 +11,7 @@ interface RSSItem {
   description: string;
   pubDate: string;
   author?: string;
+  thumbnail?: string;
 }
 
 interface RSSFeed {
@@ -104,7 +105,19 @@ const EvidenceUpdates = () => {
                   </div>
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {cogNeuroFeed.items.map((item, index) => (
-                      <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors">
+                      <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
+                        {item.thumbnail && (
+                          <div className="aspect-video w-full overflow-hidden">
+                            <img 
+                              src={item.thumbnail} 
+                              alt={item.title}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                              }}
+                            />
+                          </div>
+                        )}
                         <CardHeader className="pb-3">
                           <CardTitle className="text-lg leading-tight line-clamp-2">{item.title}</CardTitle>
                           <CardDescription className="flex items-center gap-2 text-sm">
@@ -140,7 +153,19 @@ const EvidenceUpdates = () => {
                   </div>
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {cogScienceFeed.items.map((item, index) => (
-                      <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors">
+                      <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
+                        {item.thumbnail && (
+                          <div className="aspect-video w-full overflow-hidden">
+                            <img 
+                              src={item.thumbnail} 
+                              alt={item.title}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                              }}
+                            />
+                          </div>
+                        )}
                         <CardHeader className="pb-3">
                           <CardTitle className="text-lg leading-tight line-clamp-2">{item.title}</CardTitle>
                           <CardDescription className="flex items-center gap-2 text-sm">
