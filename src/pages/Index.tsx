@@ -142,8 +142,7 @@ const Index = () => {
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
-This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
+          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in the mind.  This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Link to="/services">
                 <Button size="lg" className="text-lg px-8 py-3">
@@ -280,8 +279,7 @@ This code can be revealed and re-written using a combination of techniques based
               </div>
             </div>
             
-            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT
-(Commuing</h2>
+            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions and other AutoCode errors, offering methods to address them in real-time. Help educate yourself on addressing cognitive distortions without delay and consolidate your learning.</p>
             
             {/* Move coming soon text below paragraph */}
@@ -389,7 +387,7 @@ This code can be revealed and re-written using a combination of techniques based
               a substitute for emergency mental health care or crisis intervention.
             </p>
             <p className="mb-4">If you are thinking about hurting yourself please click below:</p>
-            <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank" rel="noopener noreferrer" className="inline-block">
+            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-block">
               <Button variant="destructive" size="sm">
                 Get Crisis Support - Samaritans
               </Button>
