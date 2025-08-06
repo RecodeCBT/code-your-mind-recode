@@ -40,7 +40,7 @@ const DrCarsonBackground = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed">
                   <p>
-                    Dr. Christopher Carson's journey in healthcare began with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
+                    Dr. Christopher Carson's journey in healthcare began with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong> in 2008, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
                   </p>
                   
                   <p>
@@ -48,7 +48,7 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    Dr. Carson then pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> and qualified as a doctor. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner.
+                    Dr. Carson then pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> in 2015 qualifying as a doctor. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner.
                   </p>
                   
                   <p>
