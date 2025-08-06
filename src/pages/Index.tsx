@@ -280,8 +280,8 @@ This code can be revealed and re-written using a combination of techniques based
               </div>
             </div>
             
-            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT
-(Commuing</h2>
+            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT 
+(coming Soon)</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions and other AutoCode errors, offering methods to address them in real-time. Help educate yourself on addressing cognitive distortions without delay and consolidate your learning.</p>
             
             {/* Move coming soon text below paragraph */}
