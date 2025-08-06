@@ -243,7 +243,7 @@ const Services = () => {
       <section className="py-20 px-4 relative z-10">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Choose Your Journey</h2>
-          <p className="text-xl text-muted-foreground mb-12 text-left">1. First select one of the four paths that best matches where you are in your mental health journey. 
+          <p className="text-xl text-muted-foreground mb-12 text-left">1. First click one of the FOUR paths that best matches where you are in your mental health journey.  
 2. Then scroll below and select your choice</p>
           
           {/* Category Selection */}
