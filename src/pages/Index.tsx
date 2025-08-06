@@ -356,7 +356,7 @@ This code can be revealed and re-written using a combination of techniques based
                 </Button>
                 
                 {/* Enhanced £20 off sticker */}
-                <div className="absolute -top-4 -right-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute -top-4 -right-9 group-hover:scale-110 transition-transform duration-300">
                   <div className="w-20 h-20 bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white rounded-full shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-4 border-white">
                     <div className="font-bold text-sm leading-none">£20</div>
                     <div className="font-bold text-xs leading-none">OFF</div>
