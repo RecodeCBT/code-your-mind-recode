@@ -142,15 +142,16 @@ const Index = () => {
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in the mind.  This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
+          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
+This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link to="/services" className="w-full sm:w-auto">
-                <Button size="lg" className="text-lg px-8 py-3 w-full sm:w-auto">
+              <Link to="/services">
+                <Button size="lg" className="text-lg px-8 py-3">
                   Start Your Transformation
                 </Button>
               </Link>
-              <Link to="/dr-carson" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-3 w-full sm:w-auto">
+              <Link to="/dr-carson">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-3">
                   Learn More
                 </Button>
               </Link>
@@ -159,7 +160,7 @@ const Index = () => {
             {/* Credentials Banner */}
             <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <GraduationCap className="h-4 w-4 flex-shrink-0" />
+                <GraduationCap className="h-4 w-4" />
                 Fully Qualified, Registered and Practicing General Practitioner
               </div>
               <div className="flex items-center gap-2">
@@ -179,8 +180,8 @@ const Index = () => {
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
-            <Link to="/contact" className="w-full sm:w-auto inline-block">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
+            <Link to="/contact">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today
               </Button>
             </Link>
@@ -256,8 +257,8 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm">Build team emotional intelligence and workplace wellbeing</p>
               </Card>
             </div>
-            <Link to="/corporate-contact#top" className="w-full sm:w-auto inline-block">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
+            <Link to="/corporate-contact#top">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
                 Enquire About Corporate Training
               </Button>
             </Link>
@@ -279,7 +280,8 @@ const Index = () => {
               </div>
             </div>
             
-            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT </h2>
+            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT
+(Commuing</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions and other AutoCode errors, offering methods to address them in real-time. Help educate yourself on addressing cognitive distortions without delay and consolidate your learning.</p>
             
             {/* Move coming soon text below paragraph */}
@@ -297,8 +299,8 @@ const Index = () => {
               </p>
             </div>
             
-            <Link to="/chatcbt-coming-soon" className="w-full sm:w-auto inline-block">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
+            <Link to="/chatcbt-coming-soon">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Learn More
               </Button>
             </Link>
@@ -348,13 +350,13 @@ const Index = () => {
             <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <div className="flex flex-col items-center justify-center gap-4">
-              <div className="relative group w-full sm:w-auto">
-                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
+              <div className="relative group">
+                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                   Book Your Session Today
                 </Button>
                 
                 {/* Enhanced £20 off sticker */}
-                <div className="absolute -top-4 -right-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute -top-4 -right-6 group-hover:scale-110 transition-transform duration-300">
                   <div className="w-20 h-20 bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white rounded-full shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-4 border-white">
                     <div className="font-bold text-sm leading-none">£20</div>
                     <div className="font-bold text-xs leading-none">OFF</div>
@@ -366,8 +368,8 @@ const Index = () => {
           </div>
           
           <div className="mt-6">
-            <Link to="/contact" className="w-full sm:w-auto inline-block">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
+            <Link to="/contact">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today
               </Button>
             </Link>
@@ -387,8 +389,8 @@ const Index = () => {
               a substitute for emergency mental health care or crisis intervention.
             </p>
             <p className="mb-4">If you are thinking about hurting yourself please click below:</p>
-            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
-              <Button variant="destructive" size="sm" className="w-full sm:w-auto">
+            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <Button variant="destructive" size="sm">
                 Get Crisis Support - Samaritans
               </Button>
             </a>
