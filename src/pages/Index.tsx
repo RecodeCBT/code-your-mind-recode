@@ -144,13 +144,13 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in the mind.  This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link to="/services">
-                <Button size="lg" className="text-lg px-8 py-3">
+              <Link to="/services" className="w-full sm:w-auto">
+                <Button size="lg" className="text-lg px-8 py-3 w-full sm:w-auto">
                   Start Your Transformation
                 </Button>
               </Link>
-              <Link to="/dr-carson">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+              <Link to="/dr-carson" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-3 w-full sm:w-auto">
                   Learn More
                 </Button>
               </Link>
@@ -179,8 +179,8 @@ const Index = () => {
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
-            <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+            <Link to="/contact" className="w-full sm:w-auto inline-block">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
                 Contact Us Today
               </Button>
             </Link>
@@ -256,8 +256,8 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm">Build team emotional intelligence and workplace wellbeing</p>
               </Card>
             </div>
-            <Link to="/corporate-contact#top">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
+            <Link to="/corporate-contact#top" className="w-full sm:w-auto inline-block">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
                 Enquire About Corporate Training
               </Button>
             </Link>
@@ -297,8 +297,8 @@ const Index = () => {
               </p>
             </div>
             
-            <Link to="/chatcbt-coming-soon">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+            <Link to="/chatcbt-coming-soon" className="w-full sm:w-auto inline-block">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
                 Learn More
               </Button>
             </Link>
@@ -348,8 +348,8 @@ const Index = () => {
             <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <div className="flex flex-col items-center justify-center gap-4">
-              <div className="relative group">
-                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+              <div className="relative group w-full sm:w-auto">
+                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
                   Book Your Session Today
                 </Button>
                 
@@ -366,8 +366,8 @@ const Index = () => {
           </div>
           
           <div className="mt-6">
-            <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+            <Link to="/contact" className="w-full sm:w-auto inline-block">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg w-full sm:w-auto">
                 Contact Us Today
               </Button>
             </Link>
@@ -387,8 +387,8 @@ const Index = () => {
               a substitute for emergency mental health care or crisis intervention.
             </p>
             <p className="mb-4">If you are thinking about hurting yourself please click below:</p>
-            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <Button variant="destructive" size="sm">
+            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
+              <Button variant="destructive" size="sm" className="w-full sm:w-auto">
                 Get Crisis Support - Samaritans
               </Button>
             </a>
