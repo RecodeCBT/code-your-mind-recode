@@ -225,7 +225,7 @@ const Services = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
-          <p className="text-xl md:text-2xl mb-8 text-muted-foreground">Doctor-delivered CBT with clear goals and measurable outcomes. 
+          <p className="text-xl md:text-2xl mb-8 text-muted-foreground">Doctor-delivered CBT with clear goals and measurable outcomes.  
 65-minute sessions. Introductory offer available.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6 bg-orange-500 hover:bg-orange-600 text-white shadow-lg transition-transform duration-300" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}>
