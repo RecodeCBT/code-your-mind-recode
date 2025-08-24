@@ -146,12 +146,12 @@ const Index = () => {
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Link to="/services">
-                <Button size="lg" className="text-lg px-8 py-3">
+                <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
                   Start Your Transformation
                 </Button>
               </Link>
               <Link to="/dr-carson">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-3">
+                <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
                   Learn More
                 </Button>
               </Link>
@@ -159,9 +159,9 @@ This code can be revealed and re-written using a combination of techniques based
             
             {/* Credentials Banner */}
             <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <GraduationCap className="h-4 w-4" />
-                Fully Qualified, Registered and Practicing General Practitioner
+            <div className="flex items-center gap-2">
+                <GraduationCap className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Fully Qualified, Registered and Practicing General Practitioner</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4" />
@@ -181,7 +181,7 @@ This code can be revealed and re-written using a combination of techniques based
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+              <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today
               </Button>
             </Link>
@@ -258,7 +258,7 @@ This code can be revealed and re-written using a combination of techniques based
               </Card>
             </div>
             <Link to="/corporate-contact#top">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
+              <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">
                 Enquire About Corporate Training
               </Button>
             </Link>
@@ -300,7 +300,7 @@ This code can be revealed and re-written using a combination of techniques based
             </div>
             
             <Link to="/chatcbt-coming-soon">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+              <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Learn More
               </Button>
             </Link>
