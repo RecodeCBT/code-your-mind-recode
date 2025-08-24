@@ -80,7 +80,7 @@ const DrCarsonBackground = () => {
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. ReCODE represents a paradigm shift towards understanding and restructuring these fundamental patterns.
+                  Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. ReCODE represents a consolidation and simplification towards understanding and restructuring these fundamental patterns.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
