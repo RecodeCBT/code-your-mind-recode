@@ -84,7 +84,7 @@ const DrCarsonBackground = () => {
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Through repetition, new coding develops much like how all skills develop through neuroplasticity. This systematic approach creates lasting change by leveraging the brain's natural ability to form new neural pathways through structured practice and repetition.
+                  The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Your brain learns by practice. When you repeat new responses, it rewires itself, just like learning to play an instrument. With steady practice, these new codes become your natural default.
                 </p>
               </CardContent>
             </Card>
