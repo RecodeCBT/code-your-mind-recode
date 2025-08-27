@@ -145,12 +145,12 @@ const Index = () => {
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link to="/services">
+              <Link to="/services#top">
                 <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
                   Start Your Transformation
                 </Button>
               </Link>
-              <Link to="/dr-carson">
+              <Link to="/dr-carson#top">
                 <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
                   Learn More
                 </Button>
@@ -180,7 +180,7 @@ This code can be revealed and re-written using a combination of techniques based
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
-            <Link to="/contact">
+            <Link to="/contact#top">
               <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today
               </Button>
@@ -266,44 +266,41 @@ This code can be revealed and re-written using a combination of techniques based
         </div>
       </section>
 
-      {/* ChatCBT Coming Soon Section */}
-      <section className="py-8 px-4 bg-gradient-to-r from-secondary/5 via-purple-600/5 to-blue-600/5 relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
+      {/* ChatCBT Coming Soon Section - Compact & Distinct */}
+      <section className="py-12 px-4 border-y-2 border-gradient-to-r from-orange-500/20 via-purple-600/20 to-blue-600/20 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-purple-600/5 to-blue-600/5"></div>
+        <div className="absolute top-5 right-10 w-16 h-16 bg-gradient-to-br from-orange-500/20 to-purple-600/20 rounded-full blur-lg"></div>
+        <div className="absolute bottom-5 left-10 w-16 h-16 bg-gradient-to-br from-blue-600/20 to-orange-500/20 rounded-lg rotate-45 blur-lg"></div>
         
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="text-center mb-8">
-            {/* Move icon above title and make it bigger */}
-            <div className="w-56 h-56 mx-auto mb-6 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-6 backdrop-blur-md shadow-lg">
-              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center">
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <div className="text-center">
+            {/* Compact circular logo */}
+            <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/60 dark:to-purple-950/60 rounded-full p-3 backdrop-blur-md shadow-xl border-2 border-gradient-to-br from-orange-500/30 to-purple-600/30">
+              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-2 flex items-center justify-center">
                 <img src="/lovable-uploads/b976013c-0e4b-4791-b936-9d3f45544770.png" alt="ReCODE: ChatCBT Logo" className="w-full h-full object-contain" />
               </div>
             </div>
             
-            <h2 className="text-4xl font-bold mb-6">ReCODE: ChatCBT
-(Coming Soon)</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">An interactive AI designed and highly trained to quickly assess for signs of cognitive distortions and other AutoCode errors, offering methods to address them in real-time. Help educate yourself on addressing cognitive distortions without delay and consolidate your learning.</p>
-            
-            {/* Move coming soon text below paragraph */}
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <MessageSquare className="h-6 w-6 text-orange-500" />
-              <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent font-semibold text-lg">
-                COMING SOON
-              </span>
-            </div>
-            
-            <div className="bg-white/10 dark:bg-gray-900/20 backdrop-blur-sm rounded-lg p-6 mb-6">
-              <h3 className="text-xl font-bold mb-4">Subscription-Based, Month-by-Month</h3>
-              <p className="text-muted-foreground">
-                Flexible, affordable access to AI-powered CBT support that complements your therapeutic journey
+            {/* Compact title with distinct styling */}
+            <div className="bg-gradient-to-r from-white/80 to-white/60 dark:from-gray-900/80 dark:to-gray-900/60 backdrop-blur-sm rounded-xl p-6 mb-4 border border-gradient-to-r from-orange-500/30 to-purple-600/30 shadow-lg">
+              <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
+                ReCODE: ChatCBT
+              </h2>
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <MessageSquare className="h-5 w-5 text-orange-500" />
+                <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent font-semibold">
+                  COMING SOON
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-3">
+                AI-powered CBT support for real-time cognitive distortion assessment
               </p>
+              <Link to="/chatcbt-coming-soon#top">
+                <Button size="sm" className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-md">
+                  Learn More
+                </Button>
+              </Link>
             </div>
-            
-            <Link to="/chatcbt-coming-soon">
-              <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
-                Learn More
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
@@ -368,7 +365,7 @@ This code can be revealed and re-written using a combination of techniques based
           </div>
           
           <div className="mt-6">
-            <Link to="/contact">
+            <Link to="/contact#top">
               <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today
               </Button>
@@ -395,9 +392,9 @@ This code can be revealed and re-written using a combination of techniques based
               </Button>
             </a>
             <div className="mt-6 pt-4 border-t border-muted-foreground/20">
-              <Link to="/policies" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
-                Privacy Policy & Terms
-              </Link>
+            <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
+              Privacy Policy & Terms
+            </Link>
             </div>
           </div>
         </div>
