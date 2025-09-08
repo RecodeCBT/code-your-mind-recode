@@ -14,28 +14,7 @@ const Testimonials = () => {
       condition: "Initial Assessment & Intermediate Course",
       rating: 5,
       text: "I can't rate Dr. Carson's fantastic RecodeCBT highly enough. There's only a mere 5 star choice. If there were 7 he'd get them all. Are you crippled at times with a knot in your chest you can't unwind? Have you lost your appetite despite feeling hungrier than ever? Do you believe everything your mind tells you are truths? Are you sceptical about trying something new because you've never heard of it before? Then you sound just like me, before I tried my first session with Dr. Carson. For the first time I have had a coherent, and easy to understand explanation of how a mind works and how I have effectively trapped myself in a bit of a negative loop. I was amazed at how my own experiences/reactions in certain situations were coming through in Dr. Carson's explanations, before I'd even told him about them. The knowledge you take away from the initial session will hopefully be enough for you to begin questioning the rationale behind your reactions/thoughts - and from there the appetite for the solutions WILL increase, and so far I am STARVING for more of the insight into a mind I felt I was a slave to. I cannot wait for our next session.",
-      date: "November 2024"
-    },
-    {
-      name: "Sarah M.",
-      condition: "Anxiety & Panic",
-      rating: 5,
-      text: "Dr. Carson's RECODE method completely transformed how I understand and manage my anxiety. The neuroscience approach made everything click for me. I finally have tools that actually work.",
-      date: "March 2024"
-    },
-    {
-      name: "James R.",
-      condition: "Depression & Low Mood",
-      rating: 5,
-      text: "After years of traditional therapy with limited results, RECODE gave me a fresh perspective. The way Dr. Carson explains thought patterns like code algorithms made so much sense. I feel like I have my life back.",
-      date: "February 2024"
-    },
-    {
-      name: "Emma K.",
-      condition: "Procrastination & Avoidance",
-      rating: 5,
-      text: "The productivity algorithms and behavioral rewiring techniques were game-changing. I went from constant procrastination to actually enjoying challenging tasks. Dr. Carson's approach is revolutionary.",
-      date: "January 2024"
+      date: "September 2025"
     }
   ];
 
@@ -92,6 +71,14 @@ const Testimonials = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg">
+              <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer">
+                Leave a Review
+              </a>
+            </Button>
           </div>
         </div>
       </div>
