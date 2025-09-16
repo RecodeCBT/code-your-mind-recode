@@ -143,15 +143,15 @@ const Services = () => {
   }, {
     id: "intensive-support",
     number: "3",
-    title: "Intensive Support",
-    description: "Comprehensive assessment and treatment packages",
+    title: "Package Courses",
+    description: "Save big on package deals",
     icon: Zap,
     color: "from-purple-400 to-purple-600"
   }, {
     id: "corporate-group",
     number: "4",
-    title: "Group & Corporate Solutions",
-    description: "Team training and group therapy options",
+    title: "Corporate and Group Training Days",
+    description: "Full and Half day workshops for staff",
     icon: Building2,
     color: "from-orange-400 to-orange-600"
   }];
