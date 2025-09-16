@@ -84,7 +84,7 @@ const Services = () => {
     price: "£780",
     originalPrice: "£1,014",
     savings: "SAVE £234",
-    bullets: ["Advanced course approach:", "- structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "- 6 modules", "- Reports and home content issued with each session.", "- Two free 20 minute drop in sessions included", "- 2 additional follow up sessions to review progress", "- SAVE £234 on 6 session course compared to single sessions", "- Book first session via system, (following dates are agreed at the end of each session)"],
+    bullets: ["Advanced course approach:", "structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "6 modules", "Reports and home content issued with each session.", "Two free 20 minute drop in sessions included", "2 additional follow up sessions to review progress", "SAVE £234 on 6 session course compared to single sessions", "Book first session via system, (following dates are agreed at the end of each session)"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=67aeddf9-e76a-43f8-8809-eac3bcc4c266&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
     hasDiscount: true,
@@ -97,7 +97,7 @@ const Services = () => {
     price: "£599",
     originalPrice: "£676",
     savings: "SAVE £76",
-    bullets: ["Intermediate course approach:", "- structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "- 6 modules", "- Reports and home content issued with each session.", "- Free 20 minute drop in session included", "- SAVE £76 on 4 session course compared to single sessions", "- Book first session via system, (following dates are agreed at the end of each session)"],
+    bullets: ["Intermediate course approach:", "structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "4 modules", "Reports and home content issued with each session.", "Free 20 minute drop in session included", "SAVE £76 on 4 session course compared to single sessions", "Book first session via system, (following dates are agreed at the end of each session)"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=049a7c0d-e671-4731-99e1-922f8ce7b8ce&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_4pkg",
     hasDiscount: true,
@@ -123,15 +123,6 @@ const Services = () => {
     bullets: ["Team mental health training", "Workplace resilience building", "Manager support skills", "Custom programme design"],
     category: "corporate-group",
     icon: Building2,
-    colorTheme: "from-orange-400 to-orange-600",
-    isCorporate: true
-  }, {
-    title: "Group Therapy",
-    duration: "8-week programmes",
-    price: "£40 per person/week",
-    bullets: ["Structured CBT curriculum", "Peer support environment", "Professional facilitation", "Minimum 8 people per session required"],
-    category: "corporate-group",
-    icon: MessageCircle,
     colorTheme: "from-orange-400 to-orange-600",
     isCorporate: true
   }];
@@ -243,8 +234,26 @@ const Services = () => {
       <section className="py-20 px-4 relative z-10">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Choose Your Journey</h2>
-          <p className="text-xl text-muted-foreground mb-12 text-left">1. First click one of the FOUR paths that best matches where you are in your mental health journey.  
-2. Then scroll below and select your choice</p>
+          <div className="max-w-3xl mx-auto mb-12 bg-muted/50 p-6 rounded-lg border-l-4 border-primary">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  1
+                </div>
+                <p className="text-lg text-foreground">
+                  First click one of the <strong>FOUR paths</strong> below that best matches where you are in your mental health journey.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  2
+                </div>
+                <p className="text-lg text-foreground">
+                  Then scroll below and <strong>select your choice</strong> from the available services.
+                </p>
+              </div>
+            </div>
+          </div>
           
           {/* Category Selection */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
