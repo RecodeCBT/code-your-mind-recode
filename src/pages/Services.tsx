@@ -60,7 +60,7 @@ const Services = () => {
     title: "Follow-up Session",
     duration: "45 min",
     price: "£129",
-    bullets: ["Progress reviews", "Skills consolidation", "Outcome tracking", "Continuity of care"],
+    bullets: ["Progress reviews", "Skills consolidation", "Outcome tracking", "Continuity of care", "*Previous session required"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=0a8ad2bd-fbfd-4ad7-b998-77a02cc30537&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
     category: "ready-to-commit",
