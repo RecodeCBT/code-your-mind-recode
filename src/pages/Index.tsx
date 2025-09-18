@@ -147,25 +147,27 @@ This code can be revealed and re-written using a combination of techniques based
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
               <Link to="/services#top" className="group">
                 <Button 
+                  variant="hero"
                   size="lg" 
-                  className="btn-circuit relative w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 font-semibold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
+                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-circuit"
                 >
-                  <div className="relative z-10 flex items-center gap-2">
-                    <Code className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <span>Start Your Transformation</span>
-                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 opacity-75" />
+                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
+                    <Code className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="text-center">Start Your Transformation</span>
+                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
                   </div>
                 </Button>
               </Link>
               <Link to="/dr-carson#top" className="group">
                 <Button 
+                  variant="hero-secondary"
                   size="lg" 
-                  className="btn-neural relative w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 font-semibold text-primary hover:text-white bg-transparent hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-neural"
                 >
-                  <div className="relative z-10 flex items-center gap-2">
-                    <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
-                    <span>Learn More</span>
-                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 opacity-75" />
+                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
+                    <Brain className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="text-center">Learn More</span>
+                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
                   </div>
                 </Button>
               </Link>

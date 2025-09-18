@@ -254,13 +254,63 @@ All colors MUST be HSL.
     .btn-neural::before,
     .btn-neural::after,
     .btn-code::before {
-      opacity: 0.7;
+      opacity: 0.5;
+      animation-duration: 4s;
     }
     
     .btn-circuit,
     .btn-neural,
     .btn-code {
       backdrop-filter: blur(4px);
+      border-width: 1px;
+    }
+    
+    .btn-circuit::before {
+      transition: left 0.4s ease;
+    }
+    
+    /* Reduce effect intensity on small screens */
+    .btn-circuit::after {
+      background-size: 20px 20px, 25px 25px, 15px 15px, 10px 10px;
+    }
+    
+    .btn-neural::before {
+      background-size: 25px 25px, 20px 20px, 15px 15px;
+    }
+    
+    .btn-code::before {
+      font-size: 6px;
+    }
+  }
+
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    .btn-circuit::after,
+    .btn-neural::before,
+    .btn-neural::after,
+    .btn-code::before {
+      opacity: 0.3;
+    }
+    
+    .btn-circuit,
+    .btn-neural,
+    .btn-code {
+      backdrop-filter: blur(2px);
+    }
+  }
+
+  /* Touch-friendly hover effects for mobile */
+  @media (hover: none) {
+    .btn-circuit:active::before,
+    .btn-neural:active::before,
+    .btn-code:active::before {
+      opacity: 0.8;
+    }
+    
+    .btn-circuit:active,
+    .btn-neural:active,
+    .btn-code:active {
+      transform: scale(0.98);
     }
   }
 }

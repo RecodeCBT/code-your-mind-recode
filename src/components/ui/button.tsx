@@ -18,6 +18,13 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        circuit: "btn-circuit bg-gradient-to-r from-orange-500/10 to-purple-600/10 text-foreground border-2 border-orange-500/30 backdrop-blur-sm hover:from-orange-500/20 hover:to-purple-600/20 hover:border-orange-500/50 hover:scale-105 transition-all duration-300",
+        neural: "btn-neural bg-gradient-to-r from-purple-600/10 to-blue-600/10 text-foreground border-2 border-purple-600/30 backdrop-blur-sm hover:from-purple-600/20 hover:to-blue-600/20 hover:border-purple-600/50 hover:scale-105 transition-all duration-300",
+        code: "btn-code bg-gradient-to-r from-blue-600/10 to-orange-500/10 text-foreground border-2 border-blue-600/30 backdrop-blur-sm hover:from-blue-600/20 hover:to-orange-500/20 hover:border-blue-600/50 hover:scale-105 transition-all duration-300",
+        "nav-active": "bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-lg border-0 hover:from-orange-600 hover:to-purple-700 hover:scale-105 transition-all duration-300",
+        "nav-ghost": "bg-transparent text-foreground hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-purple-600/10 border border-transparent hover:border-orange-500/20 hover:scale-105 transition-all duration-300",
+        hero: "bg-gradient-to-r from-orange-500 to-purple-600 text-white hover:from-orange-600 hover:to-purple-700 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-0 font-semibold",
+        "hero-secondary": "bg-transparent text-primary hover:text-white border-2 border-purple-600/30 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",
