@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowLeft } from 'lucide-react';
@@ -15,9 +16,15 @@ declare global {
 
 
 export default function ChatInterface() {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  
+  const navigateWithScrollToTop = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState('');
   const [captchaToken, setCaptchaToken] = useState('');
@@ -173,7 +180,7 @@ export default function ChatInterface() {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => window.location.href = '/'}
+            onClick={() => navigateWithScrollToTop('/')}
             className="bg-white/10 border-white/20 text-white hover:bg-white/20"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -231,7 +238,7 @@ export default function ChatInterface() {
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => window.location.href = '/'}
+          onClick={() => navigateWithScrollToTop('/')}
           className="flex items-center gap-2 hover:bg-primary/5 flex-shrink-0"
         >
           <ArrowLeft className="h-4 w-4" />

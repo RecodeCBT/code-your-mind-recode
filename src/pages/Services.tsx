@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -6,8 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight, Lightbulb, Compass, Laptop, Code, BarChart3, Search, Wrench, Link } from "lucide-react";
 const Services = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [showAllServices, setShowAllServices] = useState<boolean>(false);
+  
+  const navigateWithScrollToTop = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
   const services = [
   // Just Starting Out
   {
@@ -222,7 +229,7 @@ const Services = () => {
             <Button size="lg" className="text-lg px-8 py-6 bg-orange-500 hover:bg-orange-600 text-white shadow-lg transition-transform duration-300" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}>
               Book Your First Session
             </Button>
-            <Button variant="outline" size="lg" className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words" onClick={() => window.location.href = '/lead-magnet'}>
+            <Button variant="outline" size="lg" className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words" onClick={() => navigateWithScrollToTop('/lead-magnet')}>
               <span className="block sm:inline">Download the 14-Day</span>
               <span className="block sm:inline sm:ml-1">AutoCode™ Reset</span>
             </Button>
@@ -340,7 +347,7 @@ const Services = () => {
                         </li>)}
                     </ul>
                     <div className="space-y-2">
-                      {service.isCorporate ? <Button className="w-full" onClick={() => window.location.href = '/corporate-contact'}>
+                      {service.isCorporate ? <Button className="w-full" onClick={() => navigateWithScrollToTop('/corporate-contact')}>
                           Request Corporate Quote
                         </Button> : <Button className="w-full bg-slate-800 hover:bg-slate-700 text-white" onClick={() => service.comingSoon ? null : window.open(service.bookingUrl || 'https://recodecbt.setmore.com', '_blank')} disabled={service.comingSoon}>
                           {service.comingSoon ? 'Coming Soon' : service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
@@ -425,7 +432,7 @@ const Services = () => {
             <Button size="lg" className="text-lg px-8 py-6 bg-orange-500 hover:bg-orange-600 text-white shadow-lg transition-transform duration-300" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')}>
               Book Your First Session
             </Button>
-            <Button variant="outline" size="lg" className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words" onClick={() => window.location.href = '/lead-magnet'}>
+            <Button variant="outline" size="lg" className="text-base sm:text-lg px-4 sm:px-8 py-6 border-2 hover:bg-primary/5 text-center whitespace-normal break-words" onClick={() => navigateWithScrollToTop('/lead-magnet')}>
               <span className="block sm:inline">Download the 14-Day</span>
               <span className="block sm:inline sm:ml-1">AutoCode™ Reset</span>
             </Button>

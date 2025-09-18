@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import { Download, CheckCircle, Brain, Target } from "lucide-react";
 
 const LeadMagnet = () => {
+  const navigate = useNavigate();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const navigateWithScrollToTop = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
 
   useEffect(() => {
     document.title = "14-Day Mind Code™ Reset | RecodeCBT";
@@ -161,7 +168,7 @@ const LeadMagnet = () => {
                           variant="outline" 
                           size="lg" 
                           className="w-full"
-                          onClick={() => window.location.href = '/services'}
+                          onClick={() => navigateWithScrollToTop('/services')}
                         >
                           View Our Services
                         </Button>

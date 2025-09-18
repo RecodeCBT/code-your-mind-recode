@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import ChatCBT from "./pages/ChatCBT";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -42,6 +43,7 @@ const App = () => (
       <SpeedInsights />
       <Analytics />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           
