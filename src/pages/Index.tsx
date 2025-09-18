@@ -176,6 +176,19 @@ This code can be revealed and re-written using a combination of techniques based
         </div>
       </section>
 
+      {/* Reviews Button - Top */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <Link to="/testimonials#top">
+              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+                ⭐ Read Our Reviews
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Us Button - Between Hero and Conditions */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -364,7 +377,12 @@ This code can be revealed and re-written using a combination of techniques based
             </div>
           </div>
           
-          <div className="mt-6">
+          <div className="mt-6 space-y-4">
+            <Link to="/testimonials#top">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+                ⭐ Read Our Reviews
+              </Button>
+            </Link>
             <Link to="/contact#top">
               <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today

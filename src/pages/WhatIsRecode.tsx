@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -292,6 +293,19 @@ const WhatIsRecode = () => {
                 </CardDescription>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Button - Bottom */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <Link to="/testimonials#top">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+                ⭐ Read Our Reviews
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

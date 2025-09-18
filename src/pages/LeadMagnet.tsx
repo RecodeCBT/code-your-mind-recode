@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -63,8 +63,33 @@ const LeadMagnet = () => {
         </div>
       </section>
 
+      {/* Reviews Button */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <Link to="/testimonials#top">
+              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+                ⭐ Read Our Reviews
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Choose Your Journey Title */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">Choose Your Journey</h2>
+            <p className="text-xl text-muted-foreground">
+              Start your transformation with our comprehensive guide and continue with professional support
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
-      <section className="py-20 px-4">
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
