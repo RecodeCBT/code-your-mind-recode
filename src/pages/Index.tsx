@@ -144,15 +144,29 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link to="/services#top">
-                <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
-                  Start Your Transformation
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
+              <Link to="/services#top" className="group">
+                <Button 
+                  size="lg" 
+                  className="btn-circuit relative w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 font-semibold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-0"
+                >
+                  <div className="relative z-10 flex items-center gap-2">
+                    <Code className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span>Start Your Transformation</span>
+                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 opacity-75" />
+                  </div>
                 </Button>
               </Link>
-              <Link to="/dr-carson#top">
-                <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
-                  Learn More
+              <Link to="/dr-carson#top" className="group">
+                <Button 
+                  size="lg" 
+                  className="btn-neural relative w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 font-semibold text-primary hover:text-white bg-transparent hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <div className="relative z-10 flex items-center gap-2">
+                    <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span>Learn More</span>
+                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 opacity-75" />
+                  </div>
                 </Button>
               </Link>
             </div>

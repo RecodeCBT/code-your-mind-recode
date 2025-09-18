@@ -126,6 +126,143 @@ All colors MUST be HSL.
     background-size: 200% 200%;
     animation: gradient 3s ease infinite;
   }
+
+  /* Circuit Board Button Effect */
+  .btn-circuit {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+      hsl(24 100% 67% / 0.1), 
+      hsl(262 83% 58% / 0.1), 
+      hsl(221 83% 53% / 0.1)
+    );
+    border: 2px solid hsl(24 100% 67% / 0.3);
+    backdrop-filter: blur(8px);
+  }
+  
+  .btn-circuit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(24 100% 67% / 0.2), 
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+  
+  .btn-circuit:hover::before {
+    left: 100%;
+  }
+  
+  .btn-circuit::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(24 100% 67% / 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 20%, hsl(262 83% 58% / 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 40% 40%, hsl(221 83% 53% / 0.1) 1px, transparent 1px),
+      linear-gradient(45deg, transparent 48%, hsl(24 100% 67% / 0.05) 49%, hsl(24 100% 67% / 0.05) 51%, transparent 52%);
+    background-size: 30px 30px, 40px 40px, 25px 25px, 15px 15px;
+    pointer-events: none;
+    animation: circuit-flow 4s linear infinite;
+  }
+
+  /* Neural Network Button Effect */
+  .btn-neural {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+      hsl(262 83% 58% / 0.1), 
+      hsl(221 83% 53% / 0.1), 
+      hsl(24 100% 67% / 0.1)
+    );
+    border: 2px solid hsl(262 83% 58% / 0.3);
+    backdrop-filter: blur(8px);
+  }
+  
+  .btn-neural::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(262 83% 58% / 0.2) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(221 83% 53% / 0.2) 2px, transparent 2px),
+      radial-gradient(circle at 50% 50%, hsl(24 100% 67% / 0.2) 1px, transparent 1px);
+    background-size: 40px 40px, 35px 35px, 25px 25px;
+    animation: neural-pulse 3s ease-in-out infinite;
+  }
+  
+  .btn-neural::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(262 83% 58% / 0.4), 
+      hsl(221 83% 53% / 0.4), 
+      hsl(24 100% 67% / 0.4), 
+      transparent
+    );
+    animation: neural-scan 2s linear infinite;
+  }
+
+  /* Code Matrix Button Effect */
+  .btn-code {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+      hsl(221 83% 53% / 0.1), 
+      hsl(24 100% 67% / 0.1), 
+      hsl(262 83% 58% / 0.1)
+    );
+    border: 2px solid hsl(221 83% 53% / 0.3);
+    backdrop-filter: blur(8px);
+    font-family: 'Courier New', monospace;
+  }
+  
+  .btn-code::before {
+    content: '{ } < > / = + - * % & | ^ ~ ! ? : ; , . [ ] ( )';
+    position: absolute;
+    inset: 0;
+    color: hsl(221 83% 53% / 0.1);
+    font-size: 8px;
+    line-height: 1;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+    animation: code-scroll 6s linear infinite;
+    pointer-events: none;
+  }
+  
+  .btn-code:hover::before {
+    color: hsl(221 83% 53% / 0.2);
+    animation-duration: 2s;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .btn-circuit::after,
+    .btn-neural::before,
+    .btn-neural::after,
+    .btn-code::before {
+      opacity: 0.7;
+    }
+    
+    .btn-circuit,
+    .btn-neural,
+    .btn-code {
+      backdrop-filter: blur(4px);
+    }
+  }
 }
 
 @keyframes float {
@@ -146,5 +283,48 @@ All colors MUST be HSL.
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes circuit-flow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 30px 30px, 40px 40px, 25px 25px, 15px 15px;
+  }
+}
+
+@keyframes neural-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes neural-scan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes code-scroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
