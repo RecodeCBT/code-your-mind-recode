@@ -348,7 +348,7 @@ This code can be revealed and re-written using a combination of techniques based
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
             <div className="flex flex-col items-center justify-center gap-4">
               <div className="relative group">
-                <Button size="lg" onClick={() => window.open('https://recodecbt.setmore.com', '_blank')} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
+                <Button size="lg" onClick={() => window.location.href = 'https://recodecbt.setmore.com'} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                   Book Your Session Today
                 </Button>
                 
