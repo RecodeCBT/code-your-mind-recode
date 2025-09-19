@@ -147,14 +147,12 @@ This code can be revealed and re-written using a combination of techniques based
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
               <Link to="/services#top" className="group">
                 <Button 
-                  variant="hero"
+                  variant="quantum"
                   size="lg" 
-                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-circuit"
+                  className="relative w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 md:px-12 py-4 sm:py-5 min-h-[52px] sm:min-h-[60px]"
                 >
-                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
-                    <Code className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                    <span className="text-center">Start Your Transformation</span>
-                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
+                  <div className="relative z-10 flex items-center justify-center w-full">
+                    <span className="text-center tracking-wide">Start Your Transformation</span>
                   </div>
                 </Button>
               </Link>
@@ -197,7 +195,7 @@ This code can be revealed and re-written using a combination of techniques based
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/testimonials#top">
-              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+              <Button variant="stellar" size="lg" className="text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4">
                 ⭐ Read Our Reviews
               </Button>
             </Link>
@@ -395,7 +393,7 @@ This code can be revealed and re-written using a combination of techniques based
           
           <div className="mt-6 space-y-4">
             <Link to="/testimonials#top">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+              <Button variant="stellar" size="lg" className="text-lg px-10 py-4">
                 ⭐ Read Our Reviews
               </Button>
             </Link>
