@@ -66,18 +66,10 @@ const Testimonials = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="flex justify-center mb-16">
             <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
               <div className="text-3xl font-bold text-primary mb-2">100%</div>
               <div className="text-sm text-muted-foreground">5-Star Reviews</div>
-            </div>
-            <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Lives Transformed</div>
-            </div>
-            <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
-              <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-sm text-muted-foreground">Proven Results</div>
             </div>
           </div>
           
