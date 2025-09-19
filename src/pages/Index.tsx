@@ -4,8 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare } from "lucide-react";
 import VideoLogo from "@/components/VideoLogo";
 import Navigation from "@/components/Navigation";
-import CodeStreamBackdrop from "@/components/Neuro/CodeStreamBackdrop";
-import HealingPulseButton from "@/components/Neuro/HealingPulseButton";
 import anxietyImage from "@/assets/anxiety-brain.jpg";
 import depressionImage from "@/assets/depression-cloud.jpg";
 import procrastinationImage from "@/assets/procrastination-clock.jpg";
@@ -106,8 +104,7 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative isolate overflow-hidden bg-[var(--rc-bg)] py-20 px-4">
-        <CodeStreamBackdrop />
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
         <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -147,8 +144,33 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
-            <div className="mt-8 flex justify-center">
-              <HealingPulseButton to="/services">Book a Session</HealingPulseButton>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
+              <Link to="/services#top" className="group">
+                <Button 
+                  variant="hero"
+                  size="lg" 
+                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-circuit"
+                >
+                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
+                    <Code className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="text-center">Start Your Transformation</span>
+                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
+                  </div>
+                </Button>
+              </Link>
+              <Link to="/dr-carson#top" className="group">
+                <Button 
+                  variant="hero-secondary"
+                  size="lg" 
+                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-neural"
+                >
+                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
+                    <Brain className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                    <span className="text-center">Learn More</span>
+                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
+                  </div>
+                </Button>
+              </Link>
             </div>
             
             {/* Credentials Banner */}
@@ -175,7 +197,7 @@ This code can be revealed and re-written using a combination of techniques based
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/testimonials#top">
-              <Button variant="stellar" size="lg" className="text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4">
+              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
                 ⭐ Read Our Reviews
               </Button>
             </Link>
@@ -373,7 +395,7 @@ This code can be revealed and re-written using a combination of techniques based
           
           <div className="mt-6 space-y-4">
             <Link to="/testimonials#top">
-              <Button variant="stellar" size="lg" className="text-lg px-10 py-4">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
                 ⭐ Read Our Reviews
               </Button>
             </Link>

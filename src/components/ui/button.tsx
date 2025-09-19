@@ -25,8 +25,6 @@ const buttonVariants = cva(
         "nav-ghost": "bg-transparent text-foreground hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-purple-600/10 border border-transparent hover:border-orange-500/20 hover:scale-105 transition-all duration-300",
         hero: "bg-gradient-to-r from-orange-500 to-purple-600 text-white hover:from-orange-600 hover:to-purple-700 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-0 font-semibold",
         "hero-secondary": "bg-transparent text-primary hover:text-white border-2 border-purple-600/30 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-blue-500/20 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm",
-        quantum: "btn-quantum text-white font-bold shadow-2xl hover:shadow-primary-glow/50 transition-all duration-500 transform hover:scale-110 hover:rotate-1",
-        stellar: "btn-stellar text-foreground font-semibold shadow-lg hover:shadow-accent-glow/30 transition-all duration-400 transform hover:scale-105 hover:-rotate-1",
       },
       size: {
         default: "h-10 px-4 py-2",

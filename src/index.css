@@ -18,21 +18,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221 65% 58%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-    --primary-variant: 270 75% 65%;
-    --primary-glow: 35 100% 75%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --secondary-glow: 270 85% 80%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-    --accent-glow: 200 100% 70%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -70,21 +66,17 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 221 65% 58%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --primary-variant: 270 75% 65%;
-    --primary-glow: 35 100% 75%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --secondary-glow: 270 85% 80%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-    --accent-glow: 200 100% 70%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -321,92 +313,6 @@ All colors MUST be HSL.
       transform: scale(0.98);
     }
   }
-
-  /* Quantum button effect - unique hexagonal shape with energy pulses */
-  .btn-quantum {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-variant)), hsl(var(--accent)));
-    background-size: 200% 200%;
-    animation: quantum-pulse 4s ease-in-out infinite;
-  }
-
-  .btn-quantum::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: conic-gradient(from 0deg, transparent, hsl(var(--primary-glow)), hsl(var(--accent-glow)), transparent);
-    border-radius: inherit;
-    clip-path: inherit;
-    animation: quantum-rotate 3s linear infinite;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .btn-quantum:hover::before {
-    opacity: 0.8;
-  }
-
-  .btn-quantum::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, hsl(var(--primary-glow) / 0.3), transparent 60%);
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    animation: quantum-energy 2s ease-in-out infinite alternate;
-  }
-
-  .btn-quantum:hover::after {
-    opacity: 1;
-  }
-
-  /* Stellar button effect - diamond shape with constellation border */
-  .btn-stellar {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    clip-path: polygon(50% 0%, 80% 20%, 100% 50%, 80% 80%, 50% 100%, 20% 80%, 0% 50%, 20% 20%);
-    background: linear-gradient(45deg, hsl(var(--accent) / 0.1), hsl(var(--secondary) / 0.15));
-    border: 2px solid transparent;
-    background-clip: padding-box;
-  }
-
-  .btn-stellar::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    background: linear-gradient(45deg, 
-      hsl(var(--accent-glow)), 
-      hsl(var(--primary-glow)), 
-      hsl(var(--secondary-glow)), 
-      hsl(var(--accent-glow))
-    );
-    background-size: 400% 400%;
-    clip-path: inherit;
-    animation: stellar-constellation 4s ease-in-out infinite;
-    opacity: 0.6;
-  }
-
-  .btn-stellar:hover::before {
-    opacity: 1;
-    animation-duration: 1.5s;
-  }
-
-  .btn-stellar::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    clip-path: inherit;
-    z-index: -1;
-  }
 }
 
 @keyframes float {
@@ -472,69 +378,3 @@ All colors MUST be HSL.
     transform: translateY(-100%);
   }
 }
-
-@keyframes quantum-pulse {
-  0%, 100% { 
-    background-position: 0% 0%;
-    transform: scale(1);
-  }
-  25% { 
-    background-position: 100% 0%;
-    transform: scale(1.02);
-  }
-  50% { 
-    background-position: 100% 100%;
-    transform: scale(1);
-  }
-  75% { 
-    background-position: 0% 100%;
-    transform: scale(1.02);
-  }
-}
-
-@keyframes quantum-rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes quantum-energy {
-  0% { 
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.3;
-  }
-  100% { 
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0.6;
-  }
-}
-
-@keyframes stellar-constellation {
-  0%, 100% { 
-    background-position: 0% 0%;
-    filter: hue-rotate(0deg);
-  }
-  25% { 
-    background-position: 100% 0%;
-    filter: hue-rotate(90deg);
-  }
-  50% { 
-    background-position: 100% 100%;
-    filter: hue-rotate(180deg);
-  }
-  75% { 
-    background-position: 0% 100%;
-    filter: hue-rotate(270deg);
-  }
-}
-
-:root{
-  --rc-bg:#0b0f13;
-  --rc-cyan:#38bdf8;
-  --rc-violet:#a78bfa;
-  --rc-emerald:#34d399;
-}
-@keyframes rc-glow{0%,100%{box-shadow:0 0 0 rgba(56,189,248,0),0 0 0 rgba(167,139,250,0)}50%{box-shadow:0 0 18px rgba(56,189,248,0.35),0 0 36px rgba(167,139,250,0.22)}}
-@keyframes rc-scan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-@keyframes rc-dash{0%{stroke-dashoffset:1000}100%{stroke-dashoffset:0}}
-@keyframes rc-circuit-glow{0%,100%{filter:drop-shadow(0 0 0 rgba(56,189,248,0))}50%{filter:drop-shadow(0 0 6px rgba(56,189,248,0.6))}}
-@keyframes rc-rain{0%{transform:translateY(-100%);opacity:0}10%{opacity:.3}100%{transform:translateY(100%);opacity:0}}
