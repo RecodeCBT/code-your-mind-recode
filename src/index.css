@@ -378,15 +378,3 @@ All colors MUST be HSL.
     transform: translateY(-100%);
   }
 }
-
-:root{
-  --rc-bg:#0b0f13;
-  --rc-cyan:#38bdf8;
-  --rc-violet:#a78bfa;
-  --rc-emerald:#34d399;
-}
-@keyframes rc-glow{0%,100%{box-shadow:0 0 0 rgba(56,189,248,0),0 0 0 rgba(167,139,250,0)}50%{box-shadow:0 0 18px rgba(56,189,248,0.35),0 0 36px rgba(167,139,250,0.22)}}
-@keyframes rc-scan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-@keyframes rc-dash{0%{stroke-dashoffset:1000}100%{stroke-dashoffset:0}}
-@keyframes rc-circuit-glow{0%,100%{filter:drop-shadow(0 0 0 rgba(56,189,248,0))}50%{filter:drop-shadow(0 0 6px rgba(56,189,248,0.6))}}
-@keyframes rc-rain{0%{transform:translateY(-100%);opacity:0}10%{opacity:.3}100%{transform:translateY(100%);opacity:0}}
