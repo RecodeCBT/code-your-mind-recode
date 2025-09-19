@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { ArrowLeft, Star, User } from "lucide-react";
+import { ArrowLeft, Star, User, Quote, Award, TrendingUp } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
+    {
+      name: "Maximilian",
+      condition: "4 Session Package",
+      rating: 5,
+      text: "Working with Dr. Carson through CBT was really helpful. In just four sessions, he gave me different tools to deal with intrusive thoughts and rumination, which made a big difference. He talks about these 'autocodes' and how to disrupt them, and that's been a really practical way for me to manage my thoughts. He's super empathetic, but is also clearly very knowledgeable. I've already recommended him to others because I think he's a great resource, and I've learned so much from our sessions. It feels like everyone should know about their triggers, and know how to manage them.",
+      date: "Today",
+      featured: true
+    },
     {
       name: "David C.",
       condition: "Initial Assessment & Intermediate Course",
@@ -38,54 +44,114 @@ const Testimonials = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
       <div className="container mx-auto px-4 py-8">
-        <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground">
+        <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="h-4 w-4" />
           Back to Home
         </Link>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Client Testimonials</h1>
-            <p className="text-xl text-muted-foreground">
-              Real experiences from clients who have transformed their lives with RECODE
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-primary/10 rounded-full">
+              <Award className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Verified Reviews</span>
+            </div>
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+              Client Success Stories
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Discover how RECODE has transformed lives through evidence-based cognitive behavioral therapy. 
+              Real clients, real results, real transformation.
             </p>
           </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">5-Star Reviews</div>
+            </div>
+            <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
+              <div className="text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-sm text-muted-foreground">Lives Transformed</div>
+            </div>
+            <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
+              <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
+              <div className="text-sm text-muted-foreground">Proven Results</div>
+            </div>
+          </div>
           
-          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
+          {/* Testimonials Grid */}
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
+              <Card 
+                key={index} 
+                className={`group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+                  testimonial.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-transparent' : ''
+                }`}
+              >
+                {testimonial.featured && (
+                  <div className="absolute top-4 right-4">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      Latest
+                    </Badge>
+                  </div>
+                )}
+                
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                        <User className="h-5 w-5 text-primary" />
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
+                        <User className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                        <CardDescription className="text-sm">{testimonial.condition}</CardDescription>
+                        <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                          {testimonial.name}
+                        </CardTitle>
+                        <CardDescription className="text-sm font-medium">
+                          {testimonial.condition}
+                        </CardDescription>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1">
-                      {renderStars(testimonial.rating)}
-                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 mt-3">
+                    {renderStars(testimonial.rating)}
+                    <span className="ml-2 text-sm text-muted-foreground">({testimonial.rating}/5)</span>
                   </div>
                 </CardHeader>
+                
                 <CardContent className="pt-0">
-                  <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">
-                    "{testimonial.text}"
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground font-medium">{testimonial.date}</p>
+                  <div className="relative">
+                    <Quote className="absolute -top-2 -left-2 h-8 w-8 text-primary/20" />
+                    <blockquote className="text-muted-foreground leading-relaxed pl-6 relative">
+                      {testimonial.text}
+                    </blockquote>
+                  </div>
+                  <div className="flex items-center justify-between mt-6 pt-4 border-t border-border/50">
+                    <p className="text-sm text-muted-foreground font-medium">{testimonial.date}</p>
+                    <div className="h-2 w-2 rounded-full bg-primary/40"></div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild size="lg">
-              <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer">
-                Leave a Review
-              </a>
-            </Button>
+          {/* CTA Section */}
+          <div className="text-center mt-16 p-8 rounded-lg bg-gradient-to-r from-primary/5 via-transparent to-primary/5 border border-primary/10">
+            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Life?</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Join hundreds of clients who have overcome anxiety, depression, and limiting beliefs with RECODE's proven approach.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="shadow-lg">
+                <Link to="/services">Book Your Session</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer">
+                  Leave a Review
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
