@@ -147,9 +147,9 @@ This code can be revealed and re-written using a combination of techniques based
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
               <Link to="/services#top" className="group">
                 <Button 
-                  variant="hero"
+                  variant="default"
                   size="lg" 
-                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-circuit"
+                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white"
                 >
                   <div className="relative z-10 flex items-center justify-center gap-2 w-full">
                     <Code className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
@@ -197,7 +197,7 @@ This code can be revealed and re-written using a combination of techniques based
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/testimonials#top">
-              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
+              <Button variant="secondary" size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3">
                 ⭐ Read Our Reviews
               </Button>
             </Link>
@@ -219,12 +219,12 @@ This code can be revealed and re-written using a combination of techniques based
       </section>
 
       {/* Mental Health Conditions Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
+      <section className="py-12 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
         <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite 
@@ -393,12 +393,7 @@ This code can be revealed and re-written using a combination of techniques based
             </div>
           </div>
           
-          <div className="mt-6 space-y-4">
-            <Link to="/testimonials#top">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3 border-2 border-primary/30 hover:border-primary hover:bg-primary/5">
-                ⭐ Read Our Reviews
-              </Button>
-            </Link>
+          <div className="mt-6">
             <Link to="/contact#top">
               <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                 Contact Us Today
@@ -425,7 +420,7 @@ This code can be revealed and re-written using a combination of techniques based
                 Get Crisis Support - Samaritans
               </Button>
             </a>
-            <div className="mt-6 pt-4 border-t border-muted-foreground/20">
+            <div className="mt-4 pt-2 border-t border-muted-foreground/20">
             <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
               Privacy Policy & Terms
             </Link>

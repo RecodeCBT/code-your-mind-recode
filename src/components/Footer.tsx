@@ -2,7 +2,7 @@
 export default function Footer() {
   return (
     <footer className="bg-white py-6 px-4 text-center border-t border-gray-200 mt-12">
-      <p className="text-sm text-gray-500 mb-4">© 2025 Recode CBT. All rights reserved.</p>
+      <p className="text-sm text-gray-500 mb-2">© 2025 Recode CBT. All rights reserved.</p>
 
       <a
         href="https://www.instagram.com/recode_cbt"
