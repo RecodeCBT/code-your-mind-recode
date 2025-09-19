@@ -1,4 +1,3 @@
-'use client';
 import { Link, useLocation } from "react-router-dom";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 
