@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare } from "lucide-react";
 import VideoLogo from "@/components/VideoLogo";
 import Navigation from "@/components/Navigation";
+import CodeStreamBackdrop from "@/components/Neuro/CodeStreamBackdrop";
+import HealingPulseButton from "@/components/Neuro/HealingPulseButton";
 import anxietyImage from "@/assets/anxiety-brain.jpg";
 import depressionImage from "@/assets/depression-cloud.jpg";
 import procrastinationImage from "@/assets/procrastination-clock.jpg";
@@ -104,7 +106,8 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
+      <section className="relative isolate overflow-hidden bg-[var(--rc-bg)] py-20 px-4">
+        <CodeStreamBackdrop />
         <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -144,31 +147,8 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
-              <Link to="/services#top" className="group">
-                <Button 
-                  variant="quantum"
-                  size="lg" 
-                  className="relative w-full sm:w-auto text-sm sm:text-lg px-6 sm:px-10 md:px-12 py-4 sm:py-5 min-h-[52px] sm:min-h-[60px]"
-                >
-                  <div className="relative z-10 flex items-center justify-center w-full">
-                    <span className="text-center tracking-wide">Start Your Transformation</span>
-                  </div>
-                </Button>
-              </Link>
-              <Link to="/dr-carson#top" className="group">
-                <Button 
-                  variant="hero-secondary"
-                  size="lg" 
-                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-neural"
-                >
-                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
-                    <Brain className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                    <span className="text-center">Learn More</span>
-                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
-                  </div>
-                </Button>
-              </Link>
+            <div className="mt-8 flex justify-center">
+              <HealingPulseButton to="/services">Book a Session</HealingPulseButton>
             </div>
             
             {/* Credentials Banner */}
