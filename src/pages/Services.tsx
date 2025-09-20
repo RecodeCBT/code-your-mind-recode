@@ -254,25 +254,22 @@ const Services = () => {
       {/* Service Categories */}
       <section className="py-20 px-4 relative z-10">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Choose Your Journey</h2>
-          <div className="max-w-3xl mx-auto mb-12 bg-muted/50 p-6 rounded-lg border-l-4 border-primary">
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  1
-                </div>
-                <p className="text-lg text-foreground">
-                  First click one of the <strong>FOUR paths</strong> below that best matches where you are in your mental health journey.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  2
-                </div>
-                <p className="text-lg text-foreground">
-                  Then scroll below and <strong>select your choice</strong> from the available services.
-                </p>
-              </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Choose Your Journey</h2>
+          <div className="max-w-4xl mx-auto mb-8 bg-muted/50 p-4 md:p-6 rounded-full border border-primary/20">
+            <div className="text-center">
+              <p className="text-sm md:text-lg text-foreground">
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs md:text-sm flex-shrink-0">1</span>
+                  <span>Click one of the <strong>FOUR paths</strong> below</span>
+                </span>
+                <span className="mx-2 hidden md:inline">•</span>
+                <span className="block md:inline mt-1 md:mt-0">
+                  <span className="inline-flex items-center gap-2">
+                    <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs md:text-sm flex-shrink-0">2</span>
+                    <span>Then <strong>select your choice</strong> from services</span>
+                  </span>
+                </span>
+              </p>
             </div>
           </div>
           
