@@ -163,57 +163,6 @@ const DrCarsonBackground = () => {
               </CardContent>
             </Card>
 
-            <Card className="p-8 border-2 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-2xl flex items-center gap-2">
-                  <Dumbbell className="h-6 w-6 text-primary" />
-                  The Importance of "The Basics"
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through his dual expertise as both a practicing medical doctor and certified Level 3 Personal Trainer, Dr. Carson emphasizes the critical importance of "the basics" in holistic mental health. His experience has shown that anything affecting your energy levels directly impacts your psychological wellbeing.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6 mt-6">
-                  <div className="flex items-start gap-3">
-                    <Activity className="h-6 w-6 text-orange-500 mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-2">Exercise Habits</h4>
-                      <p className="text-muted-foreground">Regular physical activity directly influences neurotransmitter production and mental clarity</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Heart className="h-6 w-6 text-purple-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-2">Sleep Hygiene</h4>
-                      <p className="text-muted-foreground">Quality sleep patterns are fundamental to emotional regulation and cognitive function</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Brain className="h-6 w-6 text-blue-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-2">Nutritional Impacts</h4>
-                      <p className="text-muted-foreground">Proper nutrition provides the biochemical foundation for stable mood and mental performance</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Award className="h-6 w-6 text-green-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-2">Hydration Levels</h4>
-                      <p className="text-muted-foreground">Adequate hydration is essential for optimal brain function and psychological resilience</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  This comprehensive understanding allows him to address mental health from both neurochemical and lifestyle perspectives, ensuring that therapy is supported by optimal physical foundations for lasting psychological change.
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Quote Section */}

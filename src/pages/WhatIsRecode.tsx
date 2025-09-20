@@ -297,6 +297,69 @@ const WhatIsRecode = () => {
         </div>
       </section>
 
+      {/* The Basics Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-orange-500/5 via-purple-600/5 to-blue-600/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">The Importance of "The Basics"</h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Through his dual expertise as both a practicing medical doctor and certified Level 3 Personal Trainer, 
+              Dr. Carson emphasizes that anything affecting your energy levels directly impacts your psychological wellbeing.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <Card className="p-8 bg-gradient-to-br from-orange-500/10 to-orange-600/5 border-l-4 border-l-orange-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 bg-orange-500/20 rounded-full">
+                  <Zap className="h-8 w-8 text-orange-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-orange-700">Exercise Habits</h3>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Regular physical activity directly influences mitochondria production, boosting energy capacity in all your cells
+              </p>
+            </Card>
+
+            <Card className="p-8 bg-gradient-to-br from-purple-500/10 to-purple-600/5 border-l-4 border-l-purple-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 bg-purple-500/20 rounded-full">
+                  <Heart className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-purple-700">Sleep Hygiene</h3>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Quality sleep patterns are fundamental to emotional regulation and cognitive function
+              </p>
+            </Card>
+
+            <Card className="p-8 bg-gradient-to-br from-blue-500/10 to-blue-600/5 border-l-4 border-l-blue-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 bg-blue-500/20 rounded-full">
+                  <Brain className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-700">Nutritional Impacts</h3>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Knowledge on how blood sugar levels can influence energy and impact mental states.
+              </p>
+            </Card>
+
+            <Card className="p-8 bg-gradient-to-br from-teal-500/10 to-teal-600/5 border-l-4 border-l-teal-500 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 bg-teal-500/20 rounded-full">
+                  <CheckCircle className="h-8 w-8 text-teal-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-teal-700">Hydration Levels</h3>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Adequate hydration is essential for optimal brain function though essential energy pathways, removing toxic by-products of keeping the body running, and maintaining blood pressure
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Button - Bottom */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
