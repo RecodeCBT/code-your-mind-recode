@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, GraduationCap, Stethoscope, Brain, Award, Dumbbell, Heart, Activity } from "lucide-react";
+import { ArrowLeft, GraduationCap, Stethoscope, Brain, Award, Dumbbell, Heart, Activity, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
 const DrCarsonBackground = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
@@ -24,20 +24,80 @@ const DrCarsonBackground = () => {
 
           {/* Professional Introduction Section */}
           <Card className="p-8 mb-12 border-2 border-primary/20 bg-gradient-to-r from-background via-muted/10 to-primary/5">
-            <div className="grid lg:grid-cols-4 gap-8 items-center">
-              <div className="lg:col-span-1 flex flex-col items-center space-y-4">
-                <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
-                  <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" />
+            <div className="grid lg:grid-cols-5 gap-8 items-start">
+              <div className="lg:col-span-2 space-y-6">
+                {/* Photo */}
+                <div className="flex justify-center">
+                  <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
+                    <img src="/lovable-uploads/c1b46773-b5a8-41c8-a7a3-f0f16097d31d.png" alt="Dr. Christopher Carson" className="w-48 h-64 object-cover transition-transform duration-300 hover:scale-105" />
+                  </div>
                 </div>
-                <div className="relative overflow-hidden rounded-lg shadow-lg border-2 border-muted/30">
-                  
-                </div>
+                
+                {/* Professional Credentials Summary */}
+                <Card className="bg-white border border-gray-200 shadow-sm">
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <Award className="h-5 w-5 text-blue-600" />
+                      Professional Qualifications
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <GraduationCap className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-sm">MBBS Medicine</p>
+                          <p className="text-xs text-gray-600">University of East Anglia</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-3">
+                        <Stethoscope className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-sm">MRCGP</p>
+                          <p className="text-xs text-gray-600">Royal College of General Practitioners</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-3">
+                        <Brain className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-sm">Professional Diploma CBT</p>
+                          <p className="text-xs text-gray-600">Accredited Cognitive Behavioural Therapy</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-3">
+                        <Activity className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-sm">Level 3 Personal Training</p>
+                          <p className="text-xs text-gray-600">Certified Fitness Professional</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-3">
+                        <GraduationCap className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-sm">BSc (Hons) Biomedical Sciences</p>
+                          <p className="text-xs text-gray-600">Queen's University Belfast</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="pt-3 border-t border-gray-100">
+                      <div className="flex items-center gap-2">
+                        <Shield className="h-4 w-4 text-green-600" />
+                        <div>
+                          <p className="text-xs font-medium text-green-700">GMC Registered Practitioner</p>
+                          <p className="text-xs text-gray-600">Current practicing status</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
               
               <div className="lg:col-span-3">
-                <CardHeader className="pb-6">
-                  
-                </CardHeader>
                 <CardContent className="space-y-4 text-base leading-relaxed">
                   <p>
                     Dr. Christopher Carson's journey in healthcare began in 2008 with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
