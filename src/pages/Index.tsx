@@ -107,15 +107,91 @@ const Index = () => {
       <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
-            {/* Professional Logo Section */}
-            <div className="relative flex items-center justify-center mb-12">
+            {/* Enhanced Logo Section with Circuitry */}
+            <div className="relative flex items-center justify-center mb-12 h-80">
               
-              {/* Simple, Clean Logo Container */}
+              {/* Left Circuitry */}
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-64 h-32">
+                <svg className="w-full h-full" viewBox="0 0 256 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M240 64L200 64L190 54L180 64L160 64L150 54L140 64L120 64L110 74L100 64L80 64L70 54L60 64L40 64L30 74L20 64L0 64" 
+                        stroke="url(#gradient-left)" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <circle cx="200" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
+                  <circle cx="160" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
+                  <circle cx="120" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
+                  <circle cx="80" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
+                  <circle cx="40" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
+                  
+                  {/* Electricity pulse */}
+                  <circle cx="0" cy="64" r="4" fill="#7877C6" opacity="0.9" className="animate-electricity-flow-left">
+                    <animateTransform
+                      attributeName="transform"
+                      type="translate"
+                      values="0,0; 240,0; 240,0"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0; 1; 0"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  
+                  <defs>
+                    <linearGradient id="gradient-left" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#7877C6" stopOpacity="0.8"/>
+                      <stop offset="50%" stopColor="#9333EA" stopOpacity="0.6"/>
+                      <stop offset="100%" stopColor="#F97316" stopOpacity="0.4"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              
+              {/* Right Circuitry */}
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-64 h-32">
+                <svg className="w-full h-full" viewBox="0 0 256 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 64L56 64L66 54L76 64L96 64L106 54L116 64L136 64L146 74L156 64L176 64L186 54L196 64L216 64L226 74L236 64L256 64" 
+                        stroke="url(#gradient-right)" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <circle cx="56" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
+                  <circle cx="96" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
+                  <circle cx="136" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
+                  <circle cx="176" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
+                  <circle cx="216" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
+                  
+                  {/* Electricity pulse */}
+                  <circle cx="16" cy="64" r="4" fill="#7877C6" opacity="0.9" className="animate-electricity-flow-right">
+                    <animateTransform
+                      attributeName="transform"
+                      type="translate"
+                      values="0,0; 240,0; 240,0"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0; 1; 0"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  
+                  <defs>
+                    <linearGradient id="gradient-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#F97316" stopOpacity="0.4"/>
+                      <stop offset="50%" stopColor="#9333EA" stopOpacity="0.6"/>
+                      <stop offset="100%" stopColor="#7877C6" stopOpacity="0.8"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              
+              {/* Enhanced Logo Container */}
               <div className="relative z-10">
-                <div className="w-48 h-48 bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                  <div className="w-full h-full flex items-center justify-center overflow-hidden logo-impulse">
+                <div className="w-72 h-72 bg-white rounded-3xl p-8 shadow-2xl border-2 border-gray-200 animate-logo-pulse">
+                  <div className="w-full h-full flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" 
+                      src="/src/assets/recode-logo-circular.png" 
                       alt="RECODE CBT - Evidence-Based Therapy" 
                       className="w-full h-full object-contain" 
                     />
