@@ -371,21 +371,21 @@ const Index = () => {
             {/* Professional Credentials - Single Row */}
             <div className="bg-gray-50 rounded-lg p-4 mt-8 max-w-3xl mx-auto">
               <div className="flex justify-center items-center gap-8">
-                <div className="flex items-center space-x-2">
+                <div className="flex flex-col items-center space-y-2">
                   <GraduationCap className="h-6 w-6 text-blue-600" />
                   <div className="text-center">
                     <p className="font-semibold text-gray-900 text-sm">Qualified GP</p>
                     <p className="text-xs text-gray-600">Registered Practitioner</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex flex-col items-center space-y-2">
                   <Shield className="h-6 w-6 text-blue-600" />
                   <div className="text-center">
                     <p className="font-semibold text-gray-900 text-sm">CBT Accredited</p>
                     <p className="text-xs text-gray-600">Professional Diploma</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex flex-col items-center space-y-2">
                   <Stethoscope className="h-6 w-6 text-blue-600" />
                   <div className="text-center">
                     <p className="font-semibold text-gray-900 text-sm">Remote Sessions</p>
