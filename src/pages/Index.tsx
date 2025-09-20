@@ -186,32 +186,36 @@ const Index = () => {
                 </svg>
               </div>
               
-              {/* Enhanced Logo Container - circular crop */}
-              <div className="relative z-10">
-                <div className="w-108 h-108 flex items-center justify-center">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
-                    <img 
-                      src="/src/assets/recode-brain-logo.png" 
-                      alt="RECODE CBT - Evidence-Based Therapy"
-                      className="w-full h-full object-cover" 
-                      style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
-                    />
-                  </div>
+            {/* Enhanced Logo Container - responsive sizing */}
+            <div className="relative z-10">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-108 md:h-108 flex items-center justify-center mx-auto">
+                <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
+                  <img 
+                    src="/src/assets/recode-brain-logo.png" 
+                    alt="RECODE CBT - Evidence-Based Therapy"
+                    className="w-full h-full object-cover" 
+                    style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
+                  />
                 </div>
               </div>
+            </div>
             </div>
             
             {/* Tagline under logo */}
             <div className="text-center mb-6">
-              <h3 className="text-2xl md:text-3xl font-semibold text-gray-700">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 whitespace-nowrap">
                 Your Coding | Can Change
               </h3>
             </div>
             
             {/* Professional Headline */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Neural recoding through behavioural science
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight text-center">
+                <div className="flex flex-col items-center">
+                  <span>Neural-recoding</span>
+                  <span>through</span>
+                  <span>Behavioural Science</span>
+                </div>
               </h1>
               <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
                 Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.<br/>
