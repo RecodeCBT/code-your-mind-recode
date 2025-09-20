@@ -339,123 +339,112 @@ const WhatIsRecode = () => {
             </p>
           </div>
           
-          {/* Visual Diagram */}
-          <div className="relative max-w-5xl mx-auto">
-            {/* Central Hub */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-orange-500 via-purple-600 to-blue-600 rounded-full shadow-2xl flex items-center justify-center">
-                <div className="w-28 h-28 md:w-36 md:h-36 bg-white rounded-full flex items-center justify-center shadow-inner">
-                  <div className="text-center">
-                    <Brain className="h-6 w-6 md:h-8 md:w-8 text-purple-600 mx-auto mb-1" />
-                    <h3 className="text-sm md:text-lg font-bold text-gray-800">The Basics</h3>
-                    <p className="text-xs text-gray-600 hidden md:block">Foundation of Mental Wellbeing</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Connection Lines */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              {/* Top Line */}
-              <div className="absolute w-0.5 h-20 md:h-32 bg-gradient-to-t from-orange-500/50 to-orange-500/20 -top-20 md:-top-32 left-1/2 transform -translate-x-1/2"></div>
-              {/* Bottom Line */}
-              <div className="absolute w-0.5 h-20 md:h-32 bg-gradient-to-b from-purple-500/50 to-purple-500/20 top-16 md:top-20 left-1/2 transform -translate-x-1/2"></div>
-              {/* Left Line */}
-              <div className="absolute h-0.5 w-20 md:w-32 bg-gradient-to-l from-blue-500/50 to-blue-500/20 top-1/2 -left-20 md:-left-32 transform -translate-y-1/2"></div>
-              {/* Right Line */}
-              <div className="absolute h-0.5 w-20 md:w-32 bg-gradient-to-r from-teal-500/50 to-teal-500/20 top-1/2 left-16 md:left-20 transform -translate-y-1/2"></div>
-            </div>
-
-            {/* Four Connected Elements */}
+          {/* Four Quarters Grid */}
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
             
-            {/* Exercise Habits - Top */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2">
-              <Card className="w-56 md:w-64 p-4 bg-gradient-to-br from-orange-500/15 to-orange-600/10 border-2 border-orange-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Zap className="h-6 w-6 text-orange-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-orange-700 mb-3">Exercise Habits</h3>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    onClick={() => setExpandedSection('exercise')}
-                    className="text-orange-600 hover:text-orange-700 hover:bg-orange-500/10"
-                  >
-                    Read more...
-                  </Button>
+            {/* Exercise Habits - Top Left */}
+            <Card 
+              className="p-4 md:p-6 bg-gradient-to-br from-orange-500/15 to-orange-600/10 border-2 border-orange-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+              onClick={() => setExpandedSection('exercise')}
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Zap className="h-6 w-6 md:h-8 md:w-8 text-orange-600" />
                 </div>
-              </Card>
-            </div>
+                <h3 className="text-base md:text-xl font-bold text-orange-700 mb-2 md:mb-3">Exercise Habits</h3>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-orange-600 hover:text-orange-700 hover:bg-orange-500/10 text-xs md:text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setExpandedSection('exercise');
+                  }}
+                >
+                  Read more...
+                </Button>
+              </div>
+            </Card>
 
-            {/* Sleep Hygiene - Right */}
-            <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2">
-              <Card className="w-56 md:w-64 p-4 bg-gradient-to-br from-teal-500/15 to-teal-600/10 border-2 border-teal-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Heart className="h-6 w-6 text-teal-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-teal-700 mb-3">Sleep Hygiene</h3>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    onClick={() => setExpandedSection('sleep')}
-                    className="text-teal-600 hover:text-teal-700 hover:bg-teal-500/10"
-                  >
-                    Read more...
-                  </Button>
+            {/* Sleep Hygiene - Top Right */}
+            <Card 
+              className="p-4 md:p-6 bg-gradient-to-br from-teal-500/15 to-teal-600/10 border-2 border-teal-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+              onClick={() => setExpandedSection('sleep')}
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Heart className="h-6 w-6 md:h-8 md:w-8 text-teal-600" />
                 </div>
-              </Card>
-            </div>
+                <h3 className="text-base md:text-xl font-bold text-teal-700 mb-2 md:mb-3">Sleep Hygiene</h3>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-teal-600 hover:text-teal-700 hover:bg-teal-500/10 text-xs md:text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setExpandedSection('sleep');
+                  }}
+                >
+                  Read more...
+                </Button>
+              </div>
+            </Card>
 
-            {/* Nutritional Impacts - Bottom */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2">
-              <Card className="w-56 md:w-64 p-4 bg-gradient-to-br from-purple-500/15 to-purple-600/10 border-2 border-purple-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Target className="h-6 w-6 text-purple-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-purple-700 mb-3">Nutritional Impacts</h3>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    onClick={() => setExpandedSection('nutrition')}
-                    className="text-purple-600 hover:text-purple-700 hover:bg-purple-500/10"
-                  >
-                    Read more...
-                  </Button>
+            {/* Nutritional Impacts - Bottom Left */}
+            <Card 
+              className="p-4 md:p-6 bg-gradient-to-br from-purple-500/15 to-purple-600/10 border-2 border-purple-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+              onClick={() => setExpandedSection('nutrition')}
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Target className="h-6 w-6 md:h-8 md:w-8 text-purple-600" />
                 </div>
-              </Card>
-            </div>
+                <h3 className="text-base md:text-xl font-bold text-purple-700 mb-2 md:mb-3">Nutritional Impacts</h3>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-purple-600 hover:text-purple-700 hover:bg-purple-500/10 text-xs md:text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setExpandedSection('nutrition');
+                  }}
+                >
+                  Read more...
+                </Button>
+              </div>
+            </Card>
 
-            {/* Hydration Levels - Left */}
-            <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2">
-              <Card className="w-56 md:w-64 p-4 bg-gradient-to-br from-blue-500/15 to-blue-600/10 border-2 border-blue-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <CheckCircle className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-blue-700 mb-3">Hydration Levels</h3>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    onClick={() => setExpandedSection('hydration')}
-                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-500/10"
-                  >
-                    Read more...
-                  </Button>
+            {/* Hydration Levels - Bottom Right */}
+            <Card 
+              className="p-4 md:p-6 bg-gradient-to-br from-blue-500/15 to-blue-600/10 border-2 border-blue-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+              onClick={() => setExpandedSection('hydration')}
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <CheckCircle className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
                 </div>
-              </Card>
-            </div>
-
-            {/* Spacer to ensure proper height */}
-            <div className="h-80 md:h-96"></div>
+                <h3 className="text-base md:text-xl font-bold text-blue-700 mb-2 md:mb-3">Hydration Levels</h3>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="text-blue-600 hover:text-blue-700 hover:bg-blue-500/10 text-xs md:text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setExpandedSection('hydration');
+                  }}
+                >
+                  Read more...
+                </Button>
+              </div>
+            </Card>
           </div>
 
           {/* Expanded Content Overlay */}
           {expandedSection && (
-            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in">
-              <Card className="max-w-lg w-full max-h-[80vh] overflow-y-auto bg-white/95 backdrop-blur-sm border-2 shadow-2xl animate-scale-in">
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in"
+                 onClick={closeExpanded}>
+              <Card className="max-w-lg w-full max-h-[80vh] overflow-y-auto bg-white backdrop-blur-sm border-2 shadow-2xl animate-scale-in"
+                    onClick={(e) => e.stopPropagation()}>
                 <CardHeader className="text-center">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-3">
