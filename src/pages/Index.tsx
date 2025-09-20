@@ -283,9 +283,9 @@ const Index = () => {
               {/* Enhanced Logo Container - responsive and properly positioned */}
               <div className="relative z-10 flex justify-center items-center">
                 <img 
-                  src="/recode-avatar.png" 
+                  src="/recode-brain-logo-new.png" 
                   alt="ReCODE Brain Logo" 
-                  className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-contain drop-shadow-lg"
+                  className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52 object-contain drop-shadow-lg"
                 />
               </div>
             </div>
