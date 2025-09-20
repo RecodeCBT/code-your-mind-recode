@@ -103,97 +103,84 @@ const Index = () => {
   }];
   return <div className="min-h-screen bg-background">
       <Navigation />
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 py-20 px-4">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
-        <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center space-y-6">
-            {/* Neural code-themed hero with circular logo */}
-            <div className="relative flex items-center justify-center mb-16">
+      {/* Hero Section - Professional & Clean */}
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center space-y-8">
+            {/* Professional Logo Section */}
+            <div className="relative flex items-center justify-center mb-12">
               
-              {/* Background Brain-Code Pattern */}
-              <div className="absolute inset-0 w-full h-96 overflow-hidden rounded-2xl">
-                
-                
-              </div>
-
-              {/* Central Circular Logo */}
+              {/* Simple, Clean Logo Container */}
               <div className="relative z-10">
-                <div className="w-80 h-80 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-8 backdrop-blur-md shadow-2xl logo-glow">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-full"></div>
-                  <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center overflow-hidden logo-impulse">
-                    <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="ReCODE Logo" className="w-full h-full object-contain rounded-full" />
+                <div className="w-48 h-48 bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <div className="w-full h-full flex items-center justify-center overflow-hidden logo-impulse">
+                    <img 
+                      src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" 
+                      alt="RECODE CBT - Evidence-Based Therapy" 
+                      className="w-full h-full object-contain" 
+                    />
                   </div>
-                </div>
-                
-                {/* Enhanced floating particles around logo */}
-                <div className="absolute -top-4 -left-4 w-6 h-6 bg-gradient-to-br from-orange-500/40 to-purple-600/40 rounded-full blur-sm animate-pulse"></div>
-                <div className="absolute -top-2 -right-6 w-4 h-4 bg-gradient-to-br from-blue-600/40 to-orange-500/40 rounded-full blur-sm animate-pulse delay-100"></div>
-                <div className="absolute -bottom-3 -left-5 w-5 h-5 bg-gradient-to-br from-purple-600/40 to-blue-600/40 rounded-full blur-sm animate-pulse delay-200"></div>
-                <div className="absolute -bottom-4 -right-4 w-3 h-3 bg-gradient-to-br from-orange-500/40 to-purple-600/40 rounded-full blur-sm animate-pulse delay-300"></div>
-                
-                {/* Neural connection lines */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 pointer-events-none">
-                  <div className="absolute top-0 left-1/2 w-px h-20 bg-gradient-to-b from-orange-500/30 to-transparent animate-pulse delay-500"></div>
-                  <div className="absolute bottom-0 left-1/2 w-px h-20 bg-gradient-to-t from-purple-600/30 to-transparent animate-pulse delay-700"></div>
-                  <div className="absolute left-0 top-1/2 h-px w-20 bg-gradient-to-r from-blue-600/30 to-transparent animate-pulse delay-600"></div>
                 </div>
               </div>
             </div>
             
-            {/* RECODE Title with Impulse Animation */}
-            <div className="mb-4">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent logo-impulse">
-                RECODE
+            {/* Professional Headline */}
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                Evidence-Based Therapy for
+                <span className="block text-blue-600">Mental Clarity</span>
               </h1>
+              <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto">
+                Professional CBT and DBT treatment for anxiety, depression, and procrastination. 
+                Rewrite the mental patterns that hold you back.
+              </h2>
             </div>
             
-            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
-This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-8 px-2">
-              <Link to="/services#top" className="group">
+            {/* Professional CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 px-2">
+              <Link to="/services#top">
                 <Button 
-                  variant="default"
                   size="lg" 
-                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white"
+                  className="w-full sm:w-auto text-base px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold"
                 >
-                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
-                    <Code className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                    <span className="text-center">Start Your Transformation</span>
-                    <Zap className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
-                  </div>
+                  Book a Session
                 </Button>
               </Link>
-              <Link to="/dr-carson#top" className="group">
+              <Link to="/dr-carson#top">
                 <Button 
-                  variant="hero-secondary"
+                  variant="outline"
                   size="lg" 
-                  className="relative w-full sm:w-auto text-sm sm:text-lg px-4 sm:px-8 md:px-10 py-3 sm:py-4 min-h-[48px] sm:min-h-[56px] btn-neural"
+                  className="w-full sm:w-auto text-base px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold"
                 >
-                  <div className="relative z-10 flex items-center justify-center gap-2 w-full">
-                    <Brain className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                    <span className="text-center">Learn More</span>
-                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 opacity-75 flex-shrink-0" />
-                  </div>
+                  Learn More
                 </Button>
               </Link>
             </div>
             
-            {/* Credentials Banner */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-                <GraduationCap className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Fully Qualified, Registered and Practicing General Practitioner</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4" />
-                Accredited Diploma in CBT
-              </div>
-              <div className="flex items-center gap-2">
-                <Stethoscope className="h-4 w-4" />
-                Flexible Remote Consultations
+            {/* Professional Credentials */}
+            <div className="bg-gray-50 rounded-lg p-6 mt-12 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-4 text-center">
+                <div className="flex flex-col items-center space-y-2">
+                  <GraduationCap className="h-8 w-8 text-blue-600" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Qualified GP</p>
+                    <p className="text-sm text-gray-600">Registered Practitioner</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <Shield className="h-8 w-8 text-blue-600" />
+                  <div>
+                    <p className="font-semibold text-gray-900">CBT Accredited</p>
+                    <p className="text-sm text-gray-600">Professional Diploma</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
+                  <Stethoscope className="h-8 w-8 text-blue-600" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Remote Sessions</p>
+                    <p className="text-sm text-gray-600">Flexible Scheduling</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -428,7 +415,7 @@ This code can be revealed and re-written using a combination of techniques based
                 Get Crisis Support - Samaritans
               </Button>
             </a>
-            <div className="mt-2 pt-1 border-t border-muted-foreground/20">
+            <div className="mt-1 pt-0.5 border-t border-muted-foreground/20">
             <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
               Privacy Policy & Terms
             </Link>
