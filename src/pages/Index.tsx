@@ -120,9 +120,9 @@ const Index = () => {
 
               {/* Central Circular Logo */}
               <div className="relative z-10">
-                <div className="w-80 h-80 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-8 backdrop-blur-md shadow-2xl">
+                <div className="w-80 h-80 bg-gradient-to-br from-orange-50/90 to-purple-50/90 dark:from-orange-950/40 dark:to-purple-950/40 rounded-full p-8 backdrop-blur-md shadow-2xl logo-glow">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-full"></div>
-                  <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-6 flex items-center justify-center overflow-hidden logo-impulse">
                     <img src="/lovable-uploads/79e1138e-68d4-4aea-a885-459526283014.png" alt="ReCODE Logo" className="w-full h-full object-contain rounded-full" />
                   </div>
                 </div>
@@ -141,6 +141,14 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            
+            {/* RECODE Title with Impulse Animation */}
+            <div className="mb-4">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent logo-impulse">
+                RECODE
+              </h1>
+            </div>
+            
             <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground whitespace-nowrap">Your Coding | Can Change</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-base">Evidence-based therapy that treats anxiety, depression, and procrastination like coding errors in mind. 
 This code can be revealed and re-written using a combination of techniques based on established CBT and DBT models.</p>
@@ -219,7 +227,7 @@ This code can be revealed and re-written using a combination of techniques based
       </section>
 
       {/* Mental Health Conditions Section */}
-      <section className="py-12 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
+      <section className="py-8 px-4 bg-gradient-to-r from-secondary/5 via-orange-500/5 to-purple-600/5 relative overflow-hidden">
         <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
@@ -257,7 +265,7 @@ This code can be revealed and re-written using a combination of techniques based
       </section>
 
       {/* Corporate Seminars Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-muted/10 via-orange-500/5 to-purple-600/10 relative overflow-hidden">
+      <section className="py-12 px-4 bg-gradient-to-r from-muted/10 via-orange-500/5 to-purple-600/10 relative overflow-hidden">
         <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-purple-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
@@ -420,7 +428,7 @@ This code can be revealed and re-written using a combination of techniques based
                 Get Crisis Support - Samaritans
               </Button>
             </a>
-            <div className="mt-4 pt-2 border-t border-muted-foreground/20">
+            <div className="mt-2 pt-1 border-t border-muted-foreground/20">
             <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
               Privacy Policy & Terms
             </Link>
