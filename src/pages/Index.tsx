@@ -315,7 +315,7 @@ const Index = () => {
               <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
                 <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
                   <img 
-                    src="/recode-brain-logo-new.png" 
+                    src="/recode-logo.png" 
                     alt="RECODE CBT - Evidence-Based Therapy"
                     className="w-full h-full object-cover" 
                     style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
