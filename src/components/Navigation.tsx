@@ -64,7 +64,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="w-full py-6 px-4 sticky top-0 z-40">
+      <nav className="w-full py-3 px-4 sticky top-0 z-40">
         <div className="container mx-auto max-w-7xl">
           <div className="flex justify-center">
             {/* Central Menu Button with Electric Pulse */}
@@ -72,21 +72,23 @@ const Navigation = () => {
               variant="ghost"
               size="lg"
               onClick={toggleMenu}
-              className="relative p-4 rounded-full bg-gradient-to-br from-orange-500/10 to-purple-600/10 backdrop-blur-sm border-2 border-transparent hover:scale-105 transition-transform duration-300"
+              className="relative px-6 py-3 rounded-full bg-white border-2 border-transparent hover:scale-105 transition-transform duration-300 shadow-lg"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
               style={{
-                background: 'linear-gradient(145deg, rgba(251, 146, 60, 0.1), rgba(147, 51, 234, 0.1))',
                 borderImage: 'linear-gradient(45deg, hsl(var(--primary)), transparent, hsl(var(--primary))) 1',
                 animation: 'electric-pulse 3s ease-in-out infinite'
               }}
             >
               <div className="absolute inset-0 rounded-full border-2 border-transparent animate-electric-border" />
-              {isMenuOpen ? (
-                <X className="h-8 w-8 text-primary" />
-              ) : (
-                <Menu className="h-8 w-8 text-primary" />
-              )}
+              <div className="flex items-center gap-3">
+                {isMenuOpen ? (
+                  <X className="h-6 w-6 text-primary" />
+                ) : (
+                  <Menu className="h-6 w-6 text-primary" />
+                )}
+                <span className="text-base font-medium text-primary">Menu</span>
+              </div>
             </Button>
           </div>
         </div>
