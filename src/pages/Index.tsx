@@ -104,98 +104,136 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       {/* Hero Section - Professional & Clean */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
             {/* Enhanced Logo Section with Circuitry */}
-            <div className="relative flex items-center justify-center mb-12 h-80">
+            <div className="relative flex items-center justify-center mb-12 h-96">
               
-              {/* Left Circuitry */}
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-64 h-32">
-                <svg className="w-full h-full" viewBox="0 0 256 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M240 64L200 64L190 54L180 64L160 64L150 54L140 64L120 64L110 74L100 64L80 64L70 54L60 64L40 64L30 74L20 64L0 64" 
-                        stroke="url(#gradient-left)" strokeWidth="2" fill="none" opacity="0.6"/>
-                  <circle cx="200" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
-                  <circle cx="160" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
-                  <circle cx="120" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
-                  <circle cx="80" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
-                  <circle cx="40" cy="64" r="3" fill="url(#gradient-left)" opacity="0.8"/>
+              {/* Left Circuitry - Butterfly Wing Pattern */}
+              <div className="absolute -left-96 top-1/2 transform -translate-y-1/2 w-96 h-96">
+                <svg className="w-full h-full" viewBox="0 0 384 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Main circuit paths spreading like butterfly wings */}
+                  <path d="M350 192L320 192L310 180L300 192L280 192L270 170L260 192L240 192L230 160L220 192L200 192L190 150L180 192L160 192L150 140L140 192L120 192L110 130L100 192L80 192L70 140L60 192L40 192L30 150L20 192L0 192" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <path d="M350 170L320 170L300 155L280 170L260 150L240 170L220 140L200 170L180 130L160 170L140 120L120 170L100 110L80 170L60 120L40 170L20 130L0 170" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
+                  <path d="M350 214L320 214L300 229L280 214L260 234L240 214L220 244L200 214L180 254L160 214L140 264L120 214L100 274L80 214L60 264L40 214L20 254L0 214" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
                   
-                  {/* Electricity pulse */}
-                  <circle cx="0" cy="64" r="4" fill="#7877C6" opacity="0.9" className="animate-electricity-flow-left">
+                  {/* Circuit nodes */}
+                  <circle cx="320" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="280" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
+                  <circle cx="240" cy="192" r="4" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="200" cy="192" r="3" fill="hsl(24 100% 67%)" opacity="0.7"/>
+                  <circle cx="160" cy="192" r="4" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="120" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.7"/>
+                  <circle cx="80" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="40" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
+                  
+                  {/* Secondary nodes on branch paths */}
+                  <circle cx="270" cy="170" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="230" cy="160" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="190" cy="150" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="150" cy="140" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="110" cy="130" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="70" cy="140" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="30" cy="150" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  
+                  {/* Lower branch nodes */}
+                  <circle cx="270" cy="214" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="230" cy="224" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="190" cy="234" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="150" cy="244" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="110" cy="254" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="70" cy="244" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="30" cy="234" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  
+                  {/* Left moving pulse */}
+                  <circle cx="0" cy="192" r="5" fill="hsl(24 100% 67%)" opacity="0.9">
                     <animateTransform
                       attributeName="transform"
                       type="translate"
-                      values="0,0; 240,0; 240,0"
-                      dur="3s"
+                      values="0,0; 350,0"
+                      dur="4s"
                       repeatCount="indefinite"
                     />
                     <animate
                       attributeName="opacity"
-                      values="0; 1; 0"
-                      dur="3s"
+                      values="0; 1; 0.5; 1; 0"
+                      dur="4s"
                       repeatCount="indefinite"
                     />
                   </circle>
-                  
-                  <defs>
-                    <linearGradient id="gradient-left" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#7877C6" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="#9333EA" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="#F97316" stopOpacity="0.4"/>
-                    </linearGradient>
-                  </defs>
                 </svg>
               </div>
               
-              {/* Right Circuitry */}
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-64 h-32">
-                <svg className="w-full h-full" viewBox="0 0 256 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 64L56 64L66 54L76 64L96 64L106 54L116 64L136 64L146 74L156 64L176 64L186 54L196 64L216 64L226 74L236 64L256 64" 
-                        stroke="url(#gradient-right)" strokeWidth="2" fill="none" opacity="0.6"/>
-                  <circle cx="56" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
-                  <circle cx="96" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
-                  <circle cx="136" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
-                  <circle cx="176" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
-                  <circle cx="216" cy="64" r="3" fill="url(#gradient-right)" opacity="0.8"/>
+              {/* Right Circuitry - Butterfly Wing Pattern */}
+              <div className="absolute -right-96 top-1/2 transform -translate-y-1/2 w-96 h-96">
+                <svg className="w-full h-full" viewBox="0 0 384 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Main circuit paths spreading like butterfly wings */}
+                  <path d="M34 192L64 192L74 180L84 192L104 192L114 170L124 192L144 192L154 160L164 192L184 192L194 150L204 192L224 192L234 140L244 192L264 192L274 130L284 192L304 192L314 140L324 192L344 192L354 150L364 192L384 192" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <path d="M34 170L64 170L84 155L104 170L124 150L144 170L164 140L184 170L204 130L224 170L244 120L264 170L284 110L304 170L324 120L344 170L364 130L384 170" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
+                  <path d="M34 214L64 214L84 229L104 214L124 234L144 214L164 244L184 214L204 254L224 214L244 264L264 214L284 274L304 214L324 264L344 214L364 254L384 214" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
                   
-                  {/* Electricity pulse */}
-                  <circle cx="16" cy="64" r="4" fill="#7877C6" opacity="0.9" className="animate-electricity-flow-right">
+                  {/* Circuit nodes */}
+                  <circle cx="64" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="104" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
+                  <circle cx="144" cy="192" r="4" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="184" cy="192" r="3" fill="hsl(24 100% 67%)" opacity="0.7"/>
+                  <circle cx="224" cy="192" r="4" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="264" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.7"/>
+                  <circle cx="304" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="344" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
+                  
+                  {/* Secondary nodes on branch paths */}
+                  <circle cx="114" cy="170" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="154" cy="160" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="194" cy="150" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="234" cy="140" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="274" cy="130" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="314" cy="140" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="354" cy="150" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  
+                  {/* Lower branch nodes */}
+                  <circle cx="114" cy="214" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="154" cy="224" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="194" cy="234" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="234" cy="244" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="274" cy="254" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
+                  <circle cx="314" cy="244" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  <circle cx="354" cy="234" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  
+                  {/* Right moving pulse */}
+                  <circle cx="34" cy="192" r="5" fill="hsl(24 100% 67%)" opacity="0.9">
                     <animateTransform
                       attributeName="transform"
                       type="translate"
-                      values="0,0; 240,0; 240,0"
-                      dur="3s"
+                      values="0,0; 350,0"
+                      dur="4s"
                       repeatCount="indefinite"
                     />
                     <animate
                       attributeName="opacity"
-                      values="0; 1; 0"
-                      dur="3s"
+                      values="0; 1; 0.5; 1; 0"
+                      dur="4s"
                       repeatCount="indefinite"
                     />
                   </circle>
-                  
-                  <defs>
-                    <linearGradient id="gradient-right" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#F97316" stopOpacity="0.4"/>
-                      <stop offset="50%" stopColor="#9333EA" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="#7877C6" stopOpacity="0.8"/>
-                    </linearGradient>
-                  </defs>
                 </svg>
               </div>
               
-              {/* Enhanced Logo Container */}
+              {/* Enhanced Logo Container - 50% larger and no square box */}
               <div className="relative z-10">
-                <div className="w-72 h-72 bg-white rounded-3xl p-8 shadow-2xl border-2 border-gray-200 animate-logo-pulse">
-                  <div className="w-full h-full flex items-center justify-center overflow-hidden">
-                    <img 
-                      src="/src/assets/recode-logo-circular.png" 
-                      alt="RECODE CBT - Evidence-Based Therapy" 
-                      className="w-full h-full object-contain" 
-                    />
-                  </div>
+                <div className="w-108 h-108 flex items-center justify-center animate-logo-pulse">
+                  <img 
+                    src="/src/assets/recode-logo-circular.png" 
+                    alt="RECODE CBT - Evidence-Based Therapy" 
+                    className="w-full h-full object-contain drop-shadow-lg" 
+                  />
                 </div>
               </div>
             </div>

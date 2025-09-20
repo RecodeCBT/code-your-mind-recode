@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			spacing: {
+				'108': '27rem', // 432px for 50% larger logo
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -114,11 +117,11 @@ export default {
 				'logo-pulse': {
 					'0%, 100%': {
 						transform: 'scale(1)',
-						filter: 'brightness(1) drop-shadow(0 0 0px rgba(120, 119, 198, 0.3))'
+						filter: 'brightness(1) drop-shadow(0 0 10px rgba(248, 115, 22, 0.3))'
 					},
 					'50%': {
 						transform: 'scale(1.05)',
-						filter: 'brightness(1.1) drop-shadow(0 0 20px rgba(120, 119, 198, 0.6))'
+						filter: 'brightness(1.1) drop-shadow(0 0 25px rgba(248, 115, 22, 0.5)) drop-shadow(0 0 40px rgba(147, 51, 234, 0.3))'
 					}
 				}
 			},

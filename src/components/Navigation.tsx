@@ -107,20 +107,23 @@ const Navigation = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleMenu}
-              className="lg:hidden p-2"
-              aria-label="Toggle menu"
-              aria-expanded={isMenuOpen}
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6 text-gray-700" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-700" />
-              )}
-            </Button>
+            <div className="flex items-center gap-2 lg:hidden">
+              <span className="text-sm font-medium text-orange-500">Menu</span>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleMenu}
+                className="p-2"
+                aria-label="Toggle menu"
+                aria-expanded={isMenuOpen}
+              >
+                {isMenuOpen ? (
+                  <X className="h-6 w-6 text-orange-500" />
+                ) : (
+                  <Menu className="h-6 w-6 text-orange-500" />
+                )}
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
