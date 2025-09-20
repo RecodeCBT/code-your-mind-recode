@@ -136,60 +136,68 @@ const Index = () => {
                     </linearGradient>
                   </defs>
                   
-                  {/* Right side circuits (0-90 degrees) - curved paths */}
+                  {/* Right side circuits (0-90 degrees) - fully curved realistic paths */}
                   <g stroke="url(#circuitFade)" fill="none">
-                    {/* Main curved horizontal paths */}
-                    <path d="M 60 0 Q 90 -5 120 0 Q 130 -8 140 -15 Q 150 -10 160 0 Q 180 5 200 0 Q 210 -10 220 -20 Q 230 -15 240 0 Q 270 8 300 0 Q 310 -12 320 -25 Q 340 -20 360 0 Q 405 15 450 0 Q 485 -5 520 -10 Q 560 -8 600 0 Q 640 -8 680 -15 Q 715 -12 750 0 Q 775 2 800 0" strokeWidth="3"/>
-                    <path d="M 60 -10 Q 100 -25 130 -20 Q 142 -30 155 -35 Q 167 -25 180 -15 Q 200 -25 220 -30 Q 232 -38 245 -45 Q 262 -35 280 -20 Q 310 -35 340 -40 Q 360 -32 380 -25 Q 425 -45 450 -50 Q 485 -55 520 -60 Q 560 -52 600 -45 Q 640 -65 680 -70 Q 715 -62 750 -55 Q 775 -67 800 -80" strokeWidth="2.5"/>
-                    <path d="M 60 10 Q 100 25 130 20 Q 142 30 155 35 Q 167 25 180 15 Q 200 25 220 30 Q 232 38 245 45 Q 262 35 280 20 Q 310 35 340 40 Q 360 32 380 25 Q 425 45 450 50 Q 485 55 520 60 Q 560 52 600 45 Q 640 65 680 70 Q 715 62 750 55 Q 775 67 800 80" strokeWidth="2.5"/>
-                    <path d="M 80 -25 Q 125 -35 150 -40 Q 165 -47 180 -55 Q 200 -50 220 -45 Q 250 -55 280 -60 Q 300 -67 320 -75 Q 340 -65 360 -50 Q 390 -75 420 -80 Q 450 -70 480 -60 Q 515 -85 550 -90 Q 585 -82 620 -75 Q 660 -95 700 -100 Q 740 -92 780 -85 Q 790 -102 800 -120" strokeWidth="2"/>
-                    <path d="M 80 25 Q 125 35 150 40 Q 165 47 180 55 Q 200 50 220 45 Q 250 55 280 60 Q 300 67 320 75 Q 340 65 360 50 Q 390 75 420 80 Q 450 70 480 60 Q 515 85 550 90 Q 585 82 620 75 Q 660 95 700 100 Q 740 92 780 85 Q 790 102 800 120" strokeWidth="2"/>
+                    {/* Main curved horizontal paths - organic circuit design */}
+                    <path d="M 60 0 Q 90 -8 120 0 Q 150 12 180 -5 Q 210 -18 240 5 Q 280 20 320 -15 Q 360 -35 400 -8 Q 450 18 500 -12 Q 550 -28 600 8 Q 650 25 700 -18 Q 750 -35 800 -5" strokeWidth="3"/>
+                    <path d="M 60 -15 Q 100 -35 140 -25 Q 180 -45 220 -35 Q 260 -55 300 -40 Q 340 -65 380 -45 Q 420 -70 460 -55 Q 500 -80 540 -65 Q 580 -85 620 -70 Q 660 -90 700 -75 Q 740 -95 780 -80 Q 800 -85 800 -85" strokeWidth="2.5"/>
+                    <path d="M 60 15 Q 100 35 140 25 Q 180 45 220 35 Q 260 55 300 40 Q 340 65 380 45 Q 420 70 460 55 Q 500 80 540 65 Q 580 85 620 70 Q 660 90 700 75 Q 740 95 780 80 Q 800 85 800 85" strokeWidth="2.5"/>
+                    <path d="M 80 -30 Q 130 -50 170 -45 Q 210 -65 250 -55 Q 290 -75 330 -65 Q 370 -85 410 -75 Q 450 -95 490 -85 Q 530 -105 570 -95 Q 610 -115 650 -105 Q 690 -125 730 -115 Q 770 -135 800 -125" strokeWidth="2"/>
+                    <path d="M 80 30 Q 130 50 170 45 Q 210 65 250 55 Q 290 75 330 65 Q 370 85 410 75 Q 450 95 490 85 Q 530 105 570 95 Q 610 115 650 105 Q 690 125 730 115 Q 770 135 800 125" strokeWidth="2"/>
+                    
+                    {/* Secondary curved branches */}
+                    <path d="M 140 -8 Q 165 -25 190 -12 Q 215 -28 240 -15" strokeWidth="1.5"/>
+                    <path d="M 140 8 Q 165 25 190 12 Q 215 28 240 15" strokeWidth="1.5"/>
+                    <path d="M 340 -20 Q 365 -35 390 -25 Q 415 -40 440 -30" strokeWidth="1.5"/>
+                    <path d="M 340 20 Q 365 35 390 25 Q 415 40 440 30" strokeWidth="1.5"/>
+                    <path d="M 540 -18 Q 565 -32 590 -22 Q 615 -36 640 -26" strokeWidth="1.5"/>
+                    <path d="M 540 18 Q 565 32 590 22 Q 615 36 640 26" strokeWidth="1.5"/>
                   </g>
                   
-                  {/* Top side circuits (90-180 degrees) - curved paths */}
+                  {/* Top side circuits (90-180 degrees) - curved vertical paths */}
                   <g stroke="url(#fadeTop)" fill="none">
-                    <path d="M 0 -60 Q -5 -90 0 -120 Q -8 -130 -15 -140 Q -10 -150 0 -160 Q 5 -180 0 -200 Q -10 -210 -20 -220 Q -15 -230 0 -240 Q 8 -270 0 -300 Q -12 -310 -25 -320 Q -20 -340 0 -360 Q 0 -380 0 -400" strokeWidth="3"/>
-                    <path d="M -10 -60 Q -25 -100 -20 -130 Q -30 -142 -35 -155 Q -25 -167 -15 -180 Q -25 -200 -30 -220 Q -38 -232 -45 -245 Q -35 -262 -20 -280 Q -35 -310 -40 -340 Q -32 -360 -25 -380 Q -45 -390 -50 -400" strokeWidth="2.5"/>
-                    <path d="M 10 -60 Q 25 -100 20 -130 Q 30 -142 35 -155 Q 25 -167 15 -180 Q 25 -200 30 -220 Q 38 -232 45 -245 Q 35 -262 20 -280 Q 35 -310 40 -340 Q 32 -360 25 -380 Q 45 -390 50 -400" strokeWidth="2.5"/>
-                    <path d="M -25 -80 Q -35 -125 -40 -150 Q -47 -165 -55 -180 Q -50 -200 -45 -220 Q -55 -250 -60 -280 Q -67 -300 -75 -320 Q -65 -340 -50 -360 Q -75 -380 -80 -400" strokeWidth="2"/>
-                    <path d="M 25 -80 Q 35 -125 40 -150 Q 47 -165 55 -180 Q 50 -200 45 -220 Q 55 -250 60 -280 Q 67 -300 75 -320 Q 65 -340 50 -360 Q 75 -380 80 -400" strokeWidth="2"/>
+                    <path d="M 0 -60 Q -12 -90 8 -120 Q 25 -150 -5 -180 Q -28 -210 15 -240 Q 35 -280 -18 -320 Q -40 -360 -8 -400" strokeWidth="3"/>
+                    <path d="M -15 -60 Q -35 -100 -25 -140 Q -45 -180 -35 -220 Q -55 -260 -40 -300 Q -65 -340 -45 -380 Q -70 -390 -50 -400" strokeWidth="2.5"/>
+                    <path d="M 15 -60 Q 35 -100 25 -140 Q 45 -180 35 -220 Q 55 -260 40 -300 Q 65 -340 45 -380 Q 70 -390 50 -400" strokeWidth="2.5"/>
+                    <path d="M -30 -80 Q -50 -130 -45 -170 Q -65 -210 -55 -250 Q -75 -290 -65 -330 Q -85 -370 -75 -400" strokeWidth="2"/>
+                    <path d="M 30 -80 Q 50 -130 45 -170 Q 65 -210 55 -250 Q 75 -290 65 -330 Q 85 -370 75 -400" strokeWidth="2"/>
                   </g>
                   
-                  {/* Left side circuits (180-270 degrees) - curved paths */}
+                  {/* Left side circuits (180-270 degrees) - fully curved realistic paths */}
                   <g stroke="url(#circuitFade)" fill="none">
-                    <path d="M -60 0 Q -90 -5 -120 0 Q -130 -8 -140 -15 Q -150 -10 -160 0 Q -180 5 -200 0 Q -210 -10 -220 -20 Q -230 -15 -240 0 Q -270 8 -300 0 Q -310 -12 -320 -25 Q -340 -20 -360 0 Q -405 15 -450 0 Q -485 -5 -520 -10 Q -560 -8 -600 0 Q -640 -8 -680 -15 Q -715 -12 -750 0 Q -775 2 -800 0" strokeWidth="3"/>
-                    <path d="M -60 -10 Q -100 -25 -130 -20 Q -142 -30 -155 -35 Q -167 -25 -180 -15 Q -200 -25 -220 -30 Q -232 -38 -245 -45 Q -262 -35 -280 -20 Q -310 -35 -340 -40 Q -360 -32 -380 -25 Q -425 -45 -450 -50 Q -485 -55 -520 -60 Q -560 -52 -600 -45 Q -640 -65 -680 -70 Q -715 -62 -750 -55 Q -775 -67 -800 -80" strokeWidth="2.5"/>
-                    <path d="M -60 10 Q -100 25 -130 20 Q -142 30 -155 35 Q -167 25 -180 15 Q -200 25 -220 30 Q -232 38 -245 45 Q -262 35 -280 20 Q -310 35 -340 40 Q -360 32 -380 25 Q -425 45 -450 50 Q -485 55 -520 60 Q -560 52 -600 45 Q -640 65 -680 70 Q -715 62 -750 55 Q -775 67 -800 80" strokeWidth="2.5"/>
-                    <path d="M -80 -25 Q -125 -35 -150 -40 Q -165 -47 -180 -55 Q -200 -50 -220 -45 Q -250 -55 -280 -60 Q -300 -67 -320 -75 Q -340 -65 -360 -50 Q -390 -75 -420 -80 Q -450 -70 -480 -60 Q -515 -85 -550 -90 Q -585 -82 -620 -75 Q -660 -95 -700 -100 Q -740 -92 -780 -85 Q -790 -102 -800 -120" strokeWidth="2"/>
-                    <path d="M -80 25 Q -125 35 -150 40 Q -165 47 -180 55 Q -200 50 -220 45 Q -250 55 -280 60 Q -300 67 -320 75 Q -340 65 -360 50 Q -390 75 -420 80 Q -450 70 -480 60 Q -515 85 -550 90 Q -585 82 -620 75 Q -660 95 -700 100 Q -740 92 -780 85 Q -790 102 -800 120" strokeWidth="2"/>
+                    <path d="M -60 0 Q -90 -8 -120 0 Q -150 12 -180 -5 Q -210 -18 -240 5 Q -280 20 -320 -15 Q -360 -35 -400 -8 Q -450 18 -500 -12 Q -550 -28 -600 8 Q -650 25 -700 -18 Q -750 -35 -800 -5" strokeWidth="3"/>
+                    <path d="M -60 -15 Q -100 -35 -140 -25 Q -180 -45 -220 -35 Q -260 -55 -300 -40 Q -340 -65 -380 -45 Q -420 -70 -460 -55 Q -500 -80 -540 -65 Q -580 -85 -620 -70 Q -660 -90 -700 -75 Q -740 -95 -780 -80 Q -800 -85 -800 -85" strokeWidth="2.5"/>
+                    <path d="M -60 15 Q -100 35 -140 25 Q -180 45 -220 35 Q -260 55 -300 40 Q -340 65 -380 45 Q -420 70 -460 55 Q -500 80 -540 65 Q -580 85 -620 70 Q -660 90 -700 75 Q -740 95 -780 80 Q -800 85 -800 85" strokeWidth="2.5"/>
+                    <path d="M -80 -30 Q -130 -50 -170 -45 Q -210 -65 -250 -55 Q -290 -75 -330 -65 Q -370 -85 -410 -75 Q -450 -95 -490 -85 Q -530 -105 -570 -95 Q -610 -115 -650 -105 Q -690 -125 -730 -115 Q -770 -135 -800 -125" strokeWidth="2"/>
+                    <path d="M -80 30 Q -130 50 -170 45 Q -210 65 -250 55 Q -290 75 -330 65 Q -370 85 -410 75 Q -450 95 -490 85 Q -530 105 -570 95 Q -610 115 -650 105 Q -690 125 -730 115 Q -770 135 -800 125" strokeWidth="2"/>
                   </g>
                   
-                  {/* Bottom side circuits (270-360 degrees) - curved paths */}
+                  {/* Bottom side circuits (270-360 degrees) - curved vertical paths */}
                   <g stroke="url(#fadeBottom)" fill="none">
-                    <path d="M 0 60 Q -5 90 0 120 Q -8 130 -15 140 Q -10 150 0 160 Q 5 180 0 200 Q -10 210 -20 220 Q -15 230 0 240 Q 8 270 0 300 Q -12 310 -25 320 Q -20 340 0 360 Q 0 380 0 400" strokeWidth="3"/>
-                    <path d="M -10 60 Q -25 100 -20 130 Q -30 142 -35 155 Q -25 167 -15 180 Q -25 200 -30 220 Q -38 232 -45 245 Q -35 262 -20 280 Q -35 310 -40 340 Q -32 360 -25 380 Q -45 390 -50 400" strokeWidth="2.5"/>
-                    <path d="M 10 60 Q 25 100 20 130 Q 30 142 35 155 Q 25 167 15 180 Q 25 200 30 220 Q 38 232 45 245 Q 35 262 20 280 Q 35 310 40 340 Q 32 360 25 380 Q 45 390 50 400" strokeWidth="2.5"/>
-                    <path d="M -25 80 Q -35 125 -40 150 Q -47 165 -55 180 Q -50 200 -45 220 Q -55 250 -60 280 Q -67 300 -75 320 Q -65 340 -50 360 Q -75 380 -80 400" strokeWidth="2"/>
-                    <path d="M 25 80 Q 35 125 40 150 Q 47 165 55 180 Q 50 200 45 220 Q 55 250 60 280 Q 67 300 75 320 Q 65 340 50 360 Q 75 380 80 400" strokeWidth="2"/>
+                    <path d="M 0 60 Q -12 90 8 120 Q 25 150 -5 180 Q -28 210 15 240 Q 35 280 -18 320 Q -40 360 -8 400" strokeWidth="3"/>
+                    <path d="M -15 60 Q -35 100 -25 140 Q -45 180 -35 220 Q -55 260 -40 300 Q -65 340 -45 380 Q -70 390 -50 400" strokeWidth="2.5"/>
+                    <path d="M 15 60 Q 35 100 25 140 Q 45 180 35 220 Q 55 260 40 300 Q 65 340 45 380 Q 70 390 50 400" strokeWidth="2.5"/>
+                    <path d="M -30 80 Q -50 130 -45 170 Q -65 210 -55 250 Q -75 290 -65 330 Q -85 370 -75 400" strokeWidth="2"/>
+                    <path d="M 30 80 Q 50 130 45 170 Q 65 210 55 250 Q 75 290 65 330 Q 85 370 75 400" strokeWidth="2"/>
                   </g>
                   
-                  {/* Diagonal circuits for complete 360-degree coverage - curved paths */}
+                  {/* Diagonal circuits for complete 360-degree coverage - organic curved paths */}
                   <g stroke="url(#circuitFade)" fill="none">
-                    {/* Top-right diagonal - curved */}
-                    <path d="M 30 -30 Q 55 -55 80 -80 Q 110 -110 140 -140 Q 170 -170 200 -200 Q 240 -240 280 -280 Q 320 -320 360 -360 Q 400 -380 440 -400" strokeWidth="2"/>
-                    <path d="M 40 -20 Q 70 -50 100 -80 Q 130 -110 160 -140 Q 200 -180 240 -220 Q 280 -260 320 -300 Q 360 -340 400 -380" strokeWidth="1.5"/>
+                    {/* Top-right diagonal - curved organic circuits */}
+                    <path d="M 30 -30 Q 65 -65 90 -90 Q 125 -115 150 -150 Q 185 -175 220 -210 Q 255 -245 290 -280 Q 325 -315 360 -350 Q 395 -385 430 -400" strokeWidth="2"/>
+                    <path d="M 40 -20 Q 75 -55 105 -85 Q 135 -115 165 -145 Q 205 -185 245 -225 Q 285 -265 325 -305 Q 365 -345 405 -385" strokeWidth="1.5"/>
                     
-                    {/* Top-left diagonal - curved */}
-                    <path d="M -30 -30 Q -55 -55 -80 -80 Q -110 -110 -140 -140 Q -170 -170 -200 -200 Q -240 -240 -280 -280 Q -320 -320 -360 -360 Q -400 -380 -440 -400" strokeWidth="2"/>
-                    <path d="M -40 -20 Q -70 -50 -100 -80 Q -130 -110 -160 -140 Q -200 -180 -240 -220 Q -280 -260 -320 -300 Q -360 -340 -400 -380" strokeWidth="1.5"/>
+                    {/* Top-left diagonal - curved organic circuits */}
+                    <path d="M -30 -30 Q -65 -65 -90 -90 Q -125 -115 -150 -150 Q -185 -175 -220 -210 Q -255 -245 -290 -280 Q -325 -315 -360 -350 Q -395 -385 -430 -400" strokeWidth="2"/>
+                    <path d="M -40 -20 Q -75 -55 -105 -85 Q -135 -115 -165 -145 Q -205 -185 -245 -225 Q -285 -265 -325 -305 Q -365 -345 -405 -385" strokeWidth="1.5"/>
                     
-                    {/* Bottom-right diagonal - curved */}
-                    <path d="M 30 30 Q 55 55 80 80 Q 110 110 140 140 Q 170 170 200 200 Q 240 240 280 280 Q 320 320 360 360 Q 400 380 440 400" strokeWidth="2"/>
-                    <path d="M 40 20 Q 70 50 100 80 Q 130 110 160 140 Q 200 180 240 220 Q 280 260 320 300 Q 360 340 400 380" strokeWidth="1.5"/>
+                    {/* Bottom-right diagonal - curved organic circuits */}
+                    <path d="M 30 30 Q 65 65 90 90 Q 125 115 150 150 Q 185 175 220 210 Q 255 245 290 280 Q 325 315 360 350 Q 395 385 430 400" strokeWidth="2"/>
+                    <path d="M 40 20 Q 75 55 105 85 Q 135 115 165 145 Q 205 185 245 225 Q 285 265 325 305 Q 365 345 405 385" strokeWidth="1.5"/>
                     
-                    {/* Bottom-left diagonal - curved */}
-                    <path d="M -30 30 Q -55 55 -80 80 Q -110 110 -140 140 Q -170 170 -200 200 Q -240 240 -280 280 Q -320 320 -360 360 Q -400 380 -440 400" strokeWidth="2"/>
-                    <path d="M -40 20 Q -70 50 -100 80 Q -130 110 -160 140 Q -200 180 -240 220 Q -280 260 -320 300 Q -360 340 -400 380" strokeWidth="1.5"/>
+                    {/* Bottom-left diagonal - curved organic circuits */}
+                    <path d="M -30 30 Q -65 65 -90 90 Q -125 115 -150 150 Q -185 175 -220 210 Q -255 245 -290 280 Q -325 315 -360 350 Q -395 385 -430 400" strokeWidth="2"/>
+                    <path d="M -40 20 Q -75 55 -105 85 Q -135 115 -165 145 Q -205 185 -245 225 Q -285 265 -325 305 Q -365 345 -405 385" strokeWidth="1.5"/>
                   </g>
                   
                   {/* Circuit nodes positioned all around */}
@@ -233,78 +241,78 @@ const Index = () => {
                     <circle cx="-80" cy="80" r="3" opacity="0.7"/>
                   </g>
                   
-                  {/* Enhanced electrical pulses moving in all directions - slower pace */}
-                  {/* Right direction pulses */}
+                  {/* Enhanced electrical pulses moving in all directions - following curved paths */}
+                  {/* Right direction pulses - following the curved paths exactly */}
                   <circle r="7" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M 60 0 L 800 0"/>
+                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M 60 0 Q 90 -8 120 0 Q 150 12 180 -5 Q 210 -18 240 5 Q 280 20 320 -15 Q 360 -35 400 -8 Q 450 18 500 -12 Q 550 -28 600 8 Q 650 25 700 -18 Q 750 -35 800 -5"/>
                     <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.5s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="5.0s" repeatCount="indefinite" path="M 60 -10 L 800 -80"/>
+                    <animateMotion dur="5.0s" repeatCount="indefinite" path="M 60 -15 Q 100 -35 140 -25 Q 180 -45 220 -35 Q 260 -55 300 -40 Q 340 -65 380 -45 Q 420 -70 460 -55 Q 500 -80 540 -65 Q 580 -85 620 -70 Q 660 -90 700 -75 Q 740 -95 780 -80 Q 800 -85 800 -85"/>
                     <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="5.0s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="4.8s" repeatCount="indefinite" path="M 60 10 L 800 80"/>
+                    <animateMotion dur="4.8s" repeatCount="indefinite" path="M 60 15 Q 100 35 140 25 Q 180 45 220 35 Q 260 55 300 40 Q 340 65 380 45 Q 420 70 460 55 Q 500 80 540 65 Q 580 85 620 70 Q 660 90 700 75 Q 740 95 780 80 Q 800 85 800 85"/>
                     <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="4.8s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Left direction pulses */}
+                  {/* Left direction pulses - following the curved paths exactly */}
                   <circle r="7" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M -60 0 L -800 0"/>
+                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M -60 0 Q -90 -8 -120 0 Q -150 12 -180 -5 Q -210 -18 -240 5 Q -280 20 -320 -15 Q -360 -35 -400 -8 Q -450 18 -500 -12 Q -550 -28 -600 8 Q -650 25 -700 -18 Q -750 -35 -800 -5"/>
                     <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.5s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="5.0s" repeatCount="indefinite" path="M -60 -10 L -800 -80"/>
+                    <animateMotion dur="5.0s" repeatCount="indefinite" path="M -60 -15 Q -100 -35 -140 -25 Q -180 -45 -220 -35 Q -260 -55 -300 -40 Q -340 -65 -380 -45 Q -420 -70 -460 -55 Q -500 -80 -540 -65 Q -580 -85 -620 -70 Q -660 -90 -700 -75 Q -740 -95 -780 -80 Q -800 -85 -800 -85"/>
                     <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="5.0s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="4.8s" repeatCount="indefinite" path="M -60 10 L -800 80"/>
+                    <animateMotion dur="4.8s" repeatCount="indefinite" path="M -60 15 Q -100 35 -140 25 Q -180 45 -220 35 Q -260 55 -300 40 Q -340 65 -380 45 Q -420 70 -460 55 Q -500 80 -540 65 Q -580 85 -620 70 Q -660 90 -700 75 Q -740 95 -780 80 Q -800 85 -800 85"/>
                     <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="4.8s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Top direction pulses */}
+                  {/* Top direction pulses - following curved paths */}
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="0.9">
-                    <animateMotion dur="4.7s" repeatCount="indefinite" path="M 0 -60 L 0 -400"/>
+                    <animateMotion dur="4.7s" repeatCount="indefinite" path="M 0 -60 Q -12 -90 8 -120 Q 25 -150 -5 -180 Q -28 -210 15 -240 Q 35 -280 -18 -320 Q -40 -360 -8 -400"/>
                     <animate attributeName="opacity" values="0.9; 0.9; 0.4; 0.9; 0" dur="4.7s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M -10 -60 L -50 -400"/>
+                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M -15 -60 Q -35 -100 -25 -140 Q -45 -180 -35 -220 Q -55 -260 -40 -300 Q -65 -340 -45 -380 Q -70 -390 -50 -400"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.2s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="4.9s" repeatCount="indefinite" path="M 10 -60 L 50 -400"/>
+                    <animateMotion dur="4.9s" repeatCount="indefinite" path="M 15 -60 Q 35 -100 25 -140 Q 45 -180 35 -220 Q 55 -260 40 -300 Q 65 -340 45 -380 Q 70 -390 50 -400"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="4.9s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Bottom direction pulses */}
+                  {/* Bottom direction pulses - following curved paths */}
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="0.9">
-                    <animateMotion dur="4.7s" repeatCount="indefinite" path="M 0 60 L 0 400"/>
+                    <animateMotion dur="4.7s" repeatCount="indefinite" path="M 0 60 Q -12 90 8 120 Q 25 150 -5 180 Q -28 210 15 240 Q 35 280 -18 320 Q -40 360 -8 400"/>
                     <animate attributeName="opacity" values="0.9; 0.9; 0.4; 0.9; 0" dur="4.7s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M -10 60 L -50 400"/>
+                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M -15 60 Q -35 100 -25 140 Q -45 180 -35 220 Q -55 260 -40 300 Q -65 340 -45 380 Q -70 390 -50 400"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.2s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="4.9s" repeatCount="indefinite" path="M 10 60 L 50 400"/>
+                    <animateMotion dur="4.9s" repeatCount="indefinite" path="M 15 60 Q 35 100 25 140 Q 45 180 35 220 Q 55 260 40 300 Q 65 340 45 380 Q 70 390 50 400"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="4.9s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Diagonal pulses */}
+                  {/* Diagonal pulses - following organic curved paths */}
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
-                    <animateMotion dur="5.5s" repeatCount="indefinite" path="M 30 -30 L 440 -400"/>
+                    <animateMotion dur="5.5s" repeatCount="indefinite" path="M 30 -30 Q 65 -65 90 -90 Q 125 -115 150 -150 Q 185 -175 220 -210 Q 255 -245 290 -280 Q 325 -315 360 -350 Q 395 -385 430 -400"/>
                     <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.5s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
-                    <animateMotion dur="5.3s" repeatCount="indefinite" path="M -30 -30 L -440 -400"/>
+                    <animateMotion dur="5.3s" repeatCount="indefinite" path="M -30 -30 Q -65 -65 -90 -90 Q -125 -115 -150 -150 Q -185 -175 -220 -210 Q -255 -245 -290 -280 Q -325 -315 -360 -350 Q -395 -385 -430 -400"/>
                     <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.3s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
-                    <animateMotion dur="5.1s" repeatCount="indefinite" path="M 30 30 L 440 400"/>
+                    <animateMotion dur="5.1s" repeatCount="indefinite" path="M 30 30 Q 65 65 90 90 Q 125 115 150 150 Q 185 175 220 210 Q 255 245 290 280 Q 325 315 360 350 Q 395 385 430 400"/>
                     <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.1s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
-                    <animateMotion dur="5.4s" repeatCount="indefinite" path="M -30 30 L -440 400"/>
+                    <animateMotion dur="5.4s" repeatCount="indefinite" path="M -30 30 Q -65 65 -90 90 Q -125 115 -150 150 Q -185 175 -220 210 Q -255 245 -290 280 Q -325 315 -360 350 Q -395 385 -430 400"/>
                     <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.4s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
