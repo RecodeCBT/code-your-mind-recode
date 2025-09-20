@@ -67,17 +67,13 @@ const Navigation = () => {
       <nav className="w-full py-4 px-4 bg-white/95 backdrop-blur-sm border-b border-gray-200/60 sticky top-0 z-40">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-center justify-between">
-            {/* Logo/Brand */}
+            {/* Logo/Brand - Always use circular logo */}
             <Link to="/" className="flex items-center">
-              {location.pathname === '/services' ? (
-                <div className="w-12 h-12 rounded-full bg-orange-500 p-1">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <img src="/lovable-uploads/fe81a945-6632-4272-8a5e-b2608fc7fbb2.png" alt="RecodeCBT Logo" className="w-full h-full object-contain rounded-full" />
-                  </div>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500/20 to-purple-600/20 p-1">
+                <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                  <img src="/src/assets/recode-logo-circular.png" alt="RecodeCBT Logo" className="w-full h-full object-contain rounded-full mix-blend-multiply" />
                 </div>
-              ) : (
-                <span className="text-xl font-bold text-gray-900">RECODE CBT</span>
-              )}
+              </div>
             </Link>
 
             {/* Desktop Navigation - Hidden on mobile, shown on larger screens */}

@@ -110,129 +110,101 @@ const Index = () => {
             {/* Enhanced Logo Section with Circuitry */}
             <div className="relative flex items-center justify-center mb-12 h-96">
               
-              {/* Left Circuitry - Butterfly Wing Pattern */}
-              <div className="absolute -left-96 top-1/2 transform -translate-y-1/2 w-96 h-96">
-                <svg className="w-full h-full" viewBox="0 0 384 384" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Main circuit paths spreading like butterfly wings */}
-                  <path d="M350 192L320 192L310 180L300 192L280 192L270 170L260 192L240 192L230 160L220 192L200 192L190 150L180 192L160 192L150 140L140 192L120 192L110 130L100 192L80 192L70 140L60 192L40 192L30 150L20 192L0 192" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.6"/>
-                  <path d="M350 170L320 170L300 155L280 170L260 150L240 170L220 140L200 170L180 130L160 170L140 120L120 170L100 110L80 170L60 120L40 170L20 130L0 170" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
-                  <path d="M350 214L320 214L300 229L280 214L260 234L240 214L220 244L200 214L180 254L160 214L140 264L120 214L100 274L80 214L60 264L40 214L20 254L0 214" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
+              {/* Left Circuitry - Enhanced Visibility */}
+              <div className="absolute -left-80 top-1/2 transform -translate-y-1/2 w-80 h-80 opacity-90">
+                <svg className="w-full h-full" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Main circuit paths with increased visibility */}
+                  <path d="M300 160L270 160L260 148L250 160L230 160L220 138L210 160L190 160L180 128L170 160L150 160L140 118L130 160L110 160L100 108L90 160L70 160L60 118L50 160L30 160L20 128L10 160L0 160" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="3" fill="none" opacity="0.9"/>
+                  <path d="M300 138L270 138L250 123L230 138L210 118L190 138L170 108L150 138L130 98L110 138L90 88L70 138L50 98L30 138L10 108L0 138" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  <path d="M300 182L270 182L250 197L230 182L210 202L190 182L170 212L150 182L130 222L110 182L90 232L70 182L50 222L30 182L10 212L0 182" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
                   
-                  {/* Circuit nodes */}
-                  <circle cx="320" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="280" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
-                  <circle cx="240" cy="192" r="4" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="200" cy="192" r="3" fill="hsl(24 100% 67%)" opacity="0.7"/>
-                  <circle cx="160" cy="192" r="4" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="120" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.7"/>
-                  <circle cx="80" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="40" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
+                  {/* Enhanced circuit nodes */}
+                  <circle cx="270" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
+                  <circle cx="230" cy="160" r="4" fill="hsl(262 83% 58%)" opacity="0.9"/>
+                  <circle cx="190" cy="160" r="5" fill="hsl(221 83% 53%)" opacity="1"/>
+                  <circle cx="150" cy="160" r="4" fill="hsl(24 100% 67%)" opacity="0.9"/>
+                  <circle cx="110" cy="160" r="5" fill="hsl(262 83% 58%)" opacity="1"/>
+                  <circle cx="70" cy="160" r="4" fill="hsl(221 83% 53%)" opacity="0.9"/>
+                  <circle cx="30" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
                   
-                  {/* Secondary nodes on branch paths */}
-                  <circle cx="270" cy="170" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="230" cy="160" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="190" cy="150" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="150" cy="140" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="110" cy="130" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="70" cy="140" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="30" cy="150" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  {/* Enhanced secondary nodes */}
+                  <circle cx="220" cy="138" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="180" cy="128" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="140" cy="118" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="100" cy="108" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="60" cy="118" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="20" cy="128" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
                   
                   {/* Lower branch nodes */}
-                  <circle cx="270" cy="214" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="230" cy="224" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="190" cy="234" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="150" cy="244" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="110" cy="254" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="70" cy="244" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="30" cy="234" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="220" cy="182" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="180" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="140" cy="202" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="100" cy="212" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="60" cy="202" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="20" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
                   
-                  {/* Left moving pulse */}
-                  <circle cx="0" cy="192" r="5" fill="hsl(24 100% 67%)" opacity="0.9">
-                    <animateTransform
-                      attributeName="transform"
-                      type="translate"
-                      values="0,0; 350,0"
-                      dur="4s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0; 1; 0.5; 1; 0"
-                      dur="4s"
-                      repeatCount="indefinite"
-                    />
+                  {/* Left moving pulse - enhanced visibility */}
+                  <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
+                    <animateMotion dur="3s" repeatCount="indefinite" path="M 320 160 L 0 160"/>
+                    <animate attributeName="opacity" values="0; 1; 0.7; 1; 0" dur="3s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
               </div>
               
-              {/* Right Circuitry - Butterfly Wing Pattern */}
-              <div className="absolute -right-96 top-1/2 transform -translate-y-1/2 w-96 h-96">
-                <svg className="w-full h-full" viewBox="0 0 384 384" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Main circuit paths spreading like butterfly wings */}
-                  <path d="M34 192L64 192L74 180L84 192L104 192L114 170L124 192L144 192L154 160L164 192L184 192L194 150L204 192L224 192L234 140L244 192L264 192L274 130L284 192L304 192L314 140L324 192L344 192L354 150L364 192L384 192" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.6"/>
-                  <path d="M34 170L64 170L84 155L104 170L124 150L144 170L164 140L184 170L204 130L224 170L244 120L264 170L284 110L304 170L324 120L344 170L364 130L384 170" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
-                  <path d="M34 214L64 214L84 229L104 214L124 234L144 214L164 244L184 214L204 254L224 214L244 264L264 214L284 274L304 214L324 264L344 214L364 254L384 214" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="1.5" fill="none" opacity="0.5"/>
+              {/* Right Circuitry - Enhanced Visibility */}
+              <div className="absolute -right-80 top-1/2 transform -translate-y-1/2 w-80 h-80 opacity-90">
+                <svg className="w-full h-full" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Main circuit paths with increased visibility */}
+                  <path d="M20 160L50 160L60 148L70 160L90 160L100 138L110 160L130 160L140 128L150 160L170 160L180 118L190 160L210 160L220 108L230 160L250 160L260 118L270 160L290 160L300 128L310 160L320 160" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="3" fill="none" opacity="0.9"/>
+                  <path d="M20 138L50 138L70 123L90 138L110 118L130 138L150 108L170 138L190 98L210 138L230 88L250 138L270 98L290 138L310 108L320 138" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  <path d="M20 182L50 182L70 197L90 182L110 202L130 182L150 212L170 182L190 222L210 182L230 232L250 182L270 222L290 182L310 212L320 182" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
                   
-                  {/* Circuit nodes */}
-                  <circle cx="64" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="104" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
-                  <circle cx="144" cy="192" r="4" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="184" cy="192" r="3" fill="hsl(24 100% 67%)" opacity="0.7"/>
-                  <circle cx="224" cy="192" r="4" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="264" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.7"/>
-                  <circle cx="304" cy="192" r="4" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="344" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.7"/>
+                  {/* Enhanced circuit nodes */}
+                  <circle cx="50" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
+                  <circle cx="90" cy="160" r="4" fill="hsl(262 83% 58%)" opacity="0.9"/>
+                  <circle cx="130" cy="160" r="5" fill="hsl(221 83% 53%)" opacity="1"/>
+                  <circle cx="170" cy="160" r="4" fill="hsl(24 100% 67%)" opacity="0.9"/>
+                  <circle cx="210" cy="160" r="5" fill="hsl(262 83% 58%)" opacity="1"/>
+                  <circle cx="250" cy="160" r="4" fill="hsl(221 83% 53%)" opacity="0.9"/>
+                  <circle cx="290" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
                   
-                  {/* Secondary nodes on branch paths */}
-                  <circle cx="114" cy="170" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="154" cy="160" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="194" cy="150" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="234" cy="140" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="274" cy="130" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="314" cy="140" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="354" cy="150" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
+                  {/* Enhanced secondary nodes */}
+                  <circle cx="100" cy="138" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="140" cy="128" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="180" cy="118" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="220" cy="108" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="260" cy="118" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="300" cy="128" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
                   
                   {/* Lower branch nodes */}
-                  <circle cx="114" cy="214" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="154" cy="224" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="194" cy="234" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="234" cy="244" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
-                  <circle cx="274" cy="254" r="2" fill="hsl(262 83% 58%)" opacity="0.6"/>
-                  <circle cx="314" cy="244" r="2" fill="hsl(221 83% 53%)" opacity="0.6"/>
-                  <circle cx="354" cy="234" r="2" fill="hsl(24 100% 67%)" opacity="0.6"/>
+                  <circle cx="100" cy="182" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="140" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="180" cy="202" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="220" cy="212" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="260" cy="202" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="300" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
                   
-                  {/* Right moving pulse */}
-                  <circle cx="34" cy="192" r="5" fill="hsl(24 100% 67%)" opacity="0.9">
-                    <animateTransform
-                      attributeName="transform"
-                      type="translate"
-                      values="0,0; 350,0"
-                      dur="4s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0; 1; 0.5; 1; 0"
-                      dur="4s"
-                      repeatCount="indefinite"
-                    />
+                  {/* Right moving pulse - enhanced visibility */}
+                  <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
+                    <animateMotion dur="3s" repeatCount="indefinite" path="M 0 160 L 320 160"/>
+                    <animate attributeName="opacity" values="0; 1; 0.7; 1; 0" dur="3s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
               </div>
               
-              {/* Enhanced Logo Container - 50% larger and no square box */}
+              {/* Enhanced Logo Container - 50% larger, no borders, blend with background */}
               <div className="relative z-10">
-                <div className="w-108 h-108 flex items-center justify-center animate-logo-pulse">
+                <div className="w-108 h-108 flex items-center justify-center">
                   <img 
                     src="/src/assets/recode-logo-circular.png" 
                     alt="RECODE CBT - Evidence-Based Therapy" 
-                    className="w-full h-full object-contain drop-shadow-lg" 
+                    className="w-full h-full object-contain mix-blend-multiply opacity-95" 
                   />
                 </div>
               </div>

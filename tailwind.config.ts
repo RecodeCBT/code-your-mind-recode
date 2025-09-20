@@ -114,23 +114,12 @@ export default {
 						opacity: '0'
 					}
 				},
-				'logo-pulse': {
-					'0%, 100%': {
-						transform: 'scale(1)',
-						filter: 'brightness(1) drop-shadow(0 0 10px rgba(248, 115, 22, 0.3))'
-					},
-					'50%': {
-						transform: 'scale(1.05)',
-						filter: 'brightness(1.1) drop-shadow(0 0 25px rgba(248, 115, 22, 0.5)) drop-shadow(0 0 40px rgba(147, 51, 234, 0.3))'
-					}
-				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'electricity-flow-left': 'electricity-flow-left 3s ease-in-out infinite',
-				'electricity-flow-right': 'electricity-flow-right 3s ease-in-out infinite',
-				'logo-pulse': 'logo-pulse 4s ease-in-out infinite'
+				'electricity-flow-right': 'electricity-flow-right 3s ease-in-out infinite'
 			}
 		}
 	},
