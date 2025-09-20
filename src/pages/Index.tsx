@@ -136,7 +136,7 @@ const Index = () => {
                     </linearGradient>
                   </defs>
                   
-                  {/* Uniform Circuit-Neuron Hybrid Design - 8 radial sections */}
+                  {/* Enhanced Circuit-Neuron Hybrid Design - 8 radial sections with curved diagonals */}
                   <g stroke="url(#circuitFade)" fill="none">
                     
                     {/* Section 1: Right (0°) - Circuit + Neuron hybrid */}
@@ -154,14 +154,26 @@ const Index = () => {
                     <path d="M 580 -10 Q 585 -20 590 -28 Q 595 -35 600 -40" strokeWidth="1"/>
                     <path d="M 580 -10 Q 575 -18 570 -25" strokeWidth="1"/>
                     
-                    {/* Section 2: Top-Right (45°) */}
-                    <path d="M 42 -42 L 71 -71 L 85 -85 L 99 -99 L 113 -113 L 127 -127 L 141 -141 L 155 -155 L 169 -169 L 198 -198 L 226 -226 L 255 -255 L 283 -283 L 339 -339 L 396 -396 L 452 -452 L 509 -509 L 565 -565" strokeWidth="2.5"/>
+                    {/* Section 2: Top-Right (45°) - Enhanced curved fan-out design */}
+                    <path d="M 42 -42 Q 80 -60 120 -80 Q 160 -100 200 -140 Q 240 -180 280 -220 Q 320 -260 360 -300 Q 400 -340 440 -380 Q 480 -420 520 -460 Q 560 -500 600 -540" strokeWidth="2.5"/>
+                    <path d="M 50 -30 Q 90 -55 130 -85 Q 170 -115 210 -150 Q 250 -185 290 -225 Q 330 -265 370 -310 Q 410 -355 450 -395 Q 490 -435 530 -475" strokeWidth="2"/>
+                    <path d="M 30 -50 Q 70 -65 110 -75 Q 150 -95 190 -125 Q 230 -155 270 -195 Q 310 -235 350 -275 Q 390 -315 430 -355 Q 470 -395 510 -435" strokeWidth="2"/>
+                    <path d="M 60 -25 Q 100 -40 140 -60 Q 180 -80 220 -110 Q 260 -140 300 -180 Q 340 -220 380 -260 Q 420 -300 460 -340 Q 500 -380 540 -420" strokeWidth="1.5"/>
+                    <path d="M 35 -35 Q 75 -50 115 -70 Q 155 -90 195 -120 Q 235 -150 275 -190 Q 315 -230 355 -270 Q 395 -310 435 -350 Q 475 -390 515 -430" strokeWidth="1.5"/>
                     
-                    {/* Neuron branches for diagonal */}
-                    <path d="M 99 -99 Q 104 -109 109 -116 Q 114 -121 119 -126" strokeWidth="1"/>
-                    <path d="M 99 -99 Q 89 -109 84 -114" strokeWidth="1"/>
-                    <path d="M 169 -169 Q 174 -179 179 -186 Q 184 -191 189 -196" strokeWidth="1"/>
-                    <path d="M 226 -226 Q 231 -236 236 -243 Q 241 -248 246 -253" strokeWidth="1"/>
+                    {/* Fan-out branches for diagonal */}
+                    <path d="M 120 -80 Q 125 -95 130 -110 Q 135 -125 140 -140" strokeWidth="1"/>
+                    <path d="M 120 -80 Q 110 -90 105 -105" strokeWidth="1"/>
+                    <path d="M 200 -140 Q 205 -155 210 -170 Q 215 -185 220 -200" strokeWidth="1"/>
+                    <path d="M 200 -140 Q 185 -150 175 -165" strokeWidth="1"/>
+                    <path d="M 280 -220 Q 285 -235 290 -250 Q 295 -265 300 -280" strokeWidth="1"/>
+                    <path d="M 280 -220 Q 265 -230 255 -245" strokeWidth="1"/>
+                    <path d="M 360 -300 Q 365 -315 370 -330 Q 375 -345 380 -360" strokeWidth="1"/>
+                    <path d="M 360 -300 Q 345 -310 335 -325" strokeWidth="1"/>
+                    
+                    {/* Peripheral connections */}
+                    <path d="M 440 -380 Q 460 -390 480 -400 Q 500 -410 520 -420" strokeWidth="1"/>
+                    <path d="M 520 -460 Q 540 -470 560 -480 Q 580 -490 600 -500" strokeWidth="1"/>
                     
                     {/* Section 3: Top (90°) */}
                     <path d="M 0 -60 L 0 -100 L -8 -120 L -8 -140 L 0 -160 L 0 -180 L -12 -200 L -12 -220 L 0 -240 L 0 -280 L -15 -320 L -15 -360 L 0 -400" strokeWidth="2.5"/>
@@ -174,14 +186,22 @@ const Index = () => {
                     <path d="M 0 -240 Q 8 -245 15 -250 Q 20 -255 25 -260" strokeWidth="1"/>
                     <path d="M 0 -240 Q -8 -245 -15 -250" strokeWidth="1"/>
                     
-                    {/* Section 4: Top-Left (-45°) */}
-                    <path d="M -42 -42 L -71 -71 L -85 -85 L -99 -99 L -113 -113 L -127 -127 L -141 -141 L -155 -155 L -169 -169 L -198 -198 L -226 -226 L -255 -255 L -283 -283 L -339 -339 L -396 -396 L -452 -452 L -509 -509 L -565 -565" strokeWidth="2.5"/>
+                    {/* Section 4: Top-Left (-45°) - Enhanced curved fan-out design */}
+                    <path d="M -42 -42 Q -80 -60 -120 -80 Q -160 -100 -200 -140 Q -240 -180 -280 -220 Q -320 -260 -360 -300 Q -400 -340 -440 -380 Q -480 -420 -520 -460 Q -560 -500 -600 -540" strokeWidth="2.5"/>
+                    <path d="M -50 -30 Q -90 -55 -130 -85 Q -170 -115 -210 -150 Q -250 -185 -290 -225 Q -330 -265 -370 -310 Q -410 -355 -450 -395 Q -490 -435 -530 -475" strokeWidth="2"/>
+                    <path d="M -30 -50 Q -70 -65 -110 -75 Q -150 -95 -190 -125 Q -230 -155 -270 -195 Q -310 -235 -350 -275 Q -390 -315 -430 -355 Q -470 -395 -510 -435" strokeWidth="2"/>
+                    <path d="M -60 -25 Q -100 -40 -140 -60 Q -180 -80 -220 -110 Q -260 -140 -300 -180 Q -340 -220 -380 -260 Q -420 -300 -460 -340 Q -500 -380 -540 -420" strokeWidth="1.5"/>
+                    <path d="M -35 -35 Q -75 -50 -115 -70 Q -155 -90 -195 -120 Q -235 -150 -275 -190 Q -315 -230 -355 -270 Q -395 -310 -435 -350 Q -475 -390 -515 -430" strokeWidth="1.5"/>
                     
-                    {/* Neuron branches for diagonal */}
-                    <path d="M -99 -99 Q -104 -109 -109 -116 Q -114 -121 -119 -126" strokeWidth="1"/>
-                    <path d="M -99 -99 Q -89 -109 -84 -114" strokeWidth="1"/>
-                    <path d="M -169 -169 Q -174 -179 -179 -186 Q -184 -191 -189 -196" strokeWidth="1"/>
-                    <path d="M -226 -226 Q -231 -236 -236 -243 Q -241 -248 -246 -253" strokeWidth="1"/>
+                    {/* Fan-out branches for diagonal */}
+                    <path d="M -120 -80 Q -125 -95 -130 -110 Q -135 -125 -140 -140" strokeWidth="1"/>
+                    <path d="M -120 -80 Q -110 -90 -105 -105" strokeWidth="1"/>
+                    <path d="M -200 -140 Q -205 -155 -210 -170 Q -215 -185 -220 -200" strokeWidth="1"/>
+                    <path d="M -200 -140 Q -185 -150 -175 -165" strokeWidth="1"/>
+                    <path d="M -280 -220 Q -285 -235 -290 -250 Q -295 -265 -300 -280" strokeWidth="1"/>
+                    <path d="M -280 -220 Q -265 -230 -255 -245" strokeWidth="1"/>
+                    <path d="M -360 -300 Q -365 -315 -370 -330 Q -375 -345 -380 -360" strokeWidth="1"/>
+                    <path d="M -360 -300 Q -345 -310 -335 -325" strokeWidth="1"/>
                     
                     {/* Section 5: Left (180°) */}
                     <path d="M -60 0 L -100 0 L -120 -8 L -140 -8 L -160 0 L -180 0 L -200 -12 L -220 -12 L -240 0 L -280 0 L -320 -15 L -360 -15 L -400 0 L -460 0 L -520 -10 L -580 -10 L -640 0 L -720 0 L -800 0" strokeWidth="2.5"/>
@@ -194,13 +214,20 @@ const Index = () => {
                     <path d="M -240 0 Q -245 8 -250 15 Q -255 20 -260 25" strokeWidth="1"/>
                     <path d="M -240 0 Q -245 -8 -250 -15" strokeWidth="1"/>
                     
-                    {/* Section 6: Bottom-Left (-135°) */}
-                    <path d="M -42 42 L -71 71 L -85 85 L -99 99 L -113 113 L -127 127 L -141 141 L -155 155 L -169 169 L -198 198 L -226 226 L -255 255 L -283 283 L -339 339 L -396 396 L -452 452 L -509 509 L -565 565" strokeWidth="2.5"/>
+                    {/* Section 6: Bottom-Left (-135°) - Enhanced curved fan-out design */}
+                    <path d="M -42 42 Q -80 60 -120 80 Q -160 100 -200 140 Q -240 180 -280 220 Q -320 260 -360 300 Q -400 340 -440 380 Q -480 420 -520 460 Q -560 500 -600 540" strokeWidth="2.5"/>
+                    <path d="M -50 30 Q -90 55 -130 85 Q -170 115 -210 150 Q -250 185 -290 225 Q -330 265 -370 310 Q -410 355 -450 395 Q -490 435 -530 475" strokeWidth="2"/>
+                    <path d="M -30 50 Q -70 65 -110 75 Q -150 95 -190 125 Q -230 155 -270 195 Q -310 235 -350 275 Q -390 315 -430 355 Q -470 395 -510 435" strokeWidth="2"/>
+                    <path d="M -60 25 Q -100 40 -140 60 Q -180 80 -220 110 Q -260 140 -300 180 Q -340 220 -380 260 Q -420 300 -460 340 Q -500 380 -540 420" strokeWidth="1.5"/>
+                    <path d="M -35 35 Q -75 50 -115 70 Q -155 90 -195 120 Q -235 150 -275 190 Q -315 230 -355 270 Q -395 310 -435 350 Q -475 390 -515 430" strokeWidth="1.5"/>
                     
-                    {/* Neuron branches */}
-                    <path d="M -99 99 Q -104 109 -109 116 Q -114 121 -119 126" strokeWidth="1"/>
-                    <path d="M -99 99 Q -89 109 -84 114" strokeWidth="1"/>
-                    <path d="M -169 169 Q -174 179 -179 186 Q -184 191 -189 196" strokeWidth="1"/>
+                    {/* Fan-out branches */}
+                    <path d="M -120 80 Q -125 95 -130 110 Q -135 125 -140 140" strokeWidth="1"/>
+                    <path d="M -120 80 Q -110 90 -105 105" strokeWidth="1"/>
+                    <path d="M -200 140 Q -205 155 -210 170 Q -215 185 -220 200" strokeWidth="1"/>
+                    <path d="M -200 140 Q -185 150 -175 165" strokeWidth="1"/>
+                    <path d="M -280 220 Q -285 235 -290 250 Q -295 265 -300 280" strokeWidth="1"/>
+                    <path d="M -280 220 Q -265 230 -255 245" strokeWidth="1"/>
                     
                     {/* Section 7: Bottom (270°) */}
                     <path d="M 0 60 L 0 100 L -8 120 L -8 140 L 0 160 L 0 180 L -12 200 L -12 220 L 0 240 L 0 280 L -15 320 L -15 360 L 0 400" strokeWidth="2.5"/>
@@ -212,17 +239,30 @@ const Index = () => {
                     <path d="M -8 140 Q -15 135 -20 130" strokeWidth="1"/>
                     <path d="M 0 240 Q 8 245 15 250 Q 20 255 25 260" strokeWidth="1"/>
                     
-                    {/* Section 8: Bottom-Right (45°) */}
-                    <path d="M 42 42 L 71 71 L 85 85 L 99 99 L 113 113 L 127 127 L 141 141 L 155 155 L 169 169 L 198 198 L 226 226 L 255 255 L 283 283 L 339 339 L 396 396 L 452 452 L 509 509 L 565 565" strokeWidth="2.5"/>
+                    {/* Section 8: Bottom-Right (45°) - Enhanced curved fan-out design */}
+                    <path d="M 42 42 Q 80 60 120 80 Q 160 100 200 140 Q 240 180 280 220 Q 320 260 360 300 Q 400 340 440 380 Q 480 420 520 460 Q 560 500 600 540" strokeWidth="2.5"/>
+                    <path d="M 50 30 Q 90 55 130 85 Q 170 115 210 150 Q 250 185 290 225 Q 330 265 370 310 Q 410 355 450 395 Q 490 435 530 475" strokeWidth="2"/>
+                    <path d="M 30 50 Q 70 65 110 75 Q 150 95 190 125 Q 230 155 270 195 Q 310 235 350 275 Q 390 315 430 355 Q 470 395 510 435" strokeWidth="2"/>
+                    <path d="M 60 25 Q 100 40 140 60 Q 180 80 220 110 Q 260 140 300 180 Q 340 220 380 260 Q 420 300 460 340 Q 500 380 540 420" strokeWidth="1.5"/>
+                    <path d="M 35 35 Q 75 50 115 70 Q 155 90 195 120 Q 235 150 275 190 Q 315 230 355 270 Q 395 310 435 350 Q 475 390 515 430" strokeWidth="1.5"/>
                     
-                    {/* Neuron branches */}
-                    <path d="M 99 99 Q 104 109 109 116 Q 114 121 119 126" strokeWidth="1"/>
-                    <path d="M 99 99 Q 89 109 84 114" strokeWidth="1"/>
-                    <path d="M 169 169 Q 174 179 179 186 Q 184 191 189 196" strokeWidth="1"/>
-                    <path d="M 226 226 Q 231 236 236 243 Q 241 248 246 253" strokeWidth="1"/>
+                    {/* Fan-out branches */}
+                    <path d="M 120 80 Q 125 95 130 110 Q 135 125 140 140" strokeWidth="1"/>
+                    <path d="M 120 80 Q 110 90 105 105" strokeWidth="1"/>
+                    <path d="M 200 140 Q 205 155 210 170 Q 215 185 220 200" strokeWidth="1"/>
+                    <path d="M 200 140 Q 185 150 175 165" strokeWidth="1"/>
+                    <path d="M 280 220 Q 285 235 290 250 Q 295 265 300 280" strokeWidth="1"/>
+                    <path d="M 280 220 Q 265 230 255 245" strokeWidth="1"/>
+                    <path d="M 360 300 Q 365 315 370 330 Q 375 345 380 360" strokeWidth="1"/>
+                    <path d="M 360 300 Q 345 310 335 325" strokeWidth="1"/>
+                    
+                    {/* Peripheral filling patterns */}
+                    <path d="M 520 460 Q 540 470 560 480 Q 580 490 600 500" strokeWidth="1"/>
+                    <path d="M 480 420 Q 500 430 520 440 Q 540 450 560 460" strokeWidth="1"/>
+                    <path d="M 440 380 Q 460 390 480 400 Q 500 410 520 420" strokeWidth="1"/>
                   </g>
                   
-                  {/* Circuit nodes positioned uniformly in 8 radial sections */}
+                  {/* Enhanced circuit nodes positioned uniformly with additional peripheral nodes */}
                   <g fill="hsl(330 81% 60%)">
                     {/* Central hub nodes */}
                     <circle cx="60" cy="0" r="4" opacity="1"/>
@@ -234,37 +274,93 @@ const Index = () => {
                     <circle cx="0" cy="60" r="4" opacity="1"/>
                     <circle cx="42" cy="42" r="4" opacity="1"/>
                     
-                    {/* Secondary nodes - uniform spacing */}
+                    {/* Main circuit nodes */}
                     <circle cx="140" cy="-8" r="3" opacity="0.9"/>
                     <circle cx="240" cy="0" r="3" opacity="0.8"/>
                     <circle cx="400" cy="0" r="3" opacity="0.7"/>
                     <circle cx="580" cy="-10" r="2.5" opacity="0.5"/>
                     
-                    <circle cx="99" cy="-99" r="3" opacity="0.9"/>
-                    <circle cx="169" cy="-169" r="2.5" opacity="0.7"/>
-                    <circle cx="226" cy="-226" r="2" opacity="0.5"/>
+                    {/* Enhanced diagonal nodes with fan-out pattern */}
+                    <circle cx="120" cy="-80" r="3.5" opacity="0.9"/>
+                    <circle cx="200" cy="-140" r="3" opacity="0.8"/>
+                    <circle cx="280" cy="-220" r="2.5" opacity="0.7"/>
+                    <circle cx="360" cy="-300" r="2" opacity="0.6"/>
+                    <circle cx="440" cy="-380" r="1.5" opacity="0.4"/>
+                    <circle cx="520" cy="-460" r="1" opacity="0.3"/>
                     
+                    {/* Fan-out branch nodes */}
+                    <circle cx="130" cy="-85" r="2" opacity="0.7"/>
+                    <circle cx="110" cy="-75" r="2" opacity="0.7"/>
+                    <circle cx="210" cy="-150" r="2" opacity="0.6"/>
+                    <circle cx="175" cy="-125" r="2" opacity="0.6"/>
+                    <circle cx="290" cy="-225" r="2" opacity="0.5"/>
+                    <circle cx="255" cy="-195" r="2" opacity="0.5"/>
+                    <circle cx="370" cy="-310" r="1.5" opacity="0.4"/>
+                    <circle cx="335" cy="-275" r="1.5" opacity="0.4"/>
+                    
+                    {/* Peripheral connection nodes */}
+                    <circle cx="460" cy="-390" r="1.5" opacity="0.3"/>
+                    <circle cx="480" cy="-400" r="1.5" opacity="0.3"/>
+                    <circle cx="500" cy="-410" r="1" opacity="0.2"/>
+                    <circle cx="540" cy="-470" r="1" opacity="0.2"/>
+                    <circle cx="560" cy="-480" r="1" opacity="0.2"/>
+                    <circle cx="580" cy="-490" r="1" opacity="0.1"/>
+                    
+                    {/* Top vertical nodes */}
                     <circle cx="-8" cy="-140" r="3" opacity="0.9"/>
                     <circle cx="0" cy="-240" r="3" opacity="0.8"/>
                     <circle cx="-15" cy="-320" r="2.5" opacity="0.6"/>
                     
-                    {/* Mirror nodes for other sections */}
+                    {/* Mirror nodes for top-left diagonal */}
+                    <circle cx="-120" cy="-80" r="3.5" opacity="0.9"/>
+                    <circle cx="-200" cy="-140" r="3" opacity="0.8"/>
+                    <circle cx="-280" cy="-220" r="2.5" opacity="0.7"/>
+                    <circle cx="-360" cy="-300" r="2" opacity="0.6"/>
+                    <circle cx="-440" cy="-380" r="1.5" opacity="0.4"/>
+                    <circle cx="-520" cy="-460" r="1" opacity="0.3"/>
+                    
+                    {/* Left side nodes */}
                     <circle cx="-140" cy="-8" r="3" opacity="0.9"/>
                     <circle cx="-240" cy="0" r="3" opacity="0.8"/>
                     <circle cx="-400" cy="0" r="3" opacity="0.7"/>
                     
-                    <circle cx="-99" cy="99" r="3" opacity="0.9"/>
-                    <circle cx="-169" cy="169" r="2.5" opacity="0.7"/>
+                    {/* Bottom-left diagonal nodes */}
+                    <circle cx="-120" cy="80" r="3.5" opacity="0.9"/>
+                    <circle cx="-200" cy="140" r="3" opacity="0.8"/>
+                    <circle cx="-280" cy="220" r="2.5" opacity="0.7"/>
+                    <circle cx="-360" cy="300" r="2" opacity="0.6"/>
+                    <circle cx="-440" cy="380" r="1.5" opacity="0.4"/>
+                    <circle cx="-520" cy="460" r="1" opacity="0.3"/>
                     
+                    {/* Bottom vertical nodes */}
                     <circle cx="-8" cy="140" r="3" opacity="0.9"/>
                     <circle cx="0" cy="240" r="3" opacity="0.8"/>
+                    <circle cx="-15" cy="320" r="2.5" opacity="0.6"/>
                     
-                    <circle cx="140" cy="8" r="3" opacity="0.9"/>
-                    <circle cx="99" cy="99" r="3" opacity="0.9"/>
-                    <circle cx="169" cy="169" r="2.5" opacity="0.7"/>
+                    {/* Bottom-right diagonal nodes */}
+                    <circle cx="120" cy="80" r="3.5" opacity="0.9"/>
+                    <circle cx="200" cy="140" r="3" opacity="0.8"/>
+                    <circle cx="280" cy="220" r="2.5" opacity="0.7"/>
+                    <circle cx="360" cy="300" r="2" opacity="0.6"/>
+                    <circle cx="440" cy="380" r="1.5" opacity="0.4"/>
+                    <circle cx="520" cy="460" r="1" opacity="0.3"/>
+                    
+                    {/* Additional peripheral nodes for fuller coverage */}
+                    <circle cx="540" cy="420" r="1" opacity="0.2"/>
+                    <circle cx="500" cy="380" r="1" opacity="0.2"/>
+                    <circle cx="460" cy="340" r="1" opacity="0.2"/>
+                    <circle cx="-540" cy="420" r="1" opacity="0.2"/>
+                    <circle cx="-500" cy="380" r="1" opacity="0.2"/>
+                    <circle cx="-460" cy="340" r="1" opacity="0.2"/>
+                    <circle cx="-540" cy="-420" r="1" opacity="0.2"/>
+                    <circle cx="-500" cy="-380" r="1" opacity="0.2"/>
+                    <circle cx="-460" cy="-340" r="1" opacity="0.2"/>
+                    <circle cx="540" cy="-420" r="1" opacity="0.2"/>
+                    <circle cx="500" cy="-380" r="1" opacity="0.2"/>
+                    <circle cx="460" cy="-340" r="1" opacity="0.2"/>
                   </g>
                   
-                  {/* Electrical pulses following the circuit-neuron hybrid paths */}
+                  {/* Enhanced electrical pulses following the curved fan-out circuit-neuron paths */}
                   
                   {/* Section 1: Right horizontal pulses */}
                   <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
@@ -280,10 +376,18 @@ const Index = () => {
                     <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="4.8s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Section 2: Top-right diagonal pulses */}
+                  {/* Section 2: Top-right curved fan-out pulses */}
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M 42 -42 L 71 -71 L 85 -85 L 99 -99 L 113 -113 L 127 -127 L 141 -141 L 155 -155 L 169 -169 L 198 -198 L 226 -226 L 255 -255 L 283 -283 L 339 -339 L 396 -396 L 452 -452 L 509 -509 L 565 -565"/>
+                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M 42 -42 Q 80 -60 120 -80 Q 160 -100 200 -140 Q 240 -180 280 -220 Q 320 -260 360 -300 Q 400 -340 440 -380 Q 480 -420 520 -460 Q 560 -500 600 -540"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.2s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="4" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.5s" repeatCount="indefinite" path="M 50 -30 Q 90 -55 130 -85 Q 170 -115 210 -150 Q 250 -185 290 -225 Q 330 -265 370 -310 Q 410 -355 450 -395 Q 490 -435 530 -475"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="4" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.8s" repeatCount="indefinite" path="M 30 -50 Q 70 -65 110 -75 Q 150 -95 190 -125 Q 230 -155 270 -195 Q 310 -235 350 -275 Q 390 -315 430 -355 Q 470 -395 510 -435"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.8s" repeatCount="indefinite"/>
                   </circle>
                   
                   {/* Section 3: Top vertical pulses */}
@@ -296,10 +400,14 @@ const Index = () => {
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.1s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Section 4: Top-left diagonal pulses */}
+                  {/* Section 4: Top-left curved fan-out pulses */}
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="5.3s" repeatCount="indefinite" path="M -42 -42 L -71 -71 L -85 -85 L -99 -99 L -113 -113 L -127 -127 L -141 -141 L -155 -155 L -169 -169 L -198 -198 L -226 -226 L -255 -255 L -283 -283 L -339 -339 L -396 -396 L -452 -452 L -509 -509 L -565 -565"/>
+                    <animateMotion dur="5.3s" repeatCount="indefinite" path="M -42 -42 Q -80 -60 -120 -80 Q -160 -100 -200 -140 Q -240 -180 -280 -220 Q -320 -260 -360 -300 Q -400 -340 -440 -380 Q -480 -420 -520 -460 Q -560 -500 -600 -540"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.3s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="4" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.6s" repeatCount="indefinite" path="M -50 -30 Q -90 -55 -130 -85 Q -170 -115 -210 -150 Q -250 -185 -290 -225 Q -330 -265 -370 -310 Q -410 -355 -450 -395 Q -490 -435 -530 -475"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.6s" repeatCount="indefinite"/>
                   </circle>
                   
                   {/* Section 5: Left horizontal pulses */}
@@ -308,10 +416,14 @@ const Index = () => {
                     <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.5s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Section 6: Bottom-left diagonal pulses */}
+                  {/* Section 6: Bottom-left curved fan-out pulses */}
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="5.4s" repeatCount="indefinite" path="M -42 42 L -71 71 L -85 85 L -99 99 L -113 113 L -127 127 L -141 141 L -155 155 L -169 169 L -198 198 L -226 226 L -255 255 L -283 283 L -339 339 L -396 396 L -452 452 L -509 509 L -565 565"/>
+                    <animateMotion dur="5.4s" repeatCount="indefinite" path="M -42 42 Q -80 60 -120 80 Q -160 100 -200 140 Q -240 180 -280 220 Q -320 260 -360 300 Q -400 340 -440 380 Q -480 420 -520 460 Q -560 500 -600 540"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.4s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="4" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.7s" repeatCount="indefinite" path="M -50 30 Q -90 55 -130 85 Q -170 115 -210 150 Q -250 185 -290 225 Q -330 265 -370 310 Q -410 355 -450 395 Q -490 435 -530 475"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.7s" repeatCount="indefinite"/>
                   </circle>
                   
                   {/* Section 7: Bottom vertical pulses */}
@@ -320,24 +432,42 @@ const Index = () => {
                     <animate attributeName="opacity" values="0.9; 0.9; 0.4; 0.9; 0" dur="4.7s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Section 8: Bottom-right diagonal pulses */}
+                  {/* Section 8: Bottom-right curved fan-out pulses */}
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
-                    <animateMotion dur="5.1s" repeatCount="indefinite" path="M 42 42 L 71 71 L 85 85 L 99 99 L 113 113 L 127 127 L 141 141 L 155 155 L 169 169 L 198 198 L 226 226 L 255 255 L 283 283 L 339 339 L 396 396 L 452 452 L 509 509 L 565 565"/>
+                    <animateMotion dur="5.1s" repeatCount="indefinite" path="M 42 42 Q 80 60 120 80 Q 160 100 200 140 Q 240 180 280 220 Q 320 260 360 300 Q 400 340 440 380 Q 480 420 520 460 Q 560 500 600 540"/>
                     <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.1s" repeatCount="indefinite"/>
                   </circle>
+                  <circle r="4" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.4s" repeatCount="indefinite" path="M 50 30 Q 90 55 130 85 Q 170 115 210 150 Q 250 185 290 225 Q 330 265 370 310 Q 410 355 450 395 Q 490 435 530 475"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.4s" repeatCount="indefinite"/>
+                  </circle>
                   
-                  {/* Neuron-like pulse effects on branches */}
+                  {/* Enhanced neuron-like pulse effects on fan-out branches */}
                   <circle r="3" fill="hsl(280 81% 70%)" opacity="0.6">
-                    <animateMotion dur="3.5s" repeatCount="indefinite" path="M 140 -8 Q 145 -18 150 -25 Q 155 -30 160 -35"/>
+                    <animateMotion dur="3.5s" repeatCount="indefinite" path="M 120 -80 Q 125 -95 130 -110 Q 135 -125 140 -140"/>
                     <animate attributeName="opacity" values="0.6; 0.8; 0.4; 0.6; 0" dur="3.5s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="3" fill="hsl(280 81% 70%)" opacity="0.6">
-                    <animateMotion dur="3.8s" repeatCount="indefinite" path="M 240 0 Q 245 8 250 15 Q 255 20 260 25"/>
+                    <animateMotion dur="3.8s" repeatCount="indefinite" path="M 200 -140 Q 205 -155 210 -170 Q 215 -185 220 -200"/>
                     <animate attributeName="opacity" values="0.6; 0.8; 0.4; 0.6; 0" dur="3.8s" repeatCount="indefinite"/>
                   </circle>
                   <circle r="3" fill="hsl(280 81% 70%)" opacity="0.6">
-                    <animateMotion dur="4.0s" repeatCount="indefinite" path="M 99 -99 Q 104 -109 109 -116 Q 114 -121 119 -126"/>
+                    <animateMotion dur="4.0s" repeatCount="indefinite" path="M 280 -220 Q 285 -235 290 -250 Q 295 -265 300 -280"/>
                     <animate attributeName="opacity" values="0.6; 0.8; 0.4; 0.6; 0" dur="4.0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="3" fill="hsl(280 81% 70%)" opacity="0.6">
+                    <animateMotion dur="4.2s" repeatCount="indefinite" path="M 360 -300 Q 365 -315 370 -330 Q 375 -345 380 -360"/>
+                    <animate attributeName="opacity" values="0.6; 0.8; 0.4; 0.6; 0" dur="4.2s" repeatCount="indefinite"/>
+                  </circle>
+                  
+                  {/* Peripheral connection pulses */}
+                  <circle r="2" fill="hsl(220 81% 70%)" opacity="0.5">
+                    <animateMotion dur="3.0s" repeatCount="indefinite" path="M 440 -380 Q 460 -390 480 -400 Q 500 -410 520 -420"/>
+                    <animate attributeName="opacity" values="0.5; 0.7; 0.3; 0.5; 0" dur="3.0s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="2" fill="hsl(220 81% 70%)" opacity="0.5">
+                    <animateMotion dur="3.2s" repeatCount="indefinite" path="M 520 -460 Q 540 -470 560 -480 Q 580 -490 600 -500"/>
+                    <animate attributeName="opacity" values="0.5; 0.7; 0.3; 0.5; 0" dur="3.2s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
               </div>
