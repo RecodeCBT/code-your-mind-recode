@@ -64,62 +64,30 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="w-full py-4 px-4 bg-white/95 backdrop-blur-sm border-b border-gray-200/60 sticky top-0 z-40">
+      <nav className="w-full py-6 px-4 sticky top-0 z-40">
         <div className="container mx-auto max-w-7xl">
-          <div className="flex items-center justify-between">
-            {/* Logo/Brand - Always use circular logo */}
-            <Link to="/" className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500/20 to-purple-600/20 p-1">
-                <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                  <img src="/src/assets/recode-logo-circular.png" alt="RecodeCBT Logo" className="w-full h-full object-contain rounded-full mix-blend-multiply" />
-                </div>
-              </div>
-            </Link>
-
-            {/* Desktop Navigation - Hidden on mobile, shown on larger screens */}
-            <div className="hidden lg:flex items-center space-x-1">
-              {navItems.map((item) => {
-                const isActive = location.pathname === item.path;
-                
-                return (
-                  <Link key={item.path} to={item.path}>
-                    <Button
-                      variant={item.isHighlighted ? "default" : "ghost"}
-                      size="sm"
-                      className={cn(
-                        "text-sm font-medium transition-colors",
-                        item.isHighlighted 
-                          ? "bg-blue-600 hover:bg-blue-700 text-white px-4 py-2" 
-                          : isActive 
-                            ? "bg-blue-50 text-blue-600" 
-                            : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                      )}
-                    >
-                      {item.label}
-                    </Button>
-                  </Link>
-                );
-              })}
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="flex items-center gap-2 lg:hidden">
-              <span className="text-sm font-medium text-orange-500">Menu</span>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleMenu}
-                className="p-2"
-                aria-label="Toggle menu"
-                aria-expanded={isMenuOpen}
-              >
-                {isMenuOpen ? (
-                  <X className="h-6 w-6 text-orange-500" />
-                ) : (
-                  <Menu className="h-6 w-6 text-orange-500" />
-                )}
-              </Button>
-            </div>
+          <div className="flex justify-center">
+            {/* Central Menu Button with Electric Pulse */}
+            <Button
+              variant="ghost"
+              size="lg"
+              onClick={toggleMenu}
+              className="relative p-4 rounded-full bg-gradient-to-br from-orange-500/10 to-purple-600/10 backdrop-blur-sm border-2 border-transparent hover:scale-105 transition-transform duration-300"
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              style={{
+                background: 'linear-gradient(145deg, rgba(251, 146, 60, 0.1), rgba(147, 51, 234, 0.1))',
+                borderImage: 'linear-gradient(45deg, hsl(var(--primary)), transparent, hsl(var(--primary))) 1',
+                animation: 'electric-pulse 3s ease-in-out infinite'
+              }}
+            >
+              <div className="absolute inset-0 rounded-full border-2 border-transparent animate-electric-border" />
+              {isMenuOpen ? (
+                <X className="h-8 w-8 text-primary" />
+              ) : (
+                <Menu className="h-8 w-8 text-primary" />
+              )}
+            </Button>
           </div>
         </div>
       </nav>

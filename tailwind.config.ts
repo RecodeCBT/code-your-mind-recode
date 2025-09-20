@@ -114,12 +114,47 @@ export default {
 						opacity: '0'
 					}
 				},
+				'electric-pulse': {
+					'0%': { 
+						boxShadow: '0 0 0 0 hsla(var(--primary), 0.7)'
+					},
+					'50%': { 
+						boxShadow: '0 0 0 10px hsla(var(--primary), 0)'
+					},
+					'100%': { 
+						boxShadow: '0 0 0 0 hsla(var(--primary), 0)'
+					}
+				},
+				'electric-border': {
+					'0%': { 
+						borderColor: 'transparent',
+						transform: 'rotate(0deg)'
+					},
+					'25%': { 
+						borderColor: 'hsl(var(--primary))',
+						transform: 'rotate(90deg)'
+					},
+					'50%': { 
+						borderColor: 'transparent', 
+						transform: 'rotate(180deg)'
+					},
+					'75%': { 
+						borderColor: 'hsl(var(--primary))',
+						transform: 'rotate(270deg)'
+					},
+					'100%': { 
+						borderColor: 'transparent',
+						transform: 'rotate(360deg)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'electricity-flow-left': 'electricity-flow-left 3s ease-in-out infinite',
-				'electricity-flow-right': 'electricity-flow-right 3s ease-in-out infinite'
+				'electricity-flow-right': 'electricity-flow-right 3s ease-in-out infinite',
+				'electric-pulse': 'electric-pulse 3s ease-in-out infinite',
+				'electric-border': 'electric-border 4s linear infinite'
 			}
 		}
 	},
