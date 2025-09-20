@@ -19,10 +19,26 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-xl text-muted-foreground">
+            <div className="relative inline-block mb-4">
+              <h1 className="text-4xl font-bold px-8 py-4 relative z-10">Get in Touch</h1>
+              <div className="absolute inset-0 border-2 border-primary/30 rounded-lg bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 shadow-lg"></div>
+              <div className="absolute inset-2 border border-primary/20 rounded-md bg-background/50"></div>
+              {/* Circuitry corners */}
+              <div className="absolute -top-1 -left-1 w-4 h-4 border-l-2 border-t-2 border-primary/40"></div>
+              <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-primary/40"></div>
+              <div className="absolute -bottom-1 -left-1 w-4 h-4 border-l-2 border-b-2 border-primary/40"></div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-primary/40"></div>
+            </div>
+            <p className="text-xl text-muted-foreground mb-6">
               Ready to start your transformation? Contact us to begin your RECODE journey
             </p>
+            <div className="flex justify-center">
+              <Link to="/services">
+                <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-3 text-lg font-semibold shadow-lg">
+                  View Our Services
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -151,19 +167,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Quick Action Buttons */}
-              <div className="space-y-4">
-                <Link to="/services" className="block">
-                  <Button className="w-full" size="lg">
-                    Book a Session
-                  </Button>
-                </Link>
-                <Link to="/about" className="block">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Learn More About Dr. Carson
-                  </Button>
-                </Link>
-              </div>
             </div>
           </div>
 

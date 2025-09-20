@@ -247,7 +247,25 @@ const Services = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
+          <div className="relative inline-block p-6 border-2 border-primary/30 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 shadow-xl">
+            {/* Circuitry pattern border */}
+            <div className="absolute inset-0 rounded-lg overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
+              <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-primary/40 to-transparent"></div>
+              <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-accent/40 to-transparent"></div>
+              {/* Corner circuit elements */}
+              <div className="absolute top-2 left-2 w-3 h-3 border-l-2 border-t-2 border-primary/50"></div>
+              <div className="absolute top-2 right-2 w-3 h-3 border-r-2 border-t-2 border-primary/50"></div>
+              <div className="absolute bottom-2 left-2 w-3 h-3 border-l-2 border-b-2 border-accent/50"></div>
+              <div className="absolute bottom-2 right-2 w-3 h-3 border-r-2 border-b-2 border-accent/50"></div>
+            </div>
+            <h1 className="text-2xl md:text-4xl font-bold text-foreground relative z-10 leading-tight">
+              <span className="block">Rewrite your AutoCode™</span>
+              <span className="block">Doctor-Delivered Therapy</span>
+              <span className="block">based on CBT and DBT</span>
+            </h1>
+          </div>
         </div>
       </section>
 
