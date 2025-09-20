@@ -415,7 +415,7 @@ const Index = () => {
                 Get Crisis Support - Samaritans
               </Button>
             </a>
-            <div className="mt-1 pt-0.5 border-t border-muted-foreground/20">
+            <div className="border-t border-muted-foreground/20">
             <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
               Privacy Policy & Terms
             </Link>
