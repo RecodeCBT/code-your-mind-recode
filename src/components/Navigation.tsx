@@ -64,7 +64,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="w-full py-3 px-4 sticky top-0 z-40">
+      <nav className="fixed top-0 left-0 right-0 w-full py-3 px-4 z-40 bg-transparent">
         <div className="container mx-auto max-w-7xl">
           <div className="flex justify-center">
             {/* Central Menu Button with Electric Pulse */}
