@@ -207,6 +207,66 @@ const Index = () => {
                     <path d="M -85 -35 Q -95 -45 -105 -55 Q -115 -65 -125 -75 Q -135 -85 -145 -95" strokeWidth="1"/>
                     <path d="M -35 -85 Q -45 -95 -55 -105 Q -65 -115 -75 -125 Q -85 -135 -95 -145" strokeWidth="1"/>
                     <path d="M 35 -85 Q 45 -95 55 -105 Q 65 -115 75 -125 Q 85 -135 95 -145" strokeWidth="1"/>
+                    
+                    {/* Extended peripheral dendrites and circuits - filling outer gaps */}
+                    {/* Far-reaching spiculated dendrites */}
+                    <path d="M 420 50 Q 450 35 480 45 Q 510 30 540 40 Q 570 25 600 35" strokeWidth="1.8"/>
+                    <path d="M 420 -50 Q 450 -65 480 -55 Q 510 -70 540 -60 Q 570 -75 600 -65" strokeWidth="1.8"/>
+                    <path d="M 50 420 Q 35 450 45 480 Q 30 510 40 540 Q 25 570 35 600" strokeWidth="1.8"/>
+                    <path d="M -50 420 Q -65 450 -55 480 Q -70 510 -60 540 Q -75 570 -65 600" strokeWidth="1.8"/>
+                    <path d="M -420 50 Q -450 35 -480 45 Q -510 30 -540 40 Q -570 25 -600 35" strokeWidth="1.8"/>
+                    <path d="M -420 -50 Q -450 -65 -480 -55 Q -510 -70 -540 -60 Q -570 -75 -600 -65" strokeWidth="1.8"/>
+                    <path d="M 50 -420 Q 35 -450 45 -480 Q 30 -510 40 -540 Q 25 -570 35 -600" strokeWidth="1.8"/>
+                    <path d="M -50 -420 Q -65 -450 -55 -480 Q -70 -510 -60 -540 Q -75 -570 -65 -600" strokeWidth="1.8"/>
+                    
+                    {/* Diagonal peripheral spikes */}
+                    <path d="M 350 350 Q 380 380 410 410 Q 440 440 470 470 Q 500 500 530 530" strokeWidth="1.6"/>
+                    <path d="M -350 350 Q -380 380 -410 410 Q -440 440 -470 470 Q -500 500 -530 530" strokeWidth="1.6"/>
+                    <path d="M -350 -350 Q -380 -380 -410 -410 Q -440 -440 -470 -470 Q -500 -500 -530 -530" strokeWidth="1.6"/>
+                    <path d="M 350 -350 Q 380 -380 410 -410 Q 440 -440 470 -470 Q 500 -500 530 -530" strokeWidth="1.6"/>
+                    
+                    {/* Coding-themed circuit patterns */}
+                    {/* Binary-like dendrite patterns */}
+                    <path d="M 380 150 L 400 150 Q 420 155 440 150 L 460 150 Q 480 155 500 150 L 520 150 Q 540 155 560 150 L 580 150" strokeWidth="1.4"/>
+                    <path d="M 380 170 L 400 170 L 400 180 L 420 180 L 420 170 L 440 170 L 440 180 L 460 180 L 460 170 L 480 170" strokeWidth="1.4"/>
+                    <path d="M 150 380 L 150 400 Q 155 420 150 440 L 150 460 Q 155 480 150 500 L 150 520 Q 155 540 150 560 L 150 580" strokeWidth="1.4"/>
+                    <path d="M 170 380 L 170 400 L 180 400 L 180 420 L 170 420 L 170 440 L 180 440 L 180 460 L 170 460 L 170 480" strokeWidth="1.4"/>
+                    
+                    {/* Code bracket-like structures */}
+                    <path d="M -380 150 L -400 150 L -400 170 L -420 170 L -420 190 L -400 190 L -400 210 L -380 210" strokeWidth="1.4"/>
+                    <path d="M -150 380 L -150 400 L -170 400 L -170 420 L -190 420 L -190 400 L -210 400 L -210 380" strokeWidth="1.4"/>
+                    <path d="M -380 -150 L -400 -150 L -400 -170 L -420 -170 L -420 -190 L -400 -190 L -400 -210 L -380 -210" strokeWidth="1.4"/>
+                    <path d="M 150 -380 L 150 -400 L 170 -400 L 170 -420 L 190 -420 L 190 -400 L 210 -400 L 210 -380" strokeWidth="1.4"/>
+                    
+                    {/* Terminal-like pathway structures */}
+                    <path d="M 480 200 Q 500 180 520 200 Q 540 180 560 200 Q 580 180 600 200" strokeWidth="1.2"/>
+                    <path d="M 200 480 Q 180 500 200 520 Q 180 540 200 560 Q 180 580 200 600" strokeWidth="1.2"/>
+                    <path d="M -200 480 Q -180 500 -200 520 Q -180 540 -200 560 Q -180 580 -200 600" strokeWidth="1.2"/>
+                    <path d="M -480 200 Q -500 180 -520 200 Q -540 180 -560 200 Q -580 180 -600 200" strokeWidth="1.2"/>
+                    <path d="M -480 -200 Q -500 -220 -520 -200 Q -540 -220 -560 -200 Q -580 -220 -600 -200" strokeWidth="1.2"/>
+                    <path d="M 200 -480 Q 180 -500 200 -520 Q 180 -540 200 -560 Q 180 -580 200 -600" strokeWidth="1.2"/>
+                    <path d="M -200 -480 Q -180 -500 -200 -520 Q -180 -540 -200 -560 Q -180 -580 -200 -600" strokeWidth="1.2"/>
+                    <path d="M 480 -200 Q 500 -220 520 -200 Q 540 -220 560 -200 Q 580 -220 600 -200" strokeWidth="1.2"/>
+                    
+                    {/* Additional spiculated micro-dendrites */}
+                    <path d="M 450 100 Q 470 95 490 105 Q 510 100 530 110 Q 550 105 570 115" strokeWidth="1"/>
+                    <path d="M 100 450 Q 95 470 105 490 Q 100 510 110 530 Q 105 550 115 570" strokeWidth="1"/>
+                    <path d="M -100 450 Q -95 470 -105 490 Q -100 510 -110 530 Q -105 550 -115 570" strokeWidth="1"/>
+                    <path d="M -450 100 Q -470 95 -490 105 Q -510 100 -530 110 Q -550 105 -570 115" strokeWidth="1"/>
+                    <path d="M -450 -100 Q -470 -105 -490 -95 Q -510 -100 -530 -90 Q -550 -95 -570 -85" strokeWidth="1"/>
+                    <path d="M 100 -450 Q 95 -470 105 -490 Q 100 -510 110 -530 Q 105 -550 115 -570" strokeWidth="1"/>
+                    <path d="M -100 -450 Q -95 -470 -105 -490 Q -100 -510 -110 -530 Q -105 -550 -115 -570" strokeWidth="1"/>
+                    <path d="M 450 -100 Q 470 -105 490 -95 Q 510 -100 530 -90 Q 550 -95 570 -85" strokeWidth="1"/>
+                    
+                    {/* Network bridging connections */}
+                    <path d="M 300 220 Q 320 240 340 220 Q 360 240 380 220 Q 400 240 420 220" strokeWidth="1"/>
+                    <path d="M 220 300 Q 240 320 220 340 Q 240 360 220 380 Q 240 400 220 420" strokeWidth="1"/>
+                    <path d="M -220 300 Q -240 320 -220 340 Q -240 360 -220 380 Q -240 400 -220 420" strokeWidth="1"/>
+                    <path d="M -300 220 Q -320 240 -340 220 Q -360 240 -380 220 Q -400 240 -420 220" strokeWidth="1"/>
+                    <path d="M -300 -220 Q -320 -240 -340 -220 Q -360 -240 -380 -220 Q -400 -240 -420 -220" strokeWidth="1"/>
+                    <path d="M 220 -300 Q 240 -320 220 -340 Q 240 -360 220 -380 Q 240 -400 220 -420" strokeWidth="1"/>
+                    <path d="M -220 -300 Q -240 -320 -220 -340 Q -240 -360 -220 -380 Q -240 -400 -220 -420" strokeWidth="1"/>
+                    <path d="M 300 -220 Q 320 -240 340 -220 Q 360 -240 380 -220 Q 400 -240 420 -220" strokeWidth="1"/>
                   </g>
                   
                   {/* Neural Network Nodes - Complete 360-degree coverage */}
@@ -325,6 +385,91 @@ const Index = () => {
                     <circle cx="120" cy="-120" r="2.5" opacity="0.6"/>
                     <circle cx="160" cy="-160" r="2.5" opacity="0.6"/>
                     <circle cx="200" cy="-200" r="2.5" opacity="0.6"/>
+                    
+                    {/* Extended peripheral nodes for coding-themed elements */}
+                    <circle cx="420" cy="50" r="2.8" opacity="0.55"/>
+                    <circle cx="450" cy="35" r="2.2" opacity="0.5"/>
+                    <circle cx="480" cy="45" r="2.5" opacity="0.52"/>
+                    <circle cx="510" cy="30" r="2.3" opacity="0.48"/>
+                    <circle cx="540" cy="40" r="2.6" opacity="0.53"/>
+                    <circle cx="570" cy="25" r="2.1" opacity="0.45"/>
+                    
+                    <circle cx="50" cy="420" r="2.8" opacity="0.55"/>
+                    <circle cx="35" cy="450" r="2.2" opacity="0.5"/>
+                    <circle cx="45" cy="480" r="2.5" opacity="0.52"/>
+                    <circle cx="30" cy="510" r="2.3" opacity="0.48"/>
+                    <circle cx="40" cy="540" r="2.6" opacity="0.53"/>
+                    <circle cx="25" cy="570" r="2.1" opacity="0.45"/>
+                    
+                    <circle cx="-420" cy="50" r="2.8" opacity="0.55"/>
+                    <circle cx="-450" cy="35" r="2.2" opacity="0.5"/>
+                    <circle cx="-480" cy="45" r="2.5" opacity="0.52"/>
+                    <circle cx="-510" cy="30" r="2.3" opacity="0.48"/>
+                    <circle cx="-540" cy="40" r="2.6" opacity="0.53"/>
+                    <circle cx="-570" cy="25" r="2.1" opacity="0.45"/>
+                    
+                    <circle cx="-50" cy="420" r="2.8" opacity="0.55"/>
+                    <circle cx="-35" cy="450" r="2.2" opacity="0.5"/>
+                    <circle cx="-45" cy="480" r="2.5" opacity="0.52"/>
+                    <circle cx="-30" cy="510" r="2.3" opacity="0.48"/>
+                    <circle cx="-40" cy="540" r="2.6" opacity="0.53"/>
+                    <circle cx="-25" cy="570" r="2.1" opacity="0.45"/>
+                    
+                    {/* Diagonal spiculated nodes */}
+                    <circle cx="350" cy="350" r="3" opacity="0.6"/>
+                    <circle cx="380" cy="380" r="2.5" opacity="0.55"/>
+                    <circle cx="410" cy="410" r="2.8" opacity="0.58"/>
+                    <circle cx="440" cy="440" r="2.3" opacity="0.52"/>
+                    <circle cx="470" cy="470" r="2.6" opacity="0.56"/>
+                    <circle cx="500" cy="500" r="2.1" opacity="0.48"/>
+                    <circle cx="530" cy="530" r="2.4" opacity="0.5"/>
+                    
+                    <circle cx="-350" cy="350" r="3" opacity="0.6"/>
+                    <circle cx="-380" cy="380" r="2.5" opacity="0.55"/>
+                    <circle cx="-410" cy="410" r="2.8" opacity="0.58"/>
+                    <circle cx="-440" cy="440" r="2.3" opacity="0.52"/>
+                    <circle cx="-470" cy="470" r="2.6" opacity="0.56"/>
+                    <circle cx="-500" cy="500" r="2.1" opacity="0.48"/>
+                    <circle cx="-530" cy="530" r="2.4" opacity="0.5"/>
+                    
+                    <circle cx="-350" cy="-350" r="3" opacity="0.6"/>
+                    <circle cx="-380" cy="-380" r="2.5" opacity="0.55"/>
+                    <circle cx="-410" cy="-410" r="2.8" opacity="0.58"/>
+                    <circle cx="-440" cy="-440" r="2.3" opacity="0.52"/>
+                    <circle cx="-470" cy="-470" r="2.6" opacity="0.56"/>
+                    <circle cx="-500" cy="-500" r="2.1" opacity="0.48"/>
+                    <circle cx="-530" cy="-530" r="2.4" opacity="0.5"/>
+                    
+                    <circle cx="350" cy="-350" r="3" opacity="0.6"/>
+                    <circle cx="380" cy="-380" r="2.5" opacity="0.55"/>
+                    <circle cx="410" cy="-410" r="2.8" opacity="0.58"/>
+                    <circle cx="440" cy="-440" r="2.3" opacity="0.52"/>
+                    <circle cx="470" cy="-470" r="2.6" opacity="0.56"/>
+                    <circle cx="500" cy="-500" r="2.1" opacity="0.48"/>
+                    <circle cx="530" cy="-530" r="2.4" opacity="0.5"/>
+                    
+                    {/* Coding-themed junction nodes */}
+                    <circle cx="400" cy="150" r="2.5" opacity="0.5"/>
+                    <circle cx="440" cy="150" r="2.2" opacity="0.47"/>
+                    <circle cx="480" cy="150" r="2.3" opacity="0.48"/>
+                    <circle cx="520" cy="150" r="2.1" opacity="0.45"/>
+                    <circle cx="560" cy="150" r="2.4" opacity="0.49"/>
+                    
+                    <circle cx="150" cy="400" r="2.5" opacity="0.5"/>
+                    <circle cx="150" cy="440" r="2.2" opacity="0.47"/>
+                    <circle cx="150" cy="480" r="2.3" opacity="0.48"/>
+                    <circle cx="150" cy="520" r="2.1" opacity="0.45"/>
+                    <circle cx="150" cy="560" r="2.4" opacity="0.49"/>
+                    
+                    <circle cx="-400" cy="150" r="2.5" opacity="0.5"/>
+                    <circle cx="-400" cy="170" r="2.2" opacity="0.47"/>
+                    <circle cx="-400" cy="190" r="2.3" opacity="0.48"/>
+                    <circle cx="-400" cy="210" r="2.1" opacity="0.45"/>
+                    
+                    <circle cx="-150" cy="400" r="2.5" opacity="0.5"/>
+                    <circle cx="-170" cy="400" r="2.2" opacity="0.47"/>
+                    <circle cx="-190" cy="400" r="2.3" opacity="0.48"/>
+                    <circle cx="-210" cy="400" r="2.1" opacity="0.45"/>
                   </g>
                   
                   {/* Varied Electrical Impulse Animations - Multiple Colors */}
@@ -428,6 +573,81 @@ const Index = () => {
                     <circle r="2.0" fill="hsl(355 80% 58%)" opacity="0.58">
                       <animateMotion dur="5.5s" repeatCount="indefinite" path="M 40 -40 Q 60 -60 80 -80 L 100 -100 Q 120 -120 140 -140 L 160 -160 Q 180 -180 200 -200 L 220 -220 Q 240 -240 260 -260 L 280 -280"/>
                       <animate attributeName="opacity" values="0.58;0.73;0.22;0.58;0.07" dur="5.5s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    {/* Extended peripheral impulses - coding-themed colors */}
+                    <circle r="1.6" fill="hsl(220 70% 50%)" opacity="0.45">
+                      <animateMotion dur="7.2s" repeatCount="indefinite" path="M 420 50 Q 450 35 480 45 Q 510 30 540 40 Q 570 25 600 35"/>
+                      <animate attributeName="opacity" values="0.45;0.6;0.15;0.45;0.05" dur="7.2s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.5" fill="hsl(240 75% 55%)" opacity="0.42">
+                      <animateMotion dur="6.8s" repeatCount="indefinite" path="M 50 420 Q 35 450 45 480 Q 30 510 40 540 Q 25 570 35 600"/>
+                      <animate attributeName="opacity" values="0.42;0.57;0.12;0.42;0.03" dur="6.8s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.7" fill="hsl(260 80% 60%)" opacity="0.48">
+                      <animateMotion dur="7.5s" repeatCount="indefinite" path="M -50 420 Q -65 450 -55 480 Q -70 510 -60 540 Q -75 570 -65 600"/>
+                      <animate attributeName="opacity" values="0.48;0.63;0.18;0.48;0.06" dur="7.5s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.4" fill="hsl(200 85% 45%)" opacity="0.4">
+                      <animateMotion dur="6.5s" repeatCount="indefinite" path="M -420 50 Q -450 35 -480 45 Q -510 30 -540 40 Q -570 25 -600 35"/>
+                      <animate attributeName="opacity" values="0.4;0.55;0.1;0.4;0.02" dur="6.5s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    {/* Diagonal spiculated impulses */}
+                    <circle r="1.8" fill="hsl(170 70% 50%)" opacity="0.5">
+                      <animateMotion dur="8.2s" repeatCount="indefinite" path="M 350 350 Q 380 380 410 410 Q 440 440 470 470 Q 500 500 530 530"/>
+                      <animate attributeName="opacity" values="0.5;0.65;0.2;0.5;0.08" dur="8.2s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.6" fill="hsl(190 75% 55%)" opacity="0.46">
+                      <animateMotion dur="7.8s" repeatCount="indefinite" path="M -350 350 Q -380 380 -410 410 Q -440 440 -470 470 Q -500 500 -530 530"/>
+                      <animate attributeName="opacity" values="0.46;0.61;0.16;0.46;0.06" dur="7.8s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.9" fill="hsl(150 80% 48%)" opacity="0.52">
+                      <animateMotion dur="8.5s" repeatCount="indefinite" path="M -350 -350 Q -380 -380 -410 -410 Q -440 -440 -470 -470 Q -500 -500 -530 -530"/>
+                      <animate attributeName="opacity" values="0.52;0.67;0.22;0.52;0.09" dur="8.5s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.5" fill="hsl(130 75% 52%)" opacity="0.43">
+                      <animateMotion dur="7.1s" repeatCount="indefinite" path="M 350 -350 Q 380 -380 410 -410 Q 440 -440 470 -470 Q 500 -500 530 -530"/>
+                      <animate attributeName="opacity" values="0.43;0.58;0.13;0.43;0.04" dur="7.1s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    {/* Coding pattern impulses - binary-like */}
+                    <circle r="1.3" fill="hsl(60 80% 55%)" opacity="0.38">
+                      <animateMotion dur="4.8s" repeatCount="indefinite" path="M 380 150 L 400 150 Q 420 155 440 150 L 460 150 Q 480 155 500 150 L 520 150 Q 540 155 560 150 L 580 150"/>
+                      <animate attributeName="opacity" values="0.38;0.53;0.08;0.38;0.02" dur="4.8s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.2" fill="hsl(40 85% 60%)" opacity="0.35">
+                      <animateMotion dur="4.5s" repeatCount="indefinite" path="M 150 380 L 150 400 Q 155 420 150 440 L 150 460 Q 155 480 150 500 L 150 520 Q 155 540 150 560 L 150 580"/>
+                      <animate attributeName="opacity" values="0.35;0.5;0.05;0.35;0.01" dur="4.5s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    {/* Terminal-like impulses */}
+                    <circle r="1.4" fill="hsl(90 70% 48%)" opacity="0.4">
+                      <animateMotion dur="5.8s" repeatCount="indefinite" path="M 480 200 Q 500 180 520 200 Q 540 180 560 200 Q 580 180 600 200"/>
+                      <animate attributeName="opacity" values="0.4;0.55;0.1;0.4;0.02" dur="5.8s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.3" fill="hsl(110 75% 45%)" opacity="0.37">
+                      <animateMotion dur="5.5s" repeatCount="indefinite" path="M 200 480 Q 180 500 200 520 Q 180 540 200 560 Q 180 580 200 600"/>
+                      <animate attributeName="opacity" values="0.37;0.52;0.07;0.37;0.01" dur="5.5s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    {/* Micro-dendrite impulses */}
+                    <circle r="1.1" fill="hsl(310 60% 55%)" opacity="0.3">
+                      <animateMotion dur="6.2s" repeatCount="indefinite" path="M 450 100 Q 470 95 490 105 Q 510 100 530 110 Q 550 105 570 115"/>
+                      <animate attributeName="opacity" values="0.3;0.45;0.05;0.3;0.01" dur="6.2s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <circle r="1.0" fill="hsl(330 65% 50%)" opacity="0.28">
+                      <animateMotion dur="5.9s" repeatCount="indefinite" path="M 100 450 Q 95 470 105 490 Q 100 510 110 530 Q 105 550 115 570"/>
+                      <animate attributeName="opacity" values="0.28;0.43;0.03;0.28;0.005" dur="5.9s" repeatCount="indefinite"/>
                     </circle>
                   </g>
                  </svg>
