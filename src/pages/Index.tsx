@@ -107,322 +107,263 @@ const Index = () => {
       <section className="py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
-            {/* Enhanced Logo Section with 360-degree Circuitry */}
+            {/* Enhanced Logo Section with Complete 360-degree Neural Network */}
             <div className="relative flex items-center justify-center mb-12 h-96 overflow-hidden">
               
-              {/* Full 360-degree circuitry background with edge-to-edge coverage */}
-              <div className="absolute inset-0 w-full h-full">
-                <svg className="w-full h-full" preserveAspectRatio="xMidYMid slice" viewBox="-800 -400 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Uniform 360-degree neural network expanding from center */}
+              <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+                <svg className="w-full h-full max-w-none" preserveAspectRatio="xMidYMid meet" viewBox="-600 -300 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                   
-                  {/* Enhanced gradient definitions for 360-degree fading */}
+                  {/* Enhanced gradient definitions */}
                   <defs>
-                    <radialGradient id="circuitFade" cx="50%" cy="50%" r="70%">
+                    <radialGradient id="neuralFade" cx="50%" cy="50%" r="80%">
                       <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="1"/>
-                      <stop offset="20%" stopColor="hsl(330 81% 60%)" stopOpacity="0.9"/>
-                      <stop offset="40%" stopColor="hsl(330 81% 60%)" stopOpacity="0.7"/>
-                      <stop offset="60%" stopColor="hsl(330 81% 60%)" stopOpacity="0.5"/>
-                      <stop offset="80%" stopColor="hsl(330 81% 60%)" stopOpacity="0.3"/>
+                      <stop offset="30%" stopColor="hsl(330 81% 60%)" stopOpacity="0.8"/>
+                      <stop offset="60%" stopColor="hsl(330 81% 60%)" stopOpacity="0.4"/>
+                      <stop offset="85%" stopColor="hsl(330 81% 60%)" stopOpacity="0.15"/>
                       <stop offset="100%" stopColor="hsl(330 81% 60%)" stopOpacity="0.05"/>
                     </radialGradient>
-                    <linearGradient id="fadeTop" x1="0%" y1="100%" x2="0%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="1"/>
-                      <stop offset="50%" stopColor="hsl(330 81% 60%)" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="hsl(330 81% 60%)" stopOpacity="0.05"/>
-                    </linearGradient>
-                    <linearGradient id="fadeBottom" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="1"/>
-                      <stop offset="50%" stopColor="hsl(330 81% 60%)" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="hsl(330 81% 60%)" stopOpacity="0.05"/>
-                    </linearGradient>
+                    
+                    {/* Path definitions for impulse animations */}
+                    <path id="neuralPath1" d="M 0 0 Q 60 -20 120 -10 Q 180 -30 240 -20 Q 300 -40 360 -30 Q 420 -50 480 -40 Q 540 -60 600 -50" fill="none"/>
+                    <path id="neuralPath2" d="M 0 0 Q 42 42 84 84 Q 126 126 168 168 Q 210 210 252 252 Q 294 294 336 336 Q 378 378 420 420" fill="none"/>
+                    <path id="neuralPath3" d="M 0 0 Q 0 60 0 120 Q 0 180 0 240 Q 0 300 0 360 Q 0 420 0 480" fill="none"/>
+                    <path id="neuralPath4" d="M 0 0 Q -42 42 -84 84 Q -126 126 -168 168 Q -210 210 -252 252 Q -294 294 -336 336" fill="none"/>
+                    <path id="neuralPath5" d="M 0 0 Q -60 0 -120 0 Q -180 0 -240 0 Q -300 0 -360 0 Q -420 0 -480 0 Q -540 0 -600 0" fill="none"/>
+                    <path id="neuralPath6" d="M 0 0 Q -42 -42 -84 -84 Q -126 -126 -168 -168 Q -210 -210 -252 -252 Q -294 -294 -336 -336" fill="none"/>
+                    <path id="neuralPath7" d="M 0 0 Q 0 -60 0 -120 Q 0 -180 0 -240 Q 0 -300 0 -360 Q 0 -420 0 -480" fill="none"/>
+                    <path id="neuralPath8" d="M 0 0 Q 42 -42 84 -84 Q 126 -126 168 -168 Q 210 -210 252 -252 Q 294 -294 336 -336" fill="none"/>
                   </defs>
                   
-                  {/* Complete 360-degree Neural Network - No gaps, full coverage */}
-                  <g stroke="url(#circuitFade)" fill="none">
+                  {/* Complete 360-degree Neural Network */}
+                  <g stroke="url(#neuralFade)" fill="none">
                     
-                    {/* Inner Ring - 12 neural pathways every 30 degrees */}
-                    <path d="M 60 0 Q 100 -20 140 -10 Q 180 -25 220 -15 Q 260 -30 300 -20 Q 340 -35 380 -25 Q 420 -40 460 -30 Q 500 -45 540 -35 Q 580 -50 620 -40 Q 660 -55 700 -45 Q 740 -60 780 -50 Q 800 -55 800 -55" strokeWidth="2"/>
-                    <path d="M 52 30 Q 92 10 132 20 Q 172 5 212 15 Q 252 0 292 10 Q 332 -5 372 5 Q 412 -10 452 0 Q 492 -15 532 -5 Q 572 -20 612 -10 Q 652 -25 692 -15 Q 732 -30 772 -20 Q 800 -25 800 -25" strokeWidth="2"/>
-                    <path d="M 30 52 Q 70 32 110 42 Q 150 27 190 37 Q 230 22 270 32 Q 310 17 350 27 Q 390 12 430 22 Q 470 7 510 17 Q 550 2 590 12 Q 630 -3 670 7 Q 710 -8 750 2 Q 780 -5 800 0" strokeWidth="2"/>
-                    <path d="M 0 60 Q 40 40 80 50 Q 120 35 160 45 Q 200 30 240 40 Q 280 25 320 35 Q 360 20 400 30 Q 440 15 480 25 Q 520 10 560 20 Q 600 5 640 15 Q 680 0 720 10 Q 760 -5 800 5" strokeWidth="2"/>
-                    <path d="M -30 52 Q 10 32 50 42 Q 90 27 130 37 Q 170 22 210 32 Q 250 17 290 27 Q 330 12 370 22 Q 410 7 450 17 Q 490 2 530 12 Q 570 -3 610 7 Q 650 -8 690 2 Q 730 -5 770 5 Q 800 0 800 10" strokeWidth="2"/>
-                    <path d="M -52 30 Q -12 10 28 20 Q 68 5 108 15 Q 148 0 188 10 Q 228 -5 268 5 Q 308 -10 348 0 Q 388 -15 428 -5 Q 468 -20 508 -10 Q 548 -25 588 -15 Q 628 -30 668 -20 Q 708 -35 748 -25 Q 780 -30 800 -20" strokeWidth="2"/>
-                    <path d="M -60 0 Q -20 -20 20 -10 Q 60 -25 100 -15 Q 140 -30 180 -20 Q 220 -35 260 -25 Q 300 -40 340 -30 Q 380 -45 420 -35 Q 460 -50 500 -40 Q 540 -55 580 -45 Q 620 -60 660 -50 Q 700 -65 740 -55 Q 780 -60 800 -50" strokeWidth="2"/>
-                    <path d="M -52 -30 Q -12 -50 28 -40 Q 68 -55 108 -45 Q 148 -60 188 -50 Q 228 -65 268 -55 Q 308 -70 348 -60 Q 388 -75 428 -65 Q 468 -80 508 -70 Q 548 -85 588 -75 Q 628 -90 668 -80 Q 708 -95 748 -85 Q 780 -90 800 -80" strokeWidth="2"/>
-                    <path d="M -30 -52 Q 10 -72 50 -62 Q 90 -77 130 -67 Q 170 -82 210 -72 Q 250 -87 290 -77 Q 330 -92 370 -82 Q 410 -97 450 -87 Q 490 -102 530 -92 Q 570 -107 610 -97 Q 650 -112 690 -102 Q 730 -117 770 -107 Q 800 -112 800 -100" strokeWidth="2"/>
-                    <path d="M 0 -60 Q 40 -80 80 -70 Q 120 -85 160 -75 Q 200 -90 240 -80 Q 280 -95 320 -85 Q 360 -100 400 -90 Q 440 -105 480 -95 Q 520 -110 560 -100 Q 600 -115 640 -105 Q 680 -120 720 -110 Q 760 -125 800 -115" strokeWidth="2"/>
-                    <path d="M 30 -52 Q 70 -72 110 -62 Q 150 -77 190 -67 Q 230 -82 270 -72 Q 310 -87 350 -77 Q 390 -92 430 -82 Q 470 -97 510 -87 Q 550 -102 590 -92 Q 630 -107 670 -97 Q 710 -112 750 -102 Q 780 -107 800 -95" strokeWidth="2"/>
-                    <path d="M 52 -30 Q 92 -50 132 -40 Q 172 -55 212 -45 Q 252 -60 292 -50 Q 332 -65 372 -55 Q 412 -70 452 -60 Q 492 -75 532 -65 Q 572 -80 612 -70 Q 652 -85 692 -75 Q 732 -90 772 -80 Q 800 -85 800 -75" strokeWidth="2"/>
-
-                    {/* Middle Ring - Dense neural connections */}
-                    <path d="M 100 0 Q 150 -30 200 -15 Q 250 -45 300 -30 Q 350 -60 400 -45 Q 450 -75 500 -60 Q 550 -90 600 -75 Q 650 -105 700 -90 Q 750 -120 800 -105" strokeWidth="1.5"/>
-                    <path d="M 86 50 Q 136 20 186 35 Q 236 5 286 20 Q 336 -10 386 5 Q 436 -25 486 -10 Q 536 -40 586 -25 Q 636 -55 686 -40 Q 736 -70 786 -55 Q 800 -60 800 -50" strokeWidth="1.5"/>
-                    <path d="M 50 86 Q 100 56 150 71 Q 200 41 250 56 Q 300 26 350 41 Q 400 11 450 26 Q 500 -4 550 11 Q 600 -19 650 -4 Q 700 -34 750 -19 Q 800 -39 800 -25" strokeWidth="1.5"/>
-                    <path d="M 0 100 Q 50 70 100 85 Q 150 55 200 70 Q 250 40 300 55 Q 350 25 400 40 Q 450 10 500 25 Q 550 -5 600 10 Q 650 -20 700 -5 Q 750 -35 800 -20" strokeWidth="1.5"/>
-                    <path d="M -50 86 Q 0 56 50 71 Q 100 41 150 56 Q 200 26 250 41 Q 300 11 350 26 Q 400 -4 450 11 Q 500 -19 550 -4 Q 600 -34 650 -19 Q 700 -49 750 -34 Q 800 -54 800 -40" strokeWidth="1.5"/>
-                    <path d="M -86 50 Q -36 20 14 35 Q 64 5 114 20 Q 164 -10 214 5 Q 264 -25 314 -10 Q 364 -40 414 -25 Q 464 -55 514 -40 Q 564 -70 614 -55 Q 664 -85 714 -70 Q 764 -100 800 -85" strokeWidth="1.5"/>
-                    <path d="M -100 0 Q -50 -30 0 -15 Q 50 -45 100 -30 Q 150 -60 200 -45 Q 250 -75 300 -60 Q 350 -90 400 -75 Q 450 -105 500 -90 Q 550 -120 600 -105 Q 650 -135 700 -120 Q 750 -150 800 -135" strokeWidth="1.5"/>
-                    <path d="M -86 -50 Q -36 -80 14 -65 Q 64 -95 114 -80 Q 164 -110 214 -95 Q 264 -125 314 -110 Q 364 -140 414 -125 Q 464 -155 514 -140 Q 564 -170 614 -155 Q 664 -185 714 -170 Q 764 -200 800 -185" strokeWidth="1.5"/>
-                    <path d="M -50 -86 Q 0 -116 50 -101 Q 100 -131 150 -116 Q 200 -146 250 -131 Q 300 -161 350 -146 Q 400 -176 450 -161 Q 500 -191 550 -176 Q 600 -206 650 -191 Q 700 -221 750 -206 Q 800 -236 800 -220" strokeWidth="1.5"/>
-                    <path d="M 0 -100 Q 50 -130 100 -115 Q 150 -145 200 -130 Q 250 -160 300 -145 Q 350 -175 400 -160 Q 450 -190 500 -175 Q 550 -205 600 -190 Q 650 -220 700 -205 Q 750 -235 800 -220" strokeWidth="1.5"/>
-                    <path d="M 50 -86 Q 100 -116 150 -101 Q 200 -131 250 -116 Q 300 -146 350 -131 Q 400 -161 450 -146 Q 500 -176 550 -161 Q 600 -191 650 -176 Q 700 -206 750 -191 Q 800 -221 800 -205" strokeWidth="1.5"/>
-                    <path d="M 86 -50 Q 136 -80 186 -65 Q 236 -95 286 -80 Q 336 -110 386 -95 Q 436 -125 486 -110 Q 536 -140 586 -125 Q 636 -155 686 -140 Q 736 -170 786 -155 Q 800 -175 800 -160" strokeWidth="1.5"/>
-
-                    {/* Outer Ring - Extended neural network */}
-                    <path d="M 150 0 Q 200 -40 250 -25 Q 300 -65 350 -50 Q 400 -90 450 -75 Q 500 -115 550 -100 Q 600 -140 650 -125 Q 700 -165 750 -150 Q 800 -175 800 -160" strokeWidth="1.2"/>
-                    <path d="M 129 75 Q 179 35 229 50 Q 279 10 329 25 Q 379 -15 429 0 Q 479 -40 529 -25 Q 579 -65 629 -50 Q 679 -90 729 -75 Q 779 -115 800 -100" strokeWidth="1.2"/>
-                    <path d="M 75 129 Q 125 89 175 104 Q 225 64 275 79 Q 325 39 375 54 Q 425 14 475 29 Q 525 -11 575 4 Q 625 -36 675 -21 Q 725 -61 775 -46 Q 800 -66 800 -50" strokeWidth="1.2"/>
-                    <path d="M 0 150 Q 50 110 100 125 Q 150 85 200 100 Q 250 60 300 75 Q 350 35 400 50 Q 450 10 500 25 Q 550 -15 600 0 Q 650 -40 700 -25 Q 750 -65 800 -50" strokeWidth="1.2"/>
-
-                    {/* Mirror all paths for complete 360 coverage */}
-                    <path d="M -75 129 Q -25 89 25 104 Q 75 64 125 79 Q 175 39 225 54 Q 275 14 325 29 Q 375 -11 425 4 Q 475 -36 525 -21 Q 575 -61 625 -46 Q 675 -86 725 -71 Q 775 -111 800 -96" strokeWidth="1.2"/>
-                    <path d="M -129 75 Q -79 35 -29 50 Q 21 10 71 25 Q 121 -15 171 0 Q 221 -40 271 -25 Q 321 -65 371 -50 Q 421 -90 471 -75 Q 521 -115 571 -100 Q 621 -140 671 -125 Q 721 -165 771 -150 Q 800 -170 800 -155" strokeWidth="1.2"/>
-                    <path d="M -150 0 Q -100 -40 -50 -25 Q 0 -65 50 -50 Q 100 -90 150 -75 Q 200 -115 250 -100 Q 300 -140 350 -125 Q 400 -165 450 -150 Q 500 -190 550 -175 Q 600 -215 650 -200 Q 700 -240 750 -225 Q 800 -260 800 -245" strokeWidth="1.2"/>
-                    <path d="M -129 -75 Q -79 -115 -29 -100 Q 21 -140 71 -125 Q 121 -165 171 -150 Q 221 -190 271 -175 Q 321 -215 371 -200 Q 421 -240 471 -225 Q 521 -265 571 -250 Q 621 -290 671 -275 Q 721 -315 771 -300 Q 800 -335 800 -320" strokeWidth="1.2"/>
-                    <path d="M -75 -129 Q -25 -169 25 -154 Q 75 -194 125 -179 Q 175 -219 225 -204 Q 275 -244 325 -229 Q 375 -269 425 -254 Q 475 -294 525 -279 Q 575 -319 625 -304 Q 675 -344 725 -329 Q 775 -369 800 -354" strokeWidth="1.2"/>
-                    <path d="M 0 -150 Q 50 -190 100 -175 Q 150 -215 200 -200 Q 250 -240 300 -225 Q 350 -265 400 -250 Q 450 -290 500 -275 Q 550 -315 600 -300 Q 650 -340 700 -325 Q 750 -365 800 -350" strokeWidth="1.2"/>
-                    <path d="M 75 -129 Q 125 -169 175 -154 Q 225 -194 275 -179 Q 325 -219 375 -204 Q 425 -244 475 -229 Q 525 -269 575 -254 Q 625 -294 675 -279 Q 725 -319 775 -304 Q 800 -324 800 -310" strokeWidth="1.2"/>
-                    <path d="M 129 -75 Q 179 -115 229 -100 Q 279 -140 329 -125 Q 379 -165 429 -150 Q 479 -190 529 -175 Q 579 -215 629 -200 Q 679 -240 729 -225 Q 779 -265 800 -250" strokeWidth="1.2"/>
-
-                    {/* Dense neuron-like branching connections - filling all gaps */}
-                    <path d="M 80 20 Q 120 40 160 30 Q 200 50 240 40" strokeWidth="1"/>
-                    <path d="M 80 -20 Q 120 -40 160 -30 Q 200 -50 240 -40" strokeWidth="1"/>
-                    <path d="M 20 80 Q 40 120 30 160 Q 50 200 40 240" strokeWidth="1"/>
-                    <path d="M -20 80 Q -40 120 -30 160 Q -50 200 -40 240" strokeWidth="1"/>
-                    <path d="M -80 20 Q -120 40 -160 30 Q -200 50 -240 40" strokeWidth="1"/>
-                    <path d="M -80 -20 Q -120 -40 -160 -30 Q -200 -50 -240 -40" strokeWidth="1"/>
-                    <path d="M -20 -80 Q -40 -120 -30 -160 Q -50 -200 -40 -240" strokeWidth="1"/>
-                    <path d="M 20 -80 Q 40 -120 30 -160 Q 50 -200 40 -240" strokeWidth="1"/>
-
-                    {/* Cross-connections between rings */}
-                    <path d="M 100 50 Q 150 25 200 50 Q 250 25 300 50" strokeWidth="1"/>
-                    <path d="M 100 -50 Q 150 -75 200 -50 Q 250 -75 300 -50" strokeWidth="1"/>
-                    <path d="M 50 100 Q 25 150 50 200 Q 25 250 50 300" strokeWidth="1"/>
-                    <path d="M -50 100 Q -75 150 -50 200 Q -75 250 -50 300" strokeWidth="1"/>
-                    <path d="M -100 50 Q -150 25 -200 50 Q -250 25 -300 50" strokeWidth="1"/>
-                    <path d="M -100 -50 Q -150 -75 -200 -50 Q -250 -75 -300 -50" strokeWidth="1"/>
-                    <path d="M -50 -100 Q -25 -150 -50 -200 Q -25 -250 -50 -300" strokeWidth="1"/>
-                    <path d="M 50 -100 Q 25 -150 50 -200 Q 25 -250 50 -300" strokeWidth="1"/>
-
-                    {/* Diagonal cross-connections */}
-                    <path d="M 70 70 Q 105 105 140 140 Q 175 175 210 210 Q 245 245 280 280" strokeWidth="1"/>
-                    <path d="M 70 -70 Q 105 -105 140 -140 Q 175 -175 210 -210 Q 245 -245 280 -280" strokeWidth="1"/>
-                    <path d="M -70 70 Q -105 105 -140 140 Q -175 175 -210 210 Q -245 245 -280 280" strokeWidth="1"/>
-                    <path d="M -70 -70 Q -105 -105 -140 -140 Q -175 -175 -210 -210 Q -245 -245 -280 -280" strokeWidth="1"/>
+                    {/* Primary Neural Pathways - 8 main directions */}
+                    {/* 0° - East */}
+                    <path d="M 15 0 Q 80 -15 140 -8 Q 200 -20 260 -12 Q 320 -25 380 -18 Q 440 -30 500 -22 Q 560 -35 600 -28" strokeWidth="2.5"/>
+                    <path d="M 25 8 Q 85 5 145 12 Q 205 3 265 10 Q 325 -2 385 5 Q 445 -7 505 0 Q 565 -12 600 -5" strokeWidth="2"/>
+                    <path d="M 25 -8 Q 85 -25 145 -18 Q 205 -35 265 -28 Q 325 -45 385 -38 Q 445 -55 505 -48 Q 565 -65 600 -58" strokeWidth="2"/>
+                    
+                    {/* 45° - Northeast */}
+                    <path d="M 11 11 Q 65 55 120 100 Q 175 145 230 190 Q 285 235 340 280 Q 395 325 450 370 Q 505 415 530 440" strokeWidth="2.5"/>
+                    <path d="M 18 5 Q 75 45 130 85 Q 185 125 240 165 Q 295 205 350 245 Q 405 285 460 325 Q 515 365 540 390" strokeWidth="2"/>
+                    <path d="M 5 18 Q 55 75 105 130 Q 155 185 205 240 Q 255 295 305 350 Q 355 405 405 460 Q 455 515 480 540" strokeWidth="2"/>
+                    
+                    {/* 90° - North */}
+                    <path d="M 0 15 Q -15 80 -8 140 Q -20 200 -12 260 Q -25 320 -18 380 Q -30 440 -22 500 Q -35 560 -28 600" strokeWidth="2.5"/>
+                    <path d="M 8 25 Q 5 85 12 145 Q 3 205 10 265 Q -2 325 5 385 Q -7 445 0 505 Q -12 565 -5 600" strokeWidth="2"/>
+                    <path d="M -8 25 Q -25 85 -18 145 Q -35 205 -28 265 Q -45 325 -38 385 Q -55 445 -48 505 Q -65 565 -58 600" strokeWidth="2"/>
+                    
+                    {/* 135° - Northwest */}
+                    <path d="M -11 11 Q -65 55 -120 100 Q -175 145 -230 190 Q -285 235 -340 280 Q -395 325 -450 370 Q -505 415 -530 440" strokeWidth="2.5"/>
+                    <path d="M -18 5 Q -75 45 -130 85 Q -185 125 -240 165 Q -295 205 -350 245 Q -405 285 -460 325 Q -515 365 -540 390" strokeWidth="2"/>
+                    <path d="M -5 18 Q -55 75 -105 130 Q -155 185 -205 240 Q -255 295 -305 350 Q -355 405 -405 460 Q -455 515 -480 540" strokeWidth="2"/>
+                    
+                    {/* 180° - West */}
+                    <path d="M -15 0 Q -80 -15 -140 -8 Q -200 -20 -260 -12 Q -320 -25 -380 -18 Q -440 -30 -500 -22 Q -560 -35 -600 -28" strokeWidth="2.5"/>
+                    <path d="M -25 8 Q -85 5 -145 12 Q -205 3 -265 10 Q -325 -2 -385 5 Q -445 -7 -505 0 Q -565 -12 -600 -5" strokeWidth="2"/>
+                    <path d="M -25 -8 Q -85 -25 -145 -18 Q -205 -35 -265 -28 Q -325 -45 -385 -38 Q -445 -55 -505 -48 Q -565 -65 -600 -58" strokeWidth="2"/>
+                    
+                    {/* 225° - Southwest */}
+                    <path d="M -11 -11 Q -65 -55 -120 -100 Q -175 -145 -230 -190 Q -285 -235 -340 -280 Q -395 -325 -450 -370 Q -505 -415 -530 -440" strokeWidth="2.5"/>
+                    <path d="M -18 -5 Q -75 -45 -130 -85 Q -185 -125 -240 -165 Q -295 -205 -350 -245 Q -405 -285 -460 -325 Q -515 -365 -540 -390" strokeWidth="2"/>
+                    <path d="M -5 -18 Q -55 -75 -105 -130 Q -155 -185 -205 -240 Q -255 -295 -305 -350 Q -355 -405 -405 -460 Q -455 -515 -480 -540" strokeWidth="2"/>
+                    
+                    {/* 270° - South */}
+                    <path d="M 0 -15 Q -15 -80 -8 -140 Q -20 -200 -12 -260 Q -25 -320 -18 -380 Q -30 -440 -22 -500 Q -35 -560 -28 -600" strokeWidth="2.5"/>
+                    <path d="M 8 -25 Q 5 -85 12 -145 Q 3 -205 10 -265 Q -2 -325 5 -385 Q -7 -445 0 -505 Q -12 -565 -5 -600" strokeWidth="2"/>
+                    <path d="M -8 -25 Q -25 -85 -18 -145 Q -35 -205 -28 -265 Q -45 -325 -38 -385 Q -55 -445 -48 -505 Q -65 -565 -58 -600" strokeWidth="2"/>
+                    
+                    {/* 315° - Southeast */}
+                    <path d="M 11 -11 Q 65 -55 120 -100 Q 175 -145 230 -190 Q 285 -235 340 -280 Q 395 -325 450 -370 Q 505 -415 530 -440" strokeWidth="2.5"/>
+                    <path d="M 18 -5 Q 75 -45 130 -85 Q 185 -125 240 -165 Q 295 -205 350 -245 Q 405 -285 460 -325 Q 515 -365 540 -390" strokeWidth="2"/>
+                    <path d="M 5 -18 Q 55 -75 105 -130 Q 155 -185 205 -240 Q 255 -295 305 -350 Q 355 -405 405 -460 Q 455 -515 480 -540" strokeWidth="2"/>
+                    
+                    {/* Secondary neural pathways - filling gaps */}
+                    {/* 22.5° intervals for complete coverage */}
+                    <path d="M 14 6 Q 75 25 135 45 Q 195 65 255 85 Q 315 105 375 125 Q 435 145 495 165 Q 555 185 580 195" strokeWidth="1.8"/>
+                    <path d="M 6 14 Q 25 75 45 135 Q 65 195 85 255 Q 105 315 125 375 Q 145 435 165 495 Q 185 555 195 580" strokeWidth="1.8"/>
+                    <path d="M -6 14 Q -25 75 -45 135 Q -65 195 -85 255 Q -105 315 -125 375 Q -145 435 -165 495 Q -185 555 -195 580" strokeWidth="1.8"/>
+                    <path d="M -14 6 Q -75 25 -135 45 Q -195 65 -255 85 Q -315 105 -375 125 Q -435 145 -495 165 Q -555 185 -580 195" strokeWidth="1.8"/>
+                    <path d="M -14 -6 Q -75 -25 -135 -45 Q -195 -65 -255 -85 Q -315 -105 -375 -125 Q -435 -145 -495 -165 Q -555 -185 -580 -195" strokeWidth="1.8"/>
+                    <path d="M -6 -14 Q -25 -75 -45 -135 Q -65 -195 -85 -255 Q -105 -315 -125 -375 Q -145 -435 -165 -495 Q -185 -555 -195 -580" strokeWidth="1.8"/>
+                    <path d="M 6 -14 Q 25 -75 45 -135 Q 65 -195 85 -255 Q 105 -315 125 -375 Q 145 -435 165 -495 Q 185 -555 195 -580" strokeWidth="1.8"/>
+                    <path d="M 14 -6 Q 75 -25 135 -45 Q 195 -65 255 -85 Q 315 -105 375 -125 Q 435 -145 495 -165 Q 555 -185 580 -195" strokeWidth="1.8"/>
+                    
+                    {/* Interconnecting neural branches */}
+                    <path d="M 60 20 Q 100 60 140 100 Q 180 140 220 180" strokeWidth="1.5"/>
+                    <path d="M 60 -20 Q 100 -60 140 -100 Q 180 -140 220 -180" strokeWidth="1.5"/>
+                    <path d="M 20 60 Q 60 100 100 140 Q 140 180 180 220" strokeWidth="1.5"/>
+                    <path d="M -20 60 Q -60 100 -100 140 Q -140 180 -180 220" strokeWidth="1.5"/>
+                    <path d="M -60 20 Q -100 60 -140 100 Q -180 140 -220 180" strokeWidth="1.5"/>
+                    <path d="M -60 -20 Q -100 -60 -140 -100 Q -180 -140 -220 -180" strokeWidth="1.5"/>
+                    <path d="M -20 -60 Q -60 -100 -100 -140 Q -140 -180 -180 -220" strokeWidth="1.5"/>
+                    <path d="M 20 -60 Q 60 -100 100 -140 Q 140 -180 180 -220" strokeWidth="1.5"/>
+                    
+                    {/* Dense dendritic connections */}
+                    <path d="M 40 40 Q 80 80 120 120 Q 160 160 200 200 Q 240 240 280 280" strokeWidth="1.2"/>
+                    <path d="M 40 -40 Q 80 -80 120 -120 Q 160 -160 200 -200 Q 240 -240 280 -280" strokeWidth="1.2"/>
+                    <path d="M -40 40 Q -80 80 -120 120 Q -160 160 -200 200 Q -240 240 -280 280" strokeWidth="1.2"/>
+                    <path d="M -40 -40 Q -80 -80 -120 -120 Q -160 -160 -200 -200 Q -240 -240 -280 -280" strokeWidth="1.2"/>
+                    
+                    {/* Ring-to-ring connections */}
+                    <path d="M 70 0 Q 140 0 210 0 Q 280 0 350 0 Q 420 0 490 0" strokeWidth="1"/>
+                    <path d="M 0 70 Q 0 140 0 210 Q 0 280 0 350 Q 0 420 0 490" strokeWidth="1"/>
+                    <path d="M -70 0 Q -140 0 -210 0 Q -280 0 -350 0 Q -420 0 -490 0" strokeWidth="1"/>
+                    <path d="M 0 -70 Q 0 -140 0 -210 Q 0 -280 0 -350 Q 0 -420 0 -490" strokeWidth="1"/>
                   </g>
                   
-                  {/* Dense neural network nodes - complete 360-degree coverage */}
+                  {/* Neural Network Nodes - Complete 360-degree coverage */}
                   <g fill="hsl(330 81% 60%)">
-                    {/* Central hub - main connection point */}
+                    {/* Central hub */}
                     <circle cx="0" cy="0" r="6" opacity="1"/>
                     
-                    {/* Inner ring nodes - every 30 degrees (12 nodes) */}
-                    <circle cx="60" cy="0" r="4" opacity="1"/>
-                    <circle cx="52" cy="30" r="4" opacity="1"/>
-                    <circle cx="30" cy="52" r="4" opacity="1"/>
-                    <circle cx="0" cy="60" r="4" opacity="1"/>
-                    <circle cx="-30" cy="52" r="4" opacity="1"/>
-                    <circle cx="-52" cy="30" r="4" opacity="1"/>
-                    <circle cx="-60" cy="0" r="4" opacity="1"/>
-                    <circle cx="-52" cy="-30" r="4" opacity="1"/>
-                    <circle cx="-30" cy="-52" r="4" opacity="1"/>
-                    <circle cx="0" cy="-60" r="4" opacity="1"/>
-                    <circle cx="30" cy="-52" r="4" opacity="1"/>
-                    <circle cx="52" cy="-30" r="4" opacity="1"/>
+                    {/* Inner ring - 16 nodes */}
+                    <circle cx="70" cy="0" r="4" opacity="0.9"/>
+                    <circle cx="62" cy="29" r="4" opacity="0.9"/>
+                    <circle cx="49" cy="49" r="4" opacity="0.9"/>
+                    <circle cx="29" cy="62" r="4" opacity="0.9"/>
+                    <circle cx="0" cy="70" r="4" opacity="0.9"/>
+                    <circle cx="-29" cy="62" r="4" opacity="0.9"/>
+                    <circle cx="-49" cy="49" r="4" opacity="0.9"/>
+                    <circle cx="-62" cy="29" r="4" opacity="0.9"/>
+                    <circle cx="-70" cy="0" r="4" opacity="0.9"/>
+                    <circle cx="-62" cy="-29" r="4" opacity="0.9"/>
+                    <circle cx="-49" cy="-49" r="4" opacity="0.9"/>
+                    <circle cx="-29" cy="-62" r="4" opacity="0.9"/>
+                    <circle cx="0" cy="-70" r="4" opacity="0.9"/>
+                    <circle cx="29" cy="-62" r="4" opacity="0.9"/>
+                    <circle cx="49" cy="-49" r="4" opacity="0.9"/>
+                    <circle cx="62" cy="-29" r="4" opacity="0.9"/>
                     
-                    {/* Middle ring nodes - every 15 degrees (24 nodes) */}
-                    <circle cx="100" cy="0" r="3.5" opacity="0.9"/>
-                    <circle cx="96" cy="26" r="3.5" opacity="0.9"/>
-                    <circle cx="86" cy="50" r="3.5" opacity="0.9"/>
-                    <circle cx="71" cy="71" r="3.5" opacity="0.9"/>
-                    <circle cx="50" cy="86" r="3.5" opacity="0.9"/>
-                    <circle cx="26" cy="96" r="3.5" opacity="0.9"/>
-                    <circle cx="0" cy="100" r="3.5" opacity="0.9"/>
-                    <circle cx="-26" cy="96" r="3.5" opacity="0.9"/>
-                    <circle cx="-50" cy="86" r="3.5" opacity="0.9"/>
-                    <circle cx="-71" cy="71" r="3.5" opacity="0.9"/>
-                    <circle cx="-86" cy="50" r="3.5" opacity="0.9"/>
-                    <circle cx="-96" cy="26" r="3.5" opacity="0.9"/>
-                    <circle cx="-100" cy="0" r="3.5" opacity="0.9"/>
-                    <circle cx="-96" cy="-26" r="3.5" opacity="0.9"/>
-                    <circle cx="-86" cy="-50" r="3.5" opacity="0.9"/>
-                    <circle cx="-71" cy="-71" r="3.5" opacity="0.9"/>
-                    <circle cx="-50" cy="-86" r="3.5" opacity="0.9"/>
-                    <circle cx="-26" cy="-96" r="3.5" opacity="0.9"/>
-                    <circle cx="0" cy="-100" r="3.5" opacity="0.9"/>
-                    <circle cx="26" cy="-96" r="3.5" opacity="0.9"/>
-                    <circle cx="50" cy="-86" r="3.5" opacity="0.9"/>
-                    <circle cx="71" cy="-71" r="3.5" opacity="0.9"/>
-                    <circle cx="86" cy="-50" r="3.5" opacity="0.9"/>
-                    <circle cx="96" cy="-26" r="3.5" opacity="0.9"/>
+                    {/* Middle ring - 24 nodes */}
+                    <circle cx="140" cy="0" r="3.5" opacity="0.7"/>
+                    <circle cx="132" cy="52" r="3.5" opacity="0.7"/>
+                    <circle cx="112" cy="101" r="3.5" opacity="0.7"/>
+                    <circle cx="81" cy="139" r="3.5" opacity="0.7"/>
+                    <circle cx="43" cy="165" r="3.5" opacity="0.7"/>
+                    <circle cx="0" cy="175" r="3.5" opacity="0.7"/>
+                    <circle cx="-43" cy="165" r="3.5" opacity="0.7"/>
+                    <circle cx="-81" cy="139" r="3.5" opacity="0.7"/>
+                    <circle cx="-112" cy="101" r="3.5" opacity="0.7"/>
+                    <circle cx="-132" cy="52" r="3.5" opacity="0.7"/>
+                    <circle cx="-140" cy="0" r="3.5" opacity="0.7"/>
+                    <circle cx="-132" cy="-52" r="3.5" opacity="0.7"/>
+                    <circle cx="-112" cy="-101" r="3.5" opacity="0.7"/>
+                    <circle cx="-81" cy="-139" r="3.5" opacity="0.7"/>
+                    <circle cx="-43" cy="-165" r="3.5" opacity="0.7"/>
+                    <circle cx="0" cy="-175" r="3.5" opacity="0.7"/>
+                    <circle cx="43" cy="-165" r="3.5" opacity="0.7"/>
+                    <circle cx="81" cy="-139" r="3.5" opacity="0.7"/>
+                    <circle cx="112" cy="-101" r="3.5" opacity="0.7"/>
+                    <circle cx="132" cy="-52" r="3.5" opacity="0.7"/>
+                    <circle cx="99" cy="99" r="3.5" opacity="0.7"/>
+                    <circle cx="-99" cy="99" r="3.5" opacity="0.7"/>
+                    <circle cx="-99" cy="-99" r="3.5" opacity="0.7"/>
+                    <circle cx="99" cy="-99" r="3.5" opacity="0.7"/>
                     
-                    {/* Outer ring nodes - every 10 degrees (36 nodes) */}
-                    <circle cx="150" cy="0" r="3" opacity="0.8"/>
-                    <circle cx="147" cy="26" r="3" opacity="0.8"/>
-                    <circle cx="139" cy="51" r="3" opacity="0.8"/>
-                    <circle cx="129" cy="75" r="3" opacity="0.8"/>
-                    <circle cx="116" cy="96" r="3" opacity="0.8"/>
-                    <circle cx="101" cy="115" r="3" opacity="0.8"/>
-                    <circle cx="83" cy="130" r="3" opacity="0.8"/>
-                    <circle cx="64" cy="141" r="3" opacity="0.8"/>
-                    <circle cx="43" cy="149" r="3" opacity="0.8"/>
-                    <circle cx="21" cy="153" r="3" opacity="0.8"/>
-                    <circle cx="0" cy="150" r="3" opacity="0.8"/>
-                    <circle cx="-21" cy="153" r="3" opacity="0.8"/>
-                    <circle cx="-43" cy="149" r="3" opacity="0.8"/>
-                    <circle cx="-64" cy="141" r="3" opacity="0.8"/>
-                    <circle cx="-83" cy="130" r="3" opacity="0.8"/>
-                    <circle cx="-101" cy="115" r="3" opacity="0.8"/>
-                    <circle cx="-116" cy="96" r="3" opacity="0.8"/>
-                    <circle cx="-129" cy="75" r="3" opacity="0.8"/>
-                    <circle cx="-139" cy="51" r="3" opacity="0.8"/>
-                    <circle cx="-147" cy="26" r="3" opacity="0.8"/>
-                    <circle cx="-150" cy="0" r="3" opacity="0.8"/>
-                    <circle cx="-147" cy="-26" r="3" opacity="0.8"/>
-                    <circle cx="-139" cy="-51" r="3" opacity="0.8"/>
-                    <circle cx="-129" cy="-75" r="3" opacity="0.8"/>
-                    <circle cx="-116" cy="-96" r="3" opacity="0.8"/>
-                    <circle cx="-101" cy="-115" r="3" opacity="0.8"/>
-                    <circle cx="-83" cy="-130" r="3" opacity="0.8"/>
-                    <circle cx="-64" cy="-141" r="3" opacity="0.8"/>
-                    <circle cx="-43" cy="-149" r="3" opacity="0.8"/>
-                    <circle cx="-21" cy="-153" r="3" opacity="0.8"/>
-                    <circle cx="0" cy="-150" r="3" opacity="0.8"/>
-                    <circle cx="21" cy="-153" r="3" opacity="0.8"/>
-                    <circle cx="43" cy="-149" r="3" opacity="0.8"/>
-                    <circle cx="64" cy="-141" r="3" opacity="0.8"/>
-                    <circle cx="83" cy="-130" r="3" opacity="0.8"/>
-                    <circle cx="101" cy="-115" r="3" opacity="0.8"/>
-                    <circle cx="116" cy="-96" r="3" opacity="0.8"/>
-                    <circle cx="129" cy="-75" r="3" opacity="0.8"/>
-                    <circle cx="139" cy="-51" r="3" opacity="0.8"/>
-                    <circle cx="147" cy="-26" r="3" opacity="0.8"/>
+                    {/* Outer ring - 32 nodes for complete coverage */}
+                    <circle cx="280" cy="0" r="3" opacity="0.5"/>
+                    <circle cx="272" cy="70" r="3" opacity="0.5"/>
+                    <circle cx="251" cy="139" r="3" opacity="0.5"/>
+                    <circle cx="218" cy="205" r="3" opacity="0.5"/>
+                    <circle cx="173" cy="266" r="3" opacity="0.5"/>
+                    <circle cx="118" cy="320" r="3" opacity="0.5"/>
+                    <circle cx="57" cy="366" r="3" opacity="0.5"/>
+                    <circle cx="-8" cy="402" r="3" opacity="0.5"/>
+                    <circle cx="-74" cy="427" r="3" opacity="0.5"/>
+                    <circle cx="-139" cy="441" r="3" opacity="0.5"/>
+                    <circle cx="-203" cy="443" r="3" opacity="0.5"/>
+                    <circle cx="-265" cy="434" r="3" opacity="0.5"/>
+                    <circle cx="-324" cy="414" r="3" opacity="0.5"/>
+                    <circle cx="-378" cy="382" r="3" opacity="0.5"/>
+                    <circle cx="-427" cy="339" r="3" opacity="0.5"/>
+                    <circle cx="-469" cy="285" r="3" opacity="0.5"/>
+                    <circle cx="-280" cy="0" r="3" opacity="0.5"/>
+                    <circle cx="-272" cy="-70" r="3" opacity="0.5"/>
+                    <circle cx="-251" cy="-139" r="3" opacity="0.5"/>
+                    <circle cx="-218" cy="-205" r="3" opacity="0.5"/>
+                    <circle cx="-173" cy="-266" r="3" opacity="0.5"/>
+                    <circle cx="-118" cy="-320" r="3" opacity="0.5"/>
+                    <circle cx="-57" cy="-366" r="3" opacity="0.5"/>
+                    <circle cx="8" cy="-402" r="3" opacity="0.5"/>
+                    <circle cx="74" cy="-427" r="3" opacity="0.5"/>
+                    <circle cx="139" cy="-441" r="3" opacity="0.5"/>
+                    <circle cx="203" cy="-443" r="3" opacity="0.5"/>
+                    <circle cx="265" cy="-434" r="3" opacity="0.5"/>
+                    <circle cx="324" cy="-414" r="3" opacity="0.5"/>
+                    <circle cx="378" cy="-382" r="3" opacity="0.5"/>
+                    <circle cx="427" cy="-339" r="3" opacity="0.5"/>
+                    <circle cx="469" cy="-285" r="3" opacity="0.5"/>
                     
-                    {/* Extended outer nodes - filling all spaces */}
-                    <circle cx="200" cy="0" r="2.5" opacity="0.7"/>
-                    <circle cx="196" cy="35" r="2.5" opacity="0.7"/>
-                    <circle cx="185" cy="68" r="2.5" opacity="0.7"/>
-                    <circle cx="168" cy="98" r="2.5" opacity="0.7"/>
-                    <circle cx="147" cy="125" r="2.5" opacity="0.7"/>
-                    <circle cx="121" cy="147" r="2.5" opacity="0.7"/>
-                    <circle cx="92" cy="165" r="2.5" opacity="0.7"/>
-                    <circle cx="61" cy="179" r="2.5" opacity="0.7"/>
-                    <circle cx="28" cy="188" r="2.5" opacity="0.7"/>
-                    <circle cx="0" cy="200" r="2.5" opacity="0.7"/>
-                    <circle cx="-28" cy="188" r="2.5" opacity="0.7"/>
-                    <circle cx="-61" cy="179" r="2.5" opacity="0.7"/>
-                    <circle cx="-92" cy="165" r="2.5" opacity="0.7"/>
-                    <circle cx="-121" cy="147" r="2.5" opacity="0.7"/>
-                    <circle cx="-147" cy="125" r="2.5" opacity="0.7"/>
-                    <circle cx="-168" cy="98" r="2.5" opacity="0.7"/>
-                    <circle cx="-185" cy="68" r="2.5" opacity="0.7"/>
-                    <circle cx="-196" cy="35" r="2.5" opacity="0.7"/>
-                    <circle cx="-200" cy="0" r="2.5" opacity="0.7"/>
-                    <circle cx="-196" cy="-35" r="2.5" opacity="0.7"/>
-                    <circle cx="-185" cy="-68" r="2.5" opacity="0.7"/>
-                    <circle cx="-168" cy="-98" r="2.5" opacity="0.7"/>
-                    <circle cx="-147" cy="-125" r="2.5" opacity="0.7"/>
-                    <circle cx="-121" cy="-147" r="2.5" opacity="0.7"/>
-                    <circle cx="-92" cy="-165" r="2.5" opacity="0.7"/>
-                    <circle cx="-61" cy="-179" r="2.5" opacity="0.7"/>
-                    <circle cx="-28" cy="-188" r="2.5" opacity="0.7"/>
-                    <circle cx="0" cy="-200" r="2.5" opacity="0.7"/>
-                    <circle cx="28" cy="-188" r="2.5" opacity="0.7"/>
-                    <circle cx="61" cy="-179" r="2.5" opacity="0.7"/>
-                    <circle cx="92" cy="-165" r="2.5" opacity="0.7"/>
-                    <circle cx="121" cy="-147" r="2.5" opacity="0.7"/>
-                    <circle cx="147" cy="-125" r="2.5" opacity="0.7"/>
-                    <circle cx="168" cy="-98" r="2.5" opacity="0.7"/>
-                    <circle cx="185" cy="-68" r="2.5" opacity="0.7"/>
-                    <circle cx="196" cy="-35" r="2.5" opacity="0.7"/>
-                    
-                    {/* Far peripheral nodes */}
-                    <circle cx="250" cy="0" r="2" opacity="0.6"/>
-                    <circle cx="245" cy="44" r="2" opacity="0.6"/>
-                    <circle cx="231" cy="85" r="2" opacity="0.6"/>
-                    <circle cx="210" cy="123" r="2" opacity="0.6"/>
-                    <circle cx="184" cy="156" r="2" opacity="0.6"/>
-                    <circle cx="151" cy="184" r="2" opacity="0.6"/>
-                    <circle cx="115" cy="206" r="2" opacity="0.6"/>
-                    <circle cx="76" cy="224" r="2" opacity="0.6"/>
-                    <circle cx="35" cy="235" r="2" opacity="0.6"/>
-                    <circle cx="0" cy="250" r="2" opacity="0.6"/>
-                    <circle cx="-35" cy="235" r="2" opacity="0.6"/>
-                    <circle cx="-76" cy="224" r="2" opacity="0.6"/>
-                    <circle cx="-115" cy="206" r="2" opacity="0.6"/>
-                    <circle cx="-151" cy="184" r="2" opacity="0.6"/>
-                    <circle cx="-184" cy="156" r="2" opacity="0.6"/>
-                    <circle cx="-210" cy="123" r="2" opacity="0.6"/>
-                    <circle cx="-231" cy="85" r="2" opacity="0.6"/>
-                    <circle cx="-245" cy="44" r="2" opacity="0.6"/>
-                    <circle cx="-250" cy="0" r="2" opacity="0.6"/>
-                    <circle cx="-245" cy="-44" r="2" opacity="0.6"/>
-                    <circle cx="-231" cy="-85" r="2" opacity="0.6"/>
-                    <circle cx="-210" cy="-123" r="2" opacity="0.6"/>
-                    <circle cx="-184" cy="-156" r="2" opacity="0.6"/>
-                    <circle cx="-151" cy="-184" r="2" opacity="0.6"/>
-                    <circle cx="-115" cy="-206" r="2" opacity="0.6"/>
-                    <circle cx="-76" cy="-224" r="2" opacity="0.6"/>
-                    <circle cx="-35" cy="-235" r="2" opacity="0.6"/>
-                    <circle cx="0" cy="-250" r="2" opacity="0.6"/>
-                    <circle cx="35" cy="-235" r="2" opacity="0.6"/>
-                    <circle cx="76" cy="-224" r="2" opacity="0.6"/>
-                    <circle cx="115" cy="-206" r="2" opacity="0.6"/>
-                    <circle cx="151" cy="-184" r="2" opacity="0.6"/>
-                    <circle cx="184" cy="-156" r="2" opacity="0.6"/>
-                    <circle cx="210" cy="-123" r="2" opacity="0.6"/>
-                    <circle cx="231" cy="-85" r="2" opacity="0.6"/>
-                    <circle cx="245" cy="-44" r="2" opacity="0.6"/>
-                    
-                    {/* Extreme peripheral nodes - reaching edge */}
-                    <circle cx="300" cy="0" r="1.5" opacity="0.5"/>
-                    <circle cx="294" cy="52" r="1.5" opacity="0.5"/>
-                    <circle cx="277" cy="102" r="1.5" opacity="0.5"/>
-                    <circle cx="252" cy="148" r="1.5" opacity="0.5"/>
-                    <circle cx="220" cy="187" r="1.5" opacity="0.5"/>
-                    <circle cx="181" cy="221" r="1.5" opacity="0.5"/>
-                    <circle cx="138" cy="247" r="1.5" opacity="0.5"/>
-                    <circle cx="91" cy="269" r="1.5" opacity="0.5"/>
-                    <circle cx="42" cy="283" r="1.5" opacity="0.5"/>
-                    <circle cx="0" cy="300" r="1.5" opacity="0.5"/>
-                    <circle cx="-42" cy="283" r="1.5" opacity="0.5"/>
-                    <circle cx="-91" cy="269" r="1.5" opacity="0.5"/>
-                    <circle cx="-138" cy="247" r="1.5" opacity="0.5"/>
-                    <circle cx="-181" cy="221" r="1.5" opacity="0.5"/>
-                    <circle cx="-220" cy="187" r="1.5" opacity="0.5"/>
-                    <circle cx="-252" cy="148" r="1.5" opacity="0.5"/>
-                    <circle cx="-277" cy="102" r="1.5" opacity="0.5"/>
-                    <circle cx="-294" cy="52" r="1.5" opacity="0.5"/>
-                    <circle cx="-300" cy="0" r="1.5" opacity="0.5"/>
-                    <circle cx="-294" cy="-52" r="1.5" opacity="0.5"/>
-                    <circle cx="-277" cy="-102" r="1.5" opacity="0.5"/>
-                    <circle cx="-252" cy="-148" r="1.5" opacity="0.5"/>
-                    <circle cx="-220" cy="-187" r="1.5" opacity="0.5"/>
-                    <circle cx="-181" cy="-221" r="1.5" opacity="0.5"/>
-                    <circle cx="-138" cy="-247" r="1.5" opacity="0.5"/>
-                    <circle cx="-91" cy="-269" r="1.5" opacity="0.5"/>
-                    <circle cx="-42" cy="-283" r="1.5" opacity="0.5"/>
-                    <circle cx="0" cy="-300" r="1.5" opacity="0.5"/>
-                    <circle cx="42" cy="-283" r="1.5" opacity="0.5"/>
-                    <circle cx="91" cy="-269" r="1.5" opacity="0.5"/>
-                    <circle cx="138" cy="-247" r="1.5" opacity="0.5"/>
-                    <circle cx="181" cy="-221" r="1.5" opacity="0.5"/>
-                    <circle cx="220" cy="-187" r="1.5" opacity="0.5"/>
-                    <circle cx="252" cy="-148" r="1.5" opacity="0.5"/>
-                    <circle cx="277" cy="-102" r="1.5" opacity="0.5"/>
-                    <circle cx="294" cy="-52" r="1.5" opacity="0.5"/>
+                    {/* Synaptic connection points */}
+                    <circle cx="198" cy="198" r="2.5" opacity="0.6"/>
+                    <circle cx="-198" cy="198" r="2.5" opacity="0.6"/>
+                    <circle cx="-198" cy="-198" r="2.5" opacity="0.6"/>
+                    <circle cx="198" cy="-198" r="2.5" opacity="0.6"/>
+                    <circle cx="280" cy="115" r="2.5" opacity="0.6"/>
+                    <circle cx="115" cy="280" r="2.5" opacity="0.6"/>
+                    <circle cx="-115" cy="280" r="2.5" opacity="0.6"/>
+                    <circle cx="-280" cy="115" r="2.5" opacity="0.6"/>
+                    <circle cx="-280" cy="-115" r="2.5" opacity="0.6"/>
+                    <circle cx="-115" cy="-280" r="2.5" opacity="0.6"/>
+                    <circle cx="115" cy="-280" r="2.5" opacity="0.6"/>
+                    <circle cx="280" cy="-115" r="2.5" opacity="0.6"/>
                   </g>
                   
-                  {/* Complete neural network electrical pulses - following all 360-degree paths */}
-                  
-                  {/* Inner ring pulses - 12 directions */}
-                  <circle r="5" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="4.0s" repeatCount="indefinite" path="M 60 0 Q 100 -20 140 -10 Q 180 -25 220 -15 Q 260 -30 300 -20 Q 340 -35 380 -25 Q 420 -40 460 -30 Q 500 -45 540 -35 Q 580 -50 620 -40 Q 660 -55 700 -45 Q 740 -60 780 -50 Q 800 -55 800 -55"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.0s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle r="5" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="4.1s" repeatCount="indefinite" path="M 52 30 Q 92 10 132 20 Q 172 5 212 15 Q 252 0 292 10 Q 332 -5 372 5 Q 412 -10 452 0 Q 492 -15 532 -5 Q 572 -20 612 -10 Q 652 -25 692 -15 Q 732 -30 772 -20 Q 800 -25 800 -25"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.1s" repeatCount="indefinite"/>
-                  </circle>
+                  {/* Electrical impulse animations following neural pathways */}
+                  <g className="animate-pulse">
+                    {/* Primary impulses on main pathways */}
+                    <circle r="3" fill="hsl(55 91% 55%)" opacity="0.9">
+                      <animateMotion dur="4s" repeatCount="indefinite" begin="0s">
+                        <mpath href="#neuralPath1"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2.5" fill="hsl(55 91% 55%)" opacity="0.8">
+                      <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
+                        <mpath href="#neuralPath2"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2.5" fill="hsl(55 91% 55%)" opacity="0.8">
+                      <animateMotion dur="4.5s" repeatCount="indefinite" begin="2s">
+                        <mpath href="#neuralPath3"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2" fill="hsl(55 91% 55%)" opacity="0.7">
+                      <animateMotion dur="5.5s" repeatCount="indefinite" begin="0.5s">
+                        <mpath href="#neuralPath4"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2.5" fill="hsl(55 91% 55%)" opacity="0.8">
+                      <animateMotion dur="4.2s" repeatCount="indefinite" begin="1.5s">
+                        <mpath href="#neuralPath5"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2" fill="hsl(55 91% 55%)" opacity="0.7">
+                      <animateMotion dur="5.2s" repeatCount="indefinite" begin="2.5s">
+                        <mpath href="#neuralPath6"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2.5" fill="hsl(55 91% 55%)" opacity="0.8">
+                      <animateMotion dur="4.8s" repeatCount="indefinite" begin="3s">
+                        <mpath href="#neuralPath7"/>
+                      </animateMotion>
+                    </circle>
+                    
+                    <circle r="2" fill="hsl(55 91% 55%)" opacity="0.7">
+                      <animateMotion dur="4.3s" repeatCount="indefinite" begin="0.8s">
+                        <mpath href="#neuralPath8"/>
+                      </animateMotion>
+                    </circle>
+                  </g>
+                 </svg>
+               </div>
                   <circle r="5" fill="hsl(330 81% 70%)" opacity="1">
                     <animateMotion dur="4.2s" repeatCount="indefinite" path="M 30 52 Q 70 32 110 42 Q 150 27 190 37 Q 230 22 270 32 Q 310 17 350 27 Q 390 12 430 22 Q 470 7 510 17 Q 550 2 590 12 Q 630 -3 670 7 Q 710 -8 750 2 Q 780 -5 800 0"/>
                     <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.2s" repeatCount="indefinite"/>
