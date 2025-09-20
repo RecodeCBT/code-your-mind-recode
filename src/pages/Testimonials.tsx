@@ -52,10 +52,12 @@ const Testimonials = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-primary/10 rounded-full">
-              <Award className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Verified Reviews</span>
-            </div>
+          <Button asChild size="lg" className="mb-4">
+            <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3">
+              <Award className="h-4 w-4" />
+              Verified Reviews
+            </a>
+          </Button>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
               Client Success Stories
             </h1>
@@ -65,13 +67,6 @@ const Testimonials = () => {
             </p>
           </div>
 
-          {/* Stats Section */}
-          <div className="flex justify-center mb-16">
-            <div className="text-center p-6 rounded-lg bg-card border shadow-sm">
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">5-Star Reviews</div>
-            </div>
-          </div>
           
           {/* Testimonials Grid */}
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
