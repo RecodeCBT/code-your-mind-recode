@@ -107,118 +107,147 @@ const Index = () => {
       <section className="py-16 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
-            {/* Enhanced Logo Section with Circuitry */}
-            <div className="relative flex items-center justify-center mb-12 h-96">
+            {/* Enhanced Logo Section with Omnidirectional Circuitry */}
+            <div className="relative flex items-center justify-center mb-12 h-96 overflow-hidden">
               
-              {/* Left Circuitry - Enhanced Visibility */}
-              <div className="absolute -left-80 top-1/2 transform -translate-y-1/2 w-80 h-80 opacity-90">
-                <svg className="w-full h-full" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Main circuit paths with increased visibility */}
-                  <path d="M300 160L270 160L260 148L250 160L230 160L220 138L210 160L190 160L180 128L170 160L150 160L140 118L130 160L110 160L100 108L90 160L70 160L60 118L50 160L30 160L20 128L10 160L0 160" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="3" fill="none" opacity="0.9"/>
-                  <path d="M300 138L270 138L250 123L230 138L210 118L190 138L170 108L150 138L130 98L110 138L90 88L70 138L50 98L30 138L10 108L0 138" 
+              {/* Omnidirectional Circuitry radiating from pink circle */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg className="w-full h-full" viewBox="-400 -400 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  
+                  {/* Circuit paths radiating in all directions from center */}
+                  
+                  {/* Horizontal circuits */}
+                  <path d="M 0 0 L 80 0 L 95 -12 L 110 0 L 140 0 L 155 -15 L 170 0 L 200 0 L 215 -18 L 230 0 L 280 0 L 295 -20 L 320 0 L 380 0" 
                         stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
-                  <path d="M300 182L270 182L250 197L230 182L210 202L190 182L170 212L150 182L130 222L110 182L90 232L70 182L50 222L30 182L10 212L0 182" 
+                  <path d="M 0 0 L -80 0 L -95 -12 L -110 0 L -140 0 L -155 -15 L -170 0 L -200 0 L -215 -18 L -230 0 L -280 0 L -295 -20 L -320 0 L -380 0" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  
+                  {/* Vertical circuits */}
+                  <path d="M 0 0 L 0 80 L 12 95 L 0 110 L 0 140 L 15 155 L 0 170 L 0 200 L 18 215 L 0 230 L 0 280 L 20 295 L 0 320 L 0 380" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  <path d="M 0 0 L 0 -80 L 12 -95 L 0 -110 L 0 -140 L 15 -155 L 0 -170 L 0 -200 L 18 -215 L 0 -230 L 0 -280 L 20 -295 L 0 -320 L 0 -380" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  
+                  {/* Diagonal circuits - top right */}
+                  <path d="M 0 0 L 60 -60 L 68 -50 L 80 -80 L 100 -100 L 108 -88 L 120 -120 L 140 -140 L 148 -128 L 160 -160 L 180 -180 L 188 -168 L 200 -200 L 240 -240" 
                         stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
                   
-                  {/* Enhanced circuit nodes */}
-                  <circle cx="270" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
-                  <circle cx="230" cy="160" r="4" fill="hsl(262 83% 58%)" opacity="0.9"/>
-                  <circle cx="190" cy="160" r="5" fill="hsl(221 83% 53%)" opacity="1"/>
-                  <circle cx="150" cy="160" r="4" fill="hsl(24 100% 67%)" opacity="0.9"/>
-                  <circle cx="110" cy="160" r="5" fill="hsl(262 83% 58%)" opacity="1"/>
-                  <circle cx="70" cy="160" r="4" fill="hsl(221 83% 53%)" opacity="0.9"/>
-                  <circle cx="30" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
+                  {/* Diagonal circuits - top left */}
+                  <path d="M 0 0 L -60 -60 L -68 -50 L -80 -80 L -100 -100 L -108 -88 L -120 -120 L -140 -140 L -148 -128 L -160 -160 L -180 -180 L -188 -168 L -200 -200 L -240 -240" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
                   
-                  {/* Enhanced secondary nodes */}
-                  <circle cx="220" cy="138" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="180" cy="128" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="140" cy="118" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="100" cy="108" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="60" cy="118" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="20" cy="128" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  {/* Diagonal circuits - bottom right */}
+                  <path d="M 0 0 L 60 60 L 68 50 L 80 80 L 100 100 L 108 88 L 120 120 L 140 140 L 148 128 L 160 160 L 180 180 L 188 168 L 200 200 L 240 240" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.7"/>
                   
-                  {/* Lower branch nodes */}
-                  <circle cx="220" cy="182" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="180" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="140" cy="202" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="100" cy="212" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="60" cy="202" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="20" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  {/* Diagonal circuits - bottom left */}
+                  <path d="M 0 0 L -60 60 L -68 50 L -80 80 L -100 100 L -108 88 L -120 120 L -140 140 L -148 128 L -160 160 L -180 180 L -188 168 L -200 200 L -240 240" 
+                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.7"/>
                   
-                  {/* Left moving pulse - enhanced visibility */}
+                  {/* Secondary angled circuits */}
+                  <path d="M 0 0 L 40 -80 L 55 -75 L 80 -120 L 120 -160 L 135 -155 L 160 -200 L 200 -240" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="2" fill="none" opacity="0.7"/>
+                  <path d="M 0 0 L -40 -80 L -55 -75 L -80 -120 L -120 -160 L -135 -155 L -160 -200 L -200 -240" 
+                        stroke="hsl(262 83% 58%)" strokeWidth="2" fill="none" opacity="0.7"/>
+                  <path d="M 0 0 L 40 80 L 55 75 L 80 120 L 120 160 L 135 155 L 160 200 L 200 240" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="2" fill="none" opacity="0.7"/>
+                  <path d="M 0 0 L -40 80 L -55 75 L -80 120 L -120 160 L -135 155 L -160 200 L -200 240" 
+                        stroke="hsl(221 83% 53%)" strokeWidth="2" fill="none" opacity="0.7"/>
+                  
+                  {/* Circuit nodes - main directions */}
+                  <circle cx="80" cy="0" r="4" fill="hsl(262 83% 58%)" opacity="1"/>
+                  <circle cx="-80" cy="0" r="4" fill="hsl(262 83% 58%)" opacity="1"/>
+                  <circle cx="0" cy="80" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
+                  <circle cx="0" cy="-80" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
+                  <circle cx="60" cy="-60" r="4" fill="hsl(221 83% 53%)" opacity="1"/>
+                  <circle cx="-60" cy="-60" r="4" fill="hsl(221 83% 53%)" opacity="1"/>
+                  <circle cx="60" cy="60" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
+                  <circle cx="-60" cy="60" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
+                  
+                  {/* Secondary nodes */}
+                  <circle cx="140" cy="0" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
+                  <circle cx="-140" cy="0" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
+                  <circle cx="0" cy="140" r="3" fill="hsl(262 83% 58%)" opacity="0.9"/>
+                  <circle cx="0" cy="-140" r="3" fill="hsl(262 83% 58%)" opacity="0.9"/>
+                  <circle cx="100" cy="-100" r="3" fill="hsl(221 83% 53%)" opacity="0.9"/>
+                  <circle cx="-100" cy="-100" r="3" fill="hsl(221 83% 53%)" opacity="0.9"/>
+                  <circle cx="100" cy="100" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
+                  <circle cx="-100" cy="100" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
+                  
+                  {/* Tertiary nodes */}
+                  <circle cx="200" cy="0" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="-200" cy="0" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="0" cy="200" r="2.5" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="0" cy="-200" r="2.5" fill="hsl(262 83% 58%)" opacity="0.8"/>
+                  <circle cx="140" cy="-140" r="2.5" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="-140" cy="-140" r="2.5" fill="hsl(24 100% 67%)" opacity="0.8"/>
+                  <circle cx="140" cy="140" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  <circle cx="-140" cy="140" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
+                  
+                  {/* Electrical pulses moving outward in all directions */}
                   <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
-                    <animateMotion dur="3s" repeatCount="indefinite" path="M 320 160 L 0 160"/>
-                    <animate attributeName="opacity" values="0; 1; 0.7; 1; 0" dur="3s" repeatCount="indefinite"/>
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 380 0"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L -380 0"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="6" fill="hsl(262 83% 58%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 0 380"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="6" fill="hsl(262 83% 58%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 0 -380"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(221 83% 53%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 240 -240"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(221 83% 53%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L -240 -240"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(24 100% 67%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 240 240"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(24 100% 67%)" opacity="1">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L -240 240"/>
+                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
               </div>
               
-              {/* Right Circuitry - Enhanced Visibility */}
-              <div className="absolute -right-80 top-1/2 transform -translate-y-1/2 w-80 h-80 opacity-90">
-                <svg className="w-full h-full" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Main circuit paths with increased visibility */}
-                  <path d="M20 160L50 160L60 148L70 160L90 160L100 138L110 160L130 160L140 128L150 160L170 160L180 118L190 160L210 160L220 108L230 160L250 160L260 118L270 160L290 160L300 128L310 160L320 160" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="3" fill="none" opacity="0.9"/>
-                  <path d="M20 138L50 138L70 123L90 138L110 118L130 138L150 108L170 138L190 98L210 138L230 88L250 138L270 98L290 138L310 108L320 138" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
-                  <path d="M20 182L50 182L70 197L90 182L110 202L130 182L150 212L170 182L190 222L210 182L230 232L250 182L270 222L290 182L310 212L320 182" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
-                  
-                  {/* Enhanced circuit nodes */}
-                  <circle cx="50" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
-                  <circle cx="90" cy="160" r="4" fill="hsl(262 83% 58%)" opacity="0.9"/>
-                  <circle cx="130" cy="160" r="5" fill="hsl(221 83% 53%)" opacity="1"/>
-                  <circle cx="170" cy="160" r="4" fill="hsl(24 100% 67%)" opacity="0.9"/>
-                  <circle cx="210" cy="160" r="5" fill="hsl(262 83% 58%)" opacity="1"/>
-                  <circle cx="250" cy="160" r="4" fill="hsl(221 83% 53%)" opacity="0.9"/>
-                  <circle cx="290" cy="160" r="5" fill="hsl(24 100% 67%)" opacity="1"/>
-                  
-                  {/* Enhanced secondary nodes */}
-                  <circle cx="100" cy="138" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="140" cy="128" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="180" cy="118" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="220" cy="108" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="260" cy="118" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="300" cy="128" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  
-                  {/* Lower branch nodes */}
-                  <circle cx="100" cy="182" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="140" cy="192" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="180" cy="202" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="220" cy="212" r="3" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="260" cy="202" r="3" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="300" cy="192" r="3" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  
-                  {/* Right moving pulse - enhanced visibility */}
-                  <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
-                    <animateMotion dur="3s" repeatCount="indefinite" path="M 0 160 L 320 160"/>
-                    <animate attributeName="opacity" values="0; 1; 0.7; 1; 0" dur="3s" repeatCount="indefinite"/>
-                  </circle>
-                </svg>
-              </div>
-              
-              {/* Enhanced Logo Container - 50% larger, no borders, blend with background */}
+              {/* Enhanced Logo Container - blend with background */}
               <div className="relative z-10">
                 <div className="w-108 h-108 flex items-center justify-center">
                   <img 
                     src="/src/assets/recode-logo-circular.png" 
                     alt="RECODE CBT - Evidence-Based Therapy" 
-                    className="w-full h-full object-contain mix-blend-multiply opacity-95" 
+                    className="w-full h-full object-contain" 
+                    style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
                   />
                 </div>
               </div>
             </div>
             
+            {/* Tagline under logo */}
+            <div className="text-center mb-6">
+              <h3 className="text-2xl md:text-3xl font-semibold text-gray-700">
+                Your Coding | Can Change
+              </h3>
+            </div>
+            
             {/* Professional Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Evidence-Based Therapy for
-                <span className="block text-blue-600">Mental Clarity</span>
+                Neural recoding through behavioural science
               </h1>
-              <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto">
-                Professional CBT and DBT treatment for anxiety, depression, and procrastination. 
-                Rewrite the mental patterns that hold you back.
+              <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
+                Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.<br/>
+                <span className="font-medium text-gray-800">One on One and Doctor-delivered.</span>
               </h2>
             </div>
             
