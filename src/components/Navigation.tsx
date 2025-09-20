@@ -68,8 +68,16 @@ const Navigation = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
-            <Link to="/" className="text-xl font-bold text-gray-900">
-              RECODE CBT
+            <Link to="/" className="flex items-center">
+              {location.pathname === '/services' ? (
+                <div className="w-12 h-12 rounded-full bg-orange-500 p-1">
+                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                    <img src="/lovable-uploads/fe81a945-6632-4272-8a5e-b2608fc7fbb2.png" alt="RecodeCBT Logo" className="w-full h-full object-contain rounded-full" />
+                  </div>
+                </div>
+              ) : (
+                <span className="text-xl font-bold text-gray-900">RECODE CBT</span>
+              )}
             </Link>
 
             {/* Desktop Navigation - Hidden on mobile, shown on larger screens */}
