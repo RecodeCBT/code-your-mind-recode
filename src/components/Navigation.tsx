@@ -72,22 +72,17 @@ const Navigation = () => {
               variant="ghost"
               size="lg"
               onClick={toggleMenu}
-              className="relative px-6 py-3 rounded-full bg-white border-2 border-transparent hover:scale-105 transition-transform duration-300 shadow-lg"
+              className="relative px-6 py-3 rounded-full bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 hover:scale-105 transition-transform duration-300 shadow-lg"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
-              style={{
-                borderImage: 'linear-gradient(45deg, hsl(var(--primary)), transparent, hsl(var(--primary))) 1',
-                animation: 'electric-pulse 3s ease-in-out infinite'
-              }}
             >
-              <div className="absolute inset-0 rounded-full border-2 border-transparent animate-electric-border" />
               <div className="flex items-center gap-3">
                 {isMenuOpen ? (
-                  <X className="h-6 w-6 text-primary" />
+                  <X className="h-6 w-6 text-white" />
                 ) : (
-                  <Menu className="h-6 w-6 text-primary" />
+                  <Menu className="h-6 w-6 text-white" />
                 )}
-                <span className="text-base font-medium text-primary">Menu</span>
+                <span className="text-base font-medium text-white">Menu</span>
               </div>
             </Button>
           </div>
