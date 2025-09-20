@@ -15,6 +15,31 @@ const Services = () => {
     navigate(path);
     window.scrollTo(0, 0);
   };
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const scrollToOptions = () => {
+    const optionsSection = document.getElementById('options-section');
+    if (optionsSection) {
+      optionsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleCategorySelect = (categoryId: string) => {
+    const newCategory = selectedCategory === categoryId ? "" : categoryId;
+    setSelectedCategory(newCategory);
+    if (newCategory) {
+      // Wait for state update, then scroll
+      setTimeout(() => {
+        scrollToServices();
+      }, 100);
+    }
+  };
   const services = [
   // Just Starting Out
   {
@@ -252,8 +277,8 @@ const Services = () => {
           </div>
           
           {/* Category Selection */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {categories.map(category => <Card key={category.id} className={`cursor-pointer transition-transform duration-300 relative overflow-hidden group ${selectedCategory === category.id ? 'ring-4 ring-primary/50 bg-primary/10 scale-105 shadow-2xl' : selectedCategory && selectedCategory !== category.id ? 'opacity-30 scale-95' : 'hover:shadow-xl hover:scale-105'}`} onClick={() => setSelectedCategory(selectedCategory === category.id ? "" : category.id)}>
+          <div id="options-section" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {categories.map(category => <Card key={category.id} className={`cursor-pointer transition-transform duration-300 relative overflow-hidden group ${selectedCategory === category.id ? 'ring-4 ring-primary/50 bg-primary/10 scale-105 shadow-2xl' : selectedCategory && selectedCategory !== category.id ? 'opacity-30 scale-95' : 'hover:shadow-xl hover:scale-105'}`} onClick={() => handleCategorySelect(category.id)}>
                 {/* Number Badge */}
                 <div className={`absolute top-4 left-4 w-8 h-8 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center text-white font-bold text-sm z-10`}>
                   {category.number}
@@ -283,7 +308,20 @@ const Services = () => {
             </div>}
 
           {/* Services Grid */}
-          {(selectedCategory || showAllServices) && <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {(selectedCategory || showAllServices) && (
+            <div id="services-section">
+              {/* Back to Options Button */}
+              <div className="text-center mb-8">
+                <Button 
+                  variant="outline" 
+                  onClick={scrollToOptions}
+                  className="text-primary hover:text-primary-foreground hover:bg-primary border-primary"
+                >
+                  ← Back to Options
+                </Button>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {(selectedCategory ? filteredServices : services).map((service, index) => <Card key={index} className={`relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300 ${service.featured ? 'ring-2 ring-primary' : ''}`}>
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between gap-4">
@@ -344,7 +382,9 @@ const Services = () => {
                     </div>
                   </CardContent>
                 </Card>)}
-            </div>}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
