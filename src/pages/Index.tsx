@@ -110,125 +110,93 @@ const Index = () => {
             {/* Enhanced Logo Section with Omnidirectional Circuitry */}
             <div className="relative flex items-center justify-center mb-12 h-96 overflow-hidden">
               
-              {/* Omnidirectional Circuitry radiating from pink circle */}
+              {/* Enhanced circuitry spreading from logo's pink circle */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-full h-full" viewBox="-400 -400 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-full h-full" viewBox="-500 -500 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
                   
-                  {/* Circuit paths radiating in all directions from center */}
+                  {/* Right side circuits spreading outward */}
+                  <path d="M 60 0 L 120 0 L 140 -15 L 160 0 L 200 0 L 220 -20 L 240 0 L 300 0 L 320 -25 L 360 0 L 450 0" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="3" fill="none" opacity="0.8"/>
+                  <path d="M 60 -10 L 130 -20 L 155 -35 L 180 -15 L 220 -30 L 245 -45 L 280 -20 L 340 -40 L 380 -25 L 450 -50" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2.5" fill="none" opacity="0.7"/>
+                  <path d="M 60 10 L 130 20 L 155 35 L 180 15 L 220 30 L 245 45 L 280 20 L 340 40 L 380 25 L 450 50" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2.5" fill="none" opacity="0.7"/>
+                  <path d="M 80 -25 L 150 -40 L 180 -55 L 220 -45 L 280 -60 L 320 -75 L 360 -50 L 420 -80 L 480 -60" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <path d="M 80 25 L 150 40 L 180 55 L 220 45 L 280 60 L 320 75 L 360 50 L 420 80 L 480 60" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2" fill="none" opacity="0.6"/>
                   
-                  {/* Horizontal circuits */}
-                  <path d="M 0 0 L 80 0 L 95 -12 L 110 0 L 140 0 L 155 -15 L 170 0 L 200 0 L 215 -18 L 230 0 L 280 0 L 295 -20 L 320 0 L 380 0" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
-                  <path d="M 0 0 L -80 0 L -95 -12 L -110 0 L -140 0 L -155 -15 L -170 0 L -200 0 L -215 -18 L -230 0 L -280 0 L -295 -20 L -320 0 L -380 0" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  {/* Left side circuits spreading outward */}
+                  <path d="M -60 0 L -120 0 L -140 -15 L -160 0 L -200 0 L -220 -20 L -240 0 L -300 0 L -320 -25 L -360 0 L -450 0" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="3" fill="none" opacity="0.8"/>
+                  <path d="M -60 -10 L -130 -20 L -155 -35 L -180 -15 L -220 -30 L -245 -45 L -280 -20 L -340 -40 L -380 -25 L -450 -50" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2.5" fill="none" opacity="0.7"/>
+                  <path d="M -60 10 L -130 20 L -155 35 L -180 15 L -220 30 L -245 45 L -280 20 L -340 40 L -380 25 L -450 50" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2.5" fill="none" opacity="0.7"/>
+                  <path d="M -80 -25 L -150 -40 L -180 -55 L -220 -45 L -280 -60 L -320 -75 L -360 -50 L -420 -80 L -480 -60" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <path d="M -80 25 L -150 40 L -180 55 L -220 45 L -280 60 L -320 75 L -360 50 L -420 80 L -480 60" 
+                        stroke="hsl(330 81% 60%)" strokeWidth="2" fill="none" opacity="0.6"/>
                   
-                  {/* Vertical circuits */}
-                  <path d="M 0 0 L 0 80 L 12 95 L 0 110 L 0 140 L 15 155 L 0 170 L 0 200 L 18 215 L 0 230 L 0 280 L 20 295 L 0 320 L 0 380" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
-                  <path d="M 0 0 L 0 -80 L 12 -95 L 0 -110 L 0 -140 L 15 -155 L 0 -170 L 0 -200 L 18 -215 L 0 -230 L 0 -280 L 20 -295 L 0 -320 L 0 -380" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  {/* Circuit nodes on right side */}
+                  <circle cx="120" cy="0" r="4" fill="hsl(330 81% 60%)" opacity="1"/>
+                  <circle cx="200" cy="0" r="3.5" fill="hsl(330 81% 60%)" opacity="0.9"/>
+                  <circle cx="300" cy="0" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="160" cy="-15" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="240" cy="-20" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="130" cy="20" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="220" cy="30" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
                   
-                  {/* Diagonal circuits - top right */}
-                  <path d="M 0 0 L 60 -60 L 68 -50 L 80 -80 L 100 -100 L 108 -88 L 120 -120 L 140 -140 L 148 -128 L 160 -160 L 180 -180 L 188 -168 L 200 -200 L 240 -240" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
+                  {/* Circuit nodes on left side */}
+                  <circle cx="-120" cy="0" r="4" fill="hsl(330 81% 60%)" opacity="1"/>
+                  <circle cx="-200" cy="0" r="3.5" fill="hsl(330 81% 60%)" opacity="0.9"/>
+                  <circle cx="-300" cy="0" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="-160" cy="-15" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="-240" cy="-20" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="-130" cy="20" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
+                  <circle cx="-220" cy="30" r="3" fill="hsl(330 81% 60%)" opacity="0.8"/>
                   
-                  {/* Diagonal circuits - top left */}
-                  <path d="M 0 0 L -60 -60 L -68 -50 L -80 -80 L -100 -100 L -108 -88 L -120 -120 L -140 -140 L -148 -128 L -160 -160 L -180 -180 L -188 -168 L -200 -200 L -240 -240" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="2.5" fill="none" opacity="0.8"/>
-                  
-                  {/* Diagonal circuits - bottom right */}
-                  <path d="M 0 0 L 60 60 L 68 50 L 80 80 L 100 100 L 108 88 L 120 120 L 140 140 L 148 128 L 160 160 L 180 180 L 188 168 L 200 200 L 240 240" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.7"/>
-                  
-                  {/* Diagonal circuits - bottom left */}
-                  <path d="M 0 0 L -60 60 L -68 50 L -80 80 L -100 100 L -108 88 L -120 120 L -140 140 L -148 128 L -160 160 L -180 180 L -188 168 L -200 200 L -240 240" 
-                        stroke="hsl(24 100% 67%)" strokeWidth="2" fill="none" opacity="0.7"/>
-                  
-                  {/* Secondary angled circuits */}
-                  <path d="M 0 0 L 40 -80 L 55 -75 L 80 -120 L 120 -160 L 135 -155 L 160 -200 L 200 -240" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="2" fill="none" opacity="0.7"/>
-                  <path d="M 0 0 L -40 -80 L -55 -75 L -80 -120 L -120 -160 L -135 -155 L -160 -200 L -200 -240" 
-                        stroke="hsl(262 83% 58%)" strokeWidth="2" fill="none" opacity="0.7"/>
-                  <path d="M 0 0 L 40 80 L 55 75 L 80 120 L 120 160 L 135 155 L 160 200 L 200 240" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="2" fill="none" opacity="0.7"/>
-                  <path d="M 0 0 L -40 80 L -55 75 L -80 120 L -120 160 L -135 155 L -160 200 L -200 240" 
-                        stroke="hsl(221 83% 53%)" strokeWidth="2" fill="none" opacity="0.7"/>
-                  
-                  {/* Circuit nodes - main directions */}
-                  <circle cx="80" cy="0" r="4" fill="hsl(262 83% 58%)" opacity="1"/>
-                  <circle cx="-80" cy="0" r="4" fill="hsl(262 83% 58%)" opacity="1"/>
-                  <circle cx="0" cy="80" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
-                  <circle cx="0" cy="-80" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
-                  <circle cx="60" cy="-60" r="4" fill="hsl(221 83% 53%)" opacity="1"/>
-                  <circle cx="-60" cy="-60" r="4" fill="hsl(221 83% 53%)" opacity="1"/>
-                  <circle cx="60" cy="60" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
-                  <circle cx="-60" cy="60" r="4" fill="hsl(24 100% 67%)" opacity="1"/>
-                  
-                  {/* Secondary nodes */}
-                  <circle cx="140" cy="0" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
-                  <circle cx="-140" cy="0" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
-                  <circle cx="0" cy="140" r="3" fill="hsl(262 83% 58%)" opacity="0.9"/>
-                  <circle cx="0" cy="-140" r="3" fill="hsl(262 83% 58%)" opacity="0.9"/>
-                  <circle cx="100" cy="-100" r="3" fill="hsl(221 83% 53%)" opacity="0.9"/>
-                  <circle cx="-100" cy="-100" r="3" fill="hsl(221 83% 53%)" opacity="0.9"/>
-                  <circle cx="100" cy="100" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
-                  <circle cx="-100" cy="100" r="3" fill="hsl(24 100% 67%)" opacity="0.9"/>
-                  
-                  {/* Tertiary nodes */}
-                  <circle cx="200" cy="0" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="-200" cy="0" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="0" cy="200" r="2.5" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="0" cy="-200" r="2.5" fill="hsl(262 83% 58%)" opacity="0.8"/>
-                  <circle cx="140" cy="-140" r="2.5" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="-140" cy="-140" r="2.5" fill="hsl(24 100% 67%)" opacity="0.8"/>
-                  <circle cx="140" cy="140" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  <circle cx="-140" cy="140" r="2.5" fill="hsl(221 83% 53%)" opacity="0.8"/>
-                  
-                  {/* Electrical pulses moving outward in all directions */}
-                  <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 380 0"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  {/* Electrical pulses moving right */}
+                  <circle r="7" fill="hsl(330 81% 70%)" opacity="1">
+                    <animateMotion dur="2.0s" repeatCount="indefinite" path="M 60 0 L 450 0"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="2.0s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(24 100% 67%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L -380 0"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
+                    <animateMotion dur="2.2s" repeatCount="indefinite" path="M 60 -10 L 450 -50"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="2.2s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(262 83% 58%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 0 380"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
+                    <animateMotion dur="2.1s" repeatCount="indefinite" path="M 60 10 L 450 50"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="2.1s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(262 83% 58%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 0 -380"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  
+                  {/* Electrical pulses moving left */}
+                  <circle r="7" fill="hsl(330 81% 70%)" opacity="1">
+                    <animateMotion dur="2.0s" repeatCount="indefinite" path="M -60 0 L -450 0"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="2.0s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="5" fill="hsl(221 83% 53%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 240 -240"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
+                    <animateMotion dur="2.2s" repeatCount="indefinite" path="M -60 -10 L -450 -50"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="2.2s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="5" fill="hsl(221 83% 53%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L -240 -240"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle r="5" fill="hsl(24 100% 67%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L 240 240"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle r="5" fill="hsl(24 100% 67%)" opacity="1">
-                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 L -240 240"/>
-                    <animate attributeName="opacity" values="0.8; 1; 0.6; 1; 0" dur="2.5s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
+                    <animateMotion dur="2.1s" repeatCount="indefinite" path="M -60 10 L -450 50"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="2.1s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
               </div>
               
-              {/* Enhanced Logo Container - blend with background */}
+              {/* Enhanced Logo Container - circular crop */}
               <div className="relative z-10">
                 <div className="w-108 h-108 flex items-center justify-center">
-                  <img 
-                    src="/src/assets/recode-logo-circular.png" 
-                    alt="RECODE CBT - Evidence-Based Therapy" 
-                    className="w-full h-full object-contain" 
-                    style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
-                  />
+                  <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
+                    <img 
+                      src="/src/assets/recode-logo-circular.png" 
+                      alt="RECODE CBT - Evidence-Based Therapy" 
+                      className="w-full h-full object-cover" 
+                      style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -272,28 +240,28 @@ const Index = () => {
               </Link>
             </div>
             
-            {/* Professional Credentials */}
-            <div className="bg-gray-50 rounded-lg p-6 mt-12 max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-4 text-center">
-                <div className="flex flex-col items-center space-y-2">
-                  <GraduationCap className="h-8 w-8 text-blue-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Qualified GP</p>
-                    <p className="text-sm text-gray-600">Registered Practitioner</p>
+            {/* Professional Credentials - Single Row */}
+            <div className="bg-gray-50 rounded-lg p-4 mt-8 max-w-3xl mx-auto">
+              <div className="flex justify-center items-center gap-8">
+                <div className="flex items-center space-x-2">
+                  <GraduationCap className="h-6 w-6 text-blue-600" />
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-900 text-sm">Qualified GP</p>
+                    <p className="text-xs text-gray-600">Registered Practitioner</p>
                   </div>
                 </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <Shield className="h-8 w-8 text-blue-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">CBT Accredited</p>
-                    <p className="text-sm text-gray-600">Professional Diploma</p>
+                <div className="flex items-center space-x-2">
+                  <Shield className="h-6 w-6 text-blue-600" />
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-900 text-sm">CBT Accredited</p>
+                    <p className="text-xs text-gray-600">Professional Diploma</p>
                   </div>
                 </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <Stethoscope className="h-8 w-8 text-blue-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Remote Sessions</p>
-                    <p className="text-sm text-gray-600">Flexible Scheduling</p>
+                <div className="flex items-center space-x-2">
+                  <Stethoscope className="h-6 w-6 text-blue-600" />
+                  <div className="text-center">
+                    <p className="font-semibold text-gray-900 text-sm">Remote Sessions</p>
+                    <p className="text-xs text-gray-600">Flexible Scheduling</p>
                   </div>
                 </div>
               </div>
@@ -303,7 +271,7 @@ const Index = () => {
       </section>
 
       {/* Reviews Button - Top */}
-      <section className="py-8 px-4">
+      <section className="py-4 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/testimonials#top">
@@ -316,7 +284,7 @@ const Index = () => {
       </section>
 
       {/* Contact Us Button - Between Hero and Conditions */}
-      <section className="py-12 px-4">
+      <section className="py-6 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/contact#top">
@@ -373,7 +341,9 @@ const Index = () => {
         
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">New: Corporate Training & Staff Wellness</h2>
+            <h2 className="text-4xl font-bold mb-6 border-4 border-double border-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-xl px-6 py-4 inline-block shadow-lg">
+              New: Corporate Training & Staff Wellness
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Transform your workplace culture with ReCODE methodology. We offer specialized corporate seminars 
               and staff wellness sessions designed to enhance mental resilience, reduce workplace stress, and 
