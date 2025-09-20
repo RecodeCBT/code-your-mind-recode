@@ -175,15 +175,15 @@ const WhatIsRecode = () => {
               return (
                 <Link key={index} to={approach.link}>
                   <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50 cursor-pointer">
-                    <CardHeader>
-                      <div className="flex items-center gap-3 mb-2">
+                    <CardHeader className="text-center">
+                      <div className="flex flex-col items-center gap-3 mb-2">
                         <div className={`p-2 ${approach.bgColor} rounded-lg`}>
                           <Icon className={`h-5 w-5 ${approach.color}`} />
                         </div>
                         <CardTitle className="text-lg">{approach.title}</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="text-center">
                       <CardDescription className="text-base">
                         {approach.description}
                       </CardDescription>
@@ -271,8 +271,11 @@ const WhatIsRecode = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <div className="p-6 md:p-8">
+            <div className="p-6 md:p-8 text-center">
               <div className="mb-4 md:mb-6">
+                <div className="mx-auto mb-4 p-3 bg-orange-500/10 rounded-full w-fit">
+                  <Target className="h-8 w-8 text-orange-500" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-4">Cognitive Behavioral Therapy (CBT)</h3>
               </div>
               <div className="text-sm md:text-base space-y-3 md:space-y-4">
@@ -286,7 +289,7 @@ const WhatIsRecode = () => {
                 </p>
                 <div className="mt-4 md:mt-6">
                   <h4 className="font-semibold mb-2 md:mb-3 text-sm md:text-base">Core CBT Principles:</h4>
-                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
+                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-left max-w-md mx-auto">
                     <li>• <strong>Cognitive Triangle:</strong> Understanding the connection between thoughts, feelings, and behaviors</li>
                     <li>• <strong>Present-Focused:</strong> Addressing current problems and developing practical solutions</li>
                     <li>• <strong>Collaborative:</strong> Working together to identify and change unhelpful patterns</li>
@@ -296,8 +299,11 @@ const WhatIsRecode = () => {
               </div>
             </div>
 
-            <div className="p-6 md:p-8">
+            <div className="p-6 md:p-8 text-center">
               <div className="mb-4 md:mb-6">
+                <div className="mx-auto mb-4 p-3 bg-purple-600/10 rounded-full w-fit">
+                  <Heart className="h-8 w-8 text-purple-600" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-4">Dialectical Behavior Therapy (DBT)</h3>
               </div>
               <div className="text-sm md:text-base space-y-3 md:space-y-4">
@@ -311,7 +317,7 @@ const WhatIsRecode = () => {
                 </p>
                 <div className="mt-4 md:mt-6">
                   <h4 className="font-semibold mb-2 md:mb-3 text-sm md:text-base">Core DBT Skills:</h4>
-                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
+                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-left max-w-md mx-auto">
                     <li>• <strong>Mindfulness:</strong> Present-moment awareness without judgment</li>
                     <li>• <strong>Distress Tolerance:</strong> Managing crisis situations without making them worse</li>
                     <li>• <strong>Emotion Regulation:</strong> Understanding and managing intense emotions effectively</li>
