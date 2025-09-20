@@ -107,166 +107,215 @@ const Index = () => {
       <section className="py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
-            {/* Enhanced Logo Section with Full-Width Circuitry */}
+            {/* Enhanced Logo Section with 360-degree Circuitry */}
             <div className="relative flex items-center justify-center mb-12 h-96 overflow-hidden">
               
-              {/* Full-width circuitry background with edge-to-edge coverage */}
+              {/* Full 360-degree circuitry background with edge-to-edge coverage */}
               <div className="absolute inset-0 w-full h-full">
                 <svg className="w-full h-full" preserveAspectRatio="xMidYMid slice" viewBox="-800 -400 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                   
-                  {/* Gradient definitions for fading edges */}
+                  {/* Enhanced gradient definitions for 360-degree fading */}
                   <defs>
-                    <linearGradient id="fadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="hsl(330 81% 60%)" stopOpacity="0.6"/>
+                    <radialGradient id="circuitFade" cx="50%" cy="50%" r="70%">
+                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="1"/>
+                      <stop offset="20%" stopColor="hsl(330 81% 60%)" stopOpacity="0.9"/>
+                      <stop offset="40%" stopColor="hsl(330 81% 60%)" stopOpacity="0.7"/>
+                      <stop offset="60%" stopColor="hsl(330 81% 60%)" stopOpacity="0.5"/>
                       <stop offset="80%" stopColor="hsl(330 81% 60%)" stopOpacity="0.3"/>
                       <stop offset="100%" stopColor="hsl(330 81% 60%)" stopOpacity="0.05"/>
-                    </linearGradient>
-                    <linearGradient id="fadeLeft" x1="100%" y1="0%" x2="0%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="0.8"/>
+                    </radialGradient>
+                    <linearGradient id="fadeTop" x1="0%" y1="100%" x2="0%" y2="0%">
+                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="1"/>
                       <stop offset="50%" stopColor="hsl(330 81% 60%)" stopOpacity="0.6"/>
-                      <stop offset="80%" stopColor="hsl(330 81% 60%)" stopOpacity="0.3"/>
+                      <stop offset="100%" stopColor="hsl(330 81% 60%)" stopOpacity="0.05"/>
+                    </linearGradient>
+                    <linearGradient id="fadeBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="hsl(330 81% 60%)" stopOpacity="1"/>
+                      <stop offset="50%" stopColor="hsl(330 81% 60%)" stopOpacity="0.6"/>
                       <stop offset="100%" stopColor="hsl(330 81% 60%)" stopOpacity="0.05"/>
                     </linearGradient>
                   </defs>
                   
-                  {/* Right side circuits extending to screen edge */}
-                  <g stroke="url(#fadeRight)" fill="none">
-                    {/* Main circuit paths */}
+                  {/* Right side circuits (0-90 degrees) */}
+                  <g stroke="url(#circuitFade)" fill="none">
+                    {/* Main horizontal paths */}
                     <path d="M 60 0 L 120 0 L 140 -15 L 160 0 L 200 0 L 220 -20 L 240 0 L 300 0 L 320 -25 L 360 0 L 450 0 L 520 -10 L 600 0 L 680 -15 L 750 0 L 800 0" strokeWidth="3"/>
                     <path d="M 60 -10 L 130 -20 L 155 -35 L 180 -15 L 220 -30 L 245 -45 L 280 -20 L 340 -40 L 380 -25 L 450 -50 L 520 -60 L 600 -45 L 680 -70 L 750 -55 L 800 -80" strokeWidth="2.5"/>
                     <path d="M 60 10 L 130 20 L 155 35 L 180 15 L 220 30 L 245 45 L 280 20 L 340 40 L 380 25 L 450 50 L 520 60 L 600 45 L 680 70 L 750 55 L 800 80" strokeWidth="2.5"/>
                     <path d="M 80 -25 L 150 -40 L 180 -55 L 220 -45 L 280 -60 L 320 -75 L 360 -50 L 420 -80 L 480 -60 L 550 -90 L 620 -75 L 700 -100 L 780 -85 L 800 -120" strokeWidth="2"/>
                     <path d="M 80 25 L 150 40 L 180 55 L 220 45 L 280 60 L 320 75 L 360 50 L 420 80 L 480 60 L 550 90 L 620 75 L 700 100 L 780 85 L 800 120" strokeWidth="2"/>
-                    
-                    {/* Additional detailed circuitry */}
-                    <path d="M 100 -5 L 170 -12 L 210 -8 L 260 -18 L 310 -12 L 380 -22 L 440 -15 L 520 -28 L 590 -20 L 670 -35 L 740 -25 L 800 -40" strokeWidth="1.5"/>
-                    <path d="M 100 5 L 170 12 L 210 8 L 260 18 L 310 12 L 380 22 L 440 15 L 520 28 L 590 20 L 670 35 L 740 25 L 800 40" strokeWidth="1.5"/>
-                    
-                    {/* Micro-circuits and branches */}
-                    <path d="M 140 -15 L 145 -25 L 150 -15" strokeWidth="1"/>
-                    <path d="M 240 0 L 245 -10 L 250 0" strokeWidth="1"/>
-                    <path d="M 360 0 L 365 10 L 370 0" strokeWidth="1"/>
-                    <path d="M 520 -10 L 525 -20 L 530 -10" strokeWidth="1"/>
-                    <path d="M 680 -15 L 685 -25 L 690 -15" strokeWidth="1"/>
                   </g>
                   
-                  {/* Left side circuits extending to screen edge */}
-                  <g stroke="url(#fadeLeft)" fill="none">
-                    {/* Main circuit paths */}
+                  {/* Top side circuits (90-180 degrees) */}
+                  <g stroke="url(#fadeTop)" fill="none">
+                    <path d="M 0 -60 L 0 -120 L -15 -140 L 0 -160 L 0 -200 L -20 -220 L 0 -240 L 0 -300 L -25 -320 L 0 -360 L 0 -400" strokeWidth="3"/>
+                    <path d="M -10 -60 L -20 -130 L -35 -155 L -15 -180 L -30 -220 L -45 -245 L -20 -280 L -40 -340 L -25 -380 L -50 -400" strokeWidth="2.5"/>
+                    <path d="M 10 -60 L 20 -130 L 35 -155 L 15 -180 L 30 -220 L 45 -245 L 20 -280 L 40 -340 L 25 -380 L 50 -400" strokeWidth="2.5"/>
+                    <path d="M -25 -80 L -40 -150 L -55 -180 L -45 -220 L -60 -280 L -75 -320 L -50 -360 L -80 -400" strokeWidth="2"/>
+                    <path d="M 25 -80 L 40 -150 L 55 -180 L 45 -220 L 60 -280 L 75 -320 L 50 -360 L 80 -400" strokeWidth="2"/>
+                  </g>
+                  
+                  {/* Left side circuits (180-270 degrees) */}
+                  <g stroke="url(#circuitFade)" fill="none">
                     <path d="M -60 0 L -120 0 L -140 -15 L -160 0 L -200 0 L -220 -20 L -240 0 L -300 0 L -320 -25 L -360 0 L -450 0 L -520 -10 L -600 0 L -680 -15 L -750 0 L -800 0" strokeWidth="3"/>
                     <path d="M -60 -10 L -130 -20 L -155 -35 L -180 -15 L -220 -30 L -245 -45 L -280 -20 L -340 -40 L -380 -25 L -450 -50 L -520 -60 L -600 -45 L -680 -70 L -750 -55 L -800 -80" strokeWidth="2.5"/>
                     <path d="M -60 10 L -130 20 L -155 35 L -180 15 L -220 30 L -245 45 L -280 20 L -340 40 L -380 25 L -450 50 L -520 60 L -600 45 L -680 70 L -750 55 L -800 80" strokeWidth="2.5"/>
                     <path d="M -80 -25 L -150 -40 L -180 -55 L -220 -45 L -280 -60 L -320 -75 L -360 -50 L -420 -80 L -480 -60 L -550 -90 L -620 -75 L -700 -100 L -780 -85 L -800 -120" strokeWidth="2"/>
                     <path d="M -80 25 L -150 40 L -180 55 L -220 45 L -280 60 L -320 75 L -360 50 L -420 80 L -480 60 L -550 90 L -620 75 L -700 100 L -780 85 L -800 120" strokeWidth="2"/>
-                    
-                    {/* Additional detailed circuitry */}
-                    <path d="M -100 -5 L -170 -12 L -210 -8 L -260 -18 L -310 -12 L -380 -22 L -440 -15 L -520 -28 L -590 -20 L -670 -35 L -740 -25 L -800 -40" strokeWidth="1.5"/>
-                    <path d="M -100 5 L -170 12 L -210 8 L -260 18 L -310 12 L -380 22 L -440 15 L -520 28 L -590 20 L -670 35 L -740 25 L -800 40" strokeWidth="1.5"/>
-                    
-                    {/* Micro-circuits and branches */}
-                    <path d="M -140 -15 L -145 -25 L -150 -15" strokeWidth="1"/>
-                    <path d="M -240 0 L -245 -10 L -250 0" strokeWidth="1"/>
-                    <path d="M -360 0 L -365 10 L -370 0" strokeWidth="1"/>
-                    <path d="M -520 -10 L -525 -20 L -530 -10" strokeWidth="1"/>
-                    <path d="M -680 -15 L -685 -25 L -690 -15" strokeWidth="1"/>
                   </g>
                   
-                  {/* Circuit nodes with fading opacity */}
+                  {/* Bottom side circuits (270-360 degrees) */}
+                  <g stroke="url(#fadeBottom)" fill="none">
+                    <path d="M 0 60 L 0 120 L -15 140 L 0 160 L 0 200 L -20 220 L 0 240 L 0 300 L -25 320 L 0 360 L 0 400" strokeWidth="3"/>
+                    <path d="M -10 60 L -20 130 L -35 155 L -15 180 L -30 220 L -45 245 L -20 280 L -40 340 L -25 380 L -50 400" strokeWidth="2.5"/>
+                    <path d="M 10 60 L 20 130 L 35 155 L 15 180 L 30 220 L 45 245 L 20 280 L 40 340 L 25 380 L 50 400" strokeWidth="2.5"/>
+                    <path d="M -25 80 L -40 150 L -55 180 L -45 220 L -60 280 L -75 320 L -50 360 L -80 400" strokeWidth="2"/>
+                    <path d="M 25 80 L 40 150 L 55 180 L 45 220 L 60 280 L 75 320 L 50 360 L 80 400" strokeWidth="2"/>
+                  </g>
+                  
+                  {/* Diagonal circuits for complete 360-degree coverage */}
+                  <g stroke="url(#circuitFade)" fill="none">
+                    {/* Top-right diagonal */}
+                    <path d="M 30 -30 L 80 -80 L 140 -140 L 200 -200 L 280 -280 L 360 -360 L 440 -400" strokeWidth="2"/>
+                    <path d="M 40 -20 L 100 -80 L 160 -140 L 240 -220 L 320 -300 L 400 -380" strokeWidth="1.5"/>
+                    
+                    {/* Top-left diagonal */}
+                    <path d="M -30 -30 L -80 -80 L -140 -140 L -200 -200 L -280 -280 L -360 -360 L -440 -400" strokeWidth="2"/>
+                    <path d="M -40 -20 L -100 -80 L -160 -140 L -240 -220 L -320 -300 L -400 -380" strokeWidth="1.5"/>
+                    
+                    {/* Bottom-right diagonal */}
+                    <path d="M 30 30 L 80 80 L 140 140 L 200 200 L 280 280 L 360 360 L 440 400" strokeWidth="2"/>
+                    <path d="M 40 20 L 100 80 L 160 140 L 240 220 L 320 300 L 400 380" strokeWidth="1.5"/>
+                    
+                    {/* Bottom-left diagonal */}
+                    <path d="M -30 30 L -80 80 L -140 140 L -200 200 L -280 280 L -360 360 L -440 400" strokeWidth="2"/>
+                    <path d="M -40 20 L -100 80 L -160 140 L -240 220 L -320 300 L -400 380" strokeWidth="1.5"/>
+                  </g>
+                  
+                  {/* Circuit nodes positioned all around */}
                   <g fill="hsl(330 81% 60%)">
+                    {/* Central nodes */}
+                    <circle cx="60" cy="0" r="4" opacity="1"/>
+                    <circle cx="0" cy="60" r="4" opacity="1"/>
+                    <circle cx="-60" cy="0" r="4" opacity="1"/>
+                    <circle cx="0" cy="-60" r="4" opacity="1"/>
+                    
                     {/* Right side nodes */}
-                    <circle cx="120" cy="0" r="4" opacity="1"/>
-                    <circle cx="200" cy="0" r="3.5" opacity="0.9"/>
-                    <circle cx="300" cy="0" r="3" opacity="0.8"/>
-                    <circle cx="450" cy="0" r="2.5" opacity="0.7"/>
-                    <circle cx="600" cy="0" r="2" opacity="0.4"/>
-                    <circle cx="750" cy="0" r="1.5" opacity="0.2"/>
+                    <circle cx="120" cy="0" r="3.5" opacity="0.9"/>
+                    <circle cx="200" cy="0" r="3" opacity="0.8"/>
+                    <circle cx="300" cy="0" r="2.5" opacity="0.7"/>
+                    <circle cx="450" cy="0" r="2" opacity="0.5"/>
+                    <circle cx="600" cy="0" r="1.5" opacity="0.3"/>
                     
-                    <circle cx="160" cy="-15" r="3" opacity="0.8"/>
-                    <circle cx="240" cy="-20" r="3" opacity="0.8"/>
-                    <circle cx="380" cy="-25" r="2.5" opacity="0.6"/>
-                    <circle cx="520" cy="-10" r="2" opacity="0.4"/>
-                    <circle cx="680" cy="-15" r="1.5" opacity="0.2"/>
-                    
-                    <circle cx="130" cy="20" r="3" opacity="0.8"/>
-                    <circle cx="220" cy="30" r="3" opacity="0.8"/>
-                    <circle cx="380" cy="25" r="2.5" opacity="0.6"/>
-                    <circle cx="520" cy="60" r="2" opacity="0.4"/>
-                    <circle cx="680" cy="70" r="1.5" opacity="0.2"/>
+                    {/* Top side nodes */}
+                    <circle cx="0" cy="-120" r="3.5" opacity="0.9"/>
+                    <circle cx="0" cy="-200" r="3" opacity="0.8"/>
+                    <circle cx="0" cy="-300" r="2.5" opacity="0.7"/>
+                    <circle cx="0" cy="-360" r="2" opacity="0.5"/>
                     
                     {/* Left side nodes */}
-                    <circle cx="-120" cy="0" r="4" opacity="1"/>
-                    <circle cx="-200" cy="0" r="3.5" opacity="0.9"/>
-                    <circle cx="-300" cy="0" r="3" opacity="0.8"/>
-                    <circle cx="-450" cy="0" r="2.5" opacity="0.7"/>
-                    <circle cx="-600" cy="0" r="2" opacity="0.4"/>
-                    <circle cx="-750" cy="0" r="1.5" opacity="0.2"/>
+                    <circle cx="-120" cy="0" r="3.5" opacity="0.9"/>
+                    <circle cx="-200" cy="0" r="3" opacity="0.8"/>
+                    <circle cx="-300" cy="0" r="2.5" opacity="0.7"/>
+                    <circle cx="-450" cy="0" r="2" opacity="0.5"/>
+                    <circle cx="-600" cy="0" r="1.5" opacity="0.3"/>
                     
-                    <circle cx="-160" cy="-15" r="3" opacity="0.8"/>
-                    <circle cx="-240" cy="-20" r="3" opacity="0.8"/>
-                    <circle cx="-380" cy="-25" r="2.5" opacity="0.6"/>
-                    <circle cx="-520" cy="-10" r="2" opacity="0.4"/>
-                    <circle cx="-680" cy="-15" r="1.5" opacity="0.2"/>
+                    {/* Bottom side nodes */}
+                    <circle cx="0" cy="120" r="3.5" opacity="0.9"/>
+                    <circle cx="0" cy="200" r="3" opacity="0.8"/>
+                    <circle cx="0" cy="300" r="2.5" opacity="0.7"/>
+                    <circle cx="0" cy="360" r="2" opacity="0.5"/>
                     
-                    <circle cx="-130" cy="20" r="3" opacity="0.8"/>
-                    <circle cx="-220" cy="30" r="3" opacity="0.8"/>
-                    <circle cx="-380" cy="25" r="2.5" opacity="0.6"/>
-                    <circle cx="-520" cy="60" r="2" opacity="0.4"/>
-                    <circle cx="-680" cy="70" r="1.5" opacity="0.2"/>
+                    {/* Diagonal nodes */}
+                    <circle cx="80" cy="-80" r="3" opacity="0.7"/>
+                    <circle cx="-80" cy="-80" r="3" opacity="0.7"/>
+                    <circle cx="80" cy="80" r="3" opacity="0.7"/>
+                    <circle cx="-80" cy="80" r="3" opacity="0.7"/>
                   </g>
                   
-                  {/* Multiple electrical pulses moving right */}
+                  {/* Enhanced electrical pulses moving in all directions - slower pace */}
+                  {/* Right direction pulses */}
                   <circle r="7" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="3.0s" repeatCount="indefinite" path="M 60 0 L 800 0"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="3.0s" repeatCount="indefinite"/>
+                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M 60 0 L 800 0"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.5s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="3.2s" repeatCount="indefinite" path="M 60 -10 L 800 -80"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="3.2s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
+                    <animateMotion dur="5.0s" repeatCount="indefinite" path="M 60 -10 L 800 -80"/>
+                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="5.0s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="3.1s" repeatCount="indefinite" path="M 60 10 L 800 80"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="3.1s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="2.8s" repeatCount="indefinite" path="M 80 -25 L 800 -120"/>
-                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="2.8s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="2.9s" repeatCount="indefinite" path="M 80 25 L 800 120"/>
-                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="2.9s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
+                    <animateMotion dur="4.8s" repeatCount="indefinite" path="M 60 10 L 800 80"/>
+                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="4.8s" repeatCount="indefinite"/>
                   </circle>
                   
-                  {/* Multiple electrical pulses moving left */}
+                  {/* Left direction pulses */}
                   <circle r="7" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="3.0s" repeatCount="indefinite" path="M -60 0 L -800 0"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="3.0s" repeatCount="indefinite"/>
+                    <animateMotion dur="4.5s" repeatCount="indefinite" path="M -60 0 L -800 0"/>
+                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="4.5s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="3.2s" repeatCount="indefinite" path="M -60 -10 L -800 -80"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="3.2s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
+                    <animateMotion dur="5.0s" repeatCount="indefinite" path="M -60 -10 L -800 -80"/>
+                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="5.0s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="6" fill="hsl(330 81% 70%)" opacity="1">
-                    <animateMotion dur="3.1s" repeatCount="indefinite" path="M -60 10 L -800 80"/>
-                    <animate attributeName="opacity" values="1; 1; 0.5; 1; 0" dur="3.1s" repeatCount="indefinite"/>
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="0.8">
+                    <animateMotion dur="4.8s" repeatCount="indefinite" path="M -60 10 L -800 80"/>
+                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="4.8s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="2.8s" repeatCount="indefinite" path="M -80 -25 L -800 -120"/>
-                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="2.8s" repeatCount="indefinite"/>
+                  
+                  {/* Top direction pulses */}
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="0.9">
+                    <animateMotion dur="4.7s" repeatCount="indefinite" path="M 0 -60 L 0 -400"/>
+                    <animate attributeName="opacity" values="0.9; 0.9; 0.4; 0.9; 0" dur="4.7s" repeatCount="indefinite"/>
                   </circle>
-                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.8">
-                    <animateMotion dur="2.9s" repeatCount="indefinite" path="M -80 25 L -800 120"/>
-                    <animate attributeName="opacity" values="0.8; 0.8; 0.3; 0.8; 0" dur="2.9s" repeatCount="indefinite"/>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
+                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M -10 -60 L -50 -400"/>
+                    <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.2s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
+                    <animateMotion dur="4.9s" repeatCount="indefinite" path="M 10 -60 L 50 -400"/>
+                    <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="4.9s" repeatCount="indefinite"/>
+                  </circle>
+                  
+                  {/* Bottom direction pulses */}
+                  <circle r="6" fill="hsl(330 81% 70%)" opacity="0.9">
+                    <animateMotion dur="4.7s" repeatCount="indefinite" path="M 0 60 L 0 400"/>
+                    <animate attributeName="opacity" values="0.9; 0.9; 0.4; 0.9; 0" dur="4.7s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
+                    <animateMotion dur="5.2s" repeatCount="indefinite" path="M -10 60 L -50 400"/>
+                    <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="5.2s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.7">
+                    <animateMotion dur="4.9s" repeatCount="indefinite" path="M 10 60 L 50 400"/>
+                    <animate attributeName="opacity" values="0.7; 0.7; 0.3; 0.7; 0" dur="4.9s" repeatCount="indefinite"/>
+                  </circle>
+                  
+                  {/* Diagonal pulses */}
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.5s" repeatCount="indefinite" path="M 30 -30 L 440 -400"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.3s" repeatCount="indefinite" path="M -30 -30 L -440 -400"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.3s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.1s" repeatCount="indefinite" path="M 30 30 L 440 400"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.1s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle r="5" fill="hsl(330 81% 70%)" opacity="0.6">
+                    <animateMotion dur="5.4s" repeatCount="indefinite" path="M -30 30 L -440 400"/>
+                    <animate attributeName="opacity" values="0.6; 0.6; 0.2; 0.6; 0" dur="5.4s" repeatCount="indefinite"/>
                   </circle>
                 </svg>
               </div>
               
-            {/* Enhanced Logo Container - responsive sizing */}
+            {/* Enhanced Logo Container - smaller on mobile for better circuitry visibility */}
             <div className="relative z-10">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-108 md:h-108 flex items-center justify-center mx-auto">
+              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
                 <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
                   <img 
-                    src="/src/assets/recode-brain-logo.png" 
+                    src="/public/recode-brain-logo-new.png" 
                     alt="RECODE CBT - Evidence-Based Therapy"
                     className="w-full h-full object-cover" 
                     style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))' }}
