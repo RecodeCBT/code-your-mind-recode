@@ -282,7 +282,11 @@ const Index = () => {
               
               {/* Enhanced Logo Container - responsive and properly positioned */}
               <div className="relative z-10 flex justify-center items-center">
-                <VideoLogo className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48" />
+                <img 
+                  src="/recode-avatar.png" 
+                  alt="ReCODE Brain Logo" 
+                  className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-contain drop-shadow-lg"
+                />
               </div>
             </div>
             
@@ -329,29 +333,32 @@ const Index = () => {
               </Link>
             </div>
             
-            {/* Professional Credentials - Single Row */}
-            <div className="bg-gray-50 rounded-lg p-4 mt-8 max-w-3xl mx-auto">
-              <div className="flex justify-center items-center gap-8">
-                <div className="flex items-center space-x-2">
-                  <GraduationCap className="h-6 w-6 text-blue-600" />
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-900 text-sm">Qualified GP</p>
-                    <p className="text-xs text-gray-600">Registered Practitioner</p>
-                  </div>
+            {/* Professional Credentials - Grid Layout with Icons Above */}
+            <div className="bg-gray-50 rounded-lg p-6 mt-8 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="flex flex-col items-center text-center">
+                  <GraduationCap className="h-8 w-8 text-blue-600 mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">Qualified GP</p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Shield className="h-6 w-6 text-blue-600" />
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-900 text-sm">CBT Accredited</p>
-                    <p className="text-xs text-gray-600">Professional Diploma</p>
-                  </div>
+                <div className="flex flex-col items-center text-center">
+                  <User className="h-8 w-8 text-blue-600 mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">Registered Practitioner</p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Stethoscope className="h-6 w-6 text-blue-600" />
-                  <div className="text-center">
-                    <p className="font-semibold text-gray-900 text-sm">Remote Sessions</p>
-                    <p className="text-xs text-gray-600">Flexible Scheduling</p>
-                  </div>
+                <div className="flex flex-col items-center text-center">
+                  <Shield className="h-8 w-8 text-blue-600 mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">CBT Accredited</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <Award className="h-8 w-8 text-blue-600 mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">Professional Diploma</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <MessageSquare className="h-8 w-8 text-blue-600 mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">Remote Sessions</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <Stethoscope className="h-8 w-8 text-blue-600 mb-2" />
+                  <p className="font-semibold text-gray-900 text-sm">Flexible Scheduling</p>
                 </div>
               </div>
             </div>
