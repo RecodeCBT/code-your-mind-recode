@@ -308,54 +308,97 @@ const WhatIsRecode = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            <Card className="p-8 bg-gradient-to-br from-orange-500/10 to-orange-600/5 border-l-4 border-l-orange-500 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-orange-500/20 rounded-full">
-                  <Zap className="h-8 w-8 text-orange-600" />
+          {/* Visual Diagram */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Central Hub */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+              <div className="w-48 h-48 bg-gradient-to-br from-orange-500 via-purple-600 to-blue-600 rounded-full shadow-2xl flex items-center justify-center">
+                <div className="w-44 h-44 bg-white rounded-full flex items-center justify-center shadow-inner">
+                  <div className="text-center">
+                    <Brain className="h-12 w-12 text-purple-600 mx-auto mb-2" />
+                    <h3 className="text-2xl font-bold text-gray-800">The Basics</h3>
+                    <p className="text-sm text-gray-600 mt-1">Foundation of<br />Mental Wellbeing</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-orange-700">Exercise Habits</h3>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Regular physical activity directly influences mitochondria production, boosting energy capacity in all your cells
-              </p>
-            </Card>
+            </div>
 
-            <Card className="p-8 bg-gradient-to-br from-purple-500/10 to-purple-600/5 border-l-4 border-l-purple-500 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-purple-500/20 rounded-full">
-                  <Heart className="h-8 w-8 text-purple-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-purple-700">Sleep Hygiene</h3>
-              </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Quality sleep patterns are fundamental to emotional regulation and cognitive function
-              </p>
-            </Card>
+            {/* Connection Lines */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              {/* Top Line */}
+              <div className="absolute w-0.5 h-32 bg-gradient-to-t from-orange-500/50 to-orange-500/20 -top-32 left-1/2 transform -translate-x-1/2"></div>
+              {/* Bottom Line */}
+              <div className="absolute w-0.5 h-32 bg-gradient-to-b from-purple-500/50 to-purple-500/20 top-24 left-1/2 transform -translate-x-1/2"></div>
+              {/* Left Line */}
+              <div className="absolute h-0.5 w-32 bg-gradient-to-l from-blue-500/50 to-blue-500/20 top-1/2 -left-32 transform -translate-y-1/2"></div>
+              {/* Right Line */}
+              <div className="absolute h-0.5 w-32 bg-gradient-to-r from-teal-500/50 to-teal-500/20 top-1/2 left-24 transform -translate-y-1/2"></div>
+            </div>
 
-            <Card className="p-8 bg-gradient-to-br from-blue-500/10 to-blue-600/5 border-l-4 border-l-blue-500 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-blue-500/20 rounded-full">
-                  <Brain className="h-8 w-8 text-blue-600" />
+            {/* Four Connected Elements */}
+            
+            {/* Exercise Habits - Top */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+              <Card className="w-80 p-6 bg-gradient-to-br from-orange-500/15 to-orange-600/10 border-2 border-orange-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="h-8 w-8 text-orange-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-orange-700 mb-3">Exercise Habits</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Regular physical activity directly influences mitochondria production, boosting energy capacity in all your cells
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-700">Nutritional Impacts</h3>
-              </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Knowledge on how blood sugar levels can influence energy and impact mental states.
-              </p>
-            </Card>
+              </Card>
+            </div>
 
-            <Card className="p-8 bg-gradient-to-br from-teal-500/10 to-teal-600/5 border-l-4 border-l-teal-500 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-teal-500/20 rounded-full">
-                  <CheckCircle className="h-8 w-8 text-teal-600" />
+            {/* Sleep Hygiene - Right */}
+            <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2">
+              <Card className="w-80 p-6 bg-gradient-to-br from-teal-500/15 to-teal-600/10 border-2 border-teal-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-8 w-8 text-teal-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-teal-700 mb-3">Sleep Hygiene</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Quality sleep patterns are fundamental to emotional regulation and cognitive function
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-teal-700">Hydration Levels</h3>
-              </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Adequate hydration is essential for optimal brain function though essential energy pathways, removing toxic by-products of keeping the body running, and maintaining blood pressure
-              </p>
-            </Card>
+              </Card>
+            </div>
+
+            {/* Nutritional Impacts - Bottom */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
+              <Card className="w-80 p-6 bg-gradient-to-br from-purple-500/15 to-purple-600/10 border-2 border-purple-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-purple-700 mb-3">Nutritional Impacts</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Knowledge on how blood sugar levels can influence energy and impact mental states.
+                  </p>
+                </div>
+              </Card>
+            </div>
+
+            {/* Hydration Levels - Left */}
+            <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2">
+              <Card className="w-80 p-6 bg-gradient-to-br from-blue-500/15 to-blue-600/10 border-2 border-blue-500/30 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-700 mb-3">Hydration Levels</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Adequate hydration is essential for optimal brain function though essential energy pathways, removing toxic by-products of keeping the body running, and maintaining blood pressure
+                  </p>
+                </div>
+              </Card>
+            </div>
+
+            {/* Spacer to ensure proper height */}
+            <div className="h-96"></div>
           </div>
         </div>
       </section>
