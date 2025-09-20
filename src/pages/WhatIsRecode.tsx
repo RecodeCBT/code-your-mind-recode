@@ -270,60 +270,56 @@ const WhatIsRecode = () => {
             <h2 className="text-4xl font-bold mb-6">Evidence-Based Foundation</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="p-8">
-              <CardHeader>
-                <CardTitle className="text-2xl mb-4">Cognitive Behavioral Therapy (CBT)</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base space-y-4">
-                  <p>
-                    CBT is one of the most extensively researched forms of psychotherapy, with over 500 clinical trials 
-                    demonstrating its effectiveness for anxiety, depression, and other mental health conditions.
-                  </p>
-                  <p>
-                    RECODE applies CBT principles systematically, helping you identify and challenge the thought patterns 
-                    that create emotional distress and behavioral problems.
-                  </p>
-                  <div className="mt-6">
-                    <h4 className="font-semibold mb-3 text-foreground">Core CBT Principles:</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li>• <strong>Cognitive Triangle:</strong> Understanding the connection between thoughts, feelings, and behaviors</li>
-                      <li>• <strong>Present-Focused:</strong> Addressing current problems and developing practical solutions</li>
-                      <li>• <strong>Collaborative:</strong> Working together to identify and change unhelpful patterns</li>
-                      <li>• <strong>Evidence-Based:</strong> Using proven techniques like thought records and behavioral experiments</li>
-                    </ul>
-                  </div>
-                </CardDescription>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div className="p-6 md:p-8">
+              <div className="mb-4 md:mb-6">
+                <h3 className="text-xl md:text-2xl font-bold mb-4">Cognitive Behavioral Therapy (CBT)</h3>
+              </div>
+              <div className="text-sm md:text-base space-y-3 md:space-y-4">
+                <p>
+                  CBT is one of the most extensively researched forms of psychotherapy, with over 500 clinical trials 
+                  demonstrating its effectiveness for anxiety, depression, and other mental health conditions.
+                </p>
+                <p>
+                  RECODE applies CBT principles systematically, helping you identify and challenge the thought patterns 
+                  that create emotional distress and behavioral problems.
+                </p>
+                <div className="mt-4 md:mt-6">
+                  <h4 className="font-semibold mb-2 md:mb-3 text-sm md:text-base">Core CBT Principles:</h4>
+                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
+                    <li>• <strong>Cognitive Triangle:</strong> Understanding the connection between thoughts, feelings, and behaviors</li>
+                    <li>• <strong>Present-Focused:</strong> Addressing current problems and developing practical solutions</li>
+                    <li>• <strong>Collaborative:</strong> Working together to identify and change unhelpful patterns</li>
+                    <li>• <strong>Evidence-Based:</strong> Using proven techniques like thought records and behavioral experiments</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-            <Card className="p-8">
-              <CardHeader>
-                <CardTitle className="text-2xl mb-4">Dialectical Behavior Therapy (DBT)</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base space-y-4">
-                  <p>
-                    DBT adds powerful emotional regulation skills to the cognitive restructuring of CBT, 
-                    teaching you how to tolerate distress and manage intense emotions effectively.
-                  </p>
-                  <p>
-                    Through RECODE, you'll learn mindfulness, distress tolerance, and interpersonal effectiveness 
-                    skills that create lasting change in how you respond to life's challenges.
-                  </p>
-                  <div className="mt-6">
-                    <h4 className="font-semibold mb-3 text-foreground">Core DBT Skills:</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li>• <strong>Mindfulness:</strong> Present-moment awareness without judgment</li>
-                      <li>• <strong>Distress Tolerance:</strong> Managing crisis situations without making them worse</li>
-                      <li>• <strong>Emotion Regulation:</strong> Understanding and managing intense emotions effectively</li>
-                      <li>• <strong>Interpersonal Effectiveness:</strong> Maintaining relationships while meeting your needs</li>
-                    </ul>
-                  </div>
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <div className="p-6 md:p-8">
+              <div className="mb-4 md:mb-6">
+                <h3 className="text-xl md:text-2xl font-bold mb-4">Dialectical Behavior Therapy (DBT)</h3>
+              </div>
+              <div className="text-sm md:text-base space-y-3 md:space-y-4">
+                <p>
+                  DBT adds powerful emotional regulation skills to the cognitive restructuring of CBT, 
+                  teaching you how to tolerate distress and manage intense emotions effectively.
+                </p>
+                <p>
+                  Through RECODE, you'll learn mindfulness, distress tolerance, and interpersonal effectiveness 
+                  skills that create lasting change in how you respond to life's challenges.
+                </p>
+                <div className="mt-4 md:mt-6">
+                  <h4 className="font-semibold mb-2 md:mb-3 text-sm md:text-base">Core DBT Skills:</h4>
+                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
+                    <li>• <strong>Mindfulness:</strong> Present-moment awareness without judgment</li>
+                    <li>• <strong>Distress Tolerance:</strong> Managing crisis situations without making them worse</li>
+                    <li>• <strong>Emotion Regulation:</strong> Understanding and managing intense emotions effectively</li>
+                    <li>• <strong>Interpersonal Effectiveness:</strong> Maintaining relationships while meeting your needs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
