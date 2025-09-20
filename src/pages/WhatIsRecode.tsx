@@ -513,17 +513,6 @@ const WhatIsRecode = () => {
             </Link>
             </div>
 
-            {/* Central "The Basics" Icon */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-orange-500 via-purple-600 to-blue-600 rounded-full shadow-lg flex items-center justify-center">
-                <div className="w-14 h-14 md:w-18 md:h-18 bg-white rounded-full flex items-center justify-center shadow-inner">
-                  <div className="text-center">
-                    <Brain className="h-4 w-4 md:h-5 md:w-5 text-purple-600 mx-auto mb-1" />
-                    <p className="text-xs md:text-sm font-bold text-gray-800 leading-tight">The<br />Basics</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
       </section>
     </div>
