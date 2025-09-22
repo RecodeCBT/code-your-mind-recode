@@ -12,7 +12,7 @@ const Testimonials = () => {
       condition: "4 Session Package",
       rating: 5,
       text: "Working with Dr. Carson through CBT was really helpful. In just four sessions, he gave me different tools to deal with intrusive thoughts and rumination, which made a big difference. He talks about these 'autocodes' and how to disrupt them, and that's been a really practical way for me to manage my thoughts. He's super empathetic, but is also clearly very knowledgeable. I've already recommended him to others because I think he's a great resource, and I've learned so much from our sessions. It feels like everyone should know about their triggers, and know how to manage them.",
-      date: "Today",
+      date: "October 2025",
       featured: true
     },
     {
