@@ -17,7 +17,7 @@ const Testimonials = () => {
     },
     {
       name: "David C.",
-      condition: "Initial Assessment & Intermediate Course",
+      condition: "Initial Assessment & 4 Session Package",
       rating: 5,
       text: "I can't rate Dr. Carson's fantastic RecodeCBT highly enough. There's only a mere 5 star choice. If there were 7 he'd get them all. Are you crippled at times with a knot in your chest you can't unwind? Have you lost your appetite despite feeling hungrier than ever? Do you believe everything your mind tells you are truths? Are you sceptical about trying something new because you've never heard of it before? Then you sound just like me, before I tried my first session with Dr. Carson. For the first time I have had a coherent, and easy to understand explanation of how a mind works and how I have effectively trapped myself in a bit of a negative loop. I was amazed at how my own experiences/reactions in certain situations were coming through in Dr. Carson's explanations, before I'd even told him about them. The knowledge you take away from the initial session will hopefully be enough for you to begin questioning the rationale behind your reactions/thoughts - and from there the appetite for the solutions WILL increase, and so far I am STARVING for more of the insight into a mind I felt I was a slave to. I cannot wait for our next session.",
       date: "September 2025"
