@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Navigation from "@/components/Navigation";
-
 const Policies = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -40,11 +38,9 @@ const Policies = () => {
           
           <CardContent className="space-y-8">
             <div className="bg-primary/5 rounded-lg p-6 border-l-4 border-l-primary">
-              <p className="text-lg leading-relaxed">
-                Welcome to RECODE CBT. This isn't just therapy—it's a blueprint for mental clarity. 
-                We honour your trust and take privacy seriously. This policy explains how your data 
-                is collected, stored and protected when you interact with our wellness services.
-              </p>
+              <p className="text-lg leading-relaxed">Welcome to RECODE CBT. This isn't just therapy—it's a blueprint for mental 
+re-programming . 
+We honour your trust and take privacy seriously. This policy explains how your data is collected, stored and protected when you interact with our wellness services.</p>
             </div>
 
             <div className="space-y-6">
@@ -344,8 +340,6 @@ const Policies = () => {
           </Card>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Policies;
