@@ -92,7 +92,7 @@ const Navigation = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 z-50 lg:hidden"
+          className="fixed inset-0 z-50"
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
