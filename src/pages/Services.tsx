@@ -10,26 +10,28 @@ const Services = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [showAllServices, setShowAllServices] = useState<boolean>(false);
-  
   const navigateWithScrollToTop = (path: string) => {
     navigate(path);
     window.scrollTo(0, 0);
   };
-
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services-section');
     if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      servicesSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
   const scrollToOptions = () => {
     const optionsSection = document.getElementById('options-section');
     if (optionsSection) {
-      optionsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      optionsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
   const handleCategorySelect = (categoryId: string) => {
     const newCategory = selectedCategory === categoryId ? "" : categoryId;
     setSelectedCategory(newCategory);
@@ -236,37 +238,37 @@ const Services = () => {
       <Navigation />
         
       {/* Hero Section */}
-      <section className="relative py-12 px-4 text-center">
-        <div className="container mx-auto max-w-4xl relative z-10">
+      <section className="relative px-4 text-center my-0 py-px">
+        <div className="container mx-auto max-w-4xl relative z-10 py-0 my-[70px]">
           {/* Brain Logo */}
           <div className="relative inline-block mb-2">
-            <div className="w-64 h-64 mx-auto rounded-full bg-orange-500 p-2">
+            <div className="w-64 h-64 mx-auto rounded-full bg-orange-500 p-2 py-[8px]">
               <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                 <img src="/lovable-uploads/fe81a945-6632-4272-8a5e-b2608fc7fbb2.png" alt="RecodeCBT Brain Logo" className="w-full h-full object-contain rounded-full" />
               </div>
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
+          <h1 className="md:text-6xl mb-6 text-foreground text-xl py-0 my-0 font-semibold">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
         </div>
       </section>
 
       {/* Service Categories */}
-      <section className="py-20 px-4 relative z-10">
+      <section className="px-4 relative z-10 py-px my-0">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Choose Your Journey</h2>
+          <h2 className="md:text-4xl font-bold text-center mb-4 my-0 py-px text-2xl text-slate-900">Choose Your Journey</h2>
           <div className="max-w-4xl mx-auto mb-8 bg-muted/50 p-4 md:p-6 rounded-full border border-primary/20">
             <div className="text-center">
               <p className="text-sm md:text-lg text-foreground">
                 <span className="inline-flex items-center gap-2">
                   <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs md:text-sm flex-shrink-0">1</span>
-                  <span>Click one of the <strong>FOUR paths</strong> below</span>
+                  <span className="text-xs">Click one of the <strong>FOUR paths</strong> below</span>
                 </span>
                 <span className="mx-2 hidden md:inline">•</span>
                 <span className="block md:inline mt-1 md:mt-0">
                   <span className="inline-flex items-center gap-2">
-                    <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs md:text-sm flex-shrink-0">2</span>
-                    <span>Then <strong>select your choice</strong> from services</span>
+                    <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs md:text-sm flex-shrink-0 mx-[6px]">2</span>
+                    <span className="text-sm">Then <strong>select your choice</strong> from services</span>
                   </span>
                 </span>
               </p>
@@ -305,15 +307,10 @@ const Services = () => {
             </div>}
 
           {/* Services Grid */}
-          {(selectedCategory || showAllServices) && (
-            <div id="services-section">
+          {(selectedCategory || showAllServices) && <div id="services-section">
               {/* Back to Options Button */}
               <div className="text-center mb-8">
-                <Button 
-                  variant="outline" 
-                  onClick={scrollToOptions}
-                  className="text-primary hover:text-primary-foreground hover:bg-primary border-primary"
-                >
+                <Button variant="outline" onClick={scrollToOptions} className="text-primary hover:text-primary-foreground hover:bg-primary border-primary">
                   ← Back to Options
                 </Button>
               </div>
@@ -380,8 +377,7 @@ const Services = () => {
                   </CardContent>
                 </Card>)}
               </div>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
