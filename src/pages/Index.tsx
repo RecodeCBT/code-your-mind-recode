@@ -678,7 +678,13 @@ const Index = () => {
                 <div className="flex flex-col items-center">
                   <span className="text-2xl">Neural-recoding</span>
                   <span className="text-2xl">through</span>
-                  <span className="text-2xl">Behavioural Science</span>
+                  <span className="text-2xl">Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and 
+emotional reactions 
+- practiced like a new skill, 
+to re-program the mind.
+
+
+One on One Doctor-delivered</span>
                 </div>
               </h1>
               <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
