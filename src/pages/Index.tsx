@@ -104,11 +104,11 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       {/* Hero Section - Professional & Clean */}
-      <section className="py-4 sm:py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
+      <section className="py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
             {/* Enhanced Logo Section with Complete 360-degree Neural Network */}
-            <div className="relative flex items-center justify-center mb-4 sm:mb-12 h-64 sm:h-96 overflow-hidden">
+            <div className="relative flex items-center justify-center mb-12 h-96 overflow-hidden">
               
               {/* Uniform 360-degree neural network expanding from center */}
               <div className="absolute inset-0 w-full h-full flex items-center justify-center">
@@ -653,32 +653,33 @@ const Index = () => {
                  </svg>
                </div>
                
-            {/* Enhanced Logo Container - optimized size for mobile visibility */}
-            <div className="relative z-10">
-            <div className="w-72 h-72 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
-              <div className="w-full h-full rounded-full overflow-hidden bg-transparent border-none shadow-none">
-                <img src="/recode-circuit-logo-new.png" alt="RECODE CBT - Evidence-Based Therapy" className="w-full h-full object-contain rounded-full" style={{
-                  filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.1))'
-                }} />
+              {/* Enhanced Logo Container - smaller on mobile for better circuitry visibility */}
+              <div className="relative z-10">
+              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
+                <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
+                  <img src="/recode-logo.png" alt="RECODE CBT - Evidence-Based Therapy" className="w-full h-full object-cover" style={{
+                    filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))'
+                  }} />
+                </div>
               </div>
             </div>
-          </div>
             </div>
             
-            {/* Tagline under logo - reduced mobile spacing */}
-            <div className="text-center mb-3 sm:mb-6">
+            {/* Tagline under logo */}
+            <div className="text-center mb-6">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 whitespace-nowrap">
                 Your Coding | Can Change
               </h3>
             </div>
             
-            {/* Professional Headline - reduced mobile spacing */}
-            <div className="space-y-2 sm:space-y-4">
+            {/* Professional Headline */}
+            <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight text-center">
                 <div className="flex flex-col items-center">
                   <span className="text-2xl">Neural-recoding</span>
                   <span className="text-2xl">through</span>
-                  <span className="text-2xl">Behavioural Science</span>
+                  <span className="text-2xl">Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.
+One on One | Doctor-delivered</span>
                 </div>
               </h1>
               <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
@@ -961,10 +962,9 @@ Practicing Physician</h2>
               a substitute for emergency mental health care or crisis intervention.
             </p>
             <p className="mb-4">If you are thinking about hurting yourself please click below:</p>
-            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-block">
-              <Button variant="destructive" size="sm">
-                Get Crisis Support - Samaritans
-              </Button>
+            <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-block my-0">
+              <Button variant="destructive" size="sm" className="my-0 py-0">
+Privacy Policy & Terms</Button>
             </a>
             <div className="border-t border-muted-foreground/20">
             <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
