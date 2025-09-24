@@ -665,15 +665,15 @@ const Index = () => {
           </div>
             </div>
             
-            {/* Tagline under logo */}
-            <div className="text-center mb-6">
+            {/* Tagline under logo - reduced mobile spacing */}
+            <div className="text-center mb-3 sm:mb-6">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 whitespace-nowrap">
                 Your Coding | Can Change
               </h3>
             </div>
             
-            {/* Professional Headline */}
-            <div className="space-y-4">
+            {/* Professional Headline - reduced mobile spacing */}
+            <div className="space-y-2 sm:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight text-center">
                 <div className="flex flex-col items-center">
                   <span className="text-2xl">Neural-recoding</span>
