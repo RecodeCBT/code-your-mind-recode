@@ -104,11 +104,11 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       {/* Hero Section - Professional & Clean */}
-      <section className="py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
+      <section className="py-4 sm:py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
             {/* Enhanced Logo Section with Complete 360-degree Neural Network */}
-            <div className="relative flex items-center justify-center mb-12 h-96 overflow-hidden">
+            <div className="relative flex items-center justify-center mb-4 sm:mb-12 h-64 sm:h-96 overflow-hidden">
               
               {/* Uniform 360-degree neural network expanding from center */}
               <div className="absolute inset-0 w-full h-full flex items-center justify-center">
@@ -653,9 +653,9 @@ const Index = () => {
                  </svg>
                </div>
                
-            {/* Enhanced Logo Container - larger on mobile, circular with no outline */}
+            {/* Enhanced Logo Container - smaller on mobile for better visibility */}
             <div className="relative z-10">
-            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
+            <div className="w-48 h-48 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
               <div className="w-full h-full rounded-full overflow-hidden bg-transparent border-none shadow-none">
                 <img src="/recode-circuit-logo-new.png" alt="RECODE CBT - Evidence-Based Therapy" className="w-full h-full object-contain rounded-full" style={{
                   filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.1))'
