@@ -86,7 +86,7 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      {isMenuOpen && <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Navigation menu">
           {/* Backdrop */}
           <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={closeMenu} />
           
