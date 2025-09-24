@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { ArrowLeft, Star, User, Quote, Award, TrendingUp } from "lucide-react";
+import { ArrowLeft, Star, User, Quote, Award, TrendingUp, ExternalLink } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -55,7 +55,8 @@ const Testimonials = () => {
           <Button asChild size="lg" className="mb-4">
             <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3">
               <Award className="h-4 w-4" />
-              Verified Reviews
+              Verified Reviews Here
+              <ExternalLink className="h-4 w-4" />
             </a>
           </Button>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
