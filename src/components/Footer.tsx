@@ -1,6 +1,6 @@
 // src/components/Footer.tsx
 export default function Footer() {
-  return <footer className="bg-white px-4 text-center border-t border-gray-200 mt-12 py-[5px] my-[4px]">
+  return <footer className="bg-white px-4 text-center border-t border-gray-200 mt-12 py-[10px] my-px">
       <p className="text-sm text-gray-500 mb-2">© 2025 Recode CBT. All rights reserved.</p>
 
       <a href="https://www.instagram.com/recode_cbt" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-4 py-2 text-white text-sm font-semibold shadow-md transition hover:opacity-90">
