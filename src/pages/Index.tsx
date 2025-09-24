@@ -653,16 +653,16 @@ const Index = () => {
                  </svg>
                </div>
                
-              {/* Enhanced Logo Container - smaller on mobile for better circuitry visibility */}
-              <div className="relative z-10">
-              <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
-                <div className="w-full h-full rounded-full overflow-hidden bg-transparent">
-                  <img src="/recode-logo.png" alt="RECODE CBT - Evidence-Based Therapy" className="w-full h-full object-cover" style={{
-                    filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.1))'
-                  }} />
-                </div>
+            {/* Enhanced Logo Container - larger on mobile, circular with no outline */}
+            <div className="relative z-10">
+            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
+              <div className="w-full h-full rounded-full overflow-hidden bg-transparent border-none shadow-none">
+                <img src="/recode-circuit-logo-new.png" alt="RECODE CBT - Evidence-Based Therapy" className="w-full h-full object-contain rounded-full" style={{
+                  filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.1))'
+                }} />
               </div>
             </div>
+          </div>
             </div>
             
             {/* Tagline under logo */}
