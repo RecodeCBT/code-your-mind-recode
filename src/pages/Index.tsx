@@ -733,6 +733,22 @@ Doctor-delivered</span>
         </div>
       </section>
 
+      {/* Main Introduction Section */}
+      <section className="py-16 px-4 bg-gradient-to-b from-muted/30 to-background">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-6">
+            <div className="space-y-4">
+              <p className="text-xl leading-relaxed text-foreground">
+                <span className="font-semibold">Your brain isn't broken—it's coded.</span> At Recode CBT, we show people and organisations how to identify the hidden scripts that drive anxiety, stress, or low motivation, and how to reprogram them for growth.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Using practical, evidence-based techniques from CBT, DBT, and mindfulness, we help individuals build emotional balance, and equip teams with skills that foster focus, resilience, and collaboration. Whether you're working on personal change or designing a healthier workplace, Recode CBT makes advanced psychology accessible, practical, and effective.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Button - Top */}
       <section className="py-4 px-4">
         <div className="container mx-auto max-w-6xl">
