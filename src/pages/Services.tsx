@@ -47,8 +47,8 @@ const Services = () => {
   {
     title: "Initial Assessment & Therapy",
     duration: "65 min",
-    price: "£149",
-    originalPrice: "£169",
+    price: "£149.00",
+    originalPrice: "£169.00",
     discountTag: "£20 discount introductory offer",
     bullets: ["Doctor-delivered CBT", "Personalised formulation", "Measurable outcomes", "Secure online booking"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=60fdb16d-7ddb-4847-8b65-9b9db898381b&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
@@ -60,7 +60,7 @@ const Services = () => {
   }, {
     title: "Guided CBT Programme",
     duration: "Monthly + 20-min check-in",
-    price: "£19/month",
+    price: "£19.00/month",
     bullets: ["20-min monthly check-in with a Doctor", "Weekly email ReCODE CBT lessons", "Worksheets and exercises included", "Free access to ChatCBT 24/7"],
     stripeUrl: "https://buy.stripe.com/REPLACE_guided",
     isSubscription: true,
@@ -70,7 +70,7 @@ const Services = () => {
   }, {
     title: "Self-Help Packs",
     duration: "PDF toolkits",
-    price: "£9",
+    price: "£9.00",
     bullets: ["Thought diaries", "Behavioural activation planners", "Relapse-prevention guides", "Instant download"],
     stripeUrl: "https://buy.stripe.com/REPLACE_pack",
     isDigital: true,
@@ -80,7 +80,7 @@ const Services = () => {
   }, {
     title: "ChatCBT",
     duration: "24/7 AI Support",
-    price: "£8/month",
+    price: "£8.99/month",
     comingSoon: true,
     bullets: ["AI-powered CBT conversations", "Available 24/7", "Personalized guidance"],
     stripeUrl: "#",
@@ -93,7 +93,7 @@ const Services = () => {
   {
     title: "Follow-up Session",
     duration: "45 min",
-    price: "£129",
+    price: "£129.99",
     bullets: ["Progress reviews", "Skills consolidation", "Outcome tracking", "Continuity of care", "*Previous session required"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=0a8ad2bd-fbfd-4ad7-b998-77a02cc30537&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
@@ -103,7 +103,7 @@ const Services = () => {
   }, {
     title: "Drop in session",
     duration: "20 mins",
-    price: "£49",
+    price: "£49.99",
     bullets: ["20 minute check-in or emergency session", "Discuss new events and help break them down for analysis", "Refresh aspects of the course or exercises", "*Previous session required"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=5c7a5dce-69ca-428f-8921-b13cab696cc6&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_group",
@@ -115,7 +115,7 @@ const Services = () => {
   {
     title: "6-Session Package",
     duration: "6 × 65 min",
-    price: "£780",
+    price: "£780.00",
     originalPrice: "£1,014",
     savings: "SAVE £234",
     bullets: ["Advanced course approach:", "structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "6 modules", "Reports and home content issued with each session.", "Two free 20 minute drop in sessions included", "2 additional follow up sessions to review progress", "SAVE £234 on 6 session course compared to single sessions", "Book first session via system, (following dates are agreed at the end of each session)"],
@@ -128,7 +128,7 @@ const Services = () => {
   }, {
     title: "4-Session Package",
     duration: "4 × 65 min",
-    price: "£599",
+    price: "£599.00",
     originalPrice: "£676",
     savings: "SAVE £76",
     bullets: ["Intermediate course approach:", "structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "4 modules", "Reports and home content issued with each session.", "Free 20 minute drop in session included", "SAVE £76 on 4 session course compared to single sessions", "Book first session via system, (following dates are agreed at the end of each session)"],
@@ -141,7 +141,7 @@ const Services = () => {
   }, {
     title: "Assessment + Written Plan",
     duration: "90 min",
-    price: "£249",
+    price: "£249.00",
     bullets: ["Structured intake", "PHQ-9/GAD-7 assessment", "Personalised plan", "Share with GP to GP/HR letter"],
     bookingUrl: "https://recodecbt.setmore.com",
     stripeUrl: "https://buy.stripe.com/REPLACE_assess",
