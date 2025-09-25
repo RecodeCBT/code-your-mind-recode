@@ -13,6 +13,9 @@ const Navigation = () => {
     label: "What is RECODE?",
     path: "/what-is-recode"
   }, {
+    label: "The Basics",
+    path: "/basics"
+  }, {
     label: "ChatCBT",
     path: "/chatcbt"
   }, {
