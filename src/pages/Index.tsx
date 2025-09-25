@@ -658,8 +658,8 @@ const Index = () => {
             <div className="w-72 h-72 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center mx-auto">
               <div className="w-full h-full rounded-full overflow-hidden bg-transparent border-none shadow-none">
                 <img src="/recode-circuit-logo-new.png" alt="RECODE CBT - Evidence-Based Therapy" className="w-full h-full object-contain rounded-full" style={{
-                  filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.1))'
-                }} />
+                    filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.1))'
+                  }} />
               </div>
             </div>
           </div>
@@ -739,7 +739,8 @@ Doctor-delivered</span>
           <div className="text-center space-y-6">
             <div className="space-y-4">
               <p className="text-xl leading-relaxed text-foreground">
-                <span className="font-semibold">Your brain isn't broken—it's coded.</span> At Recode CBT, we show people and organisations how to identify the hidden scripts that drive anxiety, stress, or low motivation, and how to reprogram them for growth.
+                <span className="font-semibold">Your brain isn't broken
+—it's coded.</span> At Recode CBT, we show people and organisations how to identify the hidden scripts that drive anxiety, stress, or low motivation, and how to reprogram them for growth.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 Using practical, evidence-based techniques from CBT, DBT, and mindfulness, we help individuals build emotional balance, and equip teams with skills that foster focus, resilience, and collaboration. Whether you're working on personal change or designing a healthier workplace, Recode CBT makes advanced psychology accessible, practical, and effective.
