@@ -157,41 +157,53 @@ const WhatIsRecode = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* What is RECODE Section */}
       <section className="py-20 px-4 relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">The RECODE Philosophy</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Your mind runs on patterns—some helpful, others harmful. Just like debugging faulty code, 
-              we identify the mental scripts that aren't serving you and systematically replace them 
-              with more effective, evidence-based alternatives.
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="mb-16">
+            <p className="text-lg text-foreground leading-relaxed mb-12">
+              ReCODE is a structured, skills-based programme that helps people (and teams) change entrenched thought–emotion–behaviour loops. It integrates core CBT methods (behavioural activation, exposure, cognitive tools), targeted DBT skills (emotion regulation, distress tolerance), and practical habit design—think of it as learning to play the brain like an instrument.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {approaches.map((approach, index) => {
-              const Icon = approach.icon;
-              return (
-                <Link key={index} to={approach.link}>
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-transparent hover:border-l-orange-500/50 cursor-pointer">
-                    <CardHeader className="text-center">
-                      <div className="flex flex-col items-center gap-3 mb-2">
-                        <div className={`p-2 ${approach.bgColor} rounded-lg`}>
-                          <Icon className={`h-5 w-5 ${approach.color}`} />
-                        </div>
-                        <CardTitle className="text-lg">{approach.title}</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="text-center">
-                      <CardDescription className="text-base">
-                        {approach.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
+            {/* How it works */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 text-orange-500">How it works</h3>
+              <div className="space-y-4 text-foreground">
+                <p><strong>Map the pattern</strong> — identify triggers, label emotions, reduce reactions, increase acceptance and observation, and maintain through consistent repetition.</p>
+                <p><strong>Recode the pattern</strong> — run focused behavioural experiments, apply cognitive tools, and practise micro-skills for emotion regulation.</p>
+                <p><strong>Track the gains</strong> — brief measures to make improvement visible and guide next steps.</p>
+              </div>
+            </div>
+
+            {/* Who it helps (individuals) */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 text-purple-600">Who it helps (individuals)</h3>
+              <p className="text-foreground">
+                Anxiety (including GAD/social), low mood, avoidance/procrastination, stress-linked habits, sleep and performance-impacting patterns. High-risk or crisis presentations are signposted appropriately.
+              </p>
+            </div>
+
+            {/* For organisations */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 text-blue-600">For organisations</h3>
+              <p className="text-foreground mb-6">
+                ReCODE delivers evidence-informed corporate programmes that translate clinical-grade skills into workplace results:
+              </p>
+              <div className="space-y-4 text-foreground">
+                <p><strong>Workshops & keynotes:</strong> 60–90 minutes on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
+                <p><strong>Training series:</strong> 4–8 week cohorts embedding CBT/DBT micro-skills (emotion regulation, cognitive bias checks, habit design).</p>
+                <p><strong>Manager toolkits:</strong> practical scripts and micro-interventions for supportive, high-standards leadership.</p>
+                <p><strong>Measurement:</strong> simple pre/post pulse measures with anonymised, HR-ready summaries.</p>
+              </div>
+            </div>
+
+            {/* What to expect */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 text-orange-500">What to expect</h3>
+              <p className="text-foreground">
+                Flexible, and collaborative remote sessions with between-session practice tailored to real life. Many individual programmes run 4-6 sessions; corporate formats range from one-off masterclasses to cohort training with follow-ups.
+              </p>
+            </div>
           </div>
         </div>
       </section>
