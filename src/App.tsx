@@ -21,7 +21,6 @@ import DepressionMood from "./pages/conditions/DepressionMood";
 import ProcrastinationAvoidance from "./pages/conditions/ProcrastinationAvoidance";
 import AngerEmotional from "./pages/conditions/AngerEmotional";
 import WhatIsRecode from "./pages/WhatIsRecode";
-import Basics from "./pages/Basics";
 import Testimonials from "./pages/Testimonials";
 import EvidenceUpdates from "./pages/EvidenceUpdates";
 import ChatCBTComingSoon from "./pages/ChatCBTComingSoon";
@@ -55,7 +54,6 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/corporate-contact" element={<CorporateContact />} />
           <Route path="/what-is-recode" element={<WhatIsRecode />} />
-          <Route path="/basics" element={<Basics />} />
           <Route path="/chatcbt" element={<ChatCBT />} />
           <Route path="/services" element={<Services />} />
           <Route path="/lead-magnet" element={<LeadMagnet />} />
