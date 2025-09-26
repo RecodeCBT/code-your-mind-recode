@@ -683,7 +683,7 @@ const Index = () => {
               </h1>
               <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
                 Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.<br />
-                <span className="font-medium text-gray-800">
+                <span className="font-small text-gray-800">
 One on One | 
 Doctor-delivered</span>
               </h2>
@@ -740,7 +740,7 @@ Doctor-delivered</span>
             <div className="space-y-4">
               <p className="text-xl leading-relaxed text-foreground">
                 <span className="font-semibold">Your brain isn't broken
-—it's coded.</span> At Recode CBT, we show people and organisations how to identify the hidden scripts that drive anxiety, stress, or low motivation, and how to reprogram them for change.
+—it's coded.   </span> At Recode CBT, we show people and organisations how to identify the hidden scripts that drive anxiety, stress, or low motivation, and how to reprogram them for growth.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 Using practical, evidence-based techniques from CBT, DBT, and mindfulness, we help individuals build emotional balance, and equip teams with skills that foster focus, resilience, and collaboration. Whether you're working on personal change or designing a healthier workplace, Recode CBT makes advanced psychology accessible, practical, and effective.
@@ -785,8 +785,8 @@ Doctor-delivered</span>
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Your mind runs on patterns — some helpful, others harmful. We help you identify and rewrite 
-              the mental Auto-Codes behind common psychological behaviours.
+              Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite 
+              the mental code behind common psychological challenges.
             </p>
           </div>
 
@@ -845,7 +845,7 @@ Packages
               <Card className="p-6 text-center">
                 <Heart className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Emotional Resilience Training</h3>
-                <p className="text-muted-foreground text-sm">Build personal or team emotional intelligence and workplace wellbeing</p>
+                <p className="text-muted-foreground text-sm">Build team emotional intelligence and workplace wellbeing</p>
               </Card>
             </div>
             <Link to="/corporate-contact#top">
