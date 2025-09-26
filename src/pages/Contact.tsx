@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -10,11 +11,8 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <Navigation />
       <div className="container mx-auto px-4 py-8">
-        <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
-        </Link>
 
         <div className="max-w-4xl mx-auto">
           {/* Header */}

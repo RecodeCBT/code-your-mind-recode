@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Calendar } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -76,10 +76,6 @@ const EvidenceUpdates = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
       <div className="container mx-auto px-4 py-8">
-        <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
-        </Link>
 
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
