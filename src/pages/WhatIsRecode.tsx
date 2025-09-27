@@ -367,7 +367,7 @@ const WhatIsRecode = () => {
       </section>
 
       {/* Reviews Button - Bottom */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
             <Link to="/testimonials#top">

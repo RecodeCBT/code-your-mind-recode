@@ -168,7 +168,7 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* Quote Section */}
-          <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20">
+          <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20 relative z-10">
             <blockquote className="text-2xl italic mb-4">"Mental health patterns are like code - they can be pre-loaded in the human brain or they can develop. With the right approach, we can reveal this code, update and re-write them for better outcomes."</blockquote>
             <cite className="text-lg text-muted-foreground">
               - Dr. Christopher Carson<br />
@@ -176,14 +176,6 @@ const DrCarsonBackground = () => {
             </cite>
           </Card>
 
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-3">
-                Get Started with ReCODE
-              </Button>
-            </Link>
-          </div>
 
           {/* Book Your Session Section */}
           <section className="py-20 px-4 bg-primary text-primary-foreground relative">
