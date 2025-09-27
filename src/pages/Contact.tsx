@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 pt-20">
 
         <div className="max-w-4xl mx-auto">
           {/* Header */}
