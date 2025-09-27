@@ -35,6 +35,7 @@ const Basics = () => {
   };
   const closeExpanded = () => setExpandedSection(null);
   return <div className="min-h-screen bg-background">
+      <NeuroDecal.TopCircuitBackground />
       <Navigation />
       
       {/* Hero Section */}

@@ -229,6 +229,7 @@ const Services = () => {
     }
   }, []);
   return <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+      <NeuroDecal.TopCircuitBackground />
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-3xl animate-pulse"></div>

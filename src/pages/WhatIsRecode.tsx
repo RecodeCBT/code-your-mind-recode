@@ -137,6 +137,7 @@ const WhatIsRecode = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <NeuroDecal.TopCircuitBackground />
       <Navigation />
       
       {/* Hero Section */}

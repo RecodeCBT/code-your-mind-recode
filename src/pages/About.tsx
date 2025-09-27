@@ -6,6 +6,7 @@ import { ArrowLeft, GraduationCap, Stethoscope, Shield, Brain, Award, Users, Cal
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const About = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <NeuroDecal.TopCircuitBackground />
       <div className="container mx-auto px-4 py-8">
         <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-4 w-4" />

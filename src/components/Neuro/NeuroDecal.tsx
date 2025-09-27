@@ -1,4 +1,5 @@
 import React from "react";
+import topCircuitDecal from "@/assets/top-circuit-decal.png";
 
 interface TopTitleProps {
   density?: "light" | "medium";
@@ -175,9 +176,26 @@ const BodyMargins: React.FC<BodyMarginsProps> = ({
   );
 };
 
+const TopCircuitBackground: React.FC = () => {
+  return (
+    <div 
+      className="fixed inset-x-0 top-0 h-64 w-full z-0 pointer-events-none"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.85), transparent), url(${topCircuitDecal})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.6
+      }}
+      aria-hidden="true"
+    />
+  );
+};
+
 const NeuroDecal = {
   TopTitle,
-  BodyMargins
+  BodyMargins,
+  TopCircuitBackground
 };
 
 export default NeuroDecal;
