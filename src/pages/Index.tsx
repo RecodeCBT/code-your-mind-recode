@@ -691,7 +691,7 @@ const Index = () => {
             </div>
             
             {/* Professional CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 px-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 px-2">
               <Link to="/services#top">
                 <Button size="lg" className="w-full sm:w-auto text-base px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                   Book a Session
