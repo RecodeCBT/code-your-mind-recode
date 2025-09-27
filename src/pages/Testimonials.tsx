@@ -43,7 +43,7 @@ const Testimonials = () => {
           {/* Hero Section */}
           <div className="text-center mb-16 rc-title-wrap">
             <NeuroDecal.TopTitle align="center" density="light" offsetY={-10} />
-          <Button asChild size="lg" className="mb-4 relative z-10">
+          <Button asChild size="lg" className="mb-4 relative z-10 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
             <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3">
               <Award className="h-4 w-4" />
               Verified Reviews Here
