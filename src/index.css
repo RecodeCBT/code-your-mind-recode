@@ -598,9 +598,9 @@ All colors MUST be HSL.
 
 /* Recode Circuit/Neuron Decal System */
 :root {
-  --rc-cyan: #38bdf8;
-  --rc-violet: #a78bfa;
-  --rc-stroke: 1.0;
+  --rc-cyan: #00d4ff;
+  --rc-violet: #b347ff;
+  --rc-stroke: 1.5;
 }
 
 .rc-decal {
