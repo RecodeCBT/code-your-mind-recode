@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const navItems = [{
     label: "Home",
     path: "/"
@@ -39,7 +40,11 @@ const Navigation = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsClosing(false);
+    }, 600);
   };
 
   // Close menu when route changes
@@ -100,15 +105,15 @@ const Navigation = () => {
           />
           
           {/* Menu Panel - emerges from top-right */}
-          <div className="fixed top-4 right-4 w-80 max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/20 overflow-hidden animate-menu-slide-in origin-top-right">
-            {/* Header with electric gradient */}
-            <div className="flex items-center justify-between p-6 bg-gradient-to-r from-orange-400/10 via-pink-500/10 to-purple-600/10 border-b border-gradient-to-r border-orange-400/20">
-              <span className="text-lg font-semibold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">Menu</span>
+          <div className={`fixed top-4 right-4 w-80 max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/20 overflow-hidden origin-top-right ${isClosing ? 'animate-menu-slide-out' : 'animate-menu-slide-in'}`}>
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <span className="text-lg font-semibold text-gray-900">Menu</span>
               <Button 
                 variant="ghost" 
                 size="sm" 
                 onClick={closeMenu} 
-                className="p-2 hover:bg-gradient-to-r hover:from-orange-400/20 hover:to-purple-600/20 rounded-full transition-all duration-300" 
+                className="p-2 hover:bg-gray-100 rounded-full transition-all duration-300" 
                 aria-label="Close menu"
               >
                 <X className="h-5 w-5 text-gray-700" />
