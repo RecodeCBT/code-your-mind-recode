@@ -61,6 +61,7 @@ const EvidenceUpdates = () => {
     return doc.body.textContent || "";
   };
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <NeuroDecal.TopCircuitBackground />
       <Navigation />
       <div className="container mx-auto px-4 py-8 pt-20">
 

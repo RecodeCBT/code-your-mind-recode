@@ -32,6 +32,7 @@ const Testimonials = () => {
     }, (_, i) => <Star key={i} className={`h-4 w-4 ${i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`} />);
   };
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <NeuroDecal.TopCircuitBackground />
       <Navigation />
       <div className="container mx-auto px-4 py-8">
         <Link to="/" className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground transition-colors">
