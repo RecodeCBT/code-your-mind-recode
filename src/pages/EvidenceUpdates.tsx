@@ -88,6 +88,21 @@ const EvidenceUpdates = () => {
             </div>
           </div>
 
+          {/* Second Featured Video Section */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20 mb-12 relative py-[10px]">
+            <NeuroDecal.BodyMargins density="light" sections={3} />
+            <h2 className="text-2xl font-bold mb-6 text-center">Dr Sam Harris explains meditation</h2>
+            <div className="flex justify-center">
+              <div className="w-full max-w-4xl">
+                <div className="relative w-full" style={{
+                paddingBottom: '56.25%'
+              }}>
+                  <iframe className="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/_VdkmOqcYNI?si=1&t=11" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+                </div>
+              </div>
+            </div>
+          </div>
+
           {loading ? <div className="text-center py-12">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
               <p className="mt-4 text-muted-foreground">Loading latest research...</p>
