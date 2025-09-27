@@ -147,52 +147,6 @@ export default {
 						transform: 'rotate(360deg)'
 					}
 				},
-				'menu-slide-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'scale(0.1) translateX(40px) translateY(-40px) rotate(-5deg)'
-					},
-					'70%': {
-						opacity: '0.9',
-						transform: 'scale(1.05) translateX(-5px) translateY(5px) rotate(1deg)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'scale(1) translateX(0) translateY(0) rotate(0deg)'
-					}
-				},
-				'menu-slide-out': {
-					'0%': {
-						opacity: '1',
-						transform: 'scale(1) translateX(0) translateY(0) rotate(0deg)'
-					},
-					'30%': {
-						opacity: '0.9',
-						transform: 'scale(1.05) translateX(-5px) translateY(5px) rotate(1deg)'
-					},
-					'100%': {
-						opacity: '0',
-						transform: 'scale(0.1) translateX(40px) translateY(-40px) rotate(-5deg)'
-					}
-				},
-				'menu-item-cascade': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateX(10px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateX(0)'
-					}
-				},
-				'backdrop-radial': {
-					'0%': {
-						background: 'radial-gradient(circle at 90% 10%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)'
-					},
-					'100%': {
-						background: 'radial-gradient(circle at 90% 10%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%)'
-					}
-				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -200,11 +154,7 @@ export default {
 				'electricity-flow-left': 'electricity-flow-left 3s ease-in-out infinite',
 				'electricity-flow-right': 'electricity-flow-right 3s ease-in-out infinite',
 				'electric-pulse': 'electric-pulse 3s ease-in-out infinite',
-				'electric-border': 'electric-border 4s linear infinite',
-				'menu-slide-in': 'menu-slide-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-				'menu-slide-out': 'menu-slide-out 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53)',
-				'menu-item-cascade': 'menu-item-cascade 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-				'backdrop-radial': 'backdrop-radial 0.4s ease-out'
+				'electric-border': 'electric-border 4s linear infinite'
 			}
 		}
 	},
