@@ -986,10 +986,9 @@ Practicing Physician</h2>
                 Get Crisis Support - Samaritans
               </Button>
             </a>
-            <div className="border-t border-muted-foreground/20 pt-3 pb-1">
+            <div className="border-t border-muted-foreground/20 pt-2 pb-0">
             <Link to="/policies#top" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline my-0 py-0">
-
-Privacy Policy & Terms</Link>
+ Privacy Policy & Terms</Link>
             </div>
           </div>
         </div>
