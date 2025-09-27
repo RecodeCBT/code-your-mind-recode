@@ -162,12 +162,12 @@ const WhatIsRecode = () => {
       </section>
 
       {/* What is RECODE Section */}
-      <section className="py-20 px-4 relative overflow-hidden">
+      <section className="pt-4 pb-20 px-4 relative overflow-hidden">
         <NeuroDecal.BodyMargins density="light" sections={4} />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="mb-16">
             {/* RECODE Circuits Image */}
-            <div className="mb-2 flex justify-center">
+            <div className="flex justify-center">
               <img 
                 src={recodeCircuitsImage} 
                 alt="RECODE circuits - Brain with circuit patterns representing neural rewiring" 
