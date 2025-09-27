@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
+import rewireTheMindImage from "@/assets/rewire-the-mind.jpg";
 
 const WhatIsRecode = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -167,6 +168,15 @@ const WhatIsRecode = () => {
             <p className="text-lg text-foreground leading-relaxed mb-12">
               ReCODE is a structured, skills-based programme that helps people (and teams) change entrenched thought–emotion–behaviour loops. It integrates core CBT methods (behavioural activation, exposure, cognitive tools), targeted DBT skills (emotion regulation, distress tolerance), and practical habit design—think of it as learning to play the brain like an instrument.
             </p>
+            
+            {/* Rewire the Mind Image */}
+            <div className="mb-12 flex justify-center">
+              <img 
+                src={rewireTheMindImage} 
+                alt="Rewire the mind - Brain with neural connections being rewired" 
+                className="rounded-lg shadow-lg max-w-full h-auto"
+              />
+            </div>
 
             {/* How it works */}
             <div className="mb-12">
