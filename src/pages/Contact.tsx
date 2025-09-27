@@ -170,7 +170,7 @@ const Contact = () => {
           </div>
 
           {/* Emergency Notice */}
-          <Card className="mt-12 p-6 border-orange-200 bg-orange-50 dark:bg-orange-950/20">
+          <Card className="mt-12 p-6 border-orange-200 bg-orange-50 dark:bg-orange-950/20 relative z-10">
             <CardContent className="text-center">
               <h3 className="text-lg font-semibold mb-2 text-orange-800 dark:text-orange-200">
                 Emergency Support

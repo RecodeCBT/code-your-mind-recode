@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const DrCarsonBackground = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <NeuroDecal.TopCircuitBackground />
       <Navigation />
       <div className="container mx-auto px-4 py-8 pt-20">
 
@@ -167,7 +168,7 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* Quote Section */}
-          <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20">
+          <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20 relative z-10">
             <blockquote className="text-2xl italic mb-4">"Mental health patterns are like code - they can be pre-loaded in the human brain or they can develop. With the right approach, we can reveal this code, update and re-write them for better outcomes."</blockquote>
             <cite className="text-lg text-muted-foreground">
               - Dr. Christopher Carson<br />
@@ -183,7 +184,7 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* Book Your Session Section */}
-          <section className="px-4 bg-primary text-primary-foreground relative py-[20px]">
+          <section className="px-4 bg-primary text-primary-foreground relative py-[20px] z-10">
             <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
               <p className="text-xl mb-8 opacity-90">
