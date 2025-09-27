@@ -105,7 +105,7 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
       {/* Hero Section - Professional & Clean */}
-      <section className="py-4 sm:py-8 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30">
+      <section className="py-4 px-4 bg-gradient-to-b from-orange-50/30 via-purple-50/20 to-blue-50/30 sm:py-[20px]">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
             {/* Enhanced Logo Section with Complete 360-degree Neural Network */}
@@ -685,8 +685,7 @@ const Index = () => {
               <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
                 Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.<br />
                 <span className="font-small text-gray-800">
-One on One | 
-Doctor-delivered</span>
+One on One | Doctor-delivered</span>
               </h2>
             </div>
             
@@ -735,7 +734,7 @@ Doctor-delivered</span>
       </section>
 
       {/* Main Introduction Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-muted/30 to-background relative">
+      <section className="px-4 bg-gradient-to-b from-muted/30 to-background relative py-[20px]">
         <NeuroDecal.BodyMargins density="light" sections={8} />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center space-y-6">
