@@ -20,10 +20,15 @@ const TopTitle: React.FC<TopTitleProps> = ({
   const nodeCount = isLight ? 3 : 5;
   const pathCount = isLight ? 2 : 4;
   
+  console.log('NeuroDecal TopTitle rendering:', { density, align, offsetY });
+  
   return (
     <div 
       className="rc-decal rc-decal-top"
-      style={{ transform: `translateY(${offsetY}px)` }}
+      style={{ 
+        transform: `translateY(${offsetY}px)`,
+        border: '1px solid red' // Temporary debug border
+      }}
       aria-hidden="true"
     >
       <svg
@@ -91,6 +96,8 @@ const BodyMargins: React.FC<BodyMarginsProps> = ({
 }) => {
   const isLight = density === 'light';
   const elementCount = isLight ? sections * 2 : sections * 3;
+  
+  console.log('NeuroDecal BodyMargins rendering:', { density, sections, elementCount });
   
   const decalElements = Array.from({ length: elementCount }, (_, i) => {
     const isLeft = i % 2 === 0;
