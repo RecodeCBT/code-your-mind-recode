@@ -615,12 +615,13 @@ All colors MUST be HSL.
 .rc-decal-top {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .rc-decal-body {
-  position: absolute;
+  position: fixed;
   pointer-events: none;
+  z-index: -1;
 }
 
 @media (max-width: 640px) {
