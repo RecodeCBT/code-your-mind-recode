@@ -6,6 +6,7 @@ import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb, 
 import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 import rewireTheMindImage from "@/assets/rewire-the-mind.jpg";
+import recodeCircuitsImage from "@/assets/recode-circuits.png";
 
 const WhatIsRecode = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -165,6 +166,15 @@ const WhatIsRecode = () => {
         <NeuroDecal.BodyMargins density="light" sections={4} />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="mb-16">
+            {/* RECODE Circuits Image */}
+            <div className="mb-12 flex justify-center">
+              <img 
+                src={recodeCircuitsImage} 
+                alt="RECODE circuits - Brain with circuit patterns representing neural rewiring" 
+                className="rounded-lg shadow-lg max-w-full h-auto"
+              />
+            </div>
+            
             <p className="text-lg text-foreground leading-relaxed mb-12">
               ReCODE is a structured, skills-based programme that helps people (and teams) change entrenched thought–emotion–behaviour loops. It integrates core CBT methods (behavioural activation, exposure, cognitive tools), targeted DBT skills (emotion regulation, distress tolerance), and practical habit design—think of it as learning to play the brain like an instrument.
             </p>
