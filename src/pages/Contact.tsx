@@ -18,7 +18,6 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 rc-title-wrap">
-            <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
             <h1 className="text-4xl font-bold mb-4 relative z-10">Get in Touch</h1>
             <p className="text-xl text-muted-foreground">
               Ready to start your transformation? Contact us to begin your RECODE journey
@@ -26,7 +25,7 @@ const Contact = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 relative">
-            <NeuroDecal.BodyMargins density="light" sections={3} />
+            <NeuroDecal.BodyMargins pattern="circuit" intensity="subtle" />
             {/* Contact Form Section */}
             <Card className="p-8">
               <CardHeader className="text-center mb-6">

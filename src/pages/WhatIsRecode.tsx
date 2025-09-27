@@ -144,7 +144,6 @@ const WhatIsRecode = () => {
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6 rc-title-wrap">
-            <NeuroDecal.TopTitle align="center" density="light" offsetY={-12} />
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight relative z-10">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 What is RECODE?
@@ -161,7 +160,7 @@ const WhatIsRecode = () => {
 
       {/* What is RECODE Section */}
       <section className="py-20 px-4 relative overflow-hidden">
-        <NeuroDecal.BodyMargins density="light" sections={4} />
+        <NeuroDecal.BodyMargins pattern="code" intensity="subtle" />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="mb-16">
             <p className="text-lg text-foreground leading-relaxed mb-12">

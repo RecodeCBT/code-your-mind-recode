@@ -736,8 +736,7 @@ const Index = () => {
 
       {/* Main Introduction Section */}
       <section className="px-4 bg-gradient-to-b from-muted/30 to-background relative py-[20px]">
-        <NeuroDecal.BodyMargins density="light" sections={8} />
-        <NeuroDecal.BodyMargins density="light" sections={8} />
+        <NeuroDecal.BodyMargins pattern="circuit" intensity="subtle" />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center space-y-6">
             <div className="space-y-4">

@@ -44,7 +44,6 @@ const Basics = () => {
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6 rc-title-wrap">
-            <NeuroDecal.TopTitle align="center" density="light" offsetY={-12} />
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight relative z-10">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 The Basics
@@ -60,7 +59,7 @@ const Basics = () => {
 
       {/* The Basics Section */}
       <section className="px-4 bg-gradient-to-r from-orange-500/5 via-purple-600/5 to-blue-600/5 relative py-px">
-        <NeuroDecal.BodyMargins density="light" sections={3} />
+        <NeuroDecal.BodyMargins pattern="code" intensity="subtle" />
         <div className="container mx-auto max-w-6xl relative z-10 my-px py-[40px]">
           
           {/* Four Quarters Grid */}

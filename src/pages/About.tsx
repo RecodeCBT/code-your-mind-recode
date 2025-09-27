@@ -15,12 +15,11 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 rc-title-wrap">
-            <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
             <h1 className="text-4xl font-bold mb-4 relative z-10">About Dr. Christopher Carson</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto relative z-10">Pioneering mental health re-programming through a new hybrid of therapy, modelled on evidence-based therapies, and years of medical practice in mental health.</p>
           </div>
 
-          <NeuroDecal.BodyMargins density="light" sections={4} />
+          <NeuroDecal.BodyMargins pattern="brain" intensity="subtle" />
           {/* Hero Image and Intro */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div className="space-y-6">
@@ -83,7 +82,7 @@ const About = () => {
 
           {/* Qualifications */}
           <div className="mb-16 relative">
-            <NeuroDecal.BodyMargins density="light" sections={3} />
+            <NeuroDecal.BodyMargins pattern="circuit" intensity="subtle" />
             <h2 className="text-3xl font-bold text-center mb-8 relative z-10">Professional Qualifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 text-center">

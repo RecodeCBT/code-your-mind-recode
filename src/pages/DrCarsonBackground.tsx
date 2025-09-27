@@ -12,7 +12,6 @@ const DrCarsonBackground = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 rc-title-wrap">
-            <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
             <h1 className="mb-2 text-4xl font-bold relative z-10">Dr. Christopher Carson</h1>
             <p className="text-sm italic text-muted-foreground mb-4">BSc MBBS MRCGP ProfDipCBT</p>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -22,7 +21,7 @@ const DrCarsonBackground = () => {
 
           {/* Professional Introduction Section */}
           <div className="relative">
-            <NeuroDecal.BodyMargins density="light" sections={4} />
+            <NeuroDecal.BodyMargins pattern="brain" intensity="subtle" />
           <Card className="p-8 mb-12 border-2 border-primary/20 bg-gradient-to-r from-background via-muted/10 to-primary/5 relative z-10">
             <div className="grid lg:grid-cols-5 gap-8 items-start">
               <div className="lg:col-span-2 space-y-6">
