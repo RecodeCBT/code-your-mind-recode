@@ -90,28 +90,68 @@ const Navigation = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Navigation menu">
-          {/* Backdrop */}
-          <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={closeMenu} />
+          {/* Enhanced Backdrop with radial gradient animation */}
+          <div 
+            className="fixed inset-0 backdrop-blur-sm animate-backdrop-radial" 
+            style={{
+              background: 'radial-gradient(circle at 90% 10%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%)'
+            }}
+            onClick={closeMenu} 
+          />
           
-          {/* Menu Panel */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl">
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <span className="text-lg font-semibold text-gray-900">Menu</span>
-              <Button variant="ghost" size="sm" onClick={closeMenu} className="p-2" aria-label="Close menu">
+          {/* Menu Panel - emerges from top-right */}
+          <div className="fixed top-4 right-4 w-80 max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/20 overflow-hidden animate-menu-slide-in origin-top-right">
+            {/* Header with electric gradient */}
+            <div className="flex items-center justify-between p-6 bg-gradient-to-r from-orange-400/10 via-pink-500/10 to-purple-600/10 border-b border-gradient-to-r border-orange-400/20">
+              <span className="text-lg font-semibold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">Menu</span>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={closeMenu} 
+                className="p-2 hover:bg-gradient-to-r hover:from-orange-400/20 hover:to-purple-600/20 rounded-full transition-all duration-300" 
+                aria-label="Close menu"
+              >
                 <X className="h-5 w-5 text-gray-700" />
               </Button>
             </div>
             
+            {/* Navigation items with cascade animation */}
             <nav className="p-4">
-              <ul className="space-y-2">
-                {navItems.map(item => {
-              const isActive = location.pathname === item.path;
-              return <li key={item.path}>
-                      <Link to={item.path} onClick={closeMenu} className={cn("flex items-center px-4 py-3 text-base font-medium rounded-lg transition-colors", item.isHighlighted ? "bg-blue-600 text-white hover:bg-blue-700" : isActive ? "bg-blue-50 text-blue-600 border-l-4 border-blue-600" : "text-gray-700 hover:bg-gray-50 hover:text-gray-900")}>
-                        {item.label}
+              <ul className="space-y-1">
+                {navItems.map((item, index) => {
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <li 
+                      key={item.path}
+                      className="animate-menu-item-cascade"
+                      style={{ 
+                        animationDelay: `${index * 50}ms`,
+                        animationFillMode: 'both'
+                      }}
+                    >
+                      <Link 
+                        to={item.path} 
+                        onClick={closeMenu} 
+                        className={cn(
+                          "flex items-center px-4 py-3 text-base font-medium rounded-xl transition-all duration-300 group",
+                          item.isHighlighted 
+                            ? "bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white hover:from-orange-600 hover:via-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl hover:scale-[1.02]" 
+                            : isActive 
+                            ? "bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 border-l-4 border-blue-600 shadow-sm" 
+                            : "text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:text-gray-900 hover:scale-[1.01]"
+                        )}
+                      >
+                        <span className="relative">
+                          {item.label}
+                          {/* Electric underline effect for highlighted item */}
+                          {item.isHighlighted && (
+                            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white/30 animate-electric-pulse"></span>
+                          )}
+                        </span>
                       </Link>
-                    </li>;
-            })}
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
           </div>
