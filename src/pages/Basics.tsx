@@ -34,7 +34,7 @@ const Basics = () => {
     }
   };
   const closeExpanded = () => setExpandedSection(null);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background overflow-x-hidden">
       <NeuroDecal.TopCircuitBackground />
       <Navigation />
       
@@ -69,7 +69,7 @@ const Basics = () => {
             <div className="grid grid-cols-2 gap-4 md:gap-8">
             
             {/* Exercise Habits - Top Left */}
-            <Card className="p-4 md:p-6 bg-gradient-to-br from-orange-500/15 to-orange-600/10 border-2 border-orange-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105" onClick={() => setExpandedSection('exercise')}>
+            <Card className="p-4 md:p-6 bg-gradient-to-br from-orange-500/15 to-orange-600/10 border-2 border-orange-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]" onClick={() => setExpandedSection('exercise')}>
               <div className="text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Zap className="h-6 w-6 md:h-8 md:w-8 text-orange-600" />
@@ -85,7 +85,7 @@ const Basics = () => {
             </Card>
 
             {/* Sleep Hygiene - Top Right */}
-            <Card className="p-4 md:p-6 bg-gradient-to-br from-teal-500/15 to-teal-600/10 border-2 border-teal-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105" onClick={() => setExpandedSection('sleep')}>
+            <Card className="p-4 md:p-6 bg-gradient-to-br from-teal-500/15 to-teal-600/10 border-2 border-teal-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]" onClick={() => setExpandedSection('sleep')}>
               <div className="text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Heart className="h-6 w-6 md:h-8 md:w-8 text-teal-600" />
@@ -101,7 +101,7 @@ const Basics = () => {
             </Card>
 
             {/* Nutritional Impacts - Bottom Left */}
-            <Card className="p-4 md:p-6 bg-gradient-to-br from-purple-500/15 to-purple-600/10 border-2 border-purple-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105" onClick={() => setExpandedSection('nutrition')}>
+            <Card className="p-4 md:p-6 bg-gradient-to-br from-purple-500/15 to-purple-600/10 border-2 border-purple-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]" onClick={() => setExpandedSection('nutrition')}>
               <div className="text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <Target className="h-6 w-6 md:h-8 md:w-8 text-purple-600" />
@@ -117,7 +117,7 @@ const Basics = () => {
             </Card>
 
             {/* Hydration Levels - Bottom Right */}
-            <Card className="p-4 md:p-6 bg-gradient-to-br from-blue-500/15 to-blue-600/10 border-2 border-blue-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105" onClick={() => setExpandedSection('hydration')}>
+            <Card className="p-4 md:p-6 bg-gradient-to-br from-blue-500/15 to-blue-600/10 border-2 border-blue-500/30 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]" onClick={() => setExpandedSection('hydration')}>
               <div className="text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <CheckCircle className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
