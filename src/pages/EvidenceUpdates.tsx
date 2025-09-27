@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 
 interface RSSItem {
   title: string;
@@ -79,15 +80,17 @@ const EvidenceUpdates = () => {
       <div className="container mx-auto px-4 py-8">
 
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Evidence Updates</h1>
+          <div className="text-center mb-12 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
+            <h1 className="text-4xl font-bold mb-4 relative z-10">Evidence Updates</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Stay informed with the latest research and developments in mental health, CBT, and therapeutic approaches.
             </p>
           </div>
 
           {/* Featured Video Section */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20 mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20 mb-12 relative">
+            <NeuroDecal.BodyMargins density="light" sections={3} />
             <h2 className="text-2xl font-bold mb-6 text-center">Dr Joe Dispenza on DBT and changing your psychological habits</h2>
             <div className="flex justify-center">
               <div className="w-full max-w-4xl">

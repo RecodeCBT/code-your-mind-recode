@@ -550,3 +550,48 @@ All colors MUST be HSL.
     transition: none;
   }
 }
+
+/* NeuroDecal System - Brand Tokens & Utilities */
+:root {
+  --rc-cyan: 0, 186, 248;
+  --rc-violet: 167, 139, 250; 
+  --rc-stroke: 0.08;
+}
+
+.rc-decal {
+  pointer-events: none;
+  opacity: var(--rc-stroke, 0.08);
+}
+
+.rc-title-wrap {
+  position: relative;
+}
+
+.rc-decal-top {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.rc-decal-margins {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .rc-decal {
+    opacity: calc(var(--rc-stroke, 0.08) * 0.6);
+  }
+  
+  .rc-decal-margins {
+    display: none;
+  }
+}
+
+@media print {
+  .rc-decal {
+    display: none;
+  }
+}

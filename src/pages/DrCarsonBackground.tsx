@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, Stethoscope, Brain, Award, Dumbbell, Heart, Activity, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const DrCarsonBackground = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
@@ -10,8 +11,9 @@ const DrCarsonBackground = () => {
 
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="mb-2 text-4xl font-bold">Dr. Christopher Carson</h1>
+          <div className="text-center mb-12 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
+            <h1 className="mb-2 text-4xl font-bold relative z-10">Dr. Christopher Carson</h1>
             <p className="text-sm italic text-muted-foreground mb-4">BSc MBBS MRCGP ProfDipCBT</p>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The journey from medical practice to creating ReCODE - A new approach to mental health treatment
@@ -19,7 +21,9 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* Professional Introduction Section */}
-          <Card className="p-8 mb-12 border-2 border-primary/20 bg-gradient-to-r from-background via-muted/10 to-primary/5">
+          <div className="relative">
+            <NeuroDecal.BodyMargins density="light" sections={4} />
+          <Card className="p-8 mb-12 border-2 border-primary/20 bg-gradient-to-r from-background via-muted/10 to-primary/5 relative z-10">
             <div className="grid lg:grid-cols-5 gap-8 items-start">
               <div className="lg:col-span-2 space-y-6">
                 {/* Photo */}
@@ -118,6 +122,7 @@ const DrCarsonBackground = () => {
               </div>
             </div>
           </Card>
+          </div>
 
           {/* RECODE Methodology Section */}
           <div className="space-y-8 mb-16">

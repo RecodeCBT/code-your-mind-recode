@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import { ArrowLeft, Star, User, Quote, Award, TrendingUp, ExternalLink } from "lucide-react";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 
 const Testimonials = () => {
   const testimonials = [
@@ -51,15 +52,16 @@ const Testimonials = () => {
 
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div className="text-center mb-16">
-          <Button asChild size="lg" className="mb-4">
+          <div className="text-center mb-16 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-10} />
+          <Button asChild size="lg" className="mb-4 relative z-10">
             <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3">
               <Award className="h-4 w-4" />
               Verified Reviews Here
               <ExternalLink className="h-4 w-4" />
             </a>
           </Button>
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent relative z-10">
               Client Success Stories
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -70,7 +72,8 @@ const Testimonials = () => {
 
           
           {/* Testimonials Grid */}
-          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 relative">
+            <NeuroDecal.BodyMargins density="light" sections={4} />
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index} 

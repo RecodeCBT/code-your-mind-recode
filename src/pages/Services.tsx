@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight, Lightbulb, Compass, Laptop, Code, BarChart3, Search, Wrench, Link } from "lucide-react";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const Services = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -249,13 +250,17 @@ const Services = () => {
             </div>
           </div>
 
-          <h1 className="md:text-6xl mb-6 text-foreground text-xl py-0 my-0 font-semibold">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
+          <div className="rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="medium" offsetY={-6} />
+            <h1 className="md:text-6xl mb-6 text-foreground text-xl py-0 my-0 font-semibold relative z-10">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
+          </div>
         </div>
       </section>
 
       {/* Service Categories */}
       <section className="px-4 relative z-10 py-px my-0">
-        <div className="container mx-auto max-w-7xl">
+        <NeuroDecal.BodyMargins density="medium" sections={5} />
+        <div className="container mx-auto max-w-7xl relative z-10">
           <h2 className="md:text-4xl font-bold text-center mb-4 my-0 py-px text-2xl text-slate-900">Choose Your Journey</h2>
           <div className="max-w-4xl mx-auto mb-8 bg-muted/50 p-4 md:p-6 rounded-full border border-primary/20">
             <div className="text-center">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, GraduationCap, Stethoscope, Shield, Brain, Award, Users, Calendar, Heart } from "lucide-react";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const About = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <div className="container mx-auto px-4 py-8">
@@ -13,9 +14,10 @@ const About = () => {
 
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">About Dr. Christopher Carson</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Pioneering mental health re-programming through a new hybrid of therapy, modelled on evidence-based therapies, and years of medical practice in mental health.</p>
+          <div className="text-center mb-12 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
+            <h1 className="text-4xl font-bold mb-4 relative z-10">About Dr. Christopher Carson</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto relative z-10">Pioneering mental health re-programming through a new hybrid of therapy, modelled on evidence-based therapies, and years of medical practice in mental health.</p>
           </div>
 
           {/* Hero Image and Intro */}
@@ -79,8 +81,9 @@ const About = () => {
           </div>
 
           {/* Qualifications */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8">Professional Qualifications</h2>
+          <div className="mb-16 relative">
+            <NeuroDecal.BodyMargins density="light" sections={3} />
+            <h2 className="text-3xl font-bold text-center mb-8 relative z-10">Professional Qualifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 text-center">
                 <div className="p-3 bg-primary/10 rounded-lg inline-block mb-4">

@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ChatInterface from "@/components/ChatInterface"; // make sure this path matches exactly
 import Navigation from "@/components/Navigation";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 
 export default function ChatCBT() {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen relative">
+      <NeuroDecal.BodyMargins density="light" sections={2} />
       <Navigation />
       <ChatInterface />
       

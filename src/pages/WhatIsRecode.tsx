@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 
 const WhatIsRecode = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -142,8 +143,9 @@ const WhatIsRecode = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center space-y-6">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <div className="text-center space-y-6 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-12} />
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight relative z-10">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 What is RECODE?
               </span>
@@ -159,6 +161,7 @@ const WhatIsRecode = () => {
 
       {/* What is RECODE Section */}
       <section className="py-20 px-4 relative overflow-hidden">
+        <NeuroDecal.BodyMargins density="light" sections={4} />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="mb-16">
             <p className="text-lg text-foreground leading-relaxed mb-12">

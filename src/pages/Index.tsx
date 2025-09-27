@@ -9,6 +9,7 @@ import depressionImage from "@/assets/depression-cloud.jpg";
 import procrastinationImage from "@/assets/procrastination-clock.jpg";
 import angerImage from "@/assets/anger-volcano.jpg";
 import brainCodeBackground from "@/assets/brain-code-background.jpg";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const Index = () => {
   const recodeSteps = [{
     step: "REVEAL",
@@ -734,8 +735,9 @@ Doctor-delivered</span>
       </section>
 
       {/* Main Introduction Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16 px-4 bg-gradient-to-b from-muted/30 to-background relative">
+        <NeuroDecal.BodyMargins density="light" sections={8} />
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center space-y-6">
             <div className="space-y-4">
               <p className="text-xl leading-relaxed text-foreground">

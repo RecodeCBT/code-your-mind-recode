@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Target, CheckCircle, Heart, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 
 const Basics = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -47,8 +48,9 @@ const Basics = () => {
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center space-y-6">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <div className="text-center space-y-6 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-12} />
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight relative z-10">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 The Basics
               </span>
@@ -62,8 +64,9 @@ const Basics = () => {
       </section>
 
       {/* The Basics Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-orange-500/5 via-purple-600/5 to-blue-600/5">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-gradient-to-r from-orange-500/5 via-purple-600/5 to-blue-600/5 relative">
+        <NeuroDecal.BodyMargins density="light" sections={3} />
+        <div className="container mx-auto max-w-6xl relative z-10">
           
           {/* Four Quarters Grid */}
           <div className="relative max-w-4xl mx-auto">
