@@ -745,9 +745,9 @@ One on One | Doctor-delivered</span>
 
               </span> At Recode CBT, we show people and organisations how to identify the hidden scripts that drive anxiety, stress, or low motivation, and how to reprogram them for growth.
               </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Using practical, evidence-based techniques from CBT, DBT, and mindfulness, we help individuals build emotional balance, and equip teams with skills that foster focus, resilience, and collaboration. Whether you're working on personal change or designing a healthier workplace, Recode CBT makes advanced psychology accessible, practical, and effective.
-              </p>
+            <p className="text-lg leading-relaxed text-muted-foreground border-2 border-gradient-to-r from-blue-200 via-blue-300 to-blue-200 bg-gradient-to-r from-blue-50/30 via-white/50 to-blue-50/30 rounded-lg p-6 shadow-sm border-blue-200">
+              Using practical, evidence-based techniques from CBT, DBT, and mindfulness, we help individuals build emotional balance, and equip teams with skills that foster focus, resilience, and collaboration. Whether you're working on personal change or designing a healthier workplace, Recode CBT makes advanced psychology accessible, practical, and effective.
+            </p>
             </div>
           </div>
         </div>
