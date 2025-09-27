@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const navItems = [{
     label: "Home",
     path: "/"
@@ -39,12 +40,18 @@ const Navigation = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsClosing(false);
+    }, 300); // Match animation duration
   };
 
   // Close menu when route changes
   useEffect(() => {
-    setIsMenuOpen(false);
+    if (isMenuOpen) {
+      closeMenu();
+    }
   }, [location.pathname]);
 
   // Prevent body scroll when menu is open
@@ -63,7 +70,7 @@ const Navigation = () => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setIsMenuOpen(false);
+        closeMenu();
       }
     };
     if (isMenuOpen) {
@@ -89,12 +96,23 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      {(isMenuOpen || isClosing) && <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Navigation menu">
           {/* Backdrop */}
-          <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" onClick={closeMenu} />
+          <div 
+            className={cn(
+              "fixed inset-0 bg-black/30 backdrop-blur-sm",
+              isClosing ? "animate-backdrop-fade-out" : "animate-backdrop-fade-in"
+            )} 
+            onClick={closeMenu} 
+          />
           
           {/* Menu Panel */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl">
+          <div 
+            className={cn(
+              "fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl",
+              isClosing ? "animate-slide-out-right" : "animate-slide-in-right"
+            )}
+          >
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <span className="text-lg font-semibold text-gray-900">Menu</span>
               <Button variant="ghost" size="sm" onClick={closeMenu} className="p-2" aria-label="Close menu">

@@ -147,6 +147,38 @@ export default {
 						transform: 'rotate(360deg)'
 					}
 				},
+				'slide-in-right': {
+					'0%': { 
+						transform: 'translateX(100%)'
+					},
+					'100%': { 
+						transform: 'translateX(0)'
+					}
+				},
+				'slide-out-right': {
+					'0%': { 
+						transform: 'translateX(0)'
+					},
+					'100%': { 
+						transform: 'translateX(100%)'
+					}
+				},
+				'backdrop-fade-in': {
+					'0%': { 
+						opacity: '0'
+					},
+					'100%': { 
+						opacity: '1'
+					}
+				},
+				'backdrop-fade-out': {
+					'0%': { 
+						opacity: '1'
+					},
+					'100%': { 
+						opacity: '0'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -154,7 +186,11 @@ export default {
 				'electricity-flow-left': 'electricity-flow-left 3s ease-in-out infinite',
 				'electricity-flow-right': 'electricity-flow-right 3s ease-in-out infinite',
 				'electric-pulse': 'electric-pulse 3s ease-in-out infinite',
-				'electric-border': 'electric-border 4s linear infinite'
+				'electric-border': 'electric-border 4s linear infinite',
+				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'slide-out-right': 'slide-out-right 0.3s ease-out',
+				'backdrop-fade-in': 'backdrop-fade-in 0.3s ease-out',
+				'backdrop-fade-out': 'backdrop-fade-out 0.3s ease-out'
 			}
 		}
 	},
