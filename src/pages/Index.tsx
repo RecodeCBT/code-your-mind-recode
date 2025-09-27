@@ -683,10 +683,11 @@ const Index = () => {
                 </div>
               </h1>
               <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-4xl mx-auto">
-                Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.<br />
-                <span className="font-small text-gray-800">
-One on One | Doctor-delivered</span>
+                Evidence-based therapy styled on CBT + DBT models, to transform automatic thoughts, feelings, and emotional reactions - practiced like a new skill, to re-program the mind.
               </h2>
+              <div className="mt-2">
+                <span className="font-bold text-gray-800">One on One | Doctor-delivered</span>
+              </div>
             </div>
             
             {/* Professional CTA Buttons */}
