@@ -5,11 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
-import rewireTheMindImage from "@/assets/rewire-the-mind.jpg";
-
 const WhatIsRecode = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
-
   const basicsData = {
     "exercise": {
       title: "Exercise Habits",
@@ -18,7 +15,7 @@ const WhatIsRecode = () => {
       content: "Regular physical activity directly influences mitochondria production, boosting energy capacity in all your cells. Exercise increases BDNF (brain-derived neurotrophic factor), which helps with neuroplasticity and mental clarity."
     },
     "sleep": {
-      title: "Sleep Hygiene", 
+      title: "Sleep Hygiene",
       icon: Heart,
       color: "teal",
       content: "Quality sleep patterns are fundamental to emotional regulation and cognitive function. During sleep, your brain consolidates memories and clears metabolic waste, directly impacting your mental performance and emotional stability."
@@ -26,7 +23,7 @@ const WhatIsRecode = () => {
     "nutrition": {
       title: "Nutritional Impacts",
       icon: Target,
-      color: "purple", 
+      color: "purple",
       content: "Knowledge on how blood sugar levels can influence energy and impact mental states. Stable glucose levels support consistent energy and mood, while blood sugar spikes and crashes can trigger anxiety and depression-like symptoms."
     },
     "hydration": {
@@ -36,106 +33,88 @@ const WhatIsRecode = () => {
       content: "Adequate hydration is essential for optimal brain function though essential energy pathways, removing toxic by-products of keeping the body running, and maintaining blood pressure. Even mild dehydration can significantly impact concentration and mood."
     }
   };
-
   const closeExpanded = () => setExpandedSection(null);
-  const recodeSteps = [
-    {
-      step: "REVEAL",
-      description: "Notice the hidden patterns that control your reactions and self-image",
-      icon: Eye,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    },
-    {
-      step: "EVALUATE", 
-      description: "Use structured frameworks to explore whether these patterns are useful, kind, and evidence-based",
-      icon: Target,
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
-    },
-    {
-      step: "CHALLENGE",
-      description: "Interrogate old beliefs and emotional habits through guided questioning",
-      icon: Zap,
-      color: "text-blue-600", 
-      bgColor: "bg-blue-600/10"
-    },
-    {
-      step: "OBSERVE",
-      description: "Build awareness of emotional and sensory experience without reactivity",
-      icon: Brain,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    },
-    {
-      step: "DESIGN",
-      description: "Create new thoughts, habits and perspectives that serve your goals",
-      icon: Code,
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10"
-    },
-    {
-      step: "EMBED",
-      description: "Strengthen these upgrades through daily practice and long-term reinforcement",
-      icon: CheckCircle,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10"
-    }
-  ];
-
-  const approaches = [
-    {
-      title: "CBT Precision",
-      description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
-      icon: Target,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10",
-      link: "/philosophy/cbt"
-    },
-    {
-      title: "DBT Emotional Mastery", 
-      description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
-      icon: Heart,
-      color: "text-purple-600",
-      bgColor: "bg-purple-600/10",
-      link: "/philosophy/dbt"
-    },
-    {
-      title: "Mindfulness Training",
-      description: "Train attention, reduce overthinking, and reconnect with the present moment",
-      icon: Compass,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10",
-      link: "/philosophy/mindfulness"
-    },
-    {
-      title: "Neuroplasticity in Action",
-      description: "Rewire your brain with intentional mental habits, using repetition and structured practice", 
-      icon: Brain,
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10",
-      link: "/philosophy/neuroplasticity"
-    },
-    {
-      title: "Performance Psychology",
-      description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
-      icon: Lightbulb,
-      color: "text-purple-600", 
-      bgColor: "bg-purple-600/10",
-      link: "/philosophy/performance-psychology"
-    },
-    {
-      title: "Visualisation Techniques",
-      description: "Harness the power of mental imagery to rehearse success and rewire limiting beliefs",
-      icon: Eye,
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10",
-      link: "/philosophy/visualization"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const recodeSteps = [{
+    step: "REVEAL",
+    description: "Notice the hidden patterns that control your reactions and self-image",
+    icon: Eye,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10"
+  }, {
+    step: "EVALUATE",
+    description: "Use structured frameworks to explore whether these patterns are useful, kind, and evidence-based",
+    icon: Target,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  }, {
+    step: "CHALLENGE",
+    description: "Interrogate old beliefs and emotional habits through guided questioning",
+    icon: Zap,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  }, {
+    step: "OBSERVE",
+    description: "Build awareness of emotional and sensory experience without reactivity",
+    icon: Brain,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10"
+  }, {
+    step: "DESIGN",
+    description: "Create new thoughts, habits and perspectives that serve your goals",
+    icon: Code,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  }, {
+    step: "EMBED",
+    description: "Strengthen these upgrades through daily practice and long-term reinforcement",
+    icon: CheckCircle,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  }];
+  const approaches = [{
+    title: "CBT Precision",
+    description: "Identify, challenge and rewrite cognitive distortions and limiting beliefs",
+    icon: Target,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10",
+    link: "/philosophy/cbt"
+  }, {
+    title: "DBT Emotional Mastery",
+    description: "Build emotional resilience through powerful tools like distress tolerance and radical acceptance",
+    icon: Heart,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10",
+    link: "/philosophy/dbt"
+  }, {
+    title: "Mindfulness Training",
+    description: "Train attention, reduce overthinking, and reconnect with the present moment",
+    icon: Compass,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10",
+    link: "/philosophy/mindfulness"
+  }, {
+    title: "Neuroplasticity in Action",
+    description: "Rewire your brain with intentional mental habits, using repetition and structured practice",
+    icon: Brain,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10",
+    link: "/philosophy/neuroplasticity"
+  }, {
+    title: "Performance Psychology",
+    description: "Learn behavioural frameworks that support growth, confidence and flexible goal-setting",
+    icon: Lightbulb,
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10",
+    link: "/philosophy/performance-psychology"
+  }, {
+    title: "Visualisation Techniques",
+    description: "Harness the power of mental imagery to rehearse success and rewire limiting beliefs",
+    icon: Eye,
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10",
+    link: "/philosophy/visualization"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -168,15 +147,6 @@ const WhatIsRecode = () => {
             <p className="text-lg text-foreground leading-relaxed mb-12">
               ReCODE is a structured, skills-based programme that helps people (and teams) change entrenched thought–emotion–behaviour loops. It integrates core CBT methods (behavioural activation, exposure, cognitive tools), targeted DBT skills (emotion regulation, distress tolerance), and practical habit design—think of it as learning to play the brain like an instrument.
             </p>
-            
-            {/* Rewire the Mind Image */}
-            <div className="mb-12 flex justify-center">
-              <img 
-                src={rewireTheMindImage} 
-                alt="Rewire the mind - Brain with neural connections being rewired" 
-                className="rounded-lg shadow-lg max-w-full h-auto"
-              />
-            </div>
 
             {/* How it works */}
             <div className="mb-12">
@@ -190,7 +160,7 @@ const WhatIsRecode = () => {
 
             {/* Who it helps (individuals) */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-purple-600">Who it helps (individuals)</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center text-orange-600">Who it helps (individuals)</h3>
               <p className="text-foreground">
                 Anxiety (including GAD/social), low mood, avoidance/procrastination, stress-linked habits, sleep and performance-impacting patterns. High-risk or crisis presentations are signposted appropriately.
               </p>
@@ -236,27 +206,33 @@ const WhatIsRecode = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recodeSteps.map((step, index) => {
-              const Icon = step.icon;
-              // Define unique colors for each step while keeping first letter colors
-              const stepColors = [
-                "bg-orange-500/10", // REVEAL - orange
-                "bg-green-500/10",  // EVALUATE - green  
-                "bg-red-500/10",    // CHALLENGE - red
-                "bg-blue-500/10",   // OBSERVE - blue
-                "bg-purple-500/10", // DESIGN - purple
-                "bg-teal-500/10"    // EMBED - teal
-              ];
-              const iconColors = [
-                "text-orange-500", // REVEAL
-                "text-green-500",  // EVALUATE
-                "text-red-500",    // CHALLENGE
-                "text-blue-500",   // OBSERVE
-                "text-purple-500", // DESIGN
-                "text-teal-500"    // EMBED
-              ];
-              
-              return (
-                <div key={index} className="relative">
+            const Icon = step.icon;
+            // Define unique colors for each step while keeping first letter colors
+            const stepColors = ["bg-orange-500/10",
+            // REVEAL - orange
+            "bg-green-500/10",
+            // EVALUATE - green  
+            "bg-red-500/10",
+            // CHALLENGE - red
+            "bg-blue-500/10",
+            // OBSERVE - blue
+            "bg-purple-500/10",
+            // DESIGN - purple
+            "bg-teal-500/10" // EMBED - teal
+            ];
+            const iconColors = ["text-orange-500",
+            // REVEAL
+            "text-green-500",
+            // EVALUATE
+            "text-red-500",
+            // CHALLENGE
+            "text-blue-500",
+            // OBSERVE
+            "text-purple-500",
+            // DESIGN
+            "text-teal-500" // EMBED
+            ];
+            return <div key={index} className="relative">
                   <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-transparent hover:border-t-orange-500/50">
                     <CardHeader className="text-center">
                       <div className={`mx-auto mb-4 p-3 ${stepColors[index]} rounded-full w-fit`}>
@@ -278,12 +254,9 @@ const WhatIsRecode = () => {
                       </CardDescription>
                     </CardContent>
                   </Card>
-                  {index < recodeSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 transform -translate-y-1/2"></div>
-                  )}
-                </div>
-              );
-            })}
+                  {index < recodeSteps.length - 1 && <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-600/30 to-blue-600/30 transform -translate-y-1/2"></div>}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -408,8 +381,6 @@ const WhatIsRecode = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default WhatIsRecode;
