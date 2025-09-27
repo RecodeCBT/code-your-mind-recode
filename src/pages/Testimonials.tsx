@@ -42,6 +42,7 @@ const Testimonials = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-10} />
           <Button asChild size="lg" className="mb-4 relative z-10 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
             <a href="https://recodecbt.setmore.com/#reviews" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3">
               <Award className="h-4 w-4" />
@@ -61,7 +62,7 @@ const Testimonials = () => {
           
           {/* Testimonials Grid */}
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 relative">
-            <NeuroDecal.BodyMargins pattern="brain" intensity="subtle" />
+            <NeuroDecal.BodyMargins density="light" sections={4} />
             {testimonials.map((testimonial, index) => <Card key={index} className={`group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${testimonial.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-transparent' : ''}`}>
                 {testimonial.featured && <div className="absolute top-4 right-4">
                     <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">

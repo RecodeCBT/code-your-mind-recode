@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight, Lightbulb, Compass, Laptop, Code, BarChart3, Search, Wrench, Link } from "lucide-react";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
-import CircuitPattern from "@/components/CircuitPattern";
 const Services = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -242,11 +241,8 @@ const Services = () => {
       {/* Hero Section */}
       <section className="relative px-4 text-center my-0 py-px">
         <div className="container mx-auto max-w-4xl relative z-10 py-0 my-[70px]">
-          {/* Circuit Pattern Background */}
-          <CircuitPattern />
-          
           {/* Brain Logo */}
-          <div className="relative inline-block mb-2 z-20">
+          <div className="relative inline-block mb-2">
             <div className="w-64 h-64 mx-auto rounded-full bg-orange-500 p-2 py-[8px]">
               <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                 <img src="/lovable-uploads/fe81a945-6632-4272-8a5e-b2608fc7fbb2.png" alt="RecodeCBT Brain Logo" className="w-full h-full object-contain rounded-full" />
@@ -255,6 +251,7 @@ const Services = () => {
           </div>
 
           <div className="rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="medium" offsetY={-6} />
             <h1 className="md:text-6xl mb-6 text-foreground text-xl py-0 my-0 font-semibold relative z-10">Rewrite Your AutoCode™ Doctor-Delivered therapy based on CBT and DBT</h1>
           </div>
         </div>
@@ -262,7 +259,7 @@ const Services = () => {
 
       {/* Service Categories */}
       <section className="px-4 relative z-10 py-px my-0">
-        <NeuroDecal.BodyMargins pattern="code" intensity="medium" />
+        <NeuroDecal.BodyMargins density="medium" sections={5} />
         <div className="container mx-auto max-w-7xl relative z-10">
           <h2 className="md:text-4xl font-bold text-center mb-4 my-0 py-px text-2xl text-slate-900">Choose Your Journey</h2>
           <div className="max-w-4xl mx-auto mb-8 bg-muted/50 p-4 md:p-6 rounded-full border border-primary/20">

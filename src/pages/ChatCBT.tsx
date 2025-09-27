@@ -8,7 +8,7 @@ import NeuroDecal from "@/components/Neuro/NeuroDecal";
 export default function ChatCBT() {
   return (
     <div className="bg-gray-50 min-h-screen relative">
-      <NeuroDecal.BodyMargins pattern="brain" intensity="subtle" />
+      <NeuroDecal.BodyMargins density="light" sections={2} />
       <Navigation />
       <ChatInterface />
       

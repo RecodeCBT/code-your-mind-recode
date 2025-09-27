@@ -38,12 +38,13 @@ const Basics = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 px-4 py-[20px] pt-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 px-4 py-[20px] pt-28">
         <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
         <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6 rc-title-wrap">
+            <NeuroDecal.TopTitle align="center" density="light" offsetY={-12} />
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight relative z-10">
               <span className="bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 The Basics
@@ -59,7 +60,7 @@ const Basics = () => {
 
       {/* The Basics Section */}
       <section className="px-4 bg-gradient-to-r from-orange-500/5 via-purple-600/5 to-blue-600/5 relative py-px">
-        <NeuroDecal.BodyMargins pattern="code" intensity="subtle" />
+        <NeuroDecal.BodyMargins density="light" sections={3} />
         <div className="container mx-auto max-w-6xl relative z-10 my-px py-[40px]">
           
           {/* Four Quarters Grid */}
