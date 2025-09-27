@@ -12,7 +12,7 @@ const DrCarsonBackground = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 rc-title-wrap">
-            <h1 className="mb-2 text-4xl font-bold relative z-10">Dr. Christopher Carson</h1>
+            <h1 className="mb-2 text-4xl font-bold relative z-10 pt-20">Dr. Christopher Carson</h1>
             <p className="text-sm italic text-muted-foreground mb-4">BSc MBBS MRCGP ProfDipCBT</p>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The journey from medical practice to creating ReCODE - A new approach to mental health treatment
