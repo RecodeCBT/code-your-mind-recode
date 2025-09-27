@@ -9,18 +9,17 @@ declare global {
   interface Window {
     grecaptcha: {
       ready: (callback: () => void) => void;
-      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      execute: (siteKey: string, options: {
+        action: string;
+      }) => Promise<string>;
     };
   }
 }
-
-
 export default function ChatInterface() {
   const navigate = useNavigate();
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  
   const navigateWithScrollToTop = (path: string) => {
     navigate(path);
     window.scrollTo(0, 0);
@@ -29,7 +28,6 @@ export default function ChatInterface() {
   const [password, setPassword] = useState('');
   const [captchaToken, setCaptchaToken] = useState('');
   const [captchaLoading, setCaptchaLoading] = useState(false);
-
   useEffect(() => {
     // Load reCAPTCHA v3 script
     const script = document.createElement("script");
@@ -59,64 +57,59 @@ export default function ChatInterface() {
       }
     };
   }, []);
-
   const chatContainerRef = useRef(null);
-
-
-  const starterOptions = [
-    "I would like explore my Mind-Code",
-    "Talk about depression", 
-    "Talk about anxiety",
-    "Talk about anger",
-    "Talk about motivation"
-  ];
-
+  const starterOptions = ["I would like explore my Mind-Code", "Talk about depression", "Talk about anxiety", "Talk about anger", "Talk about motivation"];
   const sendMessage = async (messageText?: string) => {
     const textToSend = messageText || input;
     if (!textToSend.trim()) return;
-    const userMessage = { role: 'user', content: textToSend };
-    setMessages((prev) => [...prev, userMessage]);
+    const userMessage = {
+      role: 'user',
+      content: textToSend
+    };
+    setMessages(prev => [...prev, userMessage]);
     setInput('');
     setLoading(true);
-
     const response = await fetch('/api/recode-chat', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: textToSend }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: textToSend
+      })
     });
-
     const data = await response.json();
-    const botMessage = { role: 'bot', content: data.reply };
-    setMessages((prev) => [...prev, botMessage]);
+    const botMessage = {
+      role: 'bot',
+      content: data.reply
+    };
+    setMessages(prev => [...prev, botMessage]);
     setLoading(false);
   };
-
   const handleStarterClick = (starterText: string) => {
     sendMessage(starterText);
   };
-
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
   }, [messages, loading]);
-
   const handleUnlock = async () => {
     if (password !== 'recode2025') {
       alert('Incorrect password.');
       return;
     }
-
     setCaptchaLoading(true);
     console.log('Starting reCAPTCHA verification...');
-
     try {
       // Execute reCAPTCHA v3 verification
       if (window.grecaptcha) {
         window.grecaptcha.ready(async () => {
           try {
             console.log('reCAPTCHA ready, executing verification...');
-            const token = await window.grecaptcha.execute('6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB', { action: 'login' });
+            const token = await window.grecaptcha.execute('6LdVApUrAAAAADmQAC2OMwzVFz3od7Nk08NyYZiB', {
+              action: 'login'
+            });
             console.log('reCAPTCHA token received:', token ? 'SUCCESS' : 'FAILED');
             setCaptchaToken(token);
             setCaptchaLoading(false);
@@ -150,10 +143,8 @@ export default function ChatInterface() {
       alert('An error occurred. Please try again.');
     }
   };
-
   if (!unlocked) {
-    return (
-      <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
+    return <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
         {/* Neural Network Background */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>
@@ -177,70 +168,40 @@ export default function ChatInterface() {
 
         {/* Return to main website button */}
         <div className="absolute top-4 left-4 z-10">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => navigateWithScrollToTop('/')}
-            className="bg-white/10 border-white/20 text-white hover:bg-white/20"
-          >
+          <Button variant="outline" size="sm" onClick={() => navigateWithScrollToTop('/')} className="bg-white/10 border-white/20 text-white hover:bg-white/20">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Return to Main Site
           </Button>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl max-w-md w-full mx-4">
+        <div className="relative z-10 flex flex-col items-center p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl max-w-md w-full mx-4 py-[69px]">
           {/* Title and Subtitle */}
           <h1 className="text-3xl font-bold text-white mb-2 text-center">ReCODE ChatCBT</h1>
           <p className="text-white/80 text-center mb-6 text-sm leading-relaxed">A highly trained AI that can help you build your strengths and autocode in real time.</p>
           
           {/* ChatCBT Logo - Made circular */}
           <div className="w-80 h-80 rounded-full overflow-hidden mb-6 border-4 border-white/30 shadow-2xl">
-            <img 
-              src="/lovable-uploads/00be3df8-615b-4d76-b3a9-28b01e9651d0.png" 
-              alt="RECODE ChatCBT" 
-              className="w-full h-full object-cover"
-            />
+            <img src="/lovable-uploads/00be3df8-615b-4d76-b3a9-28b01e9651d0.png" alt="RECODE ChatCBT" className="w-full h-full object-cover" />
           </div>
           
           <h2 className="text-2xl font-bold mb-4 text-center text-white">🔒 Access Required</h2>
           <p className="mb-6 text-sm text-white/80 text-center">Please enter your access password to begin your CBT session.</p>
           
-          <Input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleUnlock()}
-            placeholder="Enter password"
-            className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary"
-          />
+          <Input type="password" value={password} onChange={e => setPassword(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleUnlock()} placeholder="Enter password" className="mb-4 p-3 border border-white/30 rounded-xl w-full text-center bg-white/10 text-white placeholder-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary" />
           
 
-          <button
-            onClick={handleUnlock}
-            disabled={captchaLoading}
-            className="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:from-primary-foreground hover:to-secondary-foreground transition-all duration-300 shadow-lg disabled:opacity-50 flex items-center justify-center gap-2"
-            >
-            {captchaLoading && (
-              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-            )}
+          <button onClick={handleUnlock} disabled={captchaLoading} className="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:from-primary-foreground hover:to-secondary-foreground transition-all duration-300 shadow-lg disabled:opacity-50 flex items-center justify-center gap-2">
+            {captchaLoading && <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>}
             {captchaLoading ? 'Verifying...' : 'Unlock ChatCBT'}
           </button>
           
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="flex flex-col h-screen w-full bg-gradient-to-br from-background via-muted/5 to-accent/5">
+  return <div className="flex flex-col h-screen w-full bg-gradient-to-br from-background via-muted/5 to-accent/5">
       {/* Redesigned Header with explanation and larger logo */}
       <header className="bg-white/90 backdrop-blur-sm shadow-sm border-b border-border/20 p-4 flex items-center justify-between flex-shrink-0">
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => navigateWithScrollToTop('/')}
-          className="flex items-center gap-2 hover:bg-primary/5 flex-shrink-0"
-        >
+        <Button variant="ghost" size="sm" onClick={() => navigateWithScrollToTop('/')} className="flex items-center gap-2 hover:bg-primary/5 flex-shrink-0">
           <ArrowLeft className="h-4 w-4" />
           <span className="hidden sm:inline">Main Site</span>
         </Button>
@@ -258,11 +219,7 @@ export default function ChatInterface() {
           
           {/* Larger logo positioned to the right */}
           <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" 
-              alt="RECODE ChatCBT" 
-              className="h-24 w-auto shadow-lg rounded-lg"
-            />
+            <img src="/lovable-uploads/e2278887-0c55-4808-8067-a5a02dfe07e0.png" alt="RECODE ChatCBT" className="h-24 w-auto shadow-lg rounded-lg" />
           </div>
         </div>
         
@@ -270,82 +227,49 @@ export default function ChatInterface() {
       </header>
 
       {/* Starter buttons - only show when no messages */}
-      {messages.length === 0 && (
-        <div className="bg-white/70 backdrop-blur-sm border-b border-border/10 p-3 flex-shrink-0">
+      {messages.length === 0 && <div className="bg-white/70 backdrop-blur-sm border-b border-border/10 p-3 flex-shrink-0">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-sm font-medium text-foreground mb-3 text-center">Choose a topic to get started:</h3>
             <div className="flex flex-wrap gap-2 justify-center">
-              {starterOptions.map((option, idx) => (
-                <Button
-                  key={idx}
-                  variant="outline"
-                  size="sm"
-                  onClick={() => handleStarterClick(option)}
-                  className="bg-white/80 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 text-xs"
-                  disabled={loading}
-                >
+              {starterOptions.map((option, idx) => <Button key={idx} variant="outline" size="sm" onClick={() => handleStarterClick(option)} className="bg-white/80 border-primary/20 hover:bg-primary/10 text-foreground transition-all duration-200 text-xs" disabled={loading}>
                   {option}
-                </Button>
-              ))}
+                </Button>)}
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Main Chat Area - takes up remaining space */}
       <div className="flex-1 flex flex-col min-h-0">
-        <main 
-          ref={chatContainerRef} 
-          className="flex-1 overflow-y-auto p-4 space-y-4"
-        >
+        <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 space-y-4">
           <div className="max-w-4xl mx-auto">
-            {messages.map((msg, idx) => (
-              <div
-                key={idx}
-                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-3 mb-4`}
-              >
-                {msg.role === 'bot' && (
-                  <div className="flex-shrink-0">
-                    <img
-                      src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png"
-                      alt="ChatCBT Assistant"
-                      className="w-16 h-16 rounded-full border-3 border-primary/20 shadow-lg bg-white p-1"
-                    />
-                  </div>
-                )}
-                <div
-                  className={`px-4 py-3 rounded-2xl text-sm max-w-[85%] whitespace-pre-wrap shadow-sm leading-relaxed ${
-                    msg.role === 'user'
-                      ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto rounded-br-sm'
-                      : 'bg-white/95 backdrop-blur-sm border border-border/20 text-foreground rounded-bl-sm'
-                  }`}
-                >
+            {messages.map((msg, idx) => <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start gap-3 mb-4`}>
+                {msg.role === 'bot' && <div className="flex-shrink-0">
+                    <img src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" alt="ChatCBT Assistant" className="w-16 h-16 rounded-full border-3 border-primary/20 shadow-lg bg-white p-1" />
+                  </div>}
+                <div className={`px-4 py-3 rounded-2xl text-sm max-w-[85%] whitespace-pre-wrap shadow-sm leading-relaxed ${msg.role === 'user' ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground ml-auto rounded-br-sm' : 'bg-white/95 backdrop-blur-sm border border-border/20 text-foreground rounded-bl-sm'}`}>
                   {msg.content}
                 </div>
-              </div>
-            ))}
+              </div>)}
 
-            {loading && (
-              <div className="flex items-start gap-3 mb-4">
+            {loading && <div className="flex items-start gap-3 mb-4">
                 <div className="flex-shrink-0">
-                  <img 
-                    src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" 
-                    alt="Loading..." 
-                    className="w-16 h-16 rounded-full border-3 border-primary/20 shadow-lg bg-white p-1 animate-pulse" 
-                  />
+                  <img src="/lovable-uploads/eb1cd8b5-9347-43f1-8db3-ddec0ceaa326.png" alt="Loading..." className="w-16 h-16 rounded-full border-3 border-primary/20 shadow-lg bg-white p-1 animate-pulse" />
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm border border-border/20 px-4 py-3 rounded-2xl rounded-bl-sm shadow-sm">
                   <span className="text-muted-foreground flex items-center gap-2 text-sm">
                     <div className="flex gap-1">
                       <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-secondary rounded-full animate-bounce" style={{
+                    animationDelay: '0.1s'
+                  }}></div>
+                      <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{
+                    animationDelay: '0.2s'
+                  }}></div>
                     </div>
                     Thinking...
                   </span>
                 </div>
-              </div>
-            )}
+              </div>}
           </div>
         </main>
 
@@ -353,19 +277,8 @@ export default function ChatInterface() {
         <div className="bg-white/95 backdrop-blur-sm border-t border-border/20 p-4 flex-shrink-0">
           <div className="max-w-4xl mx-auto">
             <div className="flex gap-3">
-              <input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && sendMessage()}
-                className="flex-grow p-3 border border-border/30 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm placeholder:text-muted-foreground"
-                placeholder="Share what's on your mind..."
-                disabled={loading}
-              />
-              <button
-                onClick={() => sendMessage()}
-                disabled={loading || !input.trim()}
-                className="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-2xl text-sm font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
-              >
+              <input value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendMessage()} className="flex-grow p-3 border border-border/30 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white/90 backdrop-blur-sm placeholder:text-muted-foreground" placeholder="Share what's on your mind..." disabled={loading} />
+              <button onClick={() => sendMessage()} disabled={loading || !input.trim()} className="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-2xl text-sm font-medium hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0">
                 Send
               </button>
             </div>
@@ -384,6 +297,5 @@ export default function ChatInterface() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
