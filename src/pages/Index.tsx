@@ -1,3 +1,4 @@
+import NeuroDecal from "@/components/Neuro/NeuroDecal";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,7 +10,6 @@ import depressionImage from "@/assets/depression-cloud.jpg";
 import procrastinationImage from "@/assets/procrastination-clock.jpg";
 import angerImage from "@/assets/anger-volcano.jpg";
 import brainCodeBackground from "@/assets/brain-code-background.jpg";
-import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const Index = () => {
   const recodeSteps = [{
     step: "REVEAL",
@@ -736,6 +736,7 @@ const Index = () => {
 
       {/* Main Introduction Section */}
       <section className="px-4 bg-gradient-to-b from-muted/30 to-background relative py-[20px]">
+        <NeuroDecal.BodyMargins density="light" sections={8} />
         <NeuroDecal.BodyMargins density="light" sections={8} />
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center space-y-6">

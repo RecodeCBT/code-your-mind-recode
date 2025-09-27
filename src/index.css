@@ -595,3 +595,42 @@ All colors MUST be HSL.
     display: none;
   }
 }
+
+/* Recode Circuit/Neuron Decal System */
+:root {
+  --rc-cyan: #38bdf8;
+  --rc-violet: #a78bfa;
+  --rc-stroke: 0.08;
+}
+
+.rc-decal {
+  pointer-events: none;
+  opacity: var(--rc-stroke, 0.08);
+}
+
+.rc-title-wrap {
+  position: relative;
+}
+
+.rc-decal-top {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.rc-decal-body {
+  position: absolute;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .rc-decal {
+    opacity: calc(var(--rc-stroke, 0.08) * 0.7);
+  }
+}
+
+@media print {
+  .rc-decal {
+    display: none;
+  }
+}

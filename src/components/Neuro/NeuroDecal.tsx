@@ -1,175 +1,141 @@
-import React from "react";
+import React from 'react';
 
 interface TopTitleProps {
-  density?: "light" | "medium";
-  align?: "center" | "left";
+  density?: 'light' | 'medium';
+  align?: 'center' | 'left';
   offsetY?: number;
 }
 
 interface BodyMarginsProps {
-  density?: "light" | "medium";
+  density?: 'light' | 'medium';
   sections?: number;
 }
 
 const TopTitle: React.FC<TopTitleProps> = ({ 
-  density = "light", 
-  align = "center", 
-  offsetY = 0 
+  density = 'light', 
+  align = 'center', 
+  offsetY = -8 
 }) => {
-  const nodeCount = density === "light" ? 4 : 8;
-  const pathCount = density === "light" ? 3 : 6;
+  const isLight = density === 'light';
+  const nodeCount = isLight ? 3 : 5;
+  const pathCount = isLight ? 2 : 4;
   
   return (
     <div 
-      className="rc-decal rc-decal-top" 
-      style={{ top: offsetY }}
+      className="rc-decal rc-decal-top"
+      style={{ transform: `translateY(${offsetY}px)` }}
       aria-hidden="true"
     >
-      <svg 
-        width="100%" 
-        height="100%" 
+      <svg
+        className="w-full h-full"
         viewBox="0 0 800 200"
-        className="absolute inset-0"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <linearGradient id="rc-gradient-top" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="hsl(0, 186, 248)" />
-            <stop offset="100%" stopColor="hsl(167, 139, 250)" />
+          <linearGradient id="neuro-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="var(--rc-cyan)" />
+            <stop offset="100%" stopColor="var(--rc-violet)" />
           </linearGradient>
         </defs>
         
         {/* Circuit traces around title area */}
-        {Array.from({ length: pathCount }, (_, i) => {
-          const y = 40 + (i * 30);
-          const x1 = align === "center" ? 50 + (i * 100) : 20 + (i * 120);
-          const x2 = x1 + 100 + Math.random() * 80;
+        <g stroke="url(#neuro-gradient)" strokeWidth="0.5" fill="none">
+          {/* Top border traces */}
+          <path d="M50 20 L200 20 L210 30 L250 30" />
+          <path d="M550 20 L600 20 L610 30 L750 30" />
           
-          return (
-            <g key={`trace-${i}`}>
-              <path
-                d={`M ${x1} ${y} L ${x2} ${y} L ${x2 + 20} ${y + 15}`}
-                stroke="url(#rc-gradient-top)"
-                strokeWidth="0.5"
-                fill="none"
-              />
-              {/* Via node */}
-              <circle
-                cx={x2}
-                cy={y}
-                r="1.5"
-                fill="url(#rc-gradient-top)"
-              />
-            </g>
-          );
-        })}
+          {/* Side traces */}
+          <path d="M30 40 L30 80 L40 90 L80 90" />
+          <path d="M770 40 L770 80 L760 90 L720 90" />
+          
+          {pathCount > 2 && (
+            <>
+              <path d="M150 160 L200 160 L210 150 L300 150" />
+              <path d="M500 160 L550 160 L560 150 L650 150" />
+            </>
+          )}
+        </g>
         
-        {/* Neurone nodes */}
-        {Array.from({ length: nodeCount }, (_, i) => {
-          const x = 100 + (i * 150) + Math.random() * 50;
-          const y = 60 + Math.random() * 80;
+        {/* Neuron nodes */}
+        <g fill="url(#neuro-gradient)">
+          <circle cx="210" cy="30" r="1.5" />
+          <circle cx="610" cy="30" r="1.5" />
+          <circle cx="40" cy="90" r="1.5" />
           
-          return (
-            <g key={`node-${i}`}>
-              {/* Central soma */}
-              <circle
-                cx={x}
-                cy={y}
-                r="2"
-                fill="url(#rc-gradient-top)"
-              />
-              {/* Dendrites */}
-              <path
-                d={`M ${x} ${y} L ${x - 15} ${y - 10} M ${x} ${y} L ${x + 15} ${y - 8} M ${x} ${y} L ${x - 8} ${y + 12}`}
-                stroke="url(#rc-gradient-top)"
-                strokeWidth="0.3"
-                fill="none"
-              />
-            </g>
-          );
-        })}
+          {nodeCount > 3 && (
+            <>
+              <circle cx="760" cy="90" r="1.5" />
+              <circle cx="210" cy="150" r="1.5" />
+            </>
+          )}
+        </g>
+        
+        {/* Dendrite branches */}
+        <g stroke="url(#neuro-gradient)" strokeWidth="0.3" fill="none">
+          <path d="M210 30 L215 25 M210 30 L205 25 M210 30 L215 35" />
+          <path d="M610 30 L615 25 M610 30 L605 25 M610 30 L615 35" />
+          
+          {nodeCount > 3 && (
+            <path d="M760 90 L765 85 M760 90 L755 85 M760 90 L765 95" />
+          )}
+        </g>
       </svg>
     </div>
   );
 };
 
 const BodyMargins: React.FC<BodyMarginsProps> = ({ 
-  density = "light", 
+  density = 'light', 
   sections = 3 
 }) => {
-  const decalsPerSection = density === "light" ? 2 : 4;
+  const isLight = density === 'light';
+  const elementCount = isLight ? sections * 2 : sections * 3;
+  
+  const decalElements = Array.from({ length: elementCount }, (_, i) => {
+    const isLeft = i % 2 === 0;
+    const sectionIndex = Math.floor(i / 2);
+    const topPosition = 20 + (sectionIndex * 25) + (Math.random() * 10 - 5);
+    const sidePosition = isLeft ? 2 + Math.random() * 3 : 95 + Math.random() * 3;
+    
+    return (
+      <g key={i} transform={`translate(${sidePosition}, ${topPosition})`}>
+        {/* Small circuit element */}
+        <path
+          d="M0 0 L8 0 L10 2 L15 2"
+          stroke="url(#body-gradient)"
+          strokeWidth="0.3"
+          fill="none"
+        />
+        <circle cx="10" cy="2" r="0.8" fill="url(#body-gradient)" />
+        
+        {/* Occasional dendrite */}
+        {i % 3 === 0 && (
+          <g stroke="url(#body-gradient)" strokeWidth="0.2" fill="none">
+            <path d="M10 2 L12 0 M10 2 L8 0 M10 2 L12 4" />
+          </g>
+        )}
+      </g>
+    );
+  });
   
   return (
-    <div className="rc-decal rc-decal-margins" aria-hidden="true">
-      <svg 
-        width="100%" 
-        height="100%" 
-        viewBox="0 0 1200 800"
-        className="absolute inset-0"
+    <div className="rc-decal rc-decal-body hidden sm:block" aria-hidden="true">
+      <svg
+        className="fixed inset-0 w-full h-full"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <linearGradient id="rc-gradient-body" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(0, 186, 248)" />
-            <stop offset="100%" stopColor="hsl(167, 139, 250)" />
+          <linearGradient id="body-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="var(--rc-cyan)" />
+            <stop offset="100%" stopColor="var(--rc-violet)" />
           </linearGradient>
         </defs>
         
-        {/* Left margin decals */}
-        {Array.from({ length: sections }, (_, sectionIndex) => {
-          const sectionY = (sectionIndex + 1) * (800 / (sections + 1));
-          
-          return Array.from({ length: decalsPerSection }, (_, decalIndex) => {
-            const y = sectionY + (decalIndex * 40) - 60;
-            const x = 20 + Math.random() * 30;
-            
-            return (
-              <g key={`left-${sectionIndex}-${decalIndex}`}>
-                {/* Small circuit trace */}
-                <path
-                  d={`M ${x} ${y} L ${x + 25} ${y} L ${x + 30} ${y + 8}`}
-                  stroke="url(#rc-gradient-body)"
-                  strokeWidth="0.4"
-                  fill="none"
-                />
-                {/* Node */}
-                <circle
-                  cx={x + 25}
-                  cy={y}
-                  r="1"
-                  fill="url(#rc-gradient-body)"
-                />
-              </g>
-            );
-          });
-        })}
-        
-        {/* Right margin decals */}
-        {Array.from({ length: sections }, (_, sectionIndex) => {
-          const sectionY = (sectionIndex + 1) * (800 / (sections + 1));
-          
-          return Array.from({ length: decalsPerSection }, (_, decalIndex) => {
-            const y = sectionY + (decalIndex * 45) - 70;
-            const x = 1150 - Math.random() * 30;
-            
-            return (
-              <g key={`right-${sectionIndex}-${decalIndex}`}>
-                {/* Small neural branch */}
-                <path
-                  d={`M ${x} ${y} L ${x - 20} ${y - 5} M ${x} ${y} L ${x - 15} ${y + 8}`}
-                  stroke="url(#rc-gradient-body)"
-                  strokeWidth="0.3"
-                  fill="none"
-                />
-                {/* Synapse */}
-                <circle
-                  cx={x}
-                  cy={y}
-                  r="0.8"
-                  fill="url(#rc-gradient-body)"
-                />
-              </g>
-            );
-          });
-        })}
+        {decalElements}
       </svg>
     </div>
   );
@@ -177,7 +143,7 @@ const BodyMargins: React.FC<BodyMarginsProps> = ({
 
 const NeuroDecal = {
   TopTitle,
-  BodyMargins
+  BodyMargins,
 };
 
 export default NeuroDecal;

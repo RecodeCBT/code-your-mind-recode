@@ -20,6 +20,7 @@ const About = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto relative z-10">Pioneering mental health re-programming through a new hybrid of therapy, modelled on evidence-based therapies, and years of medical practice in mental health.</p>
           </div>
 
+          <NeuroDecal.BodyMargins density="light" sections={4} />
           {/* Hero Image and Intro */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div className="space-y-6">
