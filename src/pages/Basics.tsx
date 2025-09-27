@@ -40,8 +40,8 @@ const Basics = () => {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-orange-500/5 to-purple-600/5 px-4 py-[20px] pt-28">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
-        <div className="absolute top-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
+        <div className="absolute top-10 left-4 w-24 h-24 bg-gradient-to-br from-orange-500/15 to-purple-600/15 rounded-full blur-xl"></div>
+        <div className="absolute top-20 right-4 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-6 rc-title-wrap">
@@ -65,7 +65,7 @@ const Basics = () => {
         <div className="container mx-auto max-w-6xl relative z-10 my-px py-[40px]">
           
           {/* Four Quarters Grid */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl mx-auto overflow-hidden">
             <div className="grid grid-cols-2 gap-4 md:gap-8">
             
             {/* Exercise Habits - Top Left */}
@@ -181,7 +181,7 @@ const Basics = () => {
       </section>
 
       {/* Book Your Session Section */}
-      <section className="px-4 bg-primary text-primary-foreground relative py-[20px]">
+      <section className="px-4 bg-primary text-primary-foreground relative py-[20px] overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -192,18 +192,17 @@ const Basics = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-6">
             <p className="text-lg mb-4">Professional ReCODE Sessions</p>
             <p className="text-sm opacity-75 mb-4">It starts with one click </p>
-            <div className="flex flex-col items-center justify-center gap-4">
-              <div className="relative group">
+            <div className="flex flex-col items-center justify-center gap-4 overflow-hidden">
+              <div className="relative group inline-block">
                 <Button size="lg" onClick={() => window.location.href = 'https://recodecbt.setmore.com'} className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white shadow-lg">
                   Book Your Session Today
                 </Button>
                 
-                {/* Enhanced £20 off sticker */}
-                <div className="absolute -top-4 -right-12 group-hover:scale-110 transition-transform duration-300">
-                  <div className="w-20 h-20 bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white rounded-full shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-4 border-white">
-                    <div className="font-bold text-sm leading-none">£20</div>
+                {/* Enhanced £20 off sticker - repositioned to stay within bounds */}
+                <div className="absolute -top-4 -right-8 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 via-red-600 to-red-700 text-white rounded-full shadow-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 flex flex-col items-center justify-center border-2 border-white">
+                    <div className="font-bold text-xs leading-none">£20</div>
                     <div className="font-bold text-xs leading-none">OFF</div>
-                    <div className="font-bold text-xs leading-none opacity-90">INTRO</div>
                   </div>
                 </div>
               </div>
