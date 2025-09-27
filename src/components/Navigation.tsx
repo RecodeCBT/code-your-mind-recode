@@ -110,7 +110,7 @@ const Navigation = () => {
           <div 
             className={cn(
               "fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-xl",
-              isClosing ? "animate-slide-out-right" : "animate-slide-in-right"
+              isClosing ? "animate-slide-out-right translate-x-full" : "animate-slide-in-right"
             )}
           >
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
