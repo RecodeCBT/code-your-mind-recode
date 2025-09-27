@@ -178,14 +178,12 @@ const DrCarsonBackground = () => {
           {/* Call to Action */}
           <div className="text-center mt-12">
             <Link to="/contact">
-              <Button size="lg" className="text-lg px-8 py-[20px]">
-                Get Started with ReCODE
-              </Button>
+              
             </Link>
           </div>
 
           {/* Book Your Session Section */}
-          <section className="py-20 px-4 bg-primary text-primary-foreground relative">
+          <section className="px-4 bg-primary text-primary-foreground relative py-[20px]">
             <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
               <p className="text-xl mb-8 opacity-90">
