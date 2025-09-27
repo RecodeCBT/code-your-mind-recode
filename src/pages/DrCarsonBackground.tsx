@@ -126,7 +126,7 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* RECODE Methodology Section */}
-          <div className="space-y-8 mb-16">
+          <div className="space-y-8 mb-16 relative z-10">
             <Card className="p-8 border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">

@@ -181,11 +181,11 @@ const TopCircuitBackground: React.FC = () => {
     <div 
       className="fixed inset-x-0 top-0 h-64 w-full z-0 pointer-events-none"
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.85), transparent), url(${topCircuitDecal})`,
+        backgroundImage: `url(${topCircuitDecal})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
-        opacity: 0.6
+        opacity: 0.3
       }}
       aria-hidden="true"
     />
