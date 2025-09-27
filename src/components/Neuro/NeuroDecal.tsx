@@ -20,10 +20,17 @@ const TopTitle: React.FC<TopTitleProps> = ({
   const nodeCount = isLight ? 8 : 15;
   const pathCount = isLight ? 6 : 12;
   
+  
+  console.log('TopTitle rendering with props:', { density, align, offsetY });
+  
   return (
     <div 
       className="rc-decal rc-decal-top"
-      style={{ transform: `translateY(${offsetY}px)` }}
+      style={{ 
+        transform: `translateY(${offsetY}px)`,
+        backgroundColor: 'rgba(255, 0, 0, 0.3)', // Red background for testing
+        border: '3px solid blue' // Blue border for testing
+      }}
       aria-hidden="true"
     >
       <svg
@@ -165,8 +172,18 @@ const BodyMargins: React.FC<BodyMarginsProps> = ({
     );
   });
   
+  
+  console.log('BodyMargins rendering with props:', { density, sections, elementCount });
+  
   return (
-    <div className="rc-decal rc-decal-body hidden sm:block fixed inset-0 pointer-events-none" aria-hidden="true" style={{ zIndex: -1 }}>
+    <div 
+      className="rc-decal rc-decal-body hidden sm:block fixed inset-0 pointer-events-none" 
+      aria-hidden="true" 
+      style={{ 
+        zIndex: 999, // Temporarily bring to front
+        backgroundColor: 'rgba(0, 255, 0, 0.1)' // Green background for testing
+      }}
+    >
       <svg
         className="w-full h-full"
         viewBox="0 0 100 100"

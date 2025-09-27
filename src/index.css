@@ -600,7 +600,7 @@ All colors MUST be HSL.
 :root {
   --rc-cyan: #38bdf8;
   --rc-violet: #a78bfa;
-  --rc-stroke: 0.3;
+  --rc-stroke: 1.0;
 }
 
 .rc-decal {
