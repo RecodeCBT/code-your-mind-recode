@@ -167,7 +167,7 @@ const WhatIsRecode = () => {
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="mb-16">
             {/* RECODE Circuits Image */}
-            <div className="mb-6 flex justify-center">
+            <div className="mb-2 flex justify-center">
               <img 
                 src={recodeCircuitsImage} 
                 alt="RECODE circuits - Brain with circuit patterns representing neural rewiring" 
