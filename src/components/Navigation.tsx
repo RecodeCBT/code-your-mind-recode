@@ -59,22 +59,26 @@ const Navigation = () => {
     }
   }, [location.pathname]);
 
-  // Prevent body scroll and movement when menu is open
+  // Prevent body scroll and movement when menu is open or closing
   useEffect(() => {
-    if (isMenuOpen) {
-      // Prevent scrolling and fix position to prevent layout shifts
+    if (isMenuOpen || isClosing) {
+      // Keep body fixed during entire animation cycle
       document.body.style.position = 'fixed';
       document.body.style.top = `-${scrollPosition}px`;
       document.body.style.width = '100%';
+      document.body.style.height = '100vh';
       document.body.style.overflow = 'hidden';
       document.body.style.scrollbarGutter = 'stable';
+      document.body.style.userSelect = 'none';
     } else {
-      // Restore body position and scroll
+      // Only restore when both opening and closing are complete
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.width = '';
+      document.body.style.height = '';
       document.body.style.overflow = '';
       document.body.style.scrollbarGutter = '';
+      document.body.style.userSelect = '';
       
       // Restore scroll position
       window.scrollTo(0, scrollPosition);
@@ -84,10 +88,12 @@ const Navigation = () => {
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.width = '';
+      document.body.style.height = '';
       document.body.style.overflow = '';
       document.body.style.scrollbarGutter = '';
+      document.body.style.userSelect = '';
     };
-  }, [isMenuOpen, scrollPosition]);
+  }, [isMenuOpen, isClosing, scrollPosition]);
 
   // Handle escape key
   useEffect(() => {
