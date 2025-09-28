@@ -8,6 +8,8 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollbarWidth, setScrollbarWidth] = useState(0);
+
   const navItems = [{
     label: "Home",
     path: "/"
@@ -39,8 +41,10 @@ const Navigation = () => {
   }];
   const toggleMenu = () => {
     if (!isMenuOpen) {
-      // Store current scroll position before opening menu
+      // Store current scroll position and calculate scrollbar width before opening menu
       setScrollPosition(window.pageYOffset);
+      const scrollbarW = window.innerWidth - document.documentElement.clientWidth;
+      setScrollbarWidth(scrollbarW);
     }
     setIsMenuOpen(!isMenuOpen);
   };
@@ -62,22 +66,18 @@ const Navigation = () => {
   // Prevent body scroll and movement when menu is open or closing
   useEffect(() => {
     if (isMenuOpen || isClosing) {
-      // Keep body fixed during entire animation cycle
+      // Apply scrollbar compensation to prevent page shift
       document.body.style.position = 'fixed';
       document.body.style.top = `-${scrollPosition}px`;
-      document.body.style.width = '100%';
-      document.body.style.height = '100vh';
       document.body.style.overflow = 'hidden';
-      document.body.style.scrollbarGutter = 'stable';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.userSelect = 'none';
     } else {
       // Only restore when both opening and closing are complete
       document.body.style.position = '';
       document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.height = '';
       document.body.style.overflow = '';
-      document.body.style.scrollbarGutter = '';
+      document.body.style.paddingRight = '';
       document.body.style.userSelect = '';
       
       // Restore scroll position
@@ -87,13 +87,11 @@ const Navigation = () => {
       // Cleanup on unmount
       document.body.style.position = '';
       document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.height = '';
       document.body.style.overflow = '';
-      document.body.style.scrollbarGutter = '';
+      document.body.style.paddingRight = '';
       document.body.style.userSelect = '';
     };
-  }, [isMenuOpen, isClosing, scrollPosition]);
+  }, [isMenuOpen, isClosing, scrollPosition, scrollbarWidth]);
 
   // Handle escape key
   useEffect(() => {
