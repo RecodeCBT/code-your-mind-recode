@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb, X } from "lucide-react";
+import { Brain, Code, Zap, Target, Eye, CheckCircle, Heart, Compass, Lightbulb, X, Triangle, Focus, Users, Award, Shield, MessageCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 import rewireTheMindImage from "@/assets/rewire-the-mind.jpg";
@@ -10,6 +10,60 @@ import recodeCircuitsImage from "@/assets/recode-circuits.png";
 
 const WhatIsRecode = () => {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  const cbtPrinciplesData = {
+    "cognitive-triangle": {
+      title: "Cognitive Triangle",
+      icon: Triangle,
+      color: "orange",
+      content: "Understanding the fundamental connection between thoughts, feelings, and behaviors. This core principle shows how changing one element of the triangle automatically influences the others, giving you multiple entry points for creating positive change in your life."
+    },
+    "present-focused": {
+      title: "Present-Focused",
+      icon: Focus,
+      color: "orange", 
+      content: "Addressing current problems and developing practical solutions for the here and now. Rather than getting lost in past regrets or future worries, CBT helps you focus your energy on what you can actually control and change today."
+    },
+    "collaborative": {
+      title: "Collaborative",
+      icon: Users,
+      color: "orange",
+      content: "Working together as partners to identify and change unhelpful patterns. This isn't about being told what to do—it's about developing your own insights and skills through guided discovery and shared problem-solving."
+    },
+    "evidence-based": {
+      title: "Evidence-Based",
+      icon: Award,
+      color: "orange",
+      content: "Using proven techniques like thought records and behavioral experiments that have been validated through decades of research. Every tool and technique has solid scientific backing, ensuring you're using methods that actually work."
+    }
+  };
+
+  const dbtSkillsData = {
+    "mindfulness": {
+      title: "Mindfulness",
+      icon: Brain,
+      color: "purple",
+      content: "Present-moment awareness without judgment. Learning to observe your thoughts and emotions as they arise without getting caught up in them, creating space between stimulus and response so you can choose how to act rather than react automatically."
+    },
+    "distress-tolerance": {
+      title: "Distress Tolerance", 
+      icon: Shield,
+      color: "purple",
+      content: "Managing crisis situations without making them worse. These skills help you survive intense emotional states without engaging in behaviors that create additional problems, using techniques like distraction, self-soothing, and radical acceptance."
+    },
+    "emotion-regulation": {
+      title: "Emotion Regulation",
+      icon: Heart,
+      color: "purple",
+      content: "Understanding and managing intense emotions effectively. Learning to identify what you're feeling, understand what triggered it, and use specific skills to either change the emotion or change how you respond to it."
+    },
+    "interpersonal-effectiveness": {
+      title: "Interpersonal Effectiveness",
+      icon: MessageCircle,
+      color: "purple",
+      content: "Maintaining relationships while meeting your needs. Balancing being assertive about your goals with maintaining important relationships, using skills like DEAR MAN, GIVE, and FAST to communicate effectively."
+    }
+  };
 
   const basicsData = {
     "exercise": {
@@ -325,12 +379,26 @@ const WhatIsRecode = () => {
                 </p>
                 <div className="mt-4 md:mt-6">
                   <h4 className="font-semibold mb-2 md:mb-3 text-sm md:text-base">Core CBT Principles:</h4>
-                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-left max-w-md mx-auto">
-                    <li>• <strong>Cognitive Triangle:</strong> Understanding the connection between thoughts, feelings, and behaviors</li>
-                    <li>• <strong>Present-Focused:</strong> Addressing current problems and developing practical solutions</li>
-                    <li>• <strong>Collaborative:</strong> Working together to identify and change unhelpful patterns</li>
-                    <li>• <strong>Evidence-Based:</strong> Using proven techniques like thought records and behavioral experiments</li>
-                  </ul>
+                  <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-md mx-auto">
+                    {Object.entries(cbtPrinciplesData).map(([key, principle]) => {
+                      const Icon = principle.icon;
+                      return (
+                        <Card 
+                          key={key}
+                          className="p-2 md:p-3 cursor-pointer hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 bg-gradient-to-br from-orange-500/5 to-orange-500/10 border border-orange-500/20 hover:border-orange-500/40"
+                          onClick={() => setExpandedSection(key)}
+                        >
+                          <div className="text-center space-y-1 md:space-y-2">
+                            <div className="mx-auto mb-1 p-1.5 md:p-2 bg-orange-500/10 rounded-full w-fit">
+                              <Icon className="h-3 w-3 md:h-4 md:w-4 text-orange-500" />
+                            </div>
+                            <h5 className="text-xs md:text-sm font-medium text-orange-600">{principle.title}</h5>
+                            <p className="text-xs text-muted-foreground">Read more...</p>
+                          </div>
+                        </Card>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -353,12 +421,26 @@ const WhatIsRecode = () => {
                 </p>
                 <div className="mt-4 md:mt-6">
                   <h4 className="font-semibold mb-2 md:mb-3 text-sm md:text-base">Core DBT Skills:</h4>
-                  <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-left max-w-md mx-auto">
-                    <li>• <strong>Mindfulness:</strong> Present-moment awareness without judgment</li>
-                    <li>• <strong>Distress Tolerance:</strong> Managing crisis situations without making them worse</li>
-                    <li>• <strong>Emotion Regulation:</strong> Understanding and managing intense emotions effectively</li>
-                    <li>• <strong>Interpersonal Effectiveness:</strong> Maintaining relationships while meeting your needs</li>
-                  </ul>
+                  <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-md mx-auto">
+                    {Object.entries(dbtSkillsData).map(([key, skill]) => {
+                      const Icon = skill.icon;
+                      return (
+                        <Card 
+                          key={key}
+                          className="p-2 md:p-3 cursor-pointer hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 bg-gradient-to-br from-purple-600/5 to-purple-600/10 border border-purple-600/20 hover:border-purple-600/40"
+                          onClick={() => setExpandedSection(key)}
+                        >
+                          <div className="text-center space-y-1 md:space-y-2">
+                            <div className="mx-auto mb-1 p-1.5 md:p-2 bg-purple-600/10 rounded-full w-fit">
+                              <Icon className="h-3 w-3 md:h-4 md:w-4 text-purple-600" />
+                            </div>
+                            <h5 className="text-xs md:text-sm font-medium text-purple-600">{skill.title}</h5>
+                            <p className="text-xs text-muted-foreground">Read more...</p>
+                          </div>
+                        </Card>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -419,6 +501,64 @@ const WhatIsRecode = () => {
           </div>
         </div>
       </section>
+
+      {/* Expanded content overlay for all data */}
+      {expandedSection && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={closeExpanded}>
+          <div className="bg-card rounded-lg max-w-md w-full p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-bold text-card-foreground">
+                {basicsData[expandedSection as keyof typeof basicsData]?.title ||
+                 cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData]?.title ||
+                 dbtSkillsData[expandedSection as keyof typeof dbtSkillsData]?.title}
+              </h3>
+              <button onClick={closeExpanded} className="text-muted-foreground hover:text-foreground">
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <div className="mb-4">
+              {(basicsData[expandedSection as keyof typeof basicsData] ||
+                cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                dbtSkillsData[expandedSection as keyof typeof dbtSkillsData]) && (
+                <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${
+                  (basicsData[expandedSection as keyof typeof basicsData] || 
+                   cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                   dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.color === 'orange' ? 'bg-orange-500/10' :
+                  (basicsData[expandedSection as keyof typeof basicsData] || 
+                   cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                   dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.color === 'teal' ? 'bg-teal-500/10' :
+                  (basicsData[expandedSection as keyof typeof basicsData] || 
+                   cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                   dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.color === 'purple' ? 'bg-purple-500/10' :
+                  'bg-blue-500/10'
+                }`}>
+                  {React.createElement((basicsData[expandedSection as keyof typeof basicsData] ||
+                                     cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                                     dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.icon, {
+                    className: `h-8 w-8 ${
+                      (basicsData[expandedSection as keyof typeof basicsData] || 
+                       cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                       dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.color === 'orange' ? 'text-orange-500' :
+                      (basicsData[expandedSection as keyof typeof basicsData] || 
+                       cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                       dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.color === 'teal' ? 'text-teal-500' :
+                      (basicsData[expandedSection as keyof typeof basicsData] || 
+                       cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData] ||
+                       dbtSkillsData[expandedSection as keyof typeof dbtSkillsData])?.color === 'purple' ? 'text-purple-500' :
+                      'text-blue-500'
+                    }`
+                  })}
+                </div>
+              )}
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              {basicsData[expandedSection as keyof typeof basicsData]?.content ||
+               cbtPrinciplesData[expandedSection as keyof typeof cbtPrinciplesData]?.content ||
+               dbtSkillsData[expandedSection as keyof typeof dbtSkillsData]?.content}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
