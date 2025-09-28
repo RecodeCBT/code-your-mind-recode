@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare, Building, TrendingUp, Users } from "lucide-react";
+import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare } from "lucide-react";
 import VideoLogo from "@/components/VideoLogo";
 import Navigation from "@/components/Navigation";
 import anxietyImage from "@/assets/anxiety-brain.jpg";
@@ -819,82 +819,43 @@ const Index = () => {
       </section>
 
       {/* Corporate Seminars Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-slate-50 via-blue-50/30 to-gray-50 relative overflow-hidden border-t border-slate-200/50">
-        {/* Professional Background Elements */}
-        <div className="absolute top-8 left-8 w-32 h-32 bg-gradient-to-br from-blue-600/8 to-slate-600/8 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-8 right-8 w-40 h-40 bg-gradient-to-br from-slate-600/6 to-blue-600/6 rounded-lg rotate-12 blur-2xl"></div>
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-gradient-to-br from-blue-600/5 to-slate-400/5 rounded-full blur-xl"></div>
+      <section className="py-12 px-4 bg-gradient-to-r from-muted/10 via-orange-500/5 to-purple-600/10 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-blue-600/15 to-orange-500/15 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-purple-600/15 to-orange-500/15 rounded-lg rotate-45 blur-xl"></div>
         
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="text-center mb-16">
-            {/* Professional Header with Corporate Icon */}
-            <div className="flex flex-col items-center mb-8">
-              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-slate-700 rounded-xl shadow-lg mb-6">
-                <Building className="h-10 w-10 text-white" />
-              </div>
-              <div className="bg-white border border-slate-200/60 rounded-2xl px-8 py-6 shadow-lg backdrop-blur-sm">
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-slate-700 bg-clip-text text-transparent mb-2">
-                  Executive & Corporate Wellness Programs
-                </h2>
-                <div className="flex items-center justify-center gap-2 text-sm font-medium text-slate-600">
-                  <Award className="h-4 w-4" />
-                  <span>Evidence-Based</span>
-                  <span>•</span>
-                  <TrendingUp className="h-4 w-4" />
-                  <span>Performance-Driven</span>
-                  <span>•</span>
-                  <Shield className="h-4 w-4" />
-                  <span>Professional Delivery</span>
-                </div>
-              </div>
-            </div>
-            
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Elevate organizational performance with ReCODE's executive-grade mental wellness programs. 
-              Our doctor-delivered, evidence-based interventions reduce workplace stress by up to 40%, 
-              enhance team productivity, and build lasting emotional resilience across your workforce.
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="font-bold mb-6 border-4 border-double border-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-xl px-6 py-4 inline-block shadow-lg text-xl">New:
+Corporate Training
+ & Staff Wellness
+Packages
+          </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              Transform your workplace culture with ReCODE methodology. We offer specialized corporate seminars 
+              and staff wellness sessions designed to enhance mental resilience, reduce workplace stress, and 
+              improve team performance through evidence-based psychological training.
             </p>
-            
-            {/* Enhanced Service Cards */}
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border-slate-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl mx-auto mb-6">
-                  <Brain className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-3">Executive Stress Management</h3>
-                <p className="text-slate-600 mb-4">Comprehensive workshops targeting high-pressure environments with measurable stress reduction outcomes</p>
-                <div className="text-sm text-blue-600 font-medium">ROI: 25-40% stress reduction</div>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card className="p-6 text-center">
+                <Brain className="h-12 w-12 text-orange-500 mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Stress Management Workshops</h3>
+                <p className="text-muted-foreground text-sm">Team sessions focused on practical stress reduction techniques</p>
               </Card>
-              
-              <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border-slate-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl mx-auto mb-6">
-                  <Target className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-3">Performance Psychology</h3>
-                <p className="text-slate-600 mb-4">Strategic mental training for enhanced focus, decision-making, and goal achievement in corporate settings</p>
-                <div className="text-sm text-slate-600 font-medium">ROI: 15-30% productivity gains</div>
+              <Card className="p-6 text-center">
+                <Target className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Performance Psychology</h3>
+                <p className="text-muted-foreground text-sm">Enhance focus, productivity and goal achievement strategies</p>
               </Card>
-              
-              <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border-slate-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-slate-600 rounded-xl mx-auto mb-6">
-                  <Users className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-3">Team Resilience Training</h3>
-                <p className="text-slate-600 mb-4">Organization-wide emotional intelligence programs to strengthen team dynamics and workplace culture</p>
-                <div className="text-sm text-blue-600 font-medium">ROI: Improved retention & culture</div>
+              <Card className="p-6 text-center">
+                <Heart className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-bold mb-2">Emotional Resilience Training</h3>
+                <p className="text-muted-foreground text-sm">Build team emotional intelligence and workplace wellbeing</p>
               </Card>
             </div>
-            
-            {/* Professional CTA */}
-            <div className="bg-gradient-to-r from-blue-600 to-slate-700 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Transform Your Organization's Mental Wellness</h3>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">Join leading companies investing in evidence-based mental health solutions. Custom programs tailored to your organizational needs.</p>
-              <Link to="/corporate-contact#top">
-                <Button size="lg" className="bg-white text-slate-800 hover:bg-slate-50 font-semibold px-8 py-3 shadow-lg">
-                  Schedule Executive Consultation
-                </Button>
-              </Link>
-            </div>
+            <Link to="/corporate-contact#top">
+              <Button size="lg" className="text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg">Enquire About Corporate Training 
+Here</Button>
+            </Link>
           </div>
         </div>
       </section>
