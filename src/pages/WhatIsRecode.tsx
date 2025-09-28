@@ -191,7 +191,7 @@ const WhatIsRecode = () => {
 
             {/* How it works */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-orange-500">How it works</h3>
+              <h3 className="text-2xl font-bold mb-6 text-orange-500 text-center">How it works</h3>
               <div className="space-y-4 text-foreground">
                 <p><strong>Map the pattern</strong> — identify triggers, label emotions, reduce reactions, increase acceptance and observation, and maintain through consistent repetition.</p>
                 <p><strong>Recode the pattern</strong> — run focused behavioural experiments, apply cognitive tools, and practise micro-skills for emotion regulation.</p>
@@ -201,7 +201,7 @@ const WhatIsRecode = () => {
 
             {/* Who it helps (individuals) */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-purple-600">Who it helps (individuals)</h3>
+              <h3 className="text-2xl font-bold mb-6 text-purple-600 text-center">Who it helps (individuals)</h3>
               <p className="text-foreground">
                 Anxiety (including GAD/social), low mood, avoidance/procrastination, stress-linked habits, sleep and performance-impacting patterns. High-risk or crisis presentations are signposted appropriately.
               </p>
@@ -209,7 +209,7 @@ const WhatIsRecode = () => {
 
             {/* For organisations */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-blue-600">For organisations</h3>
+              <h3 className="text-2xl font-bold mb-6 text-blue-600 text-center">For organisations</h3>
               <p className="text-foreground mb-6">
                 ReCODE delivers evidence-informed corporate programmes that translate clinical-grade skills into workplace results:
               </p>
@@ -223,7 +223,7 @@ const WhatIsRecode = () => {
 
             {/* What to expect */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-orange-500">What to expect</h3>
+              <h3 className="text-2xl font-bold mb-6 text-orange-500 text-center">What to expect</h3>
               <p className="text-foreground">
                 Flexible, and collaborative remote sessions with between-session practice tailored to real life. Many individual programmes run 4-6 sessions; corporate formats range from one-off masterclasses to cohort training with follow-ups.
               </p>
