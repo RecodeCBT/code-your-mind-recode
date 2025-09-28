@@ -7,6 +7,7 @@ const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const navItems = [{
     label: "Home",
     path: "/"
@@ -37,6 +38,10 @@ const Navigation = () => {
     path: "/contact"
   }];
   const toggleMenu = () => {
+    if (!isMenuOpen) {
+      // Store current scroll position before opening menu
+      setScrollPosition(window.pageYOffset);
+    }
     setIsMenuOpen(!isMenuOpen);
   };
   const closeMenu = () => {
@@ -54,17 +59,35 @@ const Navigation = () => {
     }
   }, [location.pathname]);
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll and movement when menu is open
   useEffect(() => {
     if (isMenuOpen) {
+      // Prevent scrolling and fix position to prevent layout shifts
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
+      document.body.style.scrollbarGutter = 'stable';
     } else {
-      document.body.style.overflow = 'unset';
+      // Restore body position and scroll
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.overflow = '';
+      document.body.style.scrollbarGutter = '';
+      
+      // Restore scroll position
+      window.scrollTo(0, scrollPosition);
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      // Cleanup on unmount
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.overflow = '';
+      document.body.style.scrollbarGutter = '';
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, scrollPosition]);
 
   // Handle escape key
   useEffect(() => {
@@ -113,7 +136,11 @@ const Navigation = () => {
               isClosing ? "animate-slide-out-right translate-x-full" : "animate-slide-in-right"
             )}
           >
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+            <div 
+              className="flex items-center justify-between p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors" 
+              onClick={closeMenu}
+              aria-label="Close menu by clicking header"
+            >
               <span className="text-lg font-semibold text-gray-900">Menu</span>
               <Button variant="ghost" size="sm" onClick={closeMenu} className="p-2" aria-label="Close menu">
                 <X className="h-5 w-5 text-gray-700" />
