@@ -71,29 +71,25 @@ const Navigation = () => {
   // Prevent body scroll and movement when menu is open or closing
   useEffect(() => {
     if (isMenuOpen || isClosing) {
+      // Apply overflow hidden to HTML element instead of position fixed on body
+      // This prevents scrolling without changing positioning context for fixed elements
+      document.documentElement.style.overflow = 'hidden';
+      
       if (isMobile) {
-        // Mobile-specific approach - maintain exact width to prevent text compression
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollPosition}px`;
+        // Mobile-specific approach - prevent touch scrolling and text selection
         document.body.style.width = `${bodyWidth}px`;
-        document.body.style.overflow = 'hidden';
         document.body.style.touchAction = 'none';
         document.body.style.overscrollBehavior = 'none';
         document.body.style.userSelect = 'none';
       } else {
         // Desktop approach - compensate for scrollbar removal
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollPosition}px`;
-        document.body.style.overflow = 'hidden';
         document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.userSelect = 'none';
       }
     } else {
       // Only restore when both opening and closing are complete
-      document.body.style.position = '';
-      document.body.style.top = '';
+      document.documentElement.style.overflow = '';
       document.body.style.width = '';
-      document.body.style.overflow = '';
       document.body.style.paddingRight = '';
       document.body.style.touchAction = '';
       document.body.style.overscrollBehavior = '';
@@ -104,16 +100,14 @@ const Navigation = () => {
     }
     return () => {
       // Cleanup on unmount
-      document.body.style.position = '';
-      document.body.style.top = '';
+      document.documentElement.style.overflow = '';
       document.body.style.width = '';
-      document.body.style.overflow = '';
       document.body.style.paddingRight = '';
       document.body.style.touchAction = '';
       document.body.style.overscrollBehavior = '';
       document.body.style.userSelect = '';
     };
-  }, [isMenuOpen, isClosing, scrollPosition, scrollbarWidth, isMobile]);
+  }, [isMenuOpen, isClosing, scrollPosition, scrollbarWidth, bodyWidth, isMobile]);
 
   // Handle escape key
   useEffect(() => {
