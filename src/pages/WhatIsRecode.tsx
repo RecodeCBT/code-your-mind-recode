@@ -230,7 +230,7 @@ const WhatIsRecode = () => {
               />
             </div>
             
-            <p className="text-lg text-foreground leading-relaxed mb-12">
+            <p className="text-lg text-foreground leading-relaxed mb-12 text-center">
               ReCODE is a structured, skills-based programme that helps people (and teams) change entrenched thought–emotion–behaviour loops. It integrates core CBT methods (behavioural activation, exposure, cognitive tools), targeted DBT skills (emotion regulation, distress tolerance), and practical habit design—think of it as learning to play the brain like an instrument.
             </p>
             
