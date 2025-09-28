@@ -279,7 +279,7 @@ const WhatIsRecode = () => {
               <div className="space-y-6 text-foreground">
                 <div className="text-center">
                   <h4 className="text-lg font-bold mb-2">Workshops & keynotes</h4>
-                  <p>60–90 minutes on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
+                  <p>1 to 3 hours on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
                 </div>
                 <div className="text-center">
                   <h4 className="text-lg font-bold mb-2">Training series</h4>
