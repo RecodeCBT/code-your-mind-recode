@@ -68,25 +68,32 @@ const Navigation = () => {
     }
   }, [location.pathname]);
 
-  // Prevent body scroll without affecting fixed element positioning context
+  // Prevent body scroll and movement when menu is open or closing
   useEffect(() => {
     if (isMenuOpen || isClosing) {
-      // Apply overflow hidden to html element to prevent scroll without affecting positioning context
-      document.documentElement.style.overflow = 'hidden';
-      
       if (isMobile) {
-        // Mobile-specific approach - prevent touch interactions without changing body position
+        // Mobile-specific approach - maintain exact width to prevent text compression
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.width = `${bodyWidth}px`;
+        document.body.style.overflow = 'hidden';
         document.body.style.touchAction = 'none';
         document.body.style.overscrollBehavior = 'none';
         document.body.style.userSelect = 'none';
       } else {
         // Desktop approach - compensate for scrollbar removal
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.overflow = 'hidden';
         document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.userSelect = 'none';
       }
     } else {
       // Only restore when both opening and closing are complete
-      document.documentElement.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.overflow = '';
       document.body.style.paddingRight = '';
       document.body.style.touchAction = '';
       document.body.style.overscrollBehavior = '';
@@ -97,7 +104,10 @@ const Navigation = () => {
     }
     return () => {
       // Cleanup on unmount
-      document.documentElement.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.overflow = '';
       document.body.style.paddingRight = '';
       document.body.style.touchAction = '';
       document.body.style.overscrollBehavior = '';
