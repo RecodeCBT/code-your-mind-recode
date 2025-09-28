@@ -11,6 +11,7 @@ const Navigation = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
+  const [bodyWidth, setBodyWidth] = useState(0);
 
   const navItems = [{
     label: "Home",
@@ -47,6 +48,8 @@ const Navigation = () => {
       setScrollPosition(window.pageYOffset);
       const scrollbarW = window.innerWidth - document.documentElement.clientWidth;
       setScrollbarWidth(scrollbarW);
+      // Store current body width to prevent compression
+      setBodyWidth(document.body.clientWidth);
     }
     setIsMenuOpen(!isMenuOpen);
   };
@@ -69,17 +72,14 @@ const Navigation = () => {
   useEffect(() => {
     if (isMenuOpen || isClosing) {
       if (isMobile) {
-        // Mobile-specific approach - prevent all touch interactions and movements
+        // Mobile-specific approach - maintain exact width to prevent text compression
         document.body.style.position = 'fixed';
         document.body.style.top = `-${scrollPosition}px`;
-        document.body.style.left = '0';
-        document.body.style.right = '0';
+        document.body.style.width = `${bodyWidth}px`;
         document.body.style.overflow = 'hidden';
         document.body.style.touchAction = 'none';
         document.body.style.overscrollBehavior = 'none';
         document.body.style.userSelect = 'none';
-        document.body.style.height = '100dvh';
-        document.body.style.transform = 'translate3d(0,0,0)';
       } else {
         // Desktop approach - compensate for scrollbar removal
         document.body.style.position = 'fixed';
@@ -92,15 +92,12 @@ const Navigation = () => {
       // Only restore when both opening and closing are complete
       document.body.style.position = '';
       document.body.style.top = '';
-      document.body.style.left = '';
-      document.body.style.right = '';
+      document.body.style.width = '';
       document.body.style.overflow = '';
       document.body.style.paddingRight = '';
       document.body.style.touchAction = '';
       document.body.style.overscrollBehavior = '';
       document.body.style.userSelect = '';
-      document.body.style.height = '';
-      document.body.style.transform = '';
       
       // Restore scroll position
       window.scrollTo(0, scrollPosition);
@@ -109,15 +106,12 @@ const Navigation = () => {
       // Cleanup on unmount
       document.body.style.position = '';
       document.body.style.top = '';
-      document.body.style.left = '';
-      document.body.style.right = '';
+      document.body.style.width = '';
       document.body.style.overflow = '';
       document.body.style.paddingRight = '';
       document.body.style.touchAction = '';
       document.body.style.overscrollBehavior = '';
       document.body.style.userSelect = '';
-      document.body.style.height = '';
-      document.body.style.transform = '';
     };
   }, [isMenuOpen, isClosing, scrollPosition, scrollbarWidth, isMobile]);
 
