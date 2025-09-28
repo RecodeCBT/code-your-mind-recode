@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 const Navigation = () => {
   const location = useLocation();
+  const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -66,19 +68,39 @@ const Navigation = () => {
   // Prevent body scroll and movement when menu is open or closing
   useEffect(() => {
     if (isMenuOpen || isClosing) {
-      // Apply scrollbar compensation to prevent page shift
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollPosition}px`;
-      document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-      document.body.style.userSelect = 'none';
+      if (isMobile) {
+        // Mobile-specific approach - prevent all touch interactions and movements
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
+        document.body.style.overscrollBehavior = 'none';
+        document.body.style.userSelect = 'none';
+        document.body.style.height = '100dvh';
+        document.body.style.transform = 'translate3d(0,0,0)';
+      } else {
+        // Desktop approach - compensate for scrollbar removal
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+        document.body.style.userSelect = 'none';
+      }
     } else {
       // Only restore when both opening and closing are complete
       document.body.style.position = '';
       document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
       document.body.style.overflow = '';
       document.body.style.paddingRight = '';
+      document.body.style.touchAction = '';
+      document.body.style.overscrollBehavior = '';
       document.body.style.userSelect = '';
+      document.body.style.height = '';
+      document.body.style.transform = '';
       
       // Restore scroll position
       window.scrollTo(0, scrollPosition);
@@ -87,11 +109,17 @@ const Navigation = () => {
       // Cleanup on unmount
       document.body.style.position = '';
       document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
       document.body.style.overflow = '';
       document.body.style.paddingRight = '';
+      document.body.style.touchAction = '';
+      document.body.style.overscrollBehavior = '';
       document.body.style.userSelect = '';
+      document.body.style.height = '';
+      document.body.style.transform = '';
     };
-  }, [isMenuOpen, isClosing, scrollPosition, scrollbarWidth]);
+  }, [isMenuOpen, isClosing, scrollPosition, scrollbarWidth, isMobile]);
 
   // Handle escape key
   useEffect(() => {
