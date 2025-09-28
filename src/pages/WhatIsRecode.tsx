@@ -246,10 +246,19 @@ const WhatIsRecode = () => {
             {/* How it works */}
             <div className="mb-12">
               <h3 className="text-2xl font-bold mb-6 text-orange-500 text-center">How it works</h3>
-              <div className="space-y-4 text-foreground">
-                <p><strong>Map the pattern</strong> — identify triggers, label emotions, reduce reactions, increase acceptance and observation, and maintain through consistent repetition.</p>
-                <p><strong>Recode the pattern</strong> — run focused behavioural experiments, apply cognitive tools, and practise micro-skills for emotion regulation.</p>
-                <p><strong>Track the gains</strong> — brief measures to make improvement visible and guide next steps.</p>
+              <div className="space-y-6 text-foreground">
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Map the pattern</h4>
+                  <p>identify triggers, label emotions, reduce reactions, increase acceptance and observation, and maintain through consistent repetition.</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Recode the pattern</h4>
+                  <p>run focused behavioural experiments, apply cognitive tools, and practise micro-skills for emotion regulation.</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Track the gains</h4>
+                  <p>brief measures to make improvement visible and guide next steps.</p>
+                </div>
               </div>
             </div>
 
@@ -264,21 +273,33 @@ const WhatIsRecode = () => {
             {/* For organisations */}
             <div className="mb-12">
               <h3 className="text-2xl font-bold mb-6 text-blue-600 text-center">For organisations</h3>
-              <p className="text-foreground mb-6">
+              <p className="text-foreground mb-6 text-center">
                 ReCODE delivers evidence-informed corporate programmes that translate clinical-grade skills into workplace results:
               </p>
-              <div className="space-y-4 text-foreground">
-                <p><strong>Workshops & keynotes:</strong> 60–90 minutes on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
-                <p><strong>Training series:</strong> 4–8 week cohorts embedding CBT/DBT micro-skills (emotion regulation, cognitive bias checks, habit design).</p>
-                <p><strong>Manager toolkits:</strong> practical scripts and micro-interventions for supportive, high-standards leadership.</p>
-                <p><strong>Measurement:</strong> simple pre/post pulse measures with anonymised, HR-ready summaries.</p>
+              <div className="space-y-6 text-foreground">
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Workshops & keynotes</h4>
+                  <p>60–90 minutes on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Training series</h4>
+                  <p>4–8 week cohorts embedding CBT/DBT micro-skills (emotion regulation, cognitive bias checks, habit design).</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Manager toolkits</h4>
+                  <p>practical scripts and micro-interventions for supportive, high-standards leadership.</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold mb-2">Measurement</h4>
+                  <p>simple pre/post pulse measures with anonymised, HR-ready summaries.</p>
+                </div>
               </div>
             </div>
 
             {/* What to expect */}
             <div className="mb-12">
               <h3 className="text-2xl font-bold mb-6 text-orange-500 text-center">What to expect</h3>
-              <p className="text-foreground">
+              <p className="text-foreground text-center">
                 Flexible, and collaborative remote sessions with between-session practice tailored to real life. Many individual programmes run 4-6 sessions; corporate formats range from one-off masterclasses to cohort training with follow-ups.
               </p>
             </div>
@@ -327,8 +348,7 @@ const WhatIsRecode = () => {
                       <div className={`mx-auto mb-4 p-3 ${stepColors[index]} rounded-full w-fit`}>
                         <Icon className={`h-8 w-8 ${iconColors[index]}`} />
                       </div>
-                      <CardTitle className="text-2xl font-bold">
-                        <span className="text-muted-foreground">{index + 1}. </span>
+                      <CardTitle className="text-2xl font-bold text-center">
                         <span className="text-4xl font-extrabold text-orange-500">
                           {step.step[0]}
                         </span>
