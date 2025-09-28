@@ -201,7 +201,7 @@ const WhatIsRecode = () => {
 
             {/* Who it helps (individuals) */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-purple-600 text-center">Who it helps (individuals)</h3>
+              <h3 className="text-2xl font-bold mb-6 text-purple-600 text-center">For Individuals</h3>
               <p className="text-foreground">
                 Anxiety (including GAD/social), low mood, avoidance/procrastination, stress-linked habits, sleep and performance-impacting patterns. High-risk or crisis presentations are signposted appropriately.
               </p>
