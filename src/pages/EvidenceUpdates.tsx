@@ -89,19 +89,39 @@ const EvidenceUpdates = () => {
             <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
             <div className="relative flex items-center justify-center mb-4">
               {/* Left circuit border */}
-              <div className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 w-32 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60">
-                <div className="absolute -top-1 right-0 w-2 h-2 border border-primary/60 rounded-full bg-primary/20"></div>
-                <div className="absolute -top-0.5 right-4 w-1 h-1 bg-primary/40 rounded-full"></div>
-                <div className="absolute -top-0.5 right-8 w-1 h-1 bg-primary/40 rounded-full"></div>
+              <div className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 w-40 h-px">
+                {/* Main circuit trace */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-primary/50"></div>
+                {/* Secondary trace above */}
+                <div className="absolute -top-2 right-8 w-16 h-px bg-gradient-to-r from-transparent to-primary/30"></div>
+                {/* Connection nodes */}
+                <div className="absolute -top-1.5 right-0 w-3 h-3 border-2 border-primary/50 rounded-full bg-primary/10">
+                  <div className="absolute inset-1 bg-primary/30 rounded-full"></div>
+                </div>
+                <div className="absolute -top-0.5 right-6 w-1.5 h-1.5 bg-primary/40 rounded-full"></div>
+                <div className="absolute -top-0.5 right-12 w-1 h-1 bg-primary/30 rounded-full"></div>
+                {/* Vertical connector */}
+                <div className="absolute -top-2 right-8 w-px h-2 bg-primary/20"></div>
               </div>
               
-              <h1 className="text-4xl font-bold relative z-10 px-8">Resources</h1>
+              <h1 className="text-4xl font-bold relative z-10 px-12 bg-gradient-to-r from-foreground via-foreground to-foreground bg-clip-text">
+                Resources
+              </h1>
               
               {/* Right circuit border */}
-              <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 w-32 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60">
-                <div className="absolute -top-1 left-0 w-2 h-2 border border-primary/60 rounded-full bg-primary/20"></div>
-                <div className="absolute -top-0.5 left-4 w-1 h-1 bg-primary/40 rounded-full"></div>
-                <div className="absolute -top-0.5 left-8 w-1 h-1 bg-primary/40 rounded-full"></div>
+              <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 w-40 h-px">
+                {/* Main circuit trace */}
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-primary/20 to-primary/50"></div>
+                {/* Secondary trace above */}
+                <div className="absolute -top-2 left-8 w-16 h-px bg-gradient-to-l from-transparent to-primary/30"></div>
+                {/* Connection nodes */}
+                <div className="absolute -top-1.5 left-0 w-3 h-3 border-2 border-primary/50 rounded-full bg-primary/10">
+                  <div className="absolute inset-1 bg-primary/30 rounded-full"></div>
+                </div>
+                <div className="absolute -top-0.5 left-6 w-1.5 h-1.5 bg-primary/40 rounded-full"></div>
+                <div className="absolute -top-0.5 left-12 w-1 h-1 bg-primary/30 rounded-full"></div>
+                {/* Vertical connector */}
+                <div className="absolute -top-2 left-8 w-px h-2 bg-primary/20"></div>
               </div>
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
