@@ -13,9 +13,9 @@ const DrCarsonBackground = () => {
           {/* Header */}
           <div className="text-center mb-12 rc-title-wrap">
             <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
-            <h1 className="mb-2 text-4xl font-bold relative z-10">Dr. Christopher Carson</h1>
+            <h1 className="mb-2 text-3xl sm:text-4xl font-bold relative z-10 whitespace-nowrap">Dr. Christopher Carson</h1>
             <p className="text-sm italic text-muted-foreground mb-4">BSc MBBS MRCGP ProfDipCBT</p>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               The journey from medical practice to creating ReCODE - A new approach to mental health treatment
             </p>
           </div>
@@ -98,7 +98,7 @@ const DrCarsonBackground = () => {
               </div>
               
               <div className="lg:col-span-3">
-                <CardContent className="space-y-4 text-base leading-relaxed">
+                <CardContent className="space-y-4 text-sm sm:text-base leading-relaxed">
                   <p>
                     Dr. Christopher Carson's journey in healthcare began in 2008 with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
                   </p>

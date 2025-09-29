@@ -245,26 +245,60 @@ const WhatIsRecode = () => {
 
             {/* How it works */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-orange-500 text-center">How it works</h3>
-              <div className="space-y-6 text-foreground">
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Map the pattern</h4>
-                  <p>identify triggers, label emotions, reduce reactions, increase acceptance and observation, and maintain through consistent repetition.</p>
+              <div className="relative flex items-center mb-6">
+                <div className="flex-grow border-t border-primary/30"></div>
+                <div className="flex-shrink-0 mx-4 text-2xl font-bold text-orange-500 text-center relative">
+                  How it works
+                  <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                    <svg viewBox="0 0 24 24" className="w-full h-full text-orange-500/50 fill-current">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                    <svg viewBox="0 0 24 24" className="w-full h-full text-orange-500/50 fill-current">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Recode the pattern</h4>
-                  <p>run focused behavioural experiments, apply cognitive tools, and practise micro-skills for emotion regulation.</p>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Track the gains</h4>
-                  <p>brief measures to make improvement visible and guide next steps.</p>
-                </div>
+                <div className="flex-grow border-t border-primary/30"></div>
               </div>
+              <Card className="p-6 border-2 border-orange-500/20 bg-gradient-to-br from-orange-500/5 to-transparent">
+                <div className="space-y-6 text-foreground">
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Map the pattern</h4>
+                    <p>identify triggers, label emotions, reduce reactions, increase acceptance and observation, and maintain through consistent repetition.</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Recode the pattern</h4>
+                    <p>run focused behavioural experiments, apply cognitive tools, and practise micro-skills for emotion regulation.</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Track the gains</h4>
+                    <p>brief measures to make improvement visible and guide next steps.</p>
+                  </div>
+                </div>
+              </Card>
             </div>
 
             {/* Who it helps (individuals) */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-purple-600 text-center">For Individuals</h3>
+              <div className="relative flex items-center mb-6">
+                <div className="flex-grow border-t border-primary/30"></div>
+                <div className="flex-shrink-0 mx-4 text-2xl font-bold text-purple-600 text-center relative">
+                  For Individuals
+                  <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                    <svg viewBox="0 0 24 24" className="w-full h-full text-purple-600/50 fill-current">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                    <svg viewBox="0 0 24 24" className="w-full h-full text-purple-600/50 fill-current">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex-grow border-t border-primary/30"></div>
+              </div>
               <p className="text-foreground text-center">
                 Anxiety (including GAD/social), low mood, avoidance/procrastination, stress-linked habits, sleep and performance-impacting patterns. High-risk or crisis presentations are signposted appropriately.
               </p>
@@ -272,28 +306,46 @@ const WhatIsRecode = () => {
 
             {/* For organisations */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-blue-600 text-center">For organisations</h3>
+              <div className="relative flex items-center mb-6">
+                <div className="flex-grow border-t border-primary/30"></div>
+                <div className="flex-shrink-0 mx-4 text-2xl font-bold text-blue-600 text-center relative">
+                  For Organisations
+                  <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                    <svg viewBox="0 0 24 24" className="w-full h-full text-blue-600/50 fill-current">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                    <svg viewBox="0 0 24 24" className="w-full h-full text-blue-600/50 fill-current">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex-grow border-t border-primary/30"></div>
+              </div>
               <p className="text-foreground mb-6 text-center">
                 ReCODE delivers evidence-informed corporate programmes that translate clinical-grade skills into workplace results:
               </p>
-              <div className="space-y-6 text-foreground">
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Workshops & keynotes</h4>
-                  <p>1 to 3 hours on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
+              <Card className="p-6 border-2 border-blue-600/20 bg-gradient-to-br from-blue-600/5 to-transparent">
+                <div className="grid sm:grid-cols-2 gap-6 text-foreground">
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Workshops & keynotes</h4>
+                    <p>1 to 3 hours on resilience under pressure, attention & focus, psychological safety, and burnout prevention.</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Training series</h4>
+                    <p>4–8 week cohorts embedding CBT/DBT micro-skills (emotion regulation, cognitive bias checks, habit design).</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Manager toolkits</h4>
+                    <p>practical scripts and micro-interventions for supportive, high-standards leadership.</p>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-lg font-bold mb-2">Measurement</h4>
+                    <p>simple pre/post pulse measures with anonymised, HR-ready summaries.</p>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Training series</h4>
-                  <p>4–8 week cohorts embedding CBT/DBT micro-skills (emotion regulation, cognitive bias checks, habit design).</p>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Manager toolkits</h4>
-                  <p>practical scripts and micro-interventions for supportive, high-standards leadership.</p>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-lg font-bold mb-2">Measurement</h4>
-                  <p>simple pre/post pulse measures with anonymised, HR-ready summaries.</p>
-                </div>
-              </div>
+              </Card>
             </div>
 
             {/* What to expect */}

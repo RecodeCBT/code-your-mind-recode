@@ -96,7 +96,7 @@ const Testimonials = () => {
                 <CardContent className="pt-0">
                   <div className="relative">
                     <Quote className="absolute -top-2 -left-2 h-8 w-8 text-primary/20" />
-                    <blockquote className="text-muted-foreground leading-relaxed pl-6 relative">
+                    <blockquote className="text-muted-foreground leading-relaxed pl-6 relative text-sm sm:text-base">
                       {testimonial.text}
                     </blockquote>
                   </div>
