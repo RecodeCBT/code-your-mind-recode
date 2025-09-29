@@ -130,11 +130,6 @@ const Contact = () => {
                     Book a Session
                   </Button>
                 </Link>
-                <Link to="/about" className="block">
-                  <Button variant="outline" className="w-full" size="lg">
-                    Learn More About Dr. Carson
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>

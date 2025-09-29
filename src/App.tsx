@@ -12,7 +12,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PageGradient from "./components/PageGradient";
 
-import About from "./pages/About";
+
 import DrCarsonBackground from "./pages/DrCarsonBackground";
 import Contact from "./pages/Contact";
 import CorporateContact from "./pages/CorporateContact";
@@ -50,7 +50,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           
-          <Route path="/about" element={<About />} />
+          
           <Route path="/dr-carson" element={<DrCarsonBackground />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/corporate-contact" element={<CorporateContact />} />
