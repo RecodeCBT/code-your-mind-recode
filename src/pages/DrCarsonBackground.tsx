@@ -6,7 +6,6 @@ import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const DrCarsonBackground = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
-      <NeuroDecal.TopCircuitBackground />
       <Navigation />
       <div className="container mx-auto px-4 py-8 pt-20">
 
@@ -105,11 +104,11 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing. After a long career in the university and senior level teams, <strong>he represented Ireland in American Football</strong> with the international Irish Wolfhounds team in 2018 and 2019. This insight and expertise allows him to address mental health from both neurochemical and lifestyle perspectives, understanding how exercise, nutrition, and physical health directly impact psychological resilience.
+                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing.  <strong>He represented Ireland in American Football</strong> with the international Irish Wolfhounds team in 2018 and 2019. This insight further developing an understanding on how exercise, nutrition, and physical health directly impact psychological resilience. Mental health moves from beyond the neurochemical and deeply includes lifestyle perspectives.
                   </p>
                   
                   <p>
-                    Dr. Carson then pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> and qualified as a doctor in 2015. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner in 2020.
+                    Dr. Carson pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> and qualified as a doctor in 2015. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner in 2020.
                   </p>
                   
                   <p>
@@ -117,7 +116,7 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapeutic techniques. This advanced training enhanced his ability to develop innovative approaches to mental health treatment, ultimately leading to the creation of his new <strong>ReCODE</strong> methodology.
+                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapeutic techniques. This advanced training enhanced his ability to develop innovative approaches to mental health treatment, and after success with many of his patients as a GP, ultimately lead to the creation of his new <strong>ReCODE</strong> methodology, to focus this ability, free from the constraints of the 10-minute format within current primary care medicine.
                   </p>
                 </CardContent>
               </div>
@@ -126,7 +125,7 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* RECODE Methodology Section */}
-          <div className="space-y-8 mb-16 relative z-10">
+          <div className="space-y-8 mb-16">
             <Card className="p-8 border-2 border-primary/20">
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
@@ -146,7 +145,7 @@ const DrCarsonBackground = () => {
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Your brain learns by practice. When you repeat new responses, it rewires itself, just like learning to play an instrument. With steady practice, these new codes become your natural default.
+                  The ReCODE approach involves highlighting your mental auto-codes, testing their validity against known "cognitive distortions," then develop methods to delay the "reaction" to these auto-codes using DBT-styled exercises. Your brain learns by practice. When you repeat new responses, it rewires itself, just like learning to play an instrument. With with consistency, not intensity, these new codes become your natural default.
                 </p>
               </CardContent>
             </Card>
@@ -160,7 +159,7 @@ const DrCarsonBackground = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Throughout his tenure in general practice, Dr. Carson consistently achieved remarkable success rates in treating mental health conditions. His evidence-based approach, combining traditional medical knowledge with innovative therapeutic techniques, helped hundreds of patients overcome anxiety, depression, and various psychological challenges.
+                  Throughout his tenure in general practice, Dr. Carson consistently achieved remarkable success rates in treating mental health conditions. His combination of therapy styled on evidence-based CBT and DBT, combined with traditional medical knowledge and clear teaching on how it affects the brain, he has helped countless patients overcome anxiety, depression, and various psychological challenges.
                 </p>
               </CardContent>
             </Card>
@@ -168,8 +167,8 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* Quote Section */}
-          <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20 relative z-10">
-            <blockquote className="text-2xl italic mb-4">"Mental health patterns are like code - they can be pre-loaded in the human brain or they can develop. With the right approach, we can reveal this code, update and re-write them for better outcomes."</blockquote>
+          <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20">
+            <blockquote className="text-2xl italic mb-4">"Mental health patterns are like code - they can be pre-loaded in the human brain or they can develop. With the right guidance, we can teach how to reveal this auto-code, then update and re-write them for improved psychological balance."</blockquote>
             <cite className="text-lg text-muted-foreground">
               - Dr. Christopher Carson<br />
               <span className="text-sm italic">BSc MBBS MRCGP ProfDipCBT</span>
@@ -179,12 +178,14 @@ const DrCarsonBackground = () => {
           {/* Call to Action */}
           <div className="text-center mt-12">
             <Link to="/contact">
-              
+              <Button size="lg" className="text-lg px-8 py-3">
+                Get Started with ReCODE
+              </Button>
             </Link>
           </div>
 
           {/* Book Your Session Section */}
-          <section className="px-4 bg-primary text-primary-foreground relative py-[20px] z-10">
+          <section className="py-20 px-4 bg-primary text-primary-foreground relative">
             <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-4xl font-bold mb-6">Book Your Session</h2>
               <p className="text-xl mb-8 opacity-90">
