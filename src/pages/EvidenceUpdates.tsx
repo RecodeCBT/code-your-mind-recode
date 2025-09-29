@@ -19,23 +19,42 @@ interface RSSFeed {
   items: RSSItem[];
 }
 const EvidenceUpdates = () => {
-  const [cogNeuroFeed, setCogNeuroFeed] = useState<RSSFeed | null>(null);
-  const [cogScienceFeed, setCogScienceFeed] = useState<RSSFeed | null>(null);
+  const [frontiersFeed, setFrontiersFeed] = useState<RSSFeed | null>(null);
+  const [natureFeed, setNatureFeed] = useState<RSSFeed | null>(null);
+  const [neuroNewsFeed, setNeuroNewsFeed] = useState<RSSFeed | null>(null);
+  const [nimhFeed, setNimhFeed] = useState<RSSFeed | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchRSSFeeds = async () => {
       try {
         // Using RSS2JSON service to convert RSS to JSON
-        const [cogNeuroResponse, cogScienceResponse] = await Promise.all([fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.cogneurosociety.org/feed/'), fetch('https://api.rss2json.com/v1/api.json?rss_url=https://cognitivesciencesociety.org/feed/')]);
-        const cogNeuroData = await cogNeuroResponse.json();
-        const cogScienceData = await cogScienceResponse.json();
-        setCogNeuroFeed({
-          title: cogNeuroData.feed?.title || "Cognitive Neuroscience Society",
-          items: cogNeuroData.items?.slice(0, 6) || []
+        const [frontiersResponse, natureResponse, neuroNewsResponse, nimhResponse] = await Promise.all([
+          fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.frontiersin.org/journals/behavioral-neuroscience/rss'),
+          fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.nature.com/neuro.rss'),
+          fetch('https://api.rss2json.com/v1/api.json?rss_url=https://neurosciencenews.com/feed/'),
+          fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.nimh.nih.gov/rss.xml')
+        ]);
+        
+        const frontiersData = await frontiersResponse.json();
+        const natureData = await natureResponse.json();
+        const neuroNewsData = await neuroNewsResponse.json();
+        const nimhData = await nimhResponse.json();
+        
+        setFrontiersFeed({
+          title: "Frontiers in Behavioral Neuroscience",
+          items: frontiersData.items?.slice(0, 6) || []
         });
-        setCogScienceFeed({
-          title: cogScienceData.feed?.title || "Cognitive Science Society",
-          items: cogScienceData.items?.slice(0, 6) || []
+        setNatureFeed({
+          title: "Nature Neuroscience",
+          items: natureData.items?.slice(0, 6) || []
+        });
+        setNeuroNewsFeed({
+          title: "Neuroscience News",
+          items: neuroNewsData.items?.slice(0, 6) || []
+        });
+        setNimhFeed({
+          title: "NIH/NIMH News Releases",
+          items: nimhData.items?.slice(0, 6) || []
         });
       } catch (error) {
         console.error('Error fetching RSS feeds:', error);
@@ -68,9 +87,25 @@ const EvidenceUpdates = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 rc-title-wrap">
             <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
-            <h1 className="text-4xl font-bold mb-4 relative z-10">Resources</h1>
+            <div className="relative flex items-center justify-center mb-4">
+              {/* Left circuit border */}
+              <div className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 w-32 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60">
+                <div className="absolute -top-1 right-0 w-2 h-2 border border-primary/60 rounded-full bg-primary/20"></div>
+                <div className="absolute -top-0.5 right-4 w-1 h-1 bg-primary/40 rounded-full"></div>
+                <div className="absolute -top-0.5 right-8 w-1 h-1 bg-primary/40 rounded-full"></div>
+              </div>
+              
+              <h1 className="text-4xl font-bold relative z-10 px-8">Resources</h1>
+              
+              {/* Right circuit border */}
+              <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 w-32 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60">
+                <div className="absolute -top-1 left-0 w-2 h-2 border border-primary/60 rounded-full bg-primary/20"></div>
+                <div className="absolute -top-0.5 left-4 w-1 h-1 bg-primary/40 rounded-full"></div>
+                <div className="absolute -top-0.5 left-8 w-1 h-1 bg-primary/40 rounded-full"></div>
+              </div>
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Stay informed with the latest research and developments in mental health, CBT, and therapeutic approaches.
+              Stay informed with the latest research and developments in neuroscience, behavioral health, and therapeutic approaches.
             </p>
           </div>
 
@@ -108,14 +143,14 @@ const EvidenceUpdates = () => {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
               <p className="mt-4 text-muted-foreground">Loading latest research...</p>
             </div> : <div className="space-y-12">
-              {/* Cognitive Neuroscience Society Feed */}
-              {cogNeuroFeed && <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
+              {/* Frontiers in Behavioral Neuroscience Feed */}
+              {frontiersFeed && <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
                   <div className="flex items-center gap-3 mb-6">
-                    <h2 className="text-2xl font-bold">{cogNeuroFeed.title}</h2>
-                    <Badge variant="secondary">Cognitive Neuroscience</Badge>
+                    <h2 className="text-2xl font-bold">{frontiersFeed.title}</h2>
+                    <Badge variant="secondary">Research Journal</Badge>
                   </div>
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {cogNeuroFeed.items.map((item, index) => <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
+                    {frontiersFeed.items.map((item, index) => <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
                         {item.thumbnail && <div className="aspect-video w-full overflow-hidden">
                             <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" onError={e => {
                     e.currentTarget.style.display = 'none';
@@ -126,28 +161,29 @@ const EvidenceUpdates = () => {
                           <CardDescription className="flex items-center gap-2 text-sm">
                             <Calendar className="h-4 w-4" />
                             {formatDate(item.pubDate)}
+                            {item.author && <span className="text-xs opacity-75">• {item.author}</span>}
                           </CardDescription>
                         </CardHeader>
                         <CardContent className="pt-0">
                           <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                             {stripHtml(item.description)}
                           </p>
-                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-                            Read More <ExternalLink className="h-3 w-3" />
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium">
+                            Read Full Article <ExternalLink className="h-3 w-3" />
                           </a>
                         </CardContent>
                       </Card>)}
                   </div>
                 </div>}
 
-              {/* Cognitive Science Society Feed */}
-              {cogScienceFeed && <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
+              {/* Nature Neuroscience Feed */}
+              {natureFeed && <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
                   <div className="flex items-center gap-3 mb-6">
-                    <h2 className="text-2xl font-bold">{cogScienceFeed.title}</h2>
-                    <Badge variant="secondary">Cognitive Science</Badge>
+                    <h2 className="text-2xl font-bold">{natureFeed.title}</h2>
+                    <Badge variant="secondary">Premium Journal</Badge>
                   </div>
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {cogScienceFeed.items.map((item, index) => <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
+                    {natureFeed.items.map((item, index) => <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
                         {item.thumbnail && <div className="aspect-video w-full overflow-hidden">
                             <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" onError={e => {
                     e.currentTarget.style.display = 'none';
@@ -158,14 +194,81 @@ const EvidenceUpdates = () => {
                           <CardDescription className="flex items-center gap-2 text-sm">
                             <Calendar className="h-4 w-4" />
                             {formatDate(item.pubDate)}
+                            {item.author && <span className="text-xs opacity-75">• {item.author}</span>}
                           </CardDescription>
                         </CardHeader>
                         <CardContent className="pt-0">
                           <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                             {stripHtml(item.description)}
                           </p>
-                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-                            Read More <ExternalLink className="h-3 w-3" />
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium">
+                            Read Full Article <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </CardContent>
+                      </Card>)}
+                  </div>
+                </div>}
+
+              {/* Neuroscience News Feed */}
+              {neuroNewsFeed && <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
+                  <div className="flex items-center gap-3 mb-6">
+                    <h2 className="text-2xl font-bold">{neuroNewsFeed.title}</h2>
+                    <Badge variant="secondary">Latest News</Badge>
+                  </div>
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {neuroNewsFeed.items.map((item, index) => <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
+                        {item.thumbnail && <div className="aspect-video w-full overflow-hidden">
+                            <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" onError={e => {
+                    e.currentTarget.style.display = 'none';
+                  }} />
+                          </div>}
+                        <CardHeader className="pb-3">
+                          <CardTitle className="text-lg leading-tight line-clamp-2">{item.title}</CardTitle>
+                          <CardDescription className="flex items-center gap-2 text-sm">
+                            <Calendar className="h-4 w-4" />
+                            {formatDate(item.pubDate)}
+                            {item.author && <span className="text-xs opacity-75">• {item.author}</span>}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="pt-0">
+                          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                            {stripHtml(item.description)}
+                          </p>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium">
+                            Read Full Article <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </CardContent>
+                      </Card>)}
+                  </div>
+                </div>}
+
+              {/* NIH/NIMH News Releases Feed */}
+              {nimhFeed && <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-border/20">
+                  <div className="flex items-center gap-3 mb-6">
+                    <h2 className="text-2xl font-bold">{nimhFeed.title}</h2>
+                    <Badge variant="secondary">Official Updates</Badge>
+                  </div>
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {nimhFeed.items.map((item, index) => <Card key={index} className="bg-white/5 border-border/30 hover:bg-white/10 transition-colors overflow-hidden">
+                        {item.thumbnail && <div className="aspect-video w-full overflow-hidden">
+                            <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" onError={e => {
+                    e.currentTarget.style.display = 'none';
+                  }} />
+                          </div>}
+                        <CardHeader className="pb-3">
+                          <CardTitle className="text-lg leading-tight line-clamp-2">{item.title}</CardTitle>
+                          <CardDescription className="flex items-center gap-2 text-sm">
+                            <Calendar className="h-4 w-4" />
+                            {formatDate(item.pubDate)}
+                            {item.author && <span className="text-xs opacity-75">• {item.author}</span>}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent className="pt-0">
+                          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                            {stripHtml(item.description)}
+                          </p>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium">
+                            Read Full Release <ExternalLink className="h-3 w-3" />
                           </a>
                         </CardContent>
                       </Card>)}
