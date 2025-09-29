@@ -100,23 +100,23 @@ const DrCarsonBackground = () => {
               <div className="lg:col-span-3">
                 <CardContent className="space-y-4 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Dr. Christopher Carson's journey in healthcare began in 2008 with his <strong>BSc (Hons) in Biomedical Sciences at Queen's University Belfast</strong>, where he excelled particularly in neuroscience and neuropsychopharmacology. This foundational understanding of the brain's mechanisms would prove instrumental in his later therapeutic innovations.
+                    Dr. Christopher Carson is a medical doctor and General Practitioner with a long-standing interest in how the brain and body influence mental wellbeing. His journey began with a <strong>degree in Biomedical Sciences at Queen's University Belfast</strong>, where he focused on neuroscience and neuropsychopharmacology. This early grounding in how the brain works and what influences it, this continues to inform his therapeutic approach today.
                   </p>
                   
                   <p>
-                    His passion for holistic health led him to achieve <strong>Level 3 Personal Training certification</strong>, recognizing the vital connection between physical fitness and mental wellbeing. After a long career in the university and senior level teams, <strong>he represented Ireland in American Football</strong> with the international Irish Wolfhounds team in 2018 and 2019. This insight and expertise allows him to address mental health from both neurochemical and lifestyle perspectives, understanding how exercise, nutrition, and physical health directly impact psychological resilience.
+                    Alongside medicine, he has always valued the link between physical health and mental resilience. He trained as a <strong>Level 3 Personal Trainer</strong> and <strong>represented Ireland in American Football</strong> with the Irish Wolfhounds in 2018 and 2019. These experiences gave him first-hand insight into how exercise, lifestyle, and mindset shape psychological health.
                   </p>
                   
                   <p>
-                    Dr. Carson then pursued his medical training at the <strong>University of East Anglia</strong>, where he achieved his <strong>MBBS</strong> and qualified as a doctor in 2015. Following this, he completed his <strong>MRCGP in Belfast</strong>, granting him specialist training registration as a General Practitioner in 2020.
+                    He went on to complete his medical training at the <strong>University of East Anglia</strong>, qualifying as a doctor in 2015 and later gaining his <strong>MRCGP in Belfast in 2020</strong>, granting him a position on the specialist GP register. Working across <strong>Northern Ireland and London</strong>, Dr. Carson developed a strong interest in mental health. He also recognised that NHS services, while vital, are often overstretched - leaving people waiting too long for help, and sometimes presenting information in a way that feels overwhelming rather than practical.
                   </p>
                   
                   <p>
-                    Throughout his practice across <strong>Northern Ireland and London</strong>, Dr. Carson gained a deep passion for treating mental health conditions, while simultaneously developing frustration with the slow pace and inefficiencies of the overburdened NHS services. This experience highlighted the urgent need for more effective, streamlined approaches to mental healthcare.
+                    To address this gap, he completed a <strong>postgraduate diploma in Cognitive Behavioural Therapy (CBT)</strong>, adding advanced, evidence-based psychological skills to his medical expertise. After seeing how many patients benefited from these techniques within the limits of a brief GP consultation, he created a dedicated service where this approach could be given the time and space it deserves.
                   </p>
                   
                   <p>
-                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapy. This advanced training enhanced his ability to develop new approaches to mental health treatment, ultimately leading to the creation of his new <strong>ReCODE</strong> methodology.
+                    In 2025, out of this combination of neuroscience, lifestyle medicine, and CBT grew <strong>ReCODE</strong> - a practical, evidence-informed approach designed to help people understand and "recode" the patterns that hold them back - with overwhelmingly positive feedback from his users.
                   </p>
                 </CardContent>
               </div>
