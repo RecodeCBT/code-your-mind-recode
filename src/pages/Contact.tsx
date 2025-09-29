@@ -5,16 +5,12 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
-
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const submitted = searchParams.get('submitted') === 'true';
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
-      <NeuroDecal.TopCircuitBackground />
+  return <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navigation />
-      <div className="container mx-auto px-4 py-8 pt-20">
+      <div className="container mx-auto px-4 py-8">
 
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -37,8 +33,7 @@ const Contact = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                {submitted ? (
-                  <div className="text-center py-8">
+                {submitted ? <div className="text-center py-8">
                     <div className="mb-4 text-green-600 text-2xl">✓</div>
                     <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
                     <p className="text-muted-foreground">
@@ -49,11 +44,11 @@ const Contact = () => {
                         Send Another Message
                       </Button>
                     </Link>
-                  </div>
-                ) : (
-                  <form method="POST" action="https://formspree.io/f/manbqker" className="space-y-4">
+                  </div> : <form method="POST" action="https://formspree.io/f/manbqker" className="space-y-4">
                     {/* Anti-spam honeypot field */}
-                    <input type="text" name="_gotcha" style={{ display: 'none' }} aria-hidden="true" />
+                    <input type="text" name="_gotcha" style={{
+                  display: 'none'
+                }} aria-hidden="true" />
                     
                     {/* Redirect after successful submission */}
                     <input type="hidden" name="_next" value={`${window.location.origin}/contact?submitted=true`} />
@@ -62,52 +57,27 @@ const Contact = () => {
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Full Name *
                       </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full p-3 border rounded-lg bg-background border-border focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Your full name"
-                      />
+                      <input type="text" id="name" name="name" required className="w-full p-3 border rounded-lg bg-background border-border focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your full name" />
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
                         Email Address *
                       </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full p-3 border rounded-lg bg-background border-border focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="your.email@example.com"
-                      />
+                      <input type="email" id="email" name="email" required className="w-full p-3 border rounded-lg bg-background border-border focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your.email@example.com" />
                     </div>
                     
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium mb-2">
                         Message *
                       </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        rows={6}
-                        className="w-full p-3 border rounded-lg bg-background border-border focus:ring-2 focus:ring-primary focus:border-transparent resize-vertical"
-                        placeholder="Tell us about your goals and how we can help..."
-                      />
+                      <textarea id="message" name="message" required rows={6} className="w-full p-3 border rounded-lg bg-background border-border focus:ring-2 focus:ring-primary focus:border-transparent resize-vertical" placeholder="Tell us about your goals and how we can help..." />
                     </div>
                     
-                    <button
-                      type="submit"
-                      className="w-full bg-pink-600 text-white rounded py-2 px-4 hover:opacity-90 transition-opacity font-medium"
-                    >
+                    <button type="submit" className="w-full bg-pink-600 text-white rounded py-2 px-4 hover:opacity-90 transition-opacity font-medium">
                       Send Message
                     </button>
-                  </form>
-                )}
+                  </form>}
               </CardContent>
             </Card>
 
@@ -170,8 +140,8 @@ const Contact = () => {
           </div>
 
           {/* Emergency Notice */}
-          <Card className="mt-12 p-6 border-orange-200 bg-orange-50 dark:bg-orange-950/20 relative z-10">
-            <CardContent className="text-center">
+          <Card className="mt-12 p-6 border-orange-200 bg-orange-50 dark:bg-orange-950/20">
+            <CardContent className="text-center py-0">
               <h3 className="text-lg font-semibold mb-2 text-orange-800 dark:text-orange-200">
                 Emergency Support
               </h3>
@@ -182,12 +152,7 @@ const Contact = () => {
               <p className="text-orange-700 dark:text-orange-300 mb-4">
                 If you are thinking about hurting yourself, please reach out for immediate support:
               </p>
-              <a 
-                href="https://www.samaritans.org" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
-              >
+              <a href="https://www.samaritans.org" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
                 Get Help Now - Samaritans
               </a>
             </CardContent>
@@ -234,8 +199,6 @@ const Contact = () => {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
