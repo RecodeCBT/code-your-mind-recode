@@ -125,46 +125,29 @@ const DrCarsonBackground = () => {
           </div>
 
           {/* RECODE Methodology Section */}
-          <div className="space-y-8 mb-16">
-            <Card className="p-8 border-2 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-2xl flex items-center gap-2">
-                  <div className="flex items-center gap-3">
-                    <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="RECODE Logo" className="w-8 h-8 object-contain" />
-                    <span>The ReCODE Approach</span>
-                  </div>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Dr. Carson developed ReCODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized, drawing from his comprehensive medical training and specialized CBT qualifications.
-                </p>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. ReCODE represents a consolidation and simplification towards understanding and restructuring these fundamental patterns.
-                </p>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Your brain learns by practice. When you repeat new responses, it rewires itself, just like learning to play an instrument. With steady practice, these new codes become your natural default.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8 border-2 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-2xl flex items-center gap-2">
-                  <Stethoscope className="h-6 w-6 text-primary" />
-                  Clinical Success & Innovation
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Throughout his tenure in general practice, Dr. Carson consistently achieved remarkable success rates in treating mental health conditions. His evidence-based approach, combining traditional medical knowledge with innovative therapeutic techniques, helped hundreds of patients overcome anxiety, depression, and various psychological challenges.
-                </p>
-              </CardContent>
-            </Card>
-
-          </div>
+          <Card className="p-8 mb-12 border-2 border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center gap-2">
+                <div className="flex items-center gap-3">
+                  <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="RECODE Logo" className="w-8 h-8 object-contain" />
+                  <span>The ReCODE Approach</span>
+                </div>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Dr. Carson developed ReCODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized, drawing from his comprehensive medical training and specialized CBT qualifications.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. ReCODE represents a consolidation and simplification towards understanding and restructuring these fundamental patterns.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Your brain learns by practice. When you repeat new responses, it rewires itself, just like learning to play an instrument. With steady practice, these new codes become your natural default.
+              </p>
+            </CardContent>
+          </Card>
 
           {/* Quote Section */}
           <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20">
