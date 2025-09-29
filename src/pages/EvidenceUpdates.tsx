@@ -68,7 +68,7 @@ const EvidenceUpdates = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 rc-title-wrap">
             <NeuroDecal.TopTitle align="center" density="light" offsetY={-8} />
-            <h1 className="text-4xl font-bold mb-4 relative z-10">Evidence Updates</h1>
+            <h1 className="text-4xl font-bold mb-4 relative z-10">Resources</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Stay informed with the latest research and developments in mental health, CBT, and therapeutic approaches.
             </p>

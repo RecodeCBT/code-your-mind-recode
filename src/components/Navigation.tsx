@@ -36,7 +36,7 @@ const Navigation = () => {
     label: "Testimonials",
     path: "/testimonials"
   }, {
-    label: "Evidence Updates",
+    label: "Resources",
     path: "/evidence-updates"
   }, {
     label: "Contact Us",
