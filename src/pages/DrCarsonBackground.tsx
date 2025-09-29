@@ -116,7 +116,7 @@ const DrCarsonBackground = () => {
                   </p>
                   
                   <p>
-                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy (CBT)</strong>, providing him with further specialised knowledge in evidence-based therapeutic techniques. This advanced training enhanced his ability to develop innovative approaches to mental health treatment, ultimately leading to the creation of his new <strong>ReCODE</strong> methodology.
+                    His commitment to excellence in mental health treatment led him to complete an <strong>accredited postgraduate diploma in Cognitive Behavioural Therapy</strong>, providing him with further specialised knowledge in evidence-based therapy. This advanced training enhanced his ability to develop new approaches to mental health treatment, ultimately leading to the creation of his new <strong>ReCODE</strong> methodology.
                   </p>
                 </CardContent>
               </div>
