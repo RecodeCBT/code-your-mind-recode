@@ -208,19 +208,17 @@ const WhatIsRecode = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              RECODE is not just therapy. It's mental software engineering for real life. 
-              We don't believe in simply managing symptoms—we help you decode and redesign 
-              the core algorithms that drive your thoughts, feelings and behaviours.
+              Your brain is biological <em><strong>computer</strong></em> - It's coding comes from cycles of <em><strong>repetition</strong></em>.
             </p>
           </div>
         </div>
       </section>
 
       {/* What is RECODE Section */}
-      <section className="pt-4 pb-20 px-4 relative overflow-hidden">
+      <section className="pt-2 pb-12 px-4 relative overflow-hidden">
         <NeuroDecal.BodyMargins density="light" sections={4} />
         <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="mb-16">
+          <div className="mb-8 space-y-8">
             {/* RECODE Circuits Image */}
             <div className="flex justify-center">
               <img 
@@ -230,12 +228,12 @@ const WhatIsRecode = () => {
               />
             </div>
             
-            <p className="text-lg text-foreground leading-relaxed mb-12 text-center">
+            <p className="text-base sm:text-lg text-foreground leading-relaxed text-center max-w-3xl mx-auto">
               ReCODE is a structured, skills-based programme that helps people (and teams) change entrenched thought–emotion–behaviour loops. It integrates core CBT methods (behavioural activation, exposure, cognitive tools), targeted DBT skills (emotion regulation, distress tolerance), and practical habit design—think of it as learning to play the brain like an instrument.
             </p>
             
             {/* Rewire the Mind Image */}
-            <div className="mb-12 flex justify-center">
+            <div className="mb-8 flex justify-center">
               <img 
                 src={rewireTheMindImage} 
                 alt="Rewire the mind - Brain with neural connections being rewired" 
@@ -244,7 +242,7 @@ const WhatIsRecode = () => {
             </div>
 
             {/* How it works */}
-            <div className="mb-12">
+            <div className="mb-8">
               <div className="relative flex items-center mb-6">
                 <div className="flex-grow border-t border-primary/30"></div>
                 <div className="flex-shrink-0 mx-4 text-2xl font-bold text-orange-500 text-center relative">
@@ -281,7 +279,7 @@ const WhatIsRecode = () => {
             </div>
 
             {/* Who it helps (individuals) */}
-            <div className="mb-12">
+            <div className="mb-8">
               <div className="relative flex items-center mb-6">
                 <div className="flex-grow border-t border-primary/30"></div>
                 <div className="flex-shrink-0 mx-4 text-2xl font-bold text-purple-600 text-center relative">
@@ -305,7 +303,7 @@ const WhatIsRecode = () => {
             </div>
 
             {/* For organisations */}
-            <div className="mb-12">
+            <div className="mb-8">
               <div className="relative flex items-center mb-6">
                 <div className="flex-grow border-t border-primary/30"></div>
                 <div className="flex-shrink-0 mx-4 text-2xl font-bold text-blue-600 text-center relative">
@@ -349,7 +347,7 @@ const WhatIsRecode = () => {
             </div>
 
             {/* What to expect */}
-            <div className="mb-12">
+            <div className="mb-8">
               <h3 className="text-2xl font-bold mb-6 text-orange-500 text-center">What to expect</h3>
               <p className="text-foreground text-center">
                 Flexible, and collaborative remote sessions with between-session practice tailored to real life. Many individual programmes run 4-6 sessions; corporate formats range from one-off masterclasses to cohort training with follow-ups.

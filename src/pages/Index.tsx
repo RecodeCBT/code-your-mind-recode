@@ -787,10 +787,9 @@ const Index = () => {
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-4">Conditions We Address</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite 
-              the mental code behind common psychological challenges.
+            <h2 className="text-4xl font-bold mb-4 whitespace-nowrap">Conditions We Address</h2>
+            <p className="text-xl text-muted-foreground max-w-5xl mx-auto leading-relaxed">
+              Your mind runs on patterns—some helpful, others harmful. We help you identify and rewrite the mental code behind common psychological challenges.
             </p>
           </div>
 
