@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Zap, Target, Eye, CheckCircle, Stethoscope, GraduationCap, Shield, Lightbulb, Heart, Compass, Award, User, MessageSquare } from "lucide-react";
 import VideoLogo from "@/components/VideoLogo";
+import CorporateTrainingBanner from "@/components/CorporateTrainingBanner";
 import Navigation from "@/components/Navigation";
 import anxietyImage from "@/assets/anxiety-brain.jpg";
 import depressionImage from "@/assets/depression-cloud.jpg";
@@ -824,11 +825,7 @@ const Index = () => {
         
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-bold mb-6 border-4 border-double border-gradient-to-r from-orange-500 via-purple-600 to-blue-600 bg-gradient-to-r from-orange-500/10 via-purple-600/10 to-blue-600/10 rounded-xl px-6 py-4 inline-block shadow-lg text-xl">New:
-Corporate Training
- & Staff Wellness
-Packages
-          </h2>
+            <CorporateTrainingBanner />
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Transform your workplace culture with ReCODE methodology. We offer specialized corporate seminars 
               and staff wellness sessions designed to enhance mental resilience, reduce workplace stress, and 
