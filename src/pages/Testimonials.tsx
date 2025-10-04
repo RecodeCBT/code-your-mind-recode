@@ -7,12 +7,18 @@ import { ArrowLeft, Star, User, Quote, Award, TrendingUp, ExternalLink } from "l
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const Testimonials = () => {
   const testimonials = [{
+    name: "Matthew O'C",
+    condition: "CBT Sessions",
+    rating: 5,
+    text: "I found Dr. Carson really easy to talk to, which was so important for me as I had always struggled to open up about my mental health before. Through CBT, Dr. Carson helped me gain a new perspective on life and supported me in challenging deep-rooted, unhelpful thoughts. I've gained the confidence to face some of my biggest fears and anxiety triggers, and I now feel better able to cope with challenges and even enjoy them more. Most importantly, I feel like I can be myself again — happier, more present, and a better person to be around for those I care about.",
+    date: "October 2025",
+    featured: true
+  }, {
     name: "Maximilian",
     condition: "4 Session Package",
     rating: 5,
     text: "Working with Dr. Carson through CBT was really helpful. In just four sessions, he gave me different tools to deal with intrusive thoughts and rumination, which made a big difference. He talks about these 'autocodes' and how to disrupt them, and that's been a really practical way for me to manage my thoughts. He's super empathetic, but is also clearly very knowledgeable. I've already recommended him to others because I think he's a great resource, and I've learned so much from our sessions. It feels like everyone should know about their triggers, and know how to manage them.",
-    date: "September 2025",
-    featured: true
+    date: "September 2025"
   }, {
     name: "David C.",
     condition: "Initial Assessment & 4 Session Package",
