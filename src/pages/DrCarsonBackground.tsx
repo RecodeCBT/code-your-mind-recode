@@ -98,7 +98,7 @@ const DrCarsonBackground = () => {
               </div>
               
               <div className="lg:col-span-3">
-                <CardContent className="space-y-4 text-sm sm:text-base leading-relaxed">
+                <CardContent className="space-y-6 text-base sm:text-lg leading-relaxed">
                   <p>
                     Dr. Christopher Carson is a medical doctor and General Practitioner with a long-standing interest in how the brain and body influence mental wellbeing. His journey began with a <strong>degree in Biomedical Sciences at Queen's University Belfast</strong>, where he focused on neuroscience and neuropsychopharmacology. This early grounding in how the brain works and what influences it, this continues to inform his therapeutic approach today.
                   </p>
@@ -124,30 +124,6 @@ const DrCarsonBackground = () => {
           </Card>
           </div>
 
-          {/* RECODE Methodology Section */}
-          <Card className="p-8 mb-12 border-2 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-2xl flex items-center gap-2">
-                <div className="flex items-center gap-3">
-                  <img src="/lovable-uploads/0ae4333b-2ae9-4aa3-803f-ed93b3dc6e41.png" alt="RECODE Logo" className="w-8 h-8 object-contain" />
-                  <span>The ReCODE Approach</span>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Dr. Carson developed ReCODE as a systematic method to identify and reprogram the automatic thought patterns and emotional responses that keep people stuck in cycles of mental health challenges. His approach treats the mind like software that can be debugged and optimized, drawing from his comprehensive medical training and specialized CBT qualifications.
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Through years of treating patients with anxiety, depression, and stress-related disorders, he recognized that traditional approaches often focused on symptom management rather than addressing the underlying mental patterns that drive psychological distress. ReCODE represents a consolidation and simplification towards understanding and restructuring these fundamental patterns.
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                The ReCODE approach involves highlighting your mental algorithms, testing their validity against established "cognitive distortions," then deviating from programmed "reactions" using DBT-styled exercises to delay them. Your brain learns by practice. When you repeat new responses, it rewires itself, just like learning to play an instrument. With steady practice, these new codes become your natural default.
-              </p>
-            </CardContent>
-          </Card>
 
           {/* Quote Section */}
           <Card className="p-8 text-center bg-gradient-to-r from-primary/10 via-orange-500/10 to-purple-600/10 border-2 border-primary/20">
