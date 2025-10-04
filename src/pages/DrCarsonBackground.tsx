@@ -98,24 +98,24 @@ const DrCarsonBackground = () => {
               </div>
               
               <div className="lg:col-span-3">
-                <CardContent className="space-y-6 text-base sm:text-lg leading-relaxed">
-                  <p>
+                <CardContent className="space-y-6 px-2 sm:px-6">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
                     Dr. Christopher Carson is a medical doctor and General Practitioner with a long-standing interest in how the brain and body influence mental wellbeing. His journey began with a <strong>degree in Biomedical Sciences at Queen's University Belfast</strong>, where he focused on neuroscience and neuropsychopharmacology. This early grounding in how the brain works and what influences it, this continues to inform his therapeutic approach today.
                   </p>
                   
-                  <p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
                     Alongside medicine, he has always valued the link between physical health and mental resilience. He trained as a <strong>Level 3 Personal Trainer</strong> and <strong>represented Ireland in American Football</strong> with the Irish Wolfhounds in 2018 and 2019. These experiences gave him first-hand insight into how exercise, lifestyle, and mindset shape psychological health.
                   </p>
                   
-                  <p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
                     He went on to complete his medical training at the <strong>University of East Anglia</strong>, qualifying as a doctor in 2015 and later gaining his <strong>MRCGP in Belfast in 2020</strong>, granting him a position on the specialist GP register. Working across <strong>Northern Ireland and London</strong>, Dr. Carson developed a strong interest in mental health. He also recognised that NHS services, while vital, are often overstretched - leaving people waiting too long for help, and sometimes presenting information in a way that feels overwhelming rather than practical.
                   </p>
                   
-                  <p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
                     To address this gap, he completed a <strong>postgraduate diploma in Cognitive Behavioural Therapy (CBT)</strong>, adding advanced, evidence-based psychological skills to his medical expertise. After seeing how many patients benefited from these techniques within the limits of a brief GP consultation, he created a dedicated service where this approach could be given the time and space it deserves.
                   </p>
                   
-                  <p>
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
                     In 2025, out of this combination of neuroscience, lifestyle medicine, and CBT grew <strong>ReCODE</strong> - a practical, evidence-informed approach designed to help people understand and "recode" the patterns that hold them back - with overwhelmingly positive feedback from his users.
                   </p>
                 </CardContent>
