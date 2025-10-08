@@ -61,7 +61,7 @@ const Services = () => {
       '6-session': 'intensive-support',
       'blueprint-report': 'intensive-support',
       'ongoing-session': 'ready-to-commit',
-      'guided-practice': 'just-starting'
+      'guided-practice': 'ready-to-commit'
     };
     const categoryId = categoryMap[serviceId];
     if (categoryId) {
@@ -84,7 +84,7 @@ const Services = () => {
   const services = [
   // Just Starting Out
   {
-    title: "Single RECODE Session — Assess, Map, and Plan (£149)",
+    title: "Single RECODE Session",
     duration: "65 min",
     price: "£149.00",
     bullets: ["Doctor-delivered CBT", "Personalised formulation", "Tailored next-step plan", "Brief summary report", "Secure online booking"],
@@ -95,23 +95,23 @@ const Services = () => {
     icon: Lightbulb,
     colorTheme: "from-blue-400 to-blue-600"
   }, {
-    title: "Guided RECODE Practice — Monthly Coaching & Tools (£19/month)",
+    title: "Guided RECODE Practice",
     duration: "Monthly + 20-min check-in",
     price: "£19.00/month",
     bullets: ["20-minute monthly check-in with doctor", "Weekly ReCODE CBT lessons", "Worksheets included", "24/7 ChatCBT access (on release)"],
     stripeUrl: "https://buy.stripe.com/REPLACE_guided",
     isSubscription: true,
-    category: "just-starting",
+    category: "ready-to-commit",
     icon: Compass,
     colorTheme: "from-blue-400 to-blue-600"
   }, {
-    title: "Mini-RECODE Toolkits (£9)",
+    title: "Mini-RECODE Toolkits",
     duration: "PDF toolkits",
     price: "£9.00",
     bullets: ["Quick mental upgrades using neuroscience-based CBT + DBT exercises", "Instant download"],
     stripeUrl: "https://buy.stripe.com/REPLACE_pack",
     isDigital: true,
-    category: "just-starting",
+    category: "ready-to-commit",
     icon: Laptop,
     colorTheme: "from-blue-400 to-blue-600",
     buttonText: "Buy Now"
@@ -123,7 +123,7 @@ const Services = () => {
     bullets: ["AI-powered CBT conversations", "Available 24/7", "Personalized guidance"],
     stripeUrl: "#",
     isSubscription: true,
-    category: "just-starting",
+    category: "ready-to-commit",
     icon: Code,
     colorTheme: "from-blue-400 to-blue-600"
   },
@@ -165,7 +165,7 @@ const Services = () => {
     icon: Wrench,
     colorTheme: "from-purple-400 to-purple-600"
   }, {
-    title: "RECODE Blueprint Report (£249)",
+    title: "RECODE Blueprint Report",
     duration: "65 min + report",
     price: "£249.00",
     bullets: ["Detailed written map of thought-emotion algorithms", "Step-by-step rewiring plan", "GP/workplace professional letter", "Psychometric testing", "Comprehensive personalised report", "Home exercises"],
@@ -177,7 +177,7 @@ const Services = () => {
   },
   // Corporate & Group Solutions
   {
-    title: "RECODE for Teams — Performance, Resilience & Mind Health",
+    title: "RECODE for Teams",
     duration: "Half/Full day workshops",
     price: "Quote on request",
     bullets: ["Evidence-based cognitive training for leadership and workplace wellbeing", "Team mental-health training", "Resilience building", "Manager support skills", "Custom programme design"],
@@ -189,24 +189,24 @@ const Services = () => {
   const categories = [{
     id: "just-starting",
     number: "1",
-    title: "Just Starting Out",
-    description: "Explore tools and build foundations",
+    title: "Starting or Continuing",
+    description: "First steps or ongoing support tools",
     icon: MessageCircle,
     color: "from-blue-400 to-blue-600"
   }, {
-    id: "ready-to-commit",
-    number: "2",
-    title: "Ready to Commit or Continue",
-    description: "Begin structured therapy and skill-building",
-    icon: UserCheck,
-    color: "from-green-400 to-green-600"
-  }, {
     id: "intensive-support",
-    number: "3",
+    number: "2",
     title: "Package Courses",
     description: "Save big on package deals",
     icon: Zap,
     color: "from-purple-400 to-purple-600"
+  }, {
+    id: "ready-to-commit",
+    number: "3",
+    title: "Add-On's",
+    description: "Supplementary tools and check-ins",
+    icon: UserCheck,
+    color: "from-green-400 to-green-600"
   }, {
     id: "corporate-group",
     number: "4",
@@ -305,6 +305,13 @@ const Services = () => {
               </p>
             </div>
           </div>
+
+          {/* Comparison Table Link */}
+          <div className="text-center mb-8">
+            <p className="text-base md:text-lg text-foreground">
+              Not sure what to pick? Click <button onClick={scrollToComparisonTable} className="text-blue-600 underline hover:text-blue-700 font-medium">here</button> for our full comparison table
+            </p>
+          </div>
           
           {/* Category Selection */}
           <div id="options-section" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -321,7 +328,7 @@ const Services = () => {
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 whitespace-nowrap overflow-hidden text-ellipsis">{category.title}</h3>
                   <p className="text-muted-foreground text-sm">{category.description}</p>
                   {selectedCategory === category.id && <div className="mt-4 flex items-center justify-center text-primary">
                       <ArrowRight className="w-4 h-4 animate-pulse" />
@@ -331,20 +338,10 @@ const Services = () => {
           </div>
 
           {/* Show All Button */}
-          {!selectedCategory && <div className="text-center mb-12 space-y-4">
+          {!selectedCategory && <div className="text-center mb-12">
               <Button variant={showAllServices ? "default" : "outline"} size="lg" onClick={() => setShowAllServices(!showAllServices)} className="text-lg px-8 py-3">
                 {showAllServices ? "Hide Services" : "Show All Services"}
               </Button>
-              <div>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={scrollToComparisonTable}
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                >
-                  Not sure what to pick? Click here for our full comparison table
-                </Button>
-              </div>
             </div>}
 
           {/* Services Grid */}
@@ -434,8 +431,8 @@ const Services = () => {
           </div>
 
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
-              RECODE Options — Full Comparison
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Comparison Table
             </h2>
             <p className="text-lg text-foreground max-w-3xl mx-auto">
               Compare all our services side-by-side to find the perfect fit for your journey
