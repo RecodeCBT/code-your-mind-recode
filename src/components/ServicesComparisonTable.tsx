@@ -16,7 +16,7 @@ const ServicesComparisonTable = ({ onServiceClick }: ServicesComparisonTableProp
       duration: "65 min",
       dropInSessions: "—",
       reportType: "Brief summary",
-      psychometricTesting: true,
+      psychometricTesting: false,
       homeExercises: true,
       chatCBTAccess: false,
       professionalLetter: false,
@@ -126,7 +126,7 @@ const ServicesComparisonTable = ({ onServiceClick }: ServicesComparisonTableProp
               Duration
             </TableCell>
             {services.map((service) => (
-              <TableCell key={service.id} className="text-center bg-transparent text-slate-700 px-1 sm:px-2 text-xs sm:text-sm">
+              <TableCell key={service.id} className="text-center bg-transparent text-white px-1 sm:px-2 text-xs sm:text-sm">
                 {service.duration}
               </TableCell>
             ))}
@@ -138,7 +138,7 @@ const ServicesComparisonTable = ({ onServiceClick }: ServicesComparisonTableProp
               20-min Drop-In Sessions
             </TableCell>
             {services.map((service) => (
-              <TableCell key={service.id} className="text-center bg-transparent text-slate-700 px-1 sm:px-2 text-xs sm:text-sm">
+              <TableCell key={service.id} className="text-center bg-transparent text-white px-1 sm:px-2 text-xs sm:text-sm">
                 {service.dropInSessions === "—" ? (
                   <span className="text-muted-foreground">—</span>
                 ) : (
@@ -154,7 +154,7 @@ const ServicesComparisonTable = ({ onServiceClick }: ServicesComparisonTableProp
               Report Type
             </TableCell>
             {services.map((service) => (
-              <TableCell key={service.id} className="text-center bg-transparent text-slate-700 px-1 sm:px-2 text-xs sm:text-sm">
+              <TableCell key={service.id} className="text-center bg-transparent text-white px-1 sm:px-2 text-xs sm:text-sm">
                 {service.reportType === "—" ? (
                   <span className="text-muted-foreground">—</span>
                 ) : (
@@ -255,7 +255,7 @@ const ServicesComparisonTable = ({ onServiceClick }: ServicesComparisonTableProp
               Ideal For
             </TableCell>
             {services.map((service) => (
-              <TableCell key={service.id} className="text-center bg-transparent text-slate-700 px-1 sm:px-2 text-xs sm:text-sm">
+              <TableCell key={service.id} className="text-center bg-transparent text-white px-1 sm:px-2 text-xs sm:text-sm">
                 {service.idealFor}
               </TableCell>
             ))}

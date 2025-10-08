@@ -96,11 +96,12 @@ const Services = () => {
     colorTheme: "from-blue-400 to-blue-600"
   }, {
     title: "Guided RECODE Practice",
-    duration: "Monthly + 20-min check-in",
+    duration: "CBT on the go",
     price: "£19.00/month",
     bullets: ["20-minute monthly check-in with doctor", "Weekly ReCODE CBT lessons", "Worksheets included", "24/7 ChatCBT access (on release)"],
     stripeUrl: "https://buy.stripe.com/REPLACE_guided",
     isSubscription: true,
+    buttonText: "Subscribe",
     category: "ready-to-commit",
     icon: Compass,
     colorTheme: "from-blue-400 to-blue-600"
@@ -135,7 +136,7 @@ const Services = () => {
     bullets: ["20 minute check-in or emergency session", "Discuss new events and help break them down for analysis", "Refresh aspects of the course or exercises", "*Previous session required"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=5c7a5dce-69ca-428f-8921-b13cab696cc6&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_group",
-    category: "ready-to-commit",
+    category: "just-starting",
     icon: Users,
     colorTheme: "from-green-400 to-green-600"
   },
@@ -204,7 +205,7 @@ const Services = () => {
     id: "ready-to-commit",
     number: "3",
     title: "Add-On's",
-    description: "Supplementary tools and check-ins",
+    description: "Supplementary tools & check-ins",
     icon: UserCheck,
     color: "from-green-400 to-green-600"
   }, {
@@ -329,8 +330,8 @@ const Services = () => {
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg md:text-xl font-bold mb-2 whitespace-nowrap overflow-hidden text-ellipsis">{category.title}</h3>
-                  <p className="text-muted-foreground text-sm">{category.description}</p>
-                  {selectedCategory === category.id && <div className="mt-4 flex items-center justify-center text-primary">
+                  <p className={`text-muted-foreground ${category.id === 'ready-to-commit' ? 'text-xs sm:text-sm whitespace-nowrap' : 'text-sm'}`}>{category.description}</p>
+                  {selectedCategory === category.id && category.id !== 'ready-to-commit' && <div className="mt-4 flex items-center justify-center text-primary">
                       <ArrowRight className="w-4 h-4 animate-pulse" />
                     </div>}
                 </CardContent>
@@ -431,6 +432,11 @@ const Services = () => {
           </div>
 
           <div className="text-center mb-12">
+            <div className="mb-4">
+              <p className="text-sm md:text-base text-muted-foreground flex items-center justify-center gap-2">
+                Scroll for comparison <ArrowRight className="w-4 h-4" />
+              </p>
+            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Comparison Table
             </h2>
