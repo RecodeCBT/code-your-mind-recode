@@ -84,7 +84,7 @@ const Services = () => {
   const services = [
   // Just Starting Out
   {
-    title: "Your First RECODE Session — Assess, Map, and Plan (£149)",
+    title: "Single RECODE Session — Assess, Map, and Plan (£149)",
     duration: "65 min",
     price: "£149.00",
     bullets: ["Doctor-delivered CBT", "Personalised formulation", "Tailored next-step plan", "Brief summary report", "Secure online booking"],
@@ -129,16 +129,6 @@ const Services = () => {
   },
   // Ready to Commit
   {
-    title: "Ongoing RECODE Session (£149, 45 min)",
-    duration: "45 min",
-    price: "£149.00",
-    bullets: ["Review of previous session and exercises", "Applied CBT/DBT principles", "Brief summary report", "*Previous session required"],
-    bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=0a8ad2bd-fbfd-4ad7-b998-77a02cc30537&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
-    stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
-    category: "ready-to-commit",
-    icon: BarChart3,
-    colorTheme: "from-green-400 to-green-600"
-  }, {
     title: "Drop in session",
     duration: "20 mins",
     price: "£49.99",
@@ -151,12 +141,11 @@ const Services = () => {
   },
   // Intensive Support
   {
-    title: "6-Session Rewiring Programme (£780, 25% off)",
+    title: "6-Session Rewiring Programme",
     duration: "6 × 65 min",
     price: "£780.00",
     originalPrice: "£1,014",
-    savings: "SAVE 25%",
-    bullets: ["Structured progression through CBT, DBT, and neuroplasticity practice for lasting change", "Includes comprehensive report and home exercises", "Two free 20 minute drop in sessions included", "2 additional follow up sessions to review progress", "Book first session via system, (following dates are agreed at the end of each session)"],
+    bullets: ["Structured progression through CBT, DBT, and neuroplasticity practice for lasting change", "Includes comprehensive report and home exercises", "Two free 20 minute drop in sessions included", "Book first session via system, (following dates are agreed at the end of each session)"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=67aeddf9-e76a-43f8-8809-eac3bcc4c266&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
     hasDiscount: true,
@@ -164,11 +153,10 @@ const Services = () => {
     icon: Wrench,
     colorTheme: "from-purple-400 to-purple-600"
   }, {
-    title: "4-Session Rewiring Programme (£560, 20% off)",
+    title: "4-Session Rewiring Programme",
     duration: "4 × 65 min",
     price: "£560.00",
     originalPrice: "£700",
-    savings: "SAVE 20%",
     bullets: ["Four focused sessions plus one 20-minute check-in", "Psychometric testing", "Comprehensive final report", "Book first session via system, (following dates are agreed at the end of each session)"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=049a7c0d-e671-4731-99e1-922f8ce7b8ce&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_4pkg",
@@ -400,7 +388,6 @@ const Services = () => {
                               {service.originalPrice}
                             </span>}
                           {service.price}
-                          {service.savings && <span className="block text-sm text-green-600">({service.savings})</span>}
                         </div>
                       </div>
                       
@@ -447,10 +434,10 @@ const Services = () => {
           </div>
 
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
               RECODE Options — Full Comparison
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Compare all our services side-by-side to find the perfect fit for your journey
             </p>
           </div>
