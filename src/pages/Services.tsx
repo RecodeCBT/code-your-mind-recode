@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
-import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight, Lightbulb, Compass, Laptop, Code, BarChart3, Search, Wrench, Link } from "lucide-react";
+import { CheckCircle, Users, FileText, Brain, Target, Shield, MessageCircle, BookOpen, UserCheck, Zap, Building2, ArrowRight, Lightbulb, Compass, Laptop, Code, BarChart3, Search, Wrench, Link, ArrowUp } from "lucide-react";
+import ServicesComparisonTable from "@/components/ServicesComparisonTable";
 import NeuroDecal from "@/components/Neuro/NeuroDecal";
 const Services = () => {
   const navigate = useNavigate();
@@ -33,6 +34,43 @@ const Services = () => {
       });
     }
   };
+
+  const scrollToComparisonTable = () => {
+    const comparisonSection = document.getElementById('comparison-table-section');
+    if (comparisonSection) {
+      comparisonSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToService = (serviceId: string) => {
+    scrollToOptions();
+    // Map table IDs to category IDs
+    const categoryMap: { [key: string]: string } = {
+      'first-session': 'just-starting',
+      '4-session': 'intensive-support',
+      '6-session': 'intensive-support',
+      'blueprint-report': 'intensive-support',
+      'ongoing-session': 'ready-to-commit',
+      'guided-practice': 'just-starting'
+    };
+    const categoryId = categoryMap[serviceId];
+    if (categoryId) {
+      setSelectedCategory(categoryId);
+      setTimeout(() => {
+        scrollToServices();
+      }, 300);
+    }
+  };
   const handleCategorySelect = (categoryId: string) => {
     const newCategory = selectedCategory === categoryId ? "" : categoryId;
     setSelectedCategory(newCategory);
@@ -46,12 +84,10 @@ const Services = () => {
   const services = [
   // Just Starting Out
   {
-    title: "Initial Assessment & Therapy",
+    title: "Your First RECODE Session — Assess, Map, and Plan (£149)",
     duration: "65 min",
     price: "£149.00",
-    originalPrice: "£169.00",
-    discountTag: "£20 discount introductory offer",
-    bullets: ["Doctor-delivered CBT", "Personalised formulation", "Measurable outcomes", "Secure online booking"],
+    bullets: ["Doctor-delivered CBT", "Personalised formulation", "Tailored next-step plan", "Brief summary report", "Secure online booking"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=60fdb16d-7ddb-4847-8b65-9b9db898381b&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_initial65",
     featured: true,
@@ -59,25 +95,26 @@ const Services = () => {
     icon: Lightbulb,
     colorTheme: "from-blue-400 to-blue-600"
   }, {
-    title: "Guided CBT Programme",
+    title: "Guided RECODE Practice — Monthly Coaching & Tools (£19/month)",
     duration: "Monthly + 20-min check-in",
     price: "£19.00/month",
-    bullets: ["20-min monthly check-in with a Doctor", "Weekly email ReCODE CBT lessons", "Worksheets and exercises included", "Free access to ChatCBT 24/7"],
+    bullets: ["20-minute monthly check-in with doctor", "Weekly ReCODE CBT lessons", "Worksheets included", "24/7 ChatCBT access (on release)"],
     stripeUrl: "https://buy.stripe.com/REPLACE_guided",
     isSubscription: true,
     category: "just-starting",
     icon: Compass,
     colorTheme: "from-blue-400 to-blue-600"
   }, {
-    title: "Self-Help Packs",
+    title: "Mini-RECODE Toolkits (£9)",
     duration: "PDF toolkits",
     price: "£9.00",
-    bullets: ["Thought diaries", "Behavioural activation planners", "Relapse-prevention guides", "Instant download"],
+    bullets: ["Quick mental upgrades using neuroscience-based CBT + DBT exercises", "Instant download"],
     stripeUrl: "https://buy.stripe.com/REPLACE_pack",
     isDigital: true,
     category: "just-starting",
     icon: Laptop,
-    colorTheme: "from-blue-400 to-blue-600"
+    colorTheme: "from-blue-400 to-blue-600",
+    buttonText: "Buy Now"
   }, {
     title: "ChatCBT",
     duration: "24/7 AI Support",
@@ -92,10 +129,10 @@ const Services = () => {
   },
   // Ready to Commit
   {
-    title: "Follow-up Session",
+    title: "Ongoing RECODE Session (£149, 45 min)",
     duration: "45 min",
-    price: "£129.99",
-    bullets: ["Progress reviews", "Skills consolidation", "Outcome tracking", "Continuity of care", "*Previous session required"],
+    price: "£149.00",
+    bullets: ["Review of previous session and exercises", "Applied CBT/DBT principles", "Brief summary report", "*Previous session required"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=0a8ad2bd-fbfd-4ad7-b998-77a02cc30537&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_follow45",
     category: "ready-to-commit",
@@ -114,12 +151,12 @@ const Services = () => {
   },
   // Intensive Support
   {
-    title: "6-Session Package",
+    title: "6-Session Rewiring Programme (£780, 25% off)",
     duration: "6 × 65 min",
     price: "£780.00",
     originalPrice: "£1,014",
-    savings: "SAVE £234",
-    bullets: ["Advanced course approach:", "structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "6 modules", "Reports and home content issued with each session.", "Two free 20 minute drop in sessions included", "2 additional follow up sessions to review progress", "SAVE £234 on 6 session course compared to single sessions", "Book first session via system, (following dates are agreed at the end of each session)"],
+    savings: "SAVE 25%",
+    bullets: ["Structured progression through CBT, DBT, and neuroplasticity practice for lasting change", "Includes comprehensive report and home exercises", "Two free 20 minute drop in sessions included", "2 additional follow up sessions to review progress", "Book first session via system, (following dates are agreed at the end of each session)"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=67aeddf9-e76a-43f8-8809-eac3bcc4c266&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_pkg6",
     hasDiscount: true,
@@ -127,12 +164,12 @@ const Services = () => {
     icon: Wrench,
     colorTheme: "from-purple-400 to-purple-600"
   }, {
-    title: "4-Session Package",
+    title: "4-Session Rewiring Programme (£560, 20% off)",
     duration: "4 × 65 min",
-    price: "£599.00",
-    originalPrice: "£676",
-    savings: "SAVE £76",
-    bullets: ["Intermediate course approach:", "structured R.E.C.O.D.E. analysis and applied CBT theory, psychoanalysis, and DBT styled exercises.", "4 modules", "Reports and home content issued with each session.", "Free 20 minute drop in session included", "SAVE £76 on 4 session course compared to single sessions", "Book first session via system, (following dates are agreed at the end of each session)"],
+    price: "£560.00",
+    originalPrice: "£700",
+    savings: "SAVE 20%",
+    bullets: ["Four focused sessions plus one 20-minute check-in", "Psychometric testing", "Comprehensive final report", "Book first session via system, (following dates are agreed at the end of each session)"],
     bookingUrl: "https://recodecbt.setmore.com/book?step=time-slot&products=049a7c0d-e671-4731-99e1-922f8ce7b8ce&type=service&staff=db85bbb7-a975-4259-a08f-9da787569b45&staffSelected=true",
     stripeUrl: "https://buy.stripe.com/REPLACE_4pkg",
     hasDiscount: true,
@@ -140,10 +177,10 @@ const Services = () => {
     icon: Wrench,
     colorTheme: "from-purple-400 to-purple-600"
   }, {
-    title: "Assessment + Written Plan",
-    duration: "90 min",
+    title: "RECODE Blueprint Report (£249)",
+    duration: "65 min + report",
     price: "£249.00",
-    bullets: ["Structured intake", "PHQ-9/GAD-7 assessment", "Personalised plan", "Share with GP to GP/HR letter"],
+    bullets: ["Detailed written map of thought-emotion algorithms", "Step-by-step rewiring plan", "GP/workplace professional letter", "Psychometric testing", "Comprehensive personalised report", "Home exercises"],
     bookingUrl: "https://recodecbt.setmore.com",
     stripeUrl: "https://buy.stripe.com/REPLACE_assess",
     category: "intensive-support",
@@ -152,10 +189,10 @@ const Services = () => {
   },
   // Corporate & Group Solutions
   {
-    title: "Corporate Training",
+    title: "RECODE for Teams — Performance, Resilience & Mind Health",
     duration: "Half/Full day workshops",
     price: "Quote on request",
-    bullets: ["Team mental health training", "Workplace resilience building", "Manager support skills", "Custom programme design"],
+    bullets: ["Evidence-based cognitive training for leadership and workplace wellbeing", "Team mental-health training", "Resilience building", "Manager support skills", "Custom programme design"],
     category: "corporate-group",
     icon: Building2,
     colorTheme: "from-orange-400 to-orange-600",
@@ -306,10 +343,20 @@ const Services = () => {
           </div>
 
           {/* Show All Button */}
-          {!selectedCategory && <div className="text-center mb-12">
+          {!selectedCategory && <div className="text-center mb-12 space-y-4">
               <Button variant={showAllServices ? "default" : "outline"} size="lg" onClick={() => setShowAllServices(!showAllServices)} className="text-lg px-8 py-3">
                 {showAllServices ? "Hide Services" : "Show All Services"}
               </Button>
+              <div>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={scrollToComparisonTable}
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                >
+                  Not sure what to pick? Click here for our full comparison table
+                </Button>
+              </div>
             </div>}
 
           {/* Services Grid */}
@@ -353,9 +400,6 @@ const Services = () => {
                               {service.originalPrice}
                             </span>}
                           {service.price}
-                          {service.discountTag && <div className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full inline-block mt-1">
-                              {service.discountTag}
-                            </div>}
                           {service.savings && <span className="block text-sm text-green-600">({service.savings})</span>}
                         </div>
                       </div>
@@ -377,13 +421,53 @@ const Services = () => {
                       {service.isCorporate ? <Button className="w-full" onClick={() => navigateWithScrollToTop('/corporate-contact')}>
                           Request Corporate Quote
                         </Button> : <Button className="w-full bg-slate-800 hover:bg-slate-700 text-white" onClick={() => service.comingSoon ? null : window.open(service.bookingUrl || 'https://recodecbt.setmore.com', '_blank')} disabled={service.comingSoon}>
-                          {service.comingSoon ? 'Coming Soon' : service.title.includes('Group') ? 'Reserve a Seat' : 'Book'}
+                          {service.comingSoon ? 'Coming Soon' : (service as any).buttonText || (service.title.includes('Group') ? 'Reserve a Seat' : 'Book')}
                         </Button>}
                     </div>
                   </CardContent>
                 </Card>)}
               </div>
             </div>}
+        </div>
+      </section>
+
+      {/* Comparison Table Section */}
+      <section id="comparison-table-section" className="py-20 px-4 relative z-10">
+        <div className="container mx-auto max-w-7xl">
+          {/* Back to Top Button */}
+          <div className="flex justify-end mb-6">
+            <Button 
+              variant="outline"
+              onClick={scrollToTop}
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <ArrowUp className="w-4 h-4 mr-2" />
+              Back to Top
+            </Button>
+          </div>
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              RECODE Options — Full Comparison
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Compare all our services side-by-side to find the perfect fit for your journey
+            </p>
+          </div>
+
+          <ServicesComparisonTable onServiceClick={scrollToService} />
+
+          {/* Back to Options Button */}
+          <div className="text-center mt-12">
+            <Button 
+              variant="default" 
+              size="lg"
+              onClick={scrollToOptions}
+              className="px-8 py-3 text-lg"
+            >
+              Back to Options
+            </Button>
+          </div>
         </div>
       </section>
 
