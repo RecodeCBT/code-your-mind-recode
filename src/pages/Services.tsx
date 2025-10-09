@@ -432,23 +432,22 @@ const Services = () => {
           </div>
 
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Comparison Table
             </h2>
-            
-            {/* Enhanced Scroll Hint */}
-            <div className="mb-4 flex items-center justify-center gap-2">
-              <div className="scroll-hint-container flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-[hsl(24,100%,67%,0.1)] via-[hsl(262,83%,58%,0.1)] to-[hsl(221,83%,53%,0.1)] border border-[hsl(24,100%,67%,0.3)]">
-                <span className="text-sm md:text-base font-medium bg-gradient-to-r from-[hsl(24,100%,67%)] via-[hsl(262,83%,58%)] to-[hsl(221,83%,53%)] bg-clip-text text-transparent animate-gradient">
-                  Scroll for comparison
-                </span>
-                <ArrowRight className="w-5 h-5 text-[hsl(24,100%,67%)] animate-scroll-bounce" />
-              </div>
-            </div>
-            
             <p className="text-lg text-foreground max-w-3xl mx-auto">
               Compare all our services side-by-side to find the perfect fit for your journey
             </p>
+          </div>
+
+          {/* Enhanced Scroll Hint - positioned right above the table */}
+          <div className="mb-6 flex items-center justify-center gap-2">
+            <div className="scroll-hint-container flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-[hsl(24,100%,67%,0.1)] via-[hsl(262,83%,58%,0.1)] to-[hsl(221,83%,53%,0.1)] border border-[hsl(24,100%,67%,0.3)]">
+              <span className="text-sm md:text-base font-medium bg-gradient-to-r from-[hsl(24,100%,67%)] via-[hsl(262,83%,58%)] to-[hsl(221,83%,53%)] bg-clip-text text-transparent animate-gradient">
+                Scroll for comparison
+              </span>
+              <ArrowRight className="w-5 h-5 text-[hsl(24,100%,67%)] animate-scroll-bounce" />
+            </div>
           </div>
 
           <ServicesComparisonTable onServiceClick={scrollToService} />
