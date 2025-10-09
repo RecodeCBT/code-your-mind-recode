@@ -433,6 +433,27 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(8px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes scroll-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0px hsl(24 100% 67% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 12px hsl(24 100% 67% / 0.6),
+                0 0 24px hsl(262 83% 58% / 0.3);
+  }
+}
+
 /* Navigation interaction classes */
 .nav-pill {
   position: relative;
@@ -534,6 +555,35 @@ All colors MUST be HSL.
   animation: logo-glow-pulse 8s ease-in-out infinite;
 }
 
+/* Scroll Hint Animations */
+.animate-scroll-bounce {
+  animation: scroll-bounce 1.5s ease-in-out infinite;
+}
+
+.scroll-hint-container {
+  position: relative;
+  animation: scroll-pulse-glow 2s ease-in-out infinite;
+}
+
+.scroll-hint-container::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    hsl(24 100% 67% / 0.2),
+    hsl(262 83% 58% / 0.2),
+    hsl(221 83% 53% / 0.2),
+    hsl(24 100% 67% / 0.2)
+  );
+  background-size: 200% 100%;
+  animation: gradient-sweep 3s linear infinite;
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .nav-pill::before,
@@ -541,7 +591,10 @@ All colors MUST be HSL.
   .nav-pill-ripple::after,
   .healing-pulse,
   .logo-impulse::before,
-  .logo-glow {
+  .logo-glow,
+  .animate-scroll-bounce,
+  .scroll-hint-container,
+  .scroll-hint-container::before {
     animation: none;
   }
   
